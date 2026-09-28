@@ -1,0 +1,57 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "B_original_patch_matches_existing_public_file",
+      "representation": "byte_identity_binding",
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/B/host/snapshots/capture_002/agent.patch",
+        "sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657"
+      },
+      "existing_artifact_file": "principles/feedback/source/B.patch",
+      "existing_artifact_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+      "byte_identical": true,
+      "bytes": 2602,
+      "snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+      "snapshot_ref_source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/B_sealed.json",
+        "sha256": "8f0e263e8b1c09326839ac7a1387db6a632116d6df3a4bf98ff064c12356f4a7",
+        "field": "/snapshot_ref"
+      },
+      "notice": "The existing public patch is reused unchanged; this binding is newly extracted metadata."
+    },
+    {
+      "id": "V_original_patch_matches_existing_public_file",
+      "representation": "byte_identity_binding",
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/V/host/snapshots/capture_006/agent.patch",
+        "sha256": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349"
+      },
+      "existing_artifact_file": "principles/feedback/source/V.patch",
+      "existing_artifact_sha256": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349",
+      "byte_identical": true,
+      "bytes": 2604,
+      "snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+      "snapshot_ref_source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/both_branches_sealed.json",
+        "sha256": "f06e708b25d7029c9ca05d6af91fd6812c9c2048fc0c6090f3ed0bd9511252c5",
+        "field": "/V/snapshot_ref"
+      },
+      "notice": "The existing public patch is reused unchanged; this binding is newly extracted metadata."
+    },
+    {
+      "id": "original_checker_matches_existing_public_file",
+      "representation": "byte_identity_binding",
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/checker/generated/script.py",
+        "sha256": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb"
+      },
+      "existing_artifact_file": "principles/feedback/source/original_checker.py",
+      "existing_artifact_sha256": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+      "byte_identical": true,
+      "bytes": 578,
+      "notice": "The existing public checker is reused unchanged; this binding is newly extracted metadata."
+    }
+  ]
+}

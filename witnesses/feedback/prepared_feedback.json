@@ -1,0 +1,95 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "u_prepared_feedback",
+      "representation": "source_field_substring_extraction",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/U/input.json",
+        "sha256": "b52a75a4b04960d5afc561ea131a23baecce0aea581981605a77774792df7793"
+      },
+      "source_field": "/issue",
+      "source_field_utf8_sha256": "3eac1d5bc110c83a187a3f4886e0d9883dd6bdef96002df58a3d3d85d5f63268",
+      "marker": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n",
+      "marker_occurrences": 0,
+      "offset_unit": "Python Unicode code points; start inclusive, end exclusive",
+      "omission_notice": "The rest of the prepared/effective input is omitted. This is not a model request body.",
+      "retained_fields": {
+        "/initial_snapshot": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42"
+      },
+      "start": null,
+      "end": null,
+      "text": null
+    },
+    {
+      "id": "u_effective_feedback",
+      "representation": "source_field_substring_extraction",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/U/host/effective_input.json",
+        "sha256": "dcb279a39a66694820243f7a5a1c171c8a37b17cf355f5d28a4ff889f67f59ff"
+      },
+      "source_field": "/issue",
+      "source_field_utf8_sha256": "e38569f5588d2d6ff68a8ddb4a92e8eaaec094e8063995dad2e0edaf917400b7",
+      "marker": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n",
+      "marker_occurrences": 0,
+      "offset_unit": "Python Unicode code points; start inclusive, end exclusive",
+      "omission_notice": "The rest of the prepared/effective input is omitted. This is not a model request body.",
+      "start": null,
+      "end": null,
+      "text": null
+    },
+    {
+      "id": "v_prepared_feedback",
+      "representation": "source_field_substring_extraction",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/V/input.json",
+        "sha256": "77e2ebb1ae30d18e9540e55eeff76058f237a152d755435b8bfc412559f414a0"
+      },
+      "source_field": "/issue",
+      "source_field_utf8_sha256": "2b0b9c113c484e428075d3597ad2c16cdd1ba0dbb5cb8bdbe397b3cc4ad85b2f",
+      "marker": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n",
+      "marker_occurrences": 1,
+      "offset_unit": "Python Unicode code points; start inclusive, end exclusive",
+      "omission_notice": "The rest of the prepared/effective input is omitted. This is not a model request body.",
+      "retained_fields": {
+        "/initial_snapshot": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42"
+      },
+      "start": 5390,
+      "end": 6778,
+      "text": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n{\"cases\":[{\"id\":\"int_index\",\"reason\":\"DECLARED_TEST_COMPLETED\",\"role\":\"control\",\"status\":\"PASS\",\"test\":\"Behavior.test_integer_index\"},{\"id\":\"string_key\",\"reason\":\"DECLARED_TEST_COMPLETED\",\"role\":\"control\",\"status\":\"PASS\",\"test\":\"Behavior.test_non_numeric_string_key\"},{\"exception_type\":\"AssertionError\",\"id\":\"numeric_key\",\"reason\":\"OBLIGATION_ASSERTION\",\"role\":\"issue\",\"status\":\"FAIL\",\"test\":\"Behavior.test_numeric_string_key_quoted\",\"traceback\":\"Traceback (most recent call last):\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 59, in testPartExecutor\\n    yield\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 592, in run\\n    self._callTestMethod(testMethod)\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 550, in _callTestMethod\\n    method()\\n  File \\\"/tmp/a2s-r-input/script.py\\\", line 8, in test_numeric_string_key_quoted\\n    self.assertEqual(compile_json_path([\\\"1111\\\"]), '$.\\\"1111\\\"')\\nAssertionError: '$[1111]' != '$.\\\"1111\\\"'\\n- $[1111]\\n+ $.\\\"1111\\\"\\n\\n\"}],\"decision\":\"REPRODUCED\",\"host_status\":\"COMPLETED\",\"observation\":{\"host_status\":\"COMPLETED\"},\"repository_unchanged\":true,\"status\":\"PUBLIC_BASE_OBSERVATION\",\"truncated\":false}",
+      "text_utf8_sha256": "8e2bb78531ef31dac9d19f2ceb3b956d2e082b458c0898a84902abf029448a77",
+      "deterministic_check": {
+        "parsed_feedback_equals_record": "b_feedback",
+        "equal": true
+      }
+    },
+    {
+      "id": "v_effective_feedback",
+      "representation": "source_field_substring_extraction",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/V/host/effective_input.json",
+        "sha256": "b46bab29ae97d4202c1364c05b701c9995003da907c97b79b10802d79cbb2c81"
+      },
+      "source_field": "/issue",
+      "source_field_utf8_sha256": "068cc42d076226bb4a99a063e120e6a421eea5bc757096b7662c23ad0ecdbc89",
+      "marker": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n",
+      "marker_occurrences": 1,
+      "offset_unit": "Python Unicode code points; start inclusive, end exclusive",
+      "omission_notice": "The rest of the prepared/effective input is omitted. This is not a model request body.",
+      "start": 5390,
+      "end": 6778,
+      "text": "\n\nRecorded public behavioral observations for this initial patch follow. They are fallible issue-derived checks, not official tests or a repair answer.\n{\"cases\":[{\"id\":\"int_index\",\"reason\":\"DECLARED_TEST_COMPLETED\",\"role\":\"control\",\"status\":\"PASS\",\"test\":\"Behavior.test_integer_index\"},{\"id\":\"string_key\",\"reason\":\"DECLARED_TEST_COMPLETED\",\"role\":\"control\",\"status\":\"PASS\",\"test\":\"Behavior.test_non_numeric_string_key\"},{\"exception_type\":\"AssertionError\",\"id\":\"numeric_key\",\"reason\":\"OBLIGATION_ASSERTION\",\"role\":\"issue\",\"status\":\"FAIL\",\"test\":\"Behavior.test_numeric_string_key_quoted\",\"traceback\":\"Traceback (most recent call last):\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 59, in testPartExecutor\\n    yield\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 592, in run\\n    self._callTestMethod(testMethod)\\n  File \\\"/opt/miniconda3/envs/testbed/lib/python3.9/unittest/case.py\\\", line 550, in _callTestMethod\\n    method()\\n  File \\\"/tmp/a2s-r-input/script.py\\\", line 8, in test_numeric_string_key_quoted\\n    self.assertEqual(compile_json_path([\\\"1111\\\"]), '$.\\\"1111\\\"')\\nAssertionError: '$[1111]' != '$.\\\"1111\\\"'\\n- $[1111]\\n+ $.\\\"1111\\\"\\n\\n\"}],\"decision\":\"REPRODUCED\",\"host_status\":\"COMPLETED\",\"observation\":{\"host_status\":\"COMPLETED\"},\"repository_unchanged\":true,\"status\":\"PUBLIC_BASE_OBSERVATION\",\"truncated\":false}",
+      "text_utf8_sha256": "8e2bb78531ef31dac9d19f2ceb3b956d2e082b458c0898a84902abf029448a77",
+      "deterministic_check": {
+        "parsed_feedback_equals_record": "b_feedback",
+        "equal": true
+      }
+    }
+  ],
+  "scope": "Prepared/effective input records only; actual request bodies were not opened."
+}

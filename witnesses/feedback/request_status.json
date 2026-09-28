@@ -1,0 +1,43 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "u_first_request_commit",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/requests/U/native/request_01/commit.json",
+        "sha256": "35f36f14cca3f5d3ffa9a6ecde233a8a1fa6cf08c8ffad1652e21b8a223a7a7b"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/number": 1,
+        "/purpose": "solve",
+        "/body_sha256": "38d0d7bfda3a20e33cd059409229c0a83a5c25be13e06c4c584beaccf4f1c3ba",
+        "/state": "COMMIT",
+        "/status": "completed"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "v_first_request_commit",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/requests/V/native/request_01/commit.json",
+        "sha256": "4615d41d1daf21b7744b65cf8a73cacaefbc69f4a7496af2832bc7b6d2b4043a"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/number": 1,
+        "/purpose": "solve",
+        "/body_sha256": "9484ec3ef06f446fbd912fa4d95906321ddb58424325d89b56ec36300b9ef28f",
+        "/state": "COMMIT",
+        "/status": "completed"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ],
+  "scope": "Transport status metadata only. Body hashes alone do not establish feedback delivery or sole-input difference."
+}

@@ -1,0 +1,5005 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "results_cache/raw_repo_capacity_comparison_v1/execution_summary.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/001-194-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/002-194-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/003-194-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/004-194-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/005-194-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/006-194-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/007-194-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/008-194-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/009-195-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/010-195-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/011-195-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/012-195-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/013-195-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/014-195-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/015-195-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/016-195-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/017-196-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/018-196-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/019-196-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/020-196-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/021-196-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/022-196-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/023-196-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/024-196-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/025-197-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/026-197-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/027-197-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/028-197-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/029-197-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/030-197-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/031-197-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/032-197-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/033-198-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/034-198-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/035-198-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/036-198-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/037-198-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/038-198-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/039-198-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/040-198-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/041-199-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/042-199-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/043-199-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/044-199-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/045-199-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/046-199-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/047-199-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/048-199-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/049-200-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/050-200-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/051-200-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/052-200-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/053-200-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/054-200-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/055-200-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/056-200-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/057-201-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/058-201-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/059-201-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/060-201-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/061-201-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/062-201-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/063-201-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/064-201-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/065-202-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/066-202-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/067-202-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/068-202-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/069-202-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/070-202-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/071-202-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/072-202-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/073-203-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/074-203-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/075-203-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/076-203-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/077-203-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/078-203-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/079-203-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/080-203-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/081-204-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/082-204-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/083-204-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/084-204-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/085-204-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/086-204-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/087-204-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/088-204-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/089-205-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/090-205-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/091-205-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/092-205-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/093-205-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/094-205-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/095-205-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/096-205-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/097-206-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/098-206-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/099-206-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/100-206-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/101-206-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/102-206-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/103-206-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/104-206-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/105-207-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/106-207-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/107-207-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/108-207-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/109-207-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/110-207-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/111-207-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/112-207-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/113-208-r1-LnPn/entry/prefixes/LnPn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/114-208-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/115-208-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/116-208-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/117-208-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/118-208-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/119-208-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/120-208-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/121-209-r1-Hmini/entry/prefixes/Hmini/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/122-209-r1-N/entry/prefixes/N/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/123-209-r1-L/entry/prefixes/L/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/124-209-r1-P/entry/prefixes/P/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/125-209-r1-LP/entry/prefixes/LP/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/126-209-r1-Ln/entry/prefixes/Ln/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/127-209-r1-Pn/entry/prefixes/Pn/endpoints.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/128-209-r1-LnPn/entry/prefixes/LnPn/endpoints.json"
+    ],
+    "description": "128 primary path status/stop fields only. Null means no reason in these fields, not proof of successful task resolution. No account records, model text, source views, traces, or annotations are exported.",
+    "historical_registration": false
+  },
+  "rows": [
+    {
+      "cell_id": "001-194-r1-N",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "Completed",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "f41bc0d7fa1c607208f6407d2e0ea8f8d8b39756e8b5a620257dee6c518761c7",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "cell_id": "002-194-r1-L",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c43472df3dd9485287c67f8938e0261f0b8a41912e0640d0ce797c8450487788",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "003-194-r1-P",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "1adcaf55b05ddf6d513dbdb0ecc52a597539a1a834713c87812cdcf7b7cf3e49",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "004-194-r1-LP",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "b261a1fb16f0b19cd1b1aa8afb7b5a5ebeacaa0a9db43aa8d1dce06b5bddcf4b",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "005-194-r1-Ln",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "684ba4a8fc4d22abd1d28c3caae0b03e936b82cbedec0bfdc6465c6c74322688",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "006-194-r1-Pn",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "DISCOVERY_CALL_LIMIT",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "861339aa3b9868460e31b78cc92cc5c7f7ada97e9f1429b2c6c3a226b194acea",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_CALL_LIMIT"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "007-194-r1-LnPn",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "30d9b07fbbdaae230cfdf8aca0f93c1a03d468d25ff98efb9a76056e1cb0a484",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "008-194-r1-Hmini",
+      "block_id": "194-r1",
+      "instance_id": "django__django-10880",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "1e64a26b2662e53767d325f80beabc642fe82899c4a8d1d3998d63f7bd72e38e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "009-195-r1-L",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e3b52a7bb844611e76c6670b099ffa0d7a17a1d37156962cfa85fa0d20f3b6d9",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "010-195-r1-P",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "6e12d32a3a8d7e3bca4ad3f70bbae469f2f8dfe7e4b78c623321236109f65c55",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "011-195-r1-LP",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3f942dfe7a37c5ddcf691e21735f208c84ed6bae0aeca13c5103f2f1443069fe",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "012-195-r1-Ln",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 8,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "a2e5f6bc2e897eb6529d09cef1cb744a6a2abe6b17f8c43d8d2cd0c5500c2758",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "013-195-r1-Pn",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "native_capacity_fallback",
+      "capacity_reason": "COMPLETE_P_INPUT_LIMIT",
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 4,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "8c49913cfbf5ba8bc058313c87d86270b8ce205de58ae60a3ec13895035eb6f2",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "native_capacity_fallback",
+          "reason": "COMPLETE_P_INPUT_LIMIT"
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "014-195-r1-LnPn",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 6,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "533ea3d6ac0990ba066a1a18ae80db47d0743615f3e5f57cd923fbe10810a26b",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "015-195-r1-Hmini",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c7504d56dfb28d9f4dd6feb9766b10255c3273d38e2ccd7d376988801e87c9eb",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "016-195-r1-N",
+      "block_id": "195-r1",
+      "instance_id": "pydata__xarray-3095",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "2243b91a6d48af107915f36b99b253e77e5dac1606e9855171ca3c006a4ed1aa",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "017-196-r1-P",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "939b0cb4f181990ac1d560ed7533f86db2693daee6cafe5aa57ee1a02f190dea",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "018-196-r1-LP",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e55092930f59ddb771b67306e3f03224e1d18b4ccbd6d03af48cc75af0179c45",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "019-196-r1-Ln",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "760f3c760bb6e8c92ff674555154b71ace66066ae82c13043705526a80fc1ef7",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "020-196-r1-Pn",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "54f585339c7b7830281768b1003bdaae45de5dfca06fe4ff8bbde52a4aa83de4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "021-196-r1-LnPn",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "e891b29949d9592621b3c4a56031f78b1970be375bf911df8556f41e6825e656",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "022-196-r1-Hmini",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e4bad152e755e5eead0e6e7feab97e965aa095e9806a9bd0854655015c57fec5",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "023-196-r1-N",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "933869b1987e88414a80d462799d61dc6dddffdedd1046400bdc99eee869d3a1",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "024-196-r1-L",
+      "block_id": "196-r1",
+      "instance_id": "django__django-16082",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "EMPTY_FINE_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 5,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "b82d25bad24871176b89e83dfa23b91c37dbc216abed207cd6925c74b129abec",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "EMPTY_FINE_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "025-197-r1-LP",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "14c96778fc22c1118f98a86dd2358c4e0cbdb8e6b5654a440cdb0ec4f650530e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "026-197-r1-Ln",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "a00153b3c64bf8ad626fe3fd6b8bdf5e598a6024376133cad6699be64292cec3",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "027-197-r1-Pn",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "19856f048186989e81d09b1ed854ea000670c94b3cce56a05607299ae31cd466",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "028-197-r1-LnPn",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "12b238a1f36d665cb3c605b81383d7e72c60fc98f5ca293d242ee1eb6372728b",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "029-197-r1-Hmini",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "50e977be1f4c02455e9eb2e3b9718e910fb08ddf87787a3cf9ca5b2fd9d8ee54",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "030-197-r1-N",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e2092213bbcdde364b79fc5c86c49f8903006e9686b8d11f2bd25cbec8e43db8",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "031-197-r1-L",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3ca610b138a351e411eab9640478f4e98cc233255ee6114f7548b687a25dec74",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "032-197-r1-P",
+      "block_id": "197-r1",
+      "instance_id": "django__django-15103",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "05b2a6eb9368b6762b2c2f6ecaea7361d6b39697e9d6eea2632f555448d3fca7",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "033-198-r1-Ln",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "fba6f45d0baab4233d0ddca0b537d0f435e5b70013d5cc0caf4532b1aa631524",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "034-198-r1-Pn",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5aeb9ebf2440370d6cb31b7f2b47c1402bafea1a4fb395f00946d7bed6301628",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "035-198-r1-LnPn",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "ec5ba5a0271ea018adb648fe20ecaca4a74b670a7455b0d4165a5c0b4cccf0d7",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "036-198-r1-Hmini",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5bcbf5f439fd08f01631a90f8f5bbb115e84fd93b965d311885fff046054d621",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "037-198-r1-N",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "983efaa0608a4293f1f9347c7844778a6393013a702981f54b4b5e84ee6a1365",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "038-198-r1-L",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "SOURCE_UNAVAILABLE",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 8,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "ce7e274cc2aedff06fa9d5313620362190ddb7578c1d7b8c1f5c57ec47ab753c",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "SOURCE_UNAVAILABLE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "039-198-r1-P",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e5d03ebfde3c6a274b31803937df8d12fc07d839182ae41303e7e0876a8033fd",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "040-198-r1-LP",
+      "block_id": "198-r1",
+      "instance_id": "matplotlib__matplotlib-20676",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "SOURCE_UNAVAILABLE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 1,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "dfb955e6aa8594980a9a9f7d2a5a09c7c65d2d4604ef25b45793a5575dd67de4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "SOURCE_UNAVAILABLE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "041-199-r1-Pn",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "a6ce57cf7e35d6ef7412403422a40b1c8ff8c56e53d231593a8515e9986cc4ea",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "042-199-r1-LnPn",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "9bf3e7fcc2bf13523b72856b43fd9c1fe5730b77964ba93b247fcbb4d2249319",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "043-199-r1-Hmini",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5aef7554bed01c98f82e5e90e1d413b4307f805e1d13533d070154402d37678b",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "044-199-r1-N",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "97950894beca31132b5d82433e8ac42c29bf0cf274172d975fa05d9fa44471a1",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "045-199-r1-L",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "ead6607d9bed7cdf846f554c98e16d642cc24b2ab475b03553beb7ef969f2cbe",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "046-199-r1-P",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "DISCOVERY_CALL_LIMIT",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "a6e36a59acca779a9c4941953ee8ffabc1cc4a3130ccc8084d0130b19560b8e6",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_CALL_LIMIT"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "047-199-r1-LP",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "64d5f236cee26c35cec794c95b4bb4807adefc3a5663cdc7b046cf247dfe134f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "048-199-r1-Ln",
+      "block_id": "199-r1",
+      "instance_id": "django__django-11299",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "9f4a5c6b185ab445dbcdb707da2b29aa0a6b34a0ea530d1d4d42d26b7fa74c3f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "049-200-r1-LnPn",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "4a4d37af537c6bf243c654f38ac8423ef8ddf0834929dd44e2760fbbd0a773b4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "050-200-r1-Hmini",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "24cb933078fae2a4b49e52c81277270df1da6e1cab09f54fef70dc418ef54c6d",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "051-200-r1-N",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "6c78e1b2c8a11eaf8f84b6b1e76d7898483360eb5f5b2a283a661c2fc84c2f10",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "052-200-r1-L",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c349859c298174c32c99a716ec260457134162af2038161118fbac7a5c48ccbd",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "053-200-r1-P",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "241fee00f2cb148c40e18ee44f040c4518b976312ab224c9221c1fdb78d0a830",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "054-200-r1-LP",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3c3d8eba401f99638c056d75917de7c37801242e844429776c74b071c28de9d2",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "055-200-r1-Ln",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "80453294f15272dfbf7394538ee820a3a29a36b760208830704c376a71ceac06",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "056-200-r1-Pn",
+      "block_id": "200-r1",
+      "instance_id": "django__django-16877",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "83eac88966331678b58d77005daba28d1fd25d0c943a7491349532cd8bbb4d76",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "057-201-r1-Hmini",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c31e19fce212a18a1546cc623a77472c68ebf367b607550b0e0237acb9c16f0b",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "058-201-r1-N",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "Completed",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3dbc2b7076a2b1a10044b400d66e2ff65f8fd2609d6875f6a1df1b36cab74c6f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "cell_id": "059-201-r1-L",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "01bd3373c1e7b1afb691ef9948427d76b875c7860e6630386155eaf9fd8ae403",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "060-201-r1-P",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c1ad66b99953f11a0ff29cd28039dc4d87d2b972a62a9ccbd5e6afce6fef500e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "061-201-r1-LP",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "11580bb763723d62ab4debe93e5e9a0fc52cce3bcd6be8e8bc7443caaf613358",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "062-201-r1-Ln",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "Completed",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 8,
+      "editor_requests": 0,
+      "native_requests": 8,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "52b63c54339f1006bd9c8aae2553ad3b90e9a1412c1dde4d13fc75c58648dd9e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "cell_id": "063-201-r1-Pn",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "f4fa671d6e08da824761b973cc80f03c8d05fbabaa390e518e3eccc16c698a9d",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "064-201-r1-LnPn",
+      "block_id": "201-r1",
+      "instance_id": "django__django-15467",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "b6410e0be4caf637d7fe26bcb609d7488b6c7be53aea6523b40e1fc1f9237c14",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "065-202-r1-N",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "dcadc3415decad1364157125fadd84fe2e7d7a8c5d6a416961c198f8f1204530",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "066-202-r1-L",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5d3d938f600f8e64f5d51d34fae25b655b545c607ffb2503228b98fbe2656a19",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "067-202-r1-P",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "480c323d2f32f64d5d82dce7748942f9d41829902e346ab3bbeac0181c155e72",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "068-202-r1-LP",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e48290319cb65baed13066d67550269977d07d6f40b4f8256ccdb4ca77d63e3d",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "069-202-r1-Ln",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "ade7ab4be9632b957f817e683fcb10d10cd84d19650450796ae199f5c44a34de",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "070-202-r1-Pn",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "80a891782b5361e9e305c30a1cd3c657b364df0f1f083004b06ebe786c712e83",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "071-202-r1-LnPn",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 6,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c2668044bc645596cec76501d241ce7559182c6a8bf4914cbdd9a3f8ba7c30b5",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "072-202-r1-Hmini",
+      "block_id": "202-r1",
+      "instance_id": "pytest-dev__pytest-8399",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "4e708295b0e5fc74f12987339c6085fb8ddeca52c9d3860f32665fb0e765b7d5",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "073-203-r1-L",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "b74065548b92cea6020208fe7211d45dbfc1e901d39e33fce89d0b61cecdc66f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "074-203-r1-P",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "9a4812ca4de704068eeaa3525b2f23419e36851026dff7a36fa9755efe82848e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "075-203-r1-LP",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "4325dfbbdda9204366237ab161e9945f697c6548666faeffdaeec42248efa864",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "076-203-r1-Ln",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "7fe7e321338e6237379a66ece990cb3ebfa1dc10cd4bcd315d2c77985f6437b8",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "077-203-r1-Pn",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "dc4291a7b4275075f24c8d9870456f921d1af5213703f421f2735d873f3fc8db",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "078-203-r1-LnPn",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "85718a7bd741d484b1ba78737fefc4ab3c2352a607446b1293e35e08b3245d01",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "079-203-r1-Hmini",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "949610a345a64cb57fc91805a1a8752578b4224da015dec71014b819b143e24f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "080-203-r1-N",
+      "block_id": "203-r1",
+      "instance_id": "django__django-14122",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e92e1c4466c8c1480058c545166e8a2daa9de586143179271719f1ed9f6f5c5e",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "081-204-r1-P",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e13dc189ea14d9cda83db51617d8c59abe5a53590a170a3c4a6ac31484059264",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "082-204-r1-LP",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "d2d96bb3a2a0ecd617ef6b3b4acc59a4006934b82deaaf8f2cbde55c1a6158f4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "083-204-r1-Ln",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "a0d452aae197c1af622a8669aaf81605332fb1ed53eb065152c735289b0ce9ed",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "084-204-r1-Pn",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "e166cf1eb2b543d021f7fdfcde28e7b6321a7ccf3c998bb2b696bb12ab7aaf7a",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "085-204-r1-LnPn",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 2,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "OUTSIDE_P_FILE_DOMAIN",
+      "recorded_endpoint_sha256": "d187d83e0967b3c65dda5e8c47990e88370c3179d05f625f7ba0fb37cc27de61",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "OUTSIDE_P_FILE_DOMAIN"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "086-204-r1-Hmini",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "b61344bf0971474b81472a1fdee647a5833029c85905fa0fe7f0d96a7f5156ee",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "087-204-r1-N",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "Completed",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "d5378a77fe19aa93ae1da769e6ddbaa06c2959ba0e750e4514af282207f0fcad",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "cell_id": "088-204-r1-L",
+      "block_id": "204-r1",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "05839ac67c52a5abe655216875d793f3f06195f6deed630774e164e6b83b3903",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "089-205-r1-LP",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "54b0d944147b9b33536d103c47acee6481726ecf5d63a2e336d081bb50c0a9b9",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "090-205-r1-Ln",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3c6e7c54c379b1e7c337f74d2236cd532aef8dc8b47d8e269a3c5fd3995df34a",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "091-205-r1-Pn",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "017c22209003f64249ac4737b7a3b038a04730a785c51d74c5f53dba250a0e58",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "092-205-r1-LnPn",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "4327655308d3880bb997809528c2baf4902ef7c83870a069878c3e52cfd3268f",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "093-205-r1-Hmini",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "2e4cef59ee55e4359d3793ade9a334f344f5c63fe01589a03d280b7edf2d3e39",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "094-205-r1-N",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "edc7b55d2bf5a63f542288763d592d8085d0740e1171487b9a13a23e6b8bc127",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "095-205-r1-L",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3fa16ecd65acfb35d886b3222efc01f2a7e06d9dca4214f07bc2a99deb9db1ea",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "096-205-r1-P",
+      "block_id": "205-r1",
+      "instance_id": "django__django-14434",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "e7b92f60d9f43c6342e19f0327c03c7660a928a0156563dba9e44e3cc25d7a87",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "097-206-r1-Ln",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c1073c79f85e37a96b9c4b317c5e197ff9f0ee169d7e79fad0ab3861446201a0",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "098-206-r1-Pn",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "native_capacity_fallback",
+      "capacity_reason": "ALL_SELECTED_FILES_EXCEED_PAIRED_LIMIT",
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 4,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "860ba92af5a3fac09e160449b69e636ae0691b00754e9aea3f1a287d863e7a16",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "native_capacity_fallback",
+          "reason": "ALL_SELECTED_FILES_EXCEED_PAIRED_LIMIT"
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "099-206-r1-LnPn",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 6,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c82ae432e3c139c361f0c8b0bda9cf29f94324f9b756ede8255f298ef4b3f5a9",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "100-206-r1-Hmini",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "538fc5d1c22ac97883559cd9978542f0f4a3cba2fa4e09c807e041f0127a3ab5",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "101-206-r1-N",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "a8e5b91425435dddf03df0f6479b5b547da911e54d32387fd27545fbde7ed851",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "102-206-r1-L",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "82dd7f25db07b47de861cdfae34985f45b1299cd908e9b09d2f0d9e3dd4a0353",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "103-206-r1-P",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "f2859ccba7dce5b1d1268c632eb12369ce585aee340193b7b58431920628db04",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "104-206-r1-LP",
+      "block_id": "206-r1",
+      "instance_id": "sympy__sympy-15809",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "4b8675f77671f3402582fbba1a503dc1ae13810bcb63ca7bb4e3636369f31026",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "105-207-r1-Pn",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "c77a18f322f22df8de2fcc34b4b0bc8aead9785f34d87731f4f87c1281cee45a",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "106-207-r1-LnPn",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 6,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "960e86b6f11c2afe15dc7b60a7b74ad0f29440f7210ccca48974758f69706ce4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "107-207-r1-Hmini",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "80c142e76b8ca4b9110134c8d3f0b98ad595640df7c9a623c3b73d1ce39431b8",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "108-207-r1-N",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "67f3cf3172bc467db1f128889adfa09fe9f32c2cb7a391bf9589e90fe120aa29",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "109-207-r1-L",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "c113cceac001a4892f9cb47e8891a333b3a6e7b23dcfec5f9a7bad53be9222b1",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "110-207-r1-P",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_SELECTION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 5,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "786a92ac62bdcf5a145ae27946718e1deba0fa34adadb587843845f6431483b4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_SELECTION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    },
+    {
+      "cell_id": "111-207-r1-LP",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5703ce77c17305a6806341a7d52132fdbdb75ea752705d31d53711eb25adce90",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "112-207-r1-Ln",
+      "block_id": "207-r1",
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "b105b565211e32c13f33cf07b6b26396560b74da55a393df6d73cecdc6c27e9a",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "113-208-r1-LnPn",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 6,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "7f0f54cf3fecf59a2386135156799c9be0963ea822dfe5226485e467bd140b97",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "114-208-r1-Hmini",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "9dccd053c918852949c025b7e92d2be47558c594ceae1465dae3c36e876a0998",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "115-208-r1-N",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "8ac02c39ebed658e3a71ca9f55a646811fd6465450db33d994fe78491d01fa3c",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "116-208-r1-L",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "99f5a56f9f5ad9c63e807219b42093052572256927b4b4b4e07905bf4c55d997",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "117-208-r1-P",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "0fd624683cd5c2636fba017531e3f06501b9a1720cc7f288fc822423262b4cde",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "118-208-r1-LP",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "2686cacb08be4765a62e1d195ad53c7eb95c2190422e8f17244769359970f336",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "119-208-r1-Ln",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 7,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "f92d639b1c700517049567952d04b4cc8d106796f3492eb0a1a584fe3f2853b7",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "120-208-r1-Pn",
+      "block_id": "208-r1",
+      "instance_id": "pylint-dev__pylint-6903",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "4f5a0d8a0beae3fe9017fbb40c328dcf9f46e8876dc0de318fc39b3eb769c685",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "121-209-r1-Hmini",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "Hmini",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "COMPLETE_MINI_FINAL_WORKTREE",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "3afdef7b7c2b8fe398d8460fbfb613cec4c6558b916f84cb883cdb0e428c5672",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "COMPLETE_MINI_FINAL_WORKTREE",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "122-209-r1-N",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "N",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": null,
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "6412cef61a47042f6fe95501f7b3507a2d0fa2bc9ad9f6ae19e2e9e9bfada0cf",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": null
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "123-209-r1-L",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "L",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "Completed",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 6,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "7bd4adaffaf59c1a2b2333948c73aff371361512c0155429d757b1d8531ceed4",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "cell_id": "124-209-r1-P",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "P",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "cf08cd7dac3d0cd7080643ff066514383745f20f9d613ea9e9c386e725048e48",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "125-209-r1-LP",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "LP",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 7,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "5d954e745ec3bf2ff680409c83bf6a9fbc89e9ce3a2433dce1c9b955121092ec",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "LOCALIZED"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "126-209-r1-Ln",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "Ln",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "LimitsExceeded",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 0,
+      "native_requests": 9,
+      "policy_status": "DEFAULT_FINAL",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "2a84db8ff7f5d67681da42065e86a33de465fe3a106f100f376b0804e61d1f57",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": null,
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DEFAULT_FINAL",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "LimitsExceeded"
+        }
+      ]
+    },
+    {
+      "cell_id": "127-209-r1-Pn",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "Pn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "SELECTION_COMPLETE",
+      "discovery_status": "DISCOVERY_COMPLETE",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 9,
+      "editor_requests": 4,
+      "native_requests": 0,
+      "policy_status": "ORIGINAL_GENERATED_SELECTION",
+      "pipeline_stop_reason": null,
+      "recorded_endpoint_sha256": "2d10298810aabc22c5625c501fd5c8172114f64054cd5d4ee461f5b466734b22",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "DISCOVERY_COMPLETE"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "ORIGINAL_GENERATED_SELECTION",
+          "stop_reason": null
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "SELECTION_COMPLETE"
+        }
+      ]
+    },
+    {
+      "cell_id": "128-209-r1-LnPn",
+      "block_id": "209-r1",
+      "instance_id": "django__django-14500",
+      "prefix": "LnPn",
+      "repeat_index": 1,
+      "status": "PREFIX_VALID",
+      "terminal_status": "KNOWN_PIPELINE_STOP",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": "original_P",
+      "capacity_reason": null,
+      "requests": 0,
+      "editor_requests": 0,
+      "native_requests": 0,
+      "policy_status": "DECLARED_PIPELINE_EMPTY_BASE",
+      "pipeline_stop_reason": "NO_SELECTION",
+      "recorded_endpoint_sha256": "99d68aab2197a39184dcd69a556196db023edc698c8e52f03e61775120deccef",
+      "stage_observations": [
+        {
+          "stage": "discovery_or_localization",
+          "status": "NO_LOCALIZATION"
+        },
+        {
+          "stage": "pre_edit_capacity_admission",
+          "route": "original_P",
+          "reason": null
+        },
+        {
+          "stage": "editing_pipeline",
+          "status": "DECLARED_PIPELINE_EMPTY_BASE",
+          "stop_reason": "NO_SELECTION"
+        },
+        {
+          "stage": "solver_terminal",
+          "status": "KNOWN_PIPELINE_STOP"
+        }
+      ]
+    }
+  ]
+}

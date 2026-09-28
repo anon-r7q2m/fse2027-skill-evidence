@@ -1,0 +1,42 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "results_cache/raw_repo_comparators_v1/generation/all_final_seal.json"
+    ],
+    "description": "Package identities and selected-attempt provenance; no generation request or response.",
+    "historical_registration": false
+  },
+  "status": "BOTH_FINALS_SEALED_BEFORE_INDEPENDENT_ACCEPTANCE",
+  "finals": {
+    "Ln": {
+      "role": "Ln",
+      "status": "FINAL_PACKAGE_SEALED",
+      "package_sha256": "6ce6c33aefa44332b24a096ce25932a3b82328e304e996c1a2c4e1e3f8792e94",
+      "package_files": {
+        "mechanism.py": "2ad25ce92552645c1dbc0c1adc096ec296bf043f7ee4269152c7b43d8a6579ce",
+        "package.json": "799e99ad3392a41d9185fdac0ebcfffc37c8cc9dd7a8a3a517b9f039569ee067"
+      },
+      "attempts": 1,
+      "selected_attempt": 1,
+      "source_access": false,
+      "human_code_repairs": 0,
+      "public_status": "PASS"
+    },
+    "Pn": {
+      "role": "Pn",
+      "status": "FINAL_PACKAGE_SEALED",
+      "package_sha256": "7c9a995ae9d0c90931dab288bf86fbd44c919702dff099b0bdb8785f98308d27",
+      "package_files": {
+        "mechanism.py": "0bedaf4302896ddba7baba463d8fe1dae4ed83d6679147680057385a415974dc",
+        "package.json": "f6dc11955a67b7821b1d7abf22669205177e2b1f2b662b7afdd1fe06f6506800"
+      },
+      "attempts": 2,
+      "selected_attempt": 2,
+      "source_access": false,
+      "human_code_repairs": 0,
+      "public_status": "PASS"
+    }
+  }
+}

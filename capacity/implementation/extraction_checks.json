@@ -1,0 +1,37 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [],
+    "description": "New structural/export checks, not model, benchmark, or experimental validation.",
+    "historical_registration": false
+  },
+  "selection": {
+    "ranked_ids": 476,
+    "excluded_ids": 217,
+    "selected_ids": 16,
+    "predecessor_union_matches": true,
+    "selected_ranks_194_to_209_match": true,
+    "all_rank_hashes_recomputed": true,
+    "repeat_hash_selection_matches": true
+  },
+  "identities": {
+    "logical_rows": 192,
+    "unique_scopes": 108,
+    "scope_and_consumed_hashes_match": true,
+    "reward_commit_self_digests_match_consumed": true,
+    "all_reused_rewards_share_task_base_tree_and_grader": true,
+    "existing_public_outcomes_unchanged_and_matched": true,
+    "score_reexecution": false
+  },
+  "primary_dispositions": {
+    "rows": 128,
+    "raw_model_or_request_records_exported": false
+  },
+  "code": {
+    "byte_exact_files": 35,
+    "all_exact_copies_match_historical_binding": true,
+    "verbatim_excerpts": 2,
+    "experiment_code_executed": false
+  }
+}

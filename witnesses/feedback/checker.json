@@ -1,0 +1,48 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "frozen_checker_card",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/checker/generated/card.json",
+        "sha256": "20a36128454b8a646f7d5905a629c4cb34029e27c76275bc102c548b4f826897"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/obligations/0/id": "numeric_key",
+        "/obligations/0/role": "issue",
+        "/obligations/0/test": "Behavior.test_numeric_string_key_quoted",
+        "/obligations/0/basis": "Numeric string keys should be treated as object keys in JSON path expressions (quoted), not as array indexes. compile_json_path(['1111']) is expected to produce '$.\"1111\"'.",
+        "/obligations/1/id": "string_key",
+        "/obligations/1/role": "control",
+        "/obligations/1/test": "Behavior.test_non_numeric_string_key",
+        "/obligations/1/basis": "Non-numeric string keys should be quoted in JSON path expressions. compile_json_path(['foo']) should produce '$.\"foo\"'.",
+        "/obligations/2/id": "int_index",
+        "/obligations/2/role": "control",
+        "/obligations/2/test": "Behavior.test_integer_index",
+        "/obligations/2/basis": "Integer keys should be treated as array indexes in JSON path expressions. compile_json_path([3]) should produce '$[3]'."
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "frozen_checker_seal",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/checker/generated/seal.json",
+        "sha256": "c6dc54affa31dbe875503ee2e64db4f512bf7b80eb86d528b90b9e84b89c4eba"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/files/script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "/files/card.json": "20a36128454b8a646f7d5905a629c4cb34029e27c76275bc102c548b4f826897",
+        "/requests": 6,
+        "/status": "FINAL_SEALED_BEFORE_ASSESSMENT"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

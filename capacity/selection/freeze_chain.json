@@ -1,0 +1,103 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "experiments/raw_repo_capacity_comparison_v1/launch_manifest.json",
+      "results_cache/raw_repo_capacity_comparison_v1/live/started.json",
+      "results_cache/raw_repo_capacity_comparison_v1/supervision/manifest.json",
+      "results_cache/raw_repo_capacity_comparison_v1/supervision/launcher_started.json",
+      "results_cache/raw_repo_capacity_comparison_v1/supervision/launcher_exited.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/started.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/supervision/manifest.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/supervision/launcher_started.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/all_terminal.json"
+    ],
+    "description": "Selected local chronology and digest links, not external preregistration or independent timestamps.",
+    "historical_registration": false
+  },
+  "launch": {
+    "status": "FROZEN_16_TASK_CAPACITY_COMPARISON",
+    "policy_sha256": "24bc282dfc443540471ed9d6ecf2254a7dff5e68b92f3d04c1bd13f99535e2f1",
+    "schedule_sha256": "c46355bd79b460316c493b407d31d706a0274eaf960c515ea19b4266d912891e",
+    "packages": {
+      "L": "ed16379f76c1eea804034121d2ca4f3f08ddf9dc41b6d91871ad1f8fbe44b70d",
+      "Ln": "6ce6c33aefa44332b24a096ce25932a3b82328e304e996c1a2c4e1e3f8792e94",
+      "P": "b276b81cbd303ae186cabb004855362d3c1f325649234baf9e10c7e66f623f77",
+      "Pn": "7c9a995ae9d0c90931dab288bf86fbd44c919702dff099b0bdb8785f98308d27"
+    },
+    "automatic_retries": 0,
+    "old_solver_endpoints_reused": false,
+    "bindings": {
+      "experiments/raw_repo_capacity_comparison_v1/DESIGN.md": "42aa679f61b49105f3149d00ce66cc481833736c25829b96b86c230188fcea0b",
+      "experiments/raw_repo_capacity_comparison_v1/policy.json": "24bc282dfc443540471ed9d6ecf2254a7dff5e68b92f3d04c1bd13f99535e2f1",
+      "experiments/raw_repo_capacity_comparison_v1/schedule.json": "c46355bd79b460316c493b407d31d706a0274eaf960c515ea19b4266d912891e",
+      "experiments/raw_repo_capacity_comparison_v1/scoring_plan.json": "8671f98a594dda3990ce11f39fd0bdc0e4d610f95b732bc4a770bd6bb02a4f4c",
+      "experiments/raw_repo_capacity_comparison_v1/selection.json": "f398822284bccfe815a9c4852bd70b23e7b5327ebe397abbd21e375ebd57ef0f",
+      "experiments/raw_repo_capacity_comparison_v1/selection_rule.json": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+    }
+  },
+  "records": [
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/live/started.json",
+      "record": {
+        "manifest_sha256": "4e533babc14e487b5162433263a4f49507a841caae88753bddea2954d07eab43"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/supervision/manifest.json",
+      "record": {
+        "schema": "A2S_DURABLE_SUPERVISOR_V1",
+        "phase": "live",
+        "scope_path": "experiments/raw_repo_capacity_comparison_v1/launch_manifest.json",
+        "scope_sha256": "4e533babc14e487b5162433263a4f49507a841caae88753bddea2954d07eab43"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/supervision/launcher_started.json",
+      "record": {
+        "utc": "2026-09-24T05:14:54.964116+00:00"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/supervision/launcher_exited.json",
+      "record": {
+        "utc": "2026-09-24T19:34:19.917181+00:00",
+        "status": "ORIGINAL_LAUNCHER_WAIT_RECORDED",
+        "launcher_started_sha256": "df623e9aa3a4ec767ff1634ff3d0593191d22fe84169e481ae61aadb25611cc5",
+        "return_code": 0
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/started.json",
+      "record": {
+        "score_plan_sha256": "8671f98a594dda3990ce11f39fd0bdc0e4d610f95b732bc4a770bd6bb02a4f4c",
+        "seal_sha256": "11c6dbb9ac6ff93997005e790874724c588622d11acd65bc6831419fafabc12e"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/supervision/manifest.json",
+      "record": {
+        "schema": "A2S_DURABLE_SUPERVISOR_V1",
+        "phase": "score",
+        "scope_path": "results_cache/raw_repo_capacity_comparison_v1/scores/frozen_endpoints.json",
+        "scope_sha256": "11c6dbb9ac6ff93997005e790874724c588622d11acd65bc6831419fafabc12e"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/supervision/launcher_started.json",
+      "record": {
+        "utc": "2026-09-28T07:34:07.047776+00:00"
+      }
+    },
+    {
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/all_terminal.json",
+      "record": {
+        "seal_sha256": "11c6dbb9ac6ff93997005e790874724c588622d11acd65bc6831419fafabc12e",
+        "status": "ALL_PLANNED_SCORE_DISPOSITIONS_CLOSED",
+        "actual_starts": 108,
+        "completed_count": 108
+      }
+    }
+  ]
+}

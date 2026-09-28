@@ -1,0 +1,52 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "stage_binding",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/stage_binding.json",
+        "sha256": "33cec751ecfbe2ba5d377fd21817afa5ddc116be7b3392a59b66d88e480b742c"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/task_id": "django__django-13925",
+        "/arm": "GP",
+        "/stage": "gp_generated_effect_v1",
+        "/base_commit": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/protocol_sha256": "df495c88d6a1791f1343cdab6e3e255f20ab586a2f28d1144c4d3fc5afc13d99",
+        "/task_config_sha256": "db0bdf21e39d5f33c9e1a002749339aef46da01d08c0749ee6de03fc4b48f475",
+        "/packages/G": "b65a3fcdfd78b605569863e58abd2e15efe4449222aa5f97816f553f89ee8ebb",
+        "/packages/P": "5f70bae4b1b6732fd16a06e8802fdb6628fdcb6d68e240ba434477e202da6e93"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "p_worker_execution",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/P_workers/20461ade7c134c5d8b7fd5f5858fd667.json",
+        "sha256": "8b1a595e8c899ccc4a4d543d42f49a88a9af468c3ab96580d6c05d787a9c8bb1"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/invocation": "20461ade7c134c5d8b7fd5f5858fd667",
+        "/package_sha256": "5f70bae4b1b6732fd16a06e8802fdb6628fdcb6d68e240ba434477e202da6e93",
+        "/profile_sha256": "4617c6d182f8d741eed6bfd7ee0d4b56f34d41b55d84c9e1d931463fd3a7c449",
+        "/input_sha256": "a46cbf3b55a3f6b7a5ee7a38c924307d9231bd43f14da27e502b7aed4539614f",
+        "/input_bytes": 13323,
+        "/output_sha256": "354f0d3750ef373e415f419a00ae8bdbd2115c5a21be3cfad137728723d6f460",
+        "/raw_stdout_sha256": "354f0d3750ef373e415f419a00ae8bdbd2115c5a21be3cfad137728723d6f460",
+        "/stdout_bytes": 13101,
+        "/captured_stdout_bytes": 13101,
+        "/status": "COMPLETED",
+        "/return_code": 0,
+        "/cleanup_confirmed": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

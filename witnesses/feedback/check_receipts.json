@@ -1,0 +1,81 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "b_checker_execution",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/gate_check/execution/execution_001/behavior_receipt.json",
+        "sha256": "3110821ef703ad682d5d9a59aad1bb2b14ae5b4c99a83b82fe5c61f37e709dde"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/request_id": "raw-issue-B",
+        "/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/before_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/after_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/input_hashes/script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "/input_hashes/card.json": "20a36128454b8a646f7d5905a629c4cb34029e27c76275bc102c548b4f826897",
+        "/repository_unchanged": true,
+        "/host_status": "COMPLETED",
+        "/child/return_code": 0,
+        "/child/timed_out": false,
+        "/child/truncated": false,
+        "/child/process_group_cleanup_attempted": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "u_checker_execution",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/post_U/execution/execution_001/behavior_receipt.json",
+        "sha256": "1a26c730a44a2dbaf11e5258b79a7c2c1a0ee0a381274c49699c6fef00d97fbd"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/request_id": "raw-issue-U",
+        "/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/before_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/after_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/input_hashes/script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "/input_hashes/card.json": "20a36128454b8a646f7d5905a629c4cb34029e27c76275bc102c548b4f826897",
+        "/repository_unchanged": true,
+        "/host_status": "COMPLETED",
+        "/child/return_code": 0,
+        "/child/timed_out": false,
+        "/child/truncated": false,
+        "/child/process_group_cleanup_attempted": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "v_checker_execution",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/post_V/execution/execution_001/behavior_receipt.json",
+        "sha256": "986d470290f93b8ac10606351bfc227f81cb7c6023874520f148d69c1978a966"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/request_id": "raw-issue-V",
+        "/snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/before_tree": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/after_tree": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/input_hashes/script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "/input_hashes/card.json": "20a36128454b8a646f7d5905a629c4cb34029e27c76275bc102c548b4f826897",
+        "/repository_unchanged": true,
+        "/host_status": "COMPLETED",
+        "/child/return_code": 0,
+        "/child/timed_out": false,
+        "/child/truncated": false,
+        "/child/process_group_cleanup_attempted": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

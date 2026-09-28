@@ -1,0 +1,1 @@
+{"capabilities":["model_request","read_files","localization_handoff"],"entrypoint":"mechanism:handle","modules":["mechanism.py"],"profile":"raw_naive_locator_v1","schema_version":1}

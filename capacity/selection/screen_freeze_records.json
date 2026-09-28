@@ -1,0 +1,268 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "experiments/raw_repo_capacity_comparison_v1/screen/194/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/194/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/195/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/195/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/196/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/196/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/197/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/197/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/198/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/198/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/199/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/199/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/200/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/200/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/201/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/201/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/202/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/202/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/203/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/203/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/204/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/204/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/205/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/205/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/206/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/206/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/207/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/207/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/208/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/208/decision.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/209/begin.json",
+      "experiments/raw_repo_capacity_comparison_v1/screen/209/decision.json"
+    ],
+    "description": "Only freeze times and dispositions; no issue text or difficulty.",
+    "historical_registration": false
+  },
+  "rows": [
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:49.449237+00:00",
+        "rank": 194,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 194,
+        "instance_id": "django__django-10880",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:49.925931+00:00",
+        "rank": 195,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 195,
+        "instance_id": "pydata__xarray-3095",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:49.944207+00:00",
+        "rank": 196,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 196,
+        "instance_id": "django__django-16082",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:49.964984+00:00",
+        "rank": 197,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 197,
+        "instance_id": "django__django-15103",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:49.982848+00:00",
+        "rank": 198,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 198,
+        "instance_id": "matplotlib__matplotlib-20676",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.002175+00:00",
+        "rank": 199,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 199,
+        "instance_id": "django__django-11299",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.020995+00:00",
+        "rank": 200,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 200,
+        "instance_id": "django__django-16877",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.042759+00:00",
+        "rank": 201,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 201,
+        "instance_id": "django__django-15467",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.066907+00:00",
+        "rank": 202,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 202,
+        "instance_id": "pytest-dev__pytest-8399",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.087939+00:00",
+        "rank": 203,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 203,
+        "instance_id": "django__django-14122",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.106444+00:00",
+        "rank": 204,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 204,
+        "instance_id": "scikit-learn__scikit-learn-14894",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.126914+00:00",
+        "rank": 205,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 205,
+        "instance_id": "django__django-14434",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.154458+00:00",
+        "rank": 206,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 206,
+        "instance_id": "sympy__sympy-15809",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.180147+00:00",
+        "rank": 207,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 207,
+        "instance_id": "sphinx-doc__sphinx-9258",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.203870+00:00",
+        "rank": 208,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 208,
+        "instance_id": "pylint-dev__pylint-6903",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    },
+    {
+      "begin": {
+        "created_utc": "2026-09-23T04:00:50.226290+00:00",
+        "rank": 209,
+        "selection_rule_sha256": "3f910426909ea9cf8da9567fbb6f55bbf5a06e99dc0d9c26c8cb1a2805ed4bcb"
+      },
+      "decision": {
+        "rank": 209,
+        "instance_id": "django__django-14500",
+        "status": "COMPATIBLE",
+        "disposition": "PRESELECTED_ID_NO_CONTENT_FILTER",
+        "behavior_executed": false
+      }
+    }
+  ]
+}

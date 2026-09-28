@@ -1,0 +1,65 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "final_p_state_and_selection",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/P_workers/20461ade7c134c5d8b7fd5f5858fd667.stdout.bin",
+        "sha256": "354f0d3750ef373e415f419a00ae8bdbd2115c5a21be3cfad137728723d6f460"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/state/run_id": "5ab3cad83aa16e62f0090fa2c42cf6af8da9742f6fe06f33597766f2cdffbade",
+        "/state/base_snapshot_ref": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/state/sealed": true,
+        "/state/flags/regression": true,
+        "/state/flags/reproduction": false,
+        "/state/order": [
+          "508c251e5b694a2d7328145f19dd44f31ab16857",
+          "befc36e3265f789e28c1168e8ee6468c42631bb2"
+        ],
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/ordinal": 1,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/raw_patch_sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/manifest_sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/raw_patch_bytes": 1074,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/file_count": 1,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/reproduced": null,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/key": "RAW:dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/key_kind": "raw",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/fallback_reason": "NORMALIZATION_EXCEPTION",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/g_first/comparable": true,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/g_first/failure_count": 0,
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/g_first/request_id": "req-2",
+        "/state/candidates/508c251e5b694a2d7328145f19dd44f31ab16857/g_first/status": "available",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/ordinal": 2,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/raw_patch_sha256": "91d61d38f282d117868c73a0c2d36f298a177bcb63912326fe360a30b92945f0",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/manifest_sha256": "cf4ee0a814fc0f5809fb4cc1ead585fa887411ac884a62af5ba235e32b9c7549",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/raw_patch_bytes": 1057,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/file_count": 1,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/reproduced": null,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/key": "PY:af023ab55533c1975c197fd8a0af253cdcc5fd559badebc58c579cfbd9d7fc9e",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/key_kind": "python",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/fallback_reason": null,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/g_first/comparable": true,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/g_first/failure_count": 0,
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/g_first/request_id": "req-3",
+        "/state/candidates/befc36e3265f789e28c1168e8ee6468c42631bb2/g_first/status": "available",
+        "/effects/0/kind": "select_submission_snapshot",
+        "/effects/0/mode": "candidate",
+        "/effects/0/reason": "MAJORITY_VOTE",
+        "/effects/0/snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/effects/0/counts/comparable": 2,
+        "/effects/0/counts/eligible": 2,
+        "/effects/0/counts/minimum_failures": 0,
+        "/effects/0/counts/pool": 2,
+        "/effects/0/counts/winning_votes": 1
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

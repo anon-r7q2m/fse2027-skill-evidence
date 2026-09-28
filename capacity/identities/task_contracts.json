@@ -1,0 +1,1345 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "experiments/raw_repo_capacity_comparison_v1/scoring_plan.json"
+    ],
+    "description": "Sixteen task/base/grader contracts; task contents and local task paths omitted.",
+    "historical_registration": false
+  },
+  "status": "ALL_192_POLICY_SLOTS_FROZEN_BEFORE_SOLVING",
+  "run_kind": "BENCHMARK_SELECTED_ORIGINAL_BUNDLE",
+  "adaptation": "Remove verifier.collect; fixed candidate-syntax grader and unchanged bundle transport",
+  "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1",
+  "tasks": {
+    "django__django-10880": {
+      "instance_id": "django__django-10880",
+      "repo": "django/django",
+      "rank": 194,
+      "base_commit": "838e432e3e5519c5383d12018e6c78f8ec7833c1",
+      "task_name": "agent2skill/swebench-verified-django-django-10880",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "f4decccad2b60284ef80623256508810769aff55633084486d4af9d5a98f2309"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "d554ba8ef84e2e4dc22c291d413e4cb58070d5d730dae3aca383a4cdb77c20b2"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "9391591f2d33d30e6733f5cb2b1cbefc4900b2b393077d5635425246507d41d2"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "8ab07141011aefe881fae220e2ab0f825b4cb29cb239f5d8cc3de22fb3ef7f20"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "5f0c9fb2c8ede4878944ba01b4cee0ce659974c09a9a060df865c777c98e52a0"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "b30a6cac04e1ce570f4c546ffd67b95ca612b2fa77b923b09190f6ca3e7284b2"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "5bc8f708699846cd1993f56a05b231437a81a60183d5af8b4a9c8cc2e079786f"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:ce761cc66da2ad021c701ef8791f738a87eeb3bb313a0e397a6a2ee7703200da",
+        "tests": "sha256:d62ac67720050436acc96234f17ccffde2667ce246a526a47e3f1cf4642e3589"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-11299": {
+      "instance_id": "django__django-11299",
+      "repo": "django/django",
+      "rank": 199,
+      "base_commit": "6866c91b638de5368c18713fa851bfe56253ea55",
+      "task_name": "agent2skill/swebench-verified-django-django-11299",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "a46737587e38eb6361b7cfd23244ca685384d9abf7dd6715433a10ae321f5a24"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "97b5f134c36100595809297bfa1c1ce5948944ca8c384e47b2b9df33fb94089c"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "c36380b9aa4bf3827ac10608445dca70bfac12917a35487608974542d552a1a9"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "24add172437842c7268fb33a4c81b5e05e4b0cf4debeb086fcd0b56187270181"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "595cee299c76db93e5ec8acad623fd89799fa61a68bb538c6f98ffcffd0cd1e5"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "0e40a5d6983108e83e0d5cded95c03352f5e2117de6b5b066e13af9194f85de2"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "ccf05dc23ef6a437e8e332054cf44d60adfc2146eee9cd64e63c6f2b94d14863"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:0250d3056ed73aafa31a78b857010e0709f2fe30bf25fdacbc65114de0d2d793",
+        "tests": "sha256:420630b848f946093d25f4773b796e932f83feb199d452274c2ccd7c3f574101"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-14122": {
+      "instance_id": "django__django-14122",
+      "repo": "django/django",
+      "rank": 203,
+      "base_commit": "bc04941bf811d1ea2c79fb7fc20457ed2c7e3410",
+      "task_name": "agent2skill/swebench-verified-django-django-14122",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "4abe78c97531931c2c6d144be5413ab47933e986d9ab71e4d22eb36e2936d5da"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "977d049025358afe0585a110b6fdcfe236b41139b69f5300d6b4aa5195523097"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "ddff250fa628fd73dcbceacc08c31f44d9f1bf563ad962b4d39f14443562c2bf"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "106467f9e96d0fae1649c89a9fc6fa65b4826d502751a3dcd4f3fada264494c7"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "d5551101e4463ca4d3d4342d9c6ca05a76ed33e450bb37136bebd29b70af7a18"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "cb6719ae6bb80ec1a6b66e4571f03ff2816dd6305f06ff8640d69c92a616c0cb"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "a331fd5a27c1d3d33c4d3bfa0f520c098e135c036219185bc772760454337ba1"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:f34e9aec6bb6c636c64f96400d1e39cc26b0fcde01494778ed9a0b0fbb862edf",
+        "tests": "sha256:69959b521f17c7979cc23caa0e710bb50eab728f0e57277955fe4a3851e3a29a"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-14434": {
+      "instance_id": "django__django-14434",
+      "repo": "django/django",
+      "rank": 205,
+      "base_commit": "5e04e84d67da8163f365e9f5fcd169e2630e2873",
+      "task_name": "agent2skill/swebench-verified-django-django-14434",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "ab7640e47a3785ac0d4c2c16d642845d33b30250b6ff503a9fa312992cd47553"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "069b0d7ba8ebff2f277a626aec1231cfee3546478a755fd268df7ecf2e4ee766"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "ceb1b4ec02b840ffd226bb1813d2344e10e5dca62350b6bd44ad34112a37c0a6"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "da412a5755116360c3a19f0ccfd6f36fe53b2cccabcfe53d4fa08898a6c7d38c"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "864c1c21393a01bac609933037e9d1de955d31079e120d202cd4dbde163a71f4"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "7040da3ff5b6282ed9a49dfcbf432dd7dc6f77675fb92f5f724bef7f644cde9c"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "62780053c1bffb9c51f274452e5d576662637876db7c5742698b1e3714833c3b"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:f73c127631c9c55c4236d0bc864941bd7dbe75805be811f54e9b0b8417e6150f",
+        "tests": "sha256:f47d234633b987e2e984c0783d1f72d4e3756e51a45c9bcb6deecb5f1e4bb077"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-14500": {
+      "instance_id": "django__django-14500",
+      "repo": "django/django",
+      "rank": 209,
+      "base_commit": "8c3bd0b708b488a1f6e8bd8cc6b96569904605be",
+      "task_name": "agent2skill/swebench-verified-django-django-14500",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "318cf1ba09d1fdc06decb404be66cc7e758a2f4a54157bec794467e7a683a56c"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "b5100d0bf94598959c948adbc85bc8ee1dfe12dac61312ed2abdba68d8eab4fd"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "f537c18ba617b828d5c33bc3f7c811e2c6be224aa79832e0a5764fd235c80c47"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "945b772a4f791bbb08fe028ec4f4da2c3b5672a58aebb8afe1552f147bd935e0"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "33092ed100a0d0f3bf4a66735db0df44db096848338fdbf66a99d14c52495e23"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "cc17f1a7f7fb268675dc9639e81a2cc6b4e8ebc701614cd2074474819091c834"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "d50675ca8b00f1a9bf08c25971ee02f19b90d97728d351b1d5e346dce064e4dd"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:208a8d2257d04e580f3adb81dd5575ed494839caa545bb6514b50a0892904c0e",
+        "tests": "sha256:888da5166c1298ed39003f7809f15d08e502753a900e47cf75ece57065b8f2db"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-15103": {
+      "instance_id": "django__django-15103",
+      "repo": "django/django",
+      "rank": 197,
+      "base_commit": "dd528cb2cefc0db8b91a7ff0a2bc87305b976597",
+      "task_name": "agent2skill/swebench-verified-django-django-15103",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "c9b3469513ec460a0dd54ae032e827a1a1b6f4bf9ee2431895cbd1ac68f41cff"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "34eeb1884ba091d5ef043989c3516cae61b057232f28bbf2d341c5cf670b2f84"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "ddca57f1608ac2be1dd5ea13ad4264382e50ccbc82bd6715e0bd6e625658cc33"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "7b1231afa7396ef91c90ded45bd7d157d2bdc007731734dd300216878e4bd59e"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "3e46eebd1fd732e62e93df850e3f72cf96b4feca92f822312109dda067b45eea"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "aaadc8ec3ec4126bb283508bd8a5755a712ee893aa1049902758f54a9673999b"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "45308d7dcfed2b7cf23c0842ea509bf600da8fb9aedc3fb9c4ae5ced8ec8f86d"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:201c2a1b6b566940c9e228c248e4c32236064d00c47b32deba376d0867d8b927",
+        "tests": "sha256:d015cee491db75289cb9e23c93c0e714a46a429577c069e9ffb69b3e746e6353"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-15467": {
+      "instance_id": "django__django-15467",
+      "repo": "django/django",
+      "rank": 201,
+      "base_commit": "e0442a628eb480eac6a7888aed5a86f83499e299",
+      "task_name": "agent2skill/swebench-verified-django-django-15467",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "550f11f98405206f878ed9f8e5766ca0f1779eb539abbc38e7d4733092fa552f"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "fc7443424d0b936393fb4f7cf0d1c3045fbd138a736a563d555bbf5cafccd99b"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "225634622877b08a660787cb3d91c4a40f8969b96a36e9d6ad9283676bd46979"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "7deb8a55afeb36123859b358d10e4dffb47936f3cd78de5c0e7717ebc5692a86"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "fd6d340423da6b0767a76b5579b5d23d9868f63de766ca78fe6c58a567ab97b2"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "22dc3da3999f3f102756180f3e99788554d8f5e1ce5d533264f1d100c1f99b4e"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "60046119978dbca7cc328b734f4d7c2c45a25d2401fef98e1e3c86b7880f05e1"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:ed0fb947ef8393e48c150b66961e14fc820bc19255e205b6a24a6622b0a08485",
+        "tests": "sha256:e654b44beac6d1df0db7f7bda3d66951e4bf454204462f6765f5fd54d0a36b1a"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-16082": {
+      "instance_id": "django__django-16082",
+      "repo": "django/django",
+      "rank": 196,
+      "base_commit": "bf47c719719d0e190a99fa2e7f959d5bbb7caf8a",
+      "task_name": "agent2skill/swebench-verified-django-django-16082",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "39df194ef292d30057f45685367f2dded232b49046764ca2632bbc3a0febe045"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "1d2c67bed1ede6923fe1102ec80424352c4ad9263a4049da7684b360d9aeef87"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "7432138bf3ca7d6b77026cdb89123c5135e3ba3c976bab1e864d413983695064"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "4c98b55a489d624b8b8f9965c46766b9366aed5d4d87ddfbd70e1b89c5fbb601"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "01d219b176945d743b47bfb2e35da0a42c8bd373bf3452236778f64dc32cc264"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "7eaee6a808ccba6be4f90126ed49cb09b6ee81b1568030869545fe9198a198c3"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "0948972734f570311793f7d75dc7fc15ccfd6528e56df6fd12ec548b58b57f24"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:314bd3875a28825c82d37e6f60fbbdd56d6d643dec4c778729c70546cf36bb82",
+        "tests": "sha256:0e247ffacea9798961787cb8cd56d338c6db4784c491560b3d335553ad8b86a1"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "django__django-16877": {
+      "instance_id": "django__django-16877",
+      "repo": "django/django",
+      "rank": 200,
+      "base_commit": "98f6ada0e2058d67d91fb6c16482411ec2ca0967",
+      "task_name": "agent2skill/swebench-verified-django-django-16877",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "b869cd6850a597554a7f189a248eb6c5b5957d1b9d7d79dbe0c6f2e8f2e80d9d"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "a27611c7e5e670510d13fa2a390101af04671478b7f29d91fc6833223a50236f"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "89ccb40a3ed8d35912bd083522ab2c1c17d77fe1903cbbe67a0fd3797c87f723"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "7089b7cc6327aa773f8942c7c20845831d580348ab29ca68ddd5d81af9b63de6"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "9cb325529692b8004421883049b9d713d17f58bf2ed9cc37ffe38a4da0dc1cfd"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "c0ac3abd3ea004e14aa54adae14fff75b7820c5822a2034c6133eca6f0f1c3c8"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "0b9055634fbb06e8f3512bf2df2efff2f23a79207d04654cc6f6216e41f0e41a"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:9b298b0d8609733d603830b39709e37b76b1e81242a633f7fa6efbf21da4794e",
+        "tests": "sha256:e99597747e25741b72654a0fe65c8ca428020bfe1f70bd0e29806b94c4cacb50"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "matplotlib__matplotlib-20676": {
+      "instance_id": "matplotlib__matplotlib-20676",
+      "repo": "matplotlib/matplotlib",
+      "rank": 198,
+      "base_commit": "6786f437df54ca7780a047203cbcfaa1db8dc542",
+      "task_name": "agent2skill/swebench-verified-matplotlib-matplotlib-20676",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "75f0de36a54af1bc87fddf9f3392ae426d17b7ced44955bae3e62c83b3dd5cd8"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "aca99e1f41bfafacebe6899b1c84f09d925fc306699c455e44d8e4f6a2a7e407"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "adb9ddc8b3681be0441304a4d661966cb45ab375af37f9e86b345b144233e18b"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "75ca954db426cebfb0c471477d693d6405b3a745457515ec51e2e5c89bb5741b"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "6067b9bcf04b78b241566dca5d1e0b5b2c3109482df1e2a6d36096c946273d6d"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "5867ec3bfbc434b7d74c6a5f7850510b362ae2fe82e3a75f7da700c66f33862d"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "8d1bad1a0f588e5f8909302c3c54274e7dfc1280d6ea3618775d13be0cb76921"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:7220e5d4c10cd1696667156976508a5d240233a72601685d7ee83c0fc916f5dd",
+        "tests": "sha256:62260931f7bebb6812854cff88a0d7b029dc43a9b0b78d97daff00489f4bacd9"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "pydata__xarray-3095": {
+      "instance_id": "pydata__xarray-3095",
+      "repo": "pydata/xarray",
+      "rank": 195,
+      "base_commit": "1757dffac2fa493d7b9a074b84cf8c830a706688",
+      "task_name": "agent2skill/swebench-verified-pydata-xarray-3095",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "2be1f40f996ccba45479cc00b8a1269e8ffde47365cd90f25370678269f06d6a"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "3d8f2d8422b56bd5980ec478be1413ef87805484446fc15dbd482342a59abb25"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "ca2a2c937e72b2e57bf5e4c035c7bdce7d1d15ca23919cdfc00884c7b3e14215"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "23730ba89acb3a9be5e2a21d9868983d30a3d0152c7b9b7c8c6c6785d217b17b"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "7a1f0c5118a496bb436fc8dd8d3a5dcb938bc6a0fe87f413184f3b9fb3dabc51"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "6c324dff29eb96d8d2121bca59c84cf1c9f12e2942ab5d89a123de7395cb4d68"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "41afff7792bc75c4eee12d3c19f042bb585c6fae3aae03eeaeae43c1744dd331"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:4952c4b07a03a227e0c3e294b46e2087be9a708dc7f80009783f0234dc5e9f3f",
+        "tests": "sha256:edcfb74c84112a4d37d7091afd79bafaa906dc068ce78de1eef45f6b020e9b04"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "pylint-dev__pylint-6903": {
+      "instance_id": "pylint-dev__pylint-6903",
+      "repo": "pylint-dev/pylint",
+      "rank": 208,
+      "base_commit": "ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6",
+      "task_name": "agent2skill/swebench-verified-pylint-dev-pylint-6903",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "fc80334b3cd4cc330cbad7ca5a9b41fb2fe2b1bf50245f9430dde6a30689df25"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "5b236da9e3dbb09d3bf45598d1cc24596fa01daf96d7280482e081345f4ed50f"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "d4dcb998023f1d9ae5421e9eac85ac26ec5aea4c21ded669d73b1a2a9a8493ab"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "701e0280426c17fb0d8eff81730f818c637ffb5a834f39615d0da13c9c6e807b"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "320f1ffbdd9d29d93a4434819f710d97cdaf73a200c9f1517c25e908e9d56f15"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "29ff985f594ef3532b1a19536a00ba980be4358d6602a9509df83f462c05dffa"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "df9377cc0924f83f5b608672fedf054d090fb95ed401c16853cf618788eff587"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:0ca446ff2cf9494321cb6907df35869431c8430466c8012c9c53a2cf69904fc8",
+        "tests": "sha256:f32ea86826141c62e452ab7c3d5ea3d68e9681ad9fc8056a33fa159b29fe1fe0"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "pytest-dev__pytest-8399": {
+      "instance_id": "pytest-dev__pytest-8399",
+      "repo": "pytest-dev/pytest",
+      "rank": 202,
+      "base_commit": "6e7dc8bac831cd8cf7a53b08efa366bd84f0c0fe",
+      "task_name": "agent2skill/swebench-verified-pytest-dev-pytest-8399",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "314cfe5ebd60e9ce52f5fcb2a38e4509712d70bef91790214bb5e5561ff395a9"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "ed5ccb96606056666baa1559612c33f0a58d8e6c9c19742684727ad6f10de105"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "1bcc4e7c4a9e9cbfe7e0e930e6dddda7a50f1e9c94149b087b9af95113a34951"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "00ddef8b22a819eb5a28bbceee27449187fee1d5450301e23a239f75646b7373"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "a4276c0690bbdb0505538c034197eb28ce71c8508de81ab4b39f981749cea3f6"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "8a5e61601ca71c78de0cabb959d50ebcac8d5f73722210ed6337235252319b1a"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "5946dde20ab6e3d10b1a595a5579e7ff273b375027a8147d14db9c3d926d8c7b"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:0e902e108223a2dd66ad6a0207049077d98959afb5f2c7665fdc2d104fda4b4b",
+        "tests": "sha256:a4e93c84c0cd3a023057dc0f1f06363c54c25cb5cf242e51795d6cc7262a83aa"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "scikit-learn__scikit-learn-14894": {
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "repo": "scikit-learn/scikit-learn",
+      "rank": 204,
+      "base_commit": "fdbaa58acbead5a254f2e6d597dc1ab3b947f4c6",
+      "task_name": "agent2skill/swebench-verified-scikit-learn-scikit-learn-14894",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "c397b67c35f1b2a908aa9f9f32d78daf063c1a2137bc8cbacae89e80e20491e8"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "0cf2009aebab59ce0221a4ccda59465d8506a274a5d76a4f9e35338c5373ced5"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "bc2ead4d9ef4e37e6591ad74923587212fdb30e8183482896a1d6490ebbe425d"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "733d661da6804d0611e6a927334611d5f549b71be91ab3aca4be57c464821e16"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "cf03907c195100a7fe64c1ddc7cfbcb7f6115bffbcb056f469601fa76a6cbb4f"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "f61755f9ad351f994b7ce3063b9bfc6cf165fcd73640cc989a039148721fe970"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "1added8fe4fdb67e4c55a45f46947bb81e1c9908c2e3d2bc8fdfadb6af8a0504"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:1cae7ff00af68fa65e657c7b6098e9dcb6a71d1e8450d52349376ce964aa3144",
+        "tests": "sha256:a8fedf27eefb14c6cee66f87442205bb955523f8e9f922c37627078b7c0758c8"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "sphinx-doc__sphinx-9258": {
+      "instance_id": "sphinx-doc__sphinx-9258",
+      "repo": "sphinx-doc/sphinx",
+      "rank": 207,
+      "base_commit": "06107f838c28ab6ca6bfc2cc208e15997fcb2146",
+      "task_name": "agent2skill/swebench-verified-sphinx-doc-sphinx-9258",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "d12100c1c2b161accaed024b04c0751efee88c1485c0f22dca7cfd7f8115f3ba"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "dd5b2b671d9187aefe0e7d449a2996d1bffc7eeb5b6f9027a36826a74aa4036c"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "cb6e88ec59485bbf357d82ace14d2dc85e9250db6d6b895503af9d8bc14052e2"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "dbf6f5e6aa6dfa0627425d650064ecab6a1994c372a47d7139e0c0a601bfaf85"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "cf6d749d16964906b16577bfee709823a1dd1a0196c190bdd0e18ce6d95aac33"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "edf0eb8c3fb1439f4de4a0677a1b1e1a676c276d481b022c9af37d0c5bf5e9fb"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "120a597be6ca66aa4cce67e78713c65fb1d0a9091d393c005c834f9fdffb1c3c"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:120755869a8ff79751618916420718cf7a37eeee1844e19b3f18718a39c14685",
+        "tests": "sha256:975eb543ef0a814a2454b20b7bc057b05026fc584115f2616a7aae114d65d802"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    },
+    "sympy__sympy-15809": {
+      "instance_id": "sympy__sympy-15809",
+      "repo": "sympy/sympy",
+      "rank": 206,
+      "base_commit": "28d913d3cead6c5646307ffa6540b21d65059dfd",
+      "task_name": "agent2skill/swebench-verified-sympy-sympy-15809",
+      "task_files": {
+        "environment/Dockerfile": {
+          "mode": 292,
+          "sha256": "0f7a651d093522a7f83f0985306eafb2fb5ed8088d6916d5248bb8220aefae9b"
+        },
+        "environment/capture_patch.py": {
+          "mode": 365,
+          "sha256": "55998547647a58521dff65072f2fa7f6365e47a0ac8c050efec0ac0c67e9d29c"
+        },
+        "instruction.md": {
+          "mode": 292,
+          "sha256": "b47565a010802b85d9400deac25292629aaf7e60ef6b08e2c4364b69fe31a68f"
+        },
+        "task.toml": {
+          "mode": 292,
+          "sha256": "2cc295a92acefa07614c3c1904def1faf5b2a2441608857929f8c487aae74cff"
+        },
+        "tests/Dockerfile": {
+          "mode": 292,
+          "sha256": "5b3d3dbd09fefc108317760a46c37181e2aed4d9a51f7086b17fdb5d51588a9c"
+        },
+        "tests/calibration_reward_publisher_v6.py": {
+          "mode": 365,
+          "sha256": "613901515de289b4b373d61ae9d80d25c8de4c5ad402f51ae94e77d2cbbacbce"
+        },
+        "tests/eval.sh": {
+          "mode": 365,
+          "sha256": "1805aa9397caa676a2c02476d2574f73d3a35aaed2fc06281ae4b273059a6ad9"
+        },
+        "tests/instance_metadata.json": {
+          "mode": 292,
+          "sha256": "153ea7af2efc528adc1698773cbe8a72ae3279622502d37626080758c65e85ec"
+        },
+        "tests/instance_metadata.json.sha256": {
+          "mode": 292,
+          "sha256": "b5ea44031766945d008130d136badcc7959957872e8a0bab0e3550db4d53b80e"
+        },
+        "tests/patch_guard.py": {
+          "mode": 365,
+          "sha256": "3d70d285a51162561351ba764b7e5a6512f071c3331c6c334a714809c5fa7136"
+        },
+        "tests/patch_guard_typed.py": {
+          "mode": 365,
+          "sha256": "b65b8785d50c53eb890e21fd9cf7bb3fe9629f425a39cb15f384eedea608d27a"
+        },
+        "tests/patch_guard_v2.py": {
+          "mode": 365,
+          "sha256": "02c38a5459c094109843ba90c53f482061e89948a42efac41a8a6cd6e5eec309"
+        },
+        "tests/portable_grader.py": {
+          "mode": 365,
+          "sha256": "3b01ea52e238ef3a2fa558179345384dcb3490eb93432d4964c0ca49791bf94e"
+        },
+        "tests/portable_original.py": {
+          "mode": 365,
+          "sha256": "60463f075fc020ad4386d61d36102e0cfb60013b9586c448a6390b176ecbf91c"
+        },
+        "tests/syntax_proof.py": {
+          "mode": 365,
+          "sha256": "0967a2e19ae1314c75c01b43bc6c97bbc7bf4d02a09a4684c905cb5dbefaea89"
+        },
+        "tests/syntax_witness.py": {
+          "mode": 365,
+          "sha256": "0039cf221064a71a3d4c87b79ee2896cc32fd41dd38f391fb44676772249530c"
+        },
+        "tests/test.sh": {
+          "mode": 365,
+          "sha256": "c7b495cc971ff5ea2c194dd9a6e0b8aec591b04d78fed0011a5ec4c4d5491e2d"
+        }
+      },
+      "environment_images": {
+        "environment": "sha256:4bb74b6fd775167460d84fdf37768153f1fddb937d6274f01ae1db9a63b92161",
+        "tests": "sha256:586dc182c8a40a1d826a744b41160a68965a4af1ef1dad09d453984bf37d6b75"
+      },
+      "projection_sha256": "f83cbae88d8efc8686fd41b6fbea617349407390e85d65ffd606ecdc6ff90ff9",
+      "grader_id": "agent2skill_swebench_verified_candidate_syntax_v1"
+    }
+  }
+}

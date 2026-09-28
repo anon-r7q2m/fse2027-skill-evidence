@@ -1,0 +1,35 @@
+def derive_seal(plan, endpoints, *, plan_sha256, live_sha256):
+    from analysis.editor_import_boundary_v1.host import rebound
+    from analysis.raw_repo_confirmation_v1.scoring import derive_seal as original
+
+    require(
+        set(endpoints) == {s["cell_id"] for s in plan["slots"]}, "complete endpoint dispositions"
+    )
+    valid_plan = {
+        **plan,
+        "slots": [s for s in plan["slots"] if endpoints[s["cell_id"]] is not None],
+    }
+    value, scopes = rebound(original, {"RESULTS": RESULTS})(
+        valid_plan, endpoints, plan_sha256=plan_sha256, live_sha256=live_sha256
+    )
+    observed = {row["cell_id"]: row for row in value["policies"]}
+    rows = []
+    for slot in plan["slots"]:
+        row = observed.get(slot["cell_id"])
+        rows.append(
+            {**row, "solver_status": "VALID"}
+            if row
+            else {
+                "cell_id": slot["cell_id"],
+                "instance_id": slot["instance_id"],
+                "policy": slot["policy_name"],
+                "repeat_index": slot["repeat_index"],
+                "block_id": slot["block_id"],
+                "score_cell": None,
+                "final_tree": None,
+                "shared_score": False,
+                "solver_status": "MISSING",
+            }
+        )
+    value.update(status="ALL_192_ENDPOINT_DISPOSITIONS_SEALED", policies=rows)
+    return value, scopes

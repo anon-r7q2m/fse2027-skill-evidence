@@ -1,0 +1,1 @@
+{"capabilities":["sample_batch","candidates","selection"],"entrypoint":"mechanism:handle","modules":["mechanism.py"],"profile":"raw_naive_editor_v1","schema_version":1}

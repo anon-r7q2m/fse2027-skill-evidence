@@ -1,0 +1,108 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "early_manifest",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/snapshots/capture_014/capture_manifest.json",
+        "sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/schema": "agent2skill.swebench_verified.patch_capture.v2",
+        "/schema_version": 2,
+        "/status": "ok",
+        "/base_commit": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/base_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/final_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/observed_head": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/observed_head_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/capture_semantics": "FROZEN_BASE_TO_FINAL_WORKTREE_VIA_ISOLATED_INDEX_V2",
+        "/file_count": 1,
+        "/repository_index_write": false,
+        "/patch/name": "agent.patch",
+        "/patch/bytes": 1074,
+        "/patch/sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/files/0/path": "tests/check_framework/test_model_checks.py",
+        "/files/0/change": "M",
+        "/files/0/before/bytes": 14796,
+        "/files/0/before/git_mode": "100644",
+        "/files/0/before/git_oid": "d4342ada0736cee4dc8b3d8812f37ef16439e862",
+        "/files/0/after/bytes": 15334,
+        "/files/0/after/git_mode": "100644",
+        "/files/0/after/git_oid": "619d8e31d3eb4de064f9f6de8383601887020cec",
+        "/files/0/after/git_blob_bytes": 15334,
+        "/files/0/after/content_sha256": "e1ad04bd10930e16547d48654e5f6b51a73c55fd7907f5c1977d211e536ea720"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "later_manifest",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/snapshots/capture_017/capture_manifest.json",
+        "sha256": "cf4ee0a814fc0f5809fb4cc1ead585fa887411ac884a62af5ba235e32b9c7549"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/schema": "agent2skill.swebench_verified.patch_capture.v2",
+        "/schema_version": 2,
+        "/status": "ok",
+        "/base_commit": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/base_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/final_tree": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "/observed_head": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/observed_head_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/capture_semantics": "FROZEN_BASE_TO_FINAL_WORKTREE_VIA_ISOLATED_INDEX_V2",
+        "/file_count": 1,
+        "/repository_index_write": false,
+        "/patch/name": "agent.patch",
+        "/patch/bytes": 1057,
+        "/patch/sha256": "91d61d38f282d117868c73a0c2d36f298a177bcb63912326fe360a30b92945f0",
+        "/files/0/path": "tests/check_framework/test_model_checks.py",
+        "/files/0/change": "M",
+        "/files/0/before/bytes": 14796,
+        "/files/0/before/git_mode": "100644",
+        "/files/0/before/git_oid": "d4342ada0736cee4dc8b3d8812f37ef16439e862",
+        "/files/0/after/bytes": 15317,
+        "/files/0/after/git_mode": "100644",
+        "/files/0/after/git_oid": "fc4a2529b8e93217b72aa1afbb7fad70b46df59f",
+        "/files/0/after/git_blob_bytes": 15317,
+        "/files/0/after/content_sha256": "86c5a37fb68be83ff28a5bf8c96e49550e74fc0bf2958b9a3f907a0cd60107b8"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ],
+  "raw_files": [
+    {
+      "file": "candidate_early.patch",
+      "representation": "exact_source_bytes",
+      "not_byte_identical_to_source": false,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/snapshots/capture_014/agent.patch",
+        "sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af"
+      },
+      "bytes": 1074,
+      "snapshot_ref_source_field": "/final_tree",
+      "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+      "manifest_record": "early_manifest"
+    },
+    {
+      "file": "candidate_later.patch",
+      "representation": "exact_source_bytes",
+      "not_byte_identical_to_source": false,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/snapshots/capture_017/agent.patch",
+        "sha256": "91d61d38f282d117868c73a0c2d36f298a177bcb63912326fe360a30b92945f0"
+      },
+      "bytes": 1057,
+      "snapshot_ref_source_field": "/final_tree",
+      "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+      "manifest_record": "later_manifest"
+    }
+  ]
+}

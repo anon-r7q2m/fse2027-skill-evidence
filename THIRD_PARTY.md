@@ -42,3 +42,16 @@ wrappers and documents in this curated package are separately licensed by
 at the pinned revisions in the source manifest. Both directories include their
 original MIT LICENSE. The replay wrapper is project-authored and distinct from
 the unchanged donor methods it loads.
+
+## Original-record and installation supplements
+
+The two GP candidate patches under `witnesses/gp/` modify public Django source;
+the existing Django BSD notice in `principles/feedback/LICENSE-Django.txt`
+continues to apply. Feedback supplements reuse the already bundled Django
+source and patches.
+
+The fixed capacity implementation includes project installation wrappers and
+generated L/P/Ln/Pn packages. Agentless-derived L/P code retains the existing
+Agentless MIT notice linked above; full package/source identities are in
+`capacity/implementation/PROVENANCE.json`. Mini is a pinned dependency represented
+by project wrappers and configuration, not a newly vendored upstream distribution.

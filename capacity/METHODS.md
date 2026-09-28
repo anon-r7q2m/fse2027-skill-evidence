@@ -1,0 +1,60 @@
+# Fixed capacity comparison: methods and recorded identities
+
+This supplement was assembled from existing experiment records on 2026-09-28. It is a new release projection, not a new experiment, a historical preregistration, or a complete executable host distribution. [Provenance](implementation/PROVENANCE.json) records original source-file SHA-256 values, original binding records, copied-file identities, and transformations. Local paths and transport/account fields are omitted. The previously released outcome matrix and numerical analyses remain unchanged.
+
+## Eight installed policies
+
+All arms used the recorded `gpt-5-mini`, `medium` reasoning configuration, with at most nine model requests per task/run, 65,536 input tokens, 8,192 output tokens, and a 300-second request timeout. The [policy projection](implementation/policy.json) includes the local input-estimator definition; it is not an assertion of exact server-side token estimation. Equal ceilings do not imply equal realized cost. Discovery/localization could use at most five requests; each of four pool samples could use one; a native continuation received only the unused common allowance.
+
+| Arm | Discovery/localization | Editing and submitted result |
+|---|---|---|
+| N | None as a separate phase | Ordinary native loop; final captured worktree |
+| L | Fixed L locator | Ordinary native loop with localization; final captured worktree |
+| P | Ordinary discovery | P candidate pool or pre-edit native capacity fallback |
+| LP | Fixed L locator | Same P pool or pre-edit native capacity fallback |
+| Ln | Fixed Ln locator | Ordinary native loop with localization; final captured worktree |
+| Pn | Ordinary discovery | Pn candidate pool or pre-edit native capacity fallback |
+| LnPn | Fixed Ln locator | Same Pn pool or pre-edit native capacity fallback |
+| Hmini | Complete mini loop | Pinned mini 2.4.6 with the shared request ceiling; final captured worktree |
+
+The [current workflow](implementation/analysis/raw_repo_capacity_comparison_v1/workflow.py) rebinds the [original dispatcher](implementation/analysis/raw_repo_handoff_scored_v1/workflow.py), including its `child` and `run_host` functions. The dispatched implementations are the [N/L/P/LP host](implementation/analysis/raw_repo_localization_scored_v2/host.py), [Ln/Pn/LnPn host](implementation/analysis/raw_repo_comparators_v1/host.py), and [mini wrapper](implementation/analysis/raw_repo_comparators_v1/mini.py). The [ordinary host](implementation/analysis/raw_repo_localization_v1/host.py) defines discovery, native continuation, and the actual P submission choice.
+
+The common [capacity route](implementation/analysis/raw_repo_capacity_comparison_v1/host.py), [source-domain check](implementation/analysis/raw_repo_capacity_comparison_v1/source.py), [request permissions](implementation/analysis/raw_repo_capacity_comparison_v1/roles.py), and [budget](implementation/analysis/raw_repo_capacity_comparison_v1/budget.py) are part of each installed policy. Before any pool sample, a pool arm selects either its original editor or native fallback. The fallback retains the same solve clock and unused request allowance. There is no post-failure pool rescue or replacement target file. P admission uses its initial newline-normalized after representation and before/after byte bound; Pn uses twice the original UTF-8 size as a prospective host proxy. Pn's final candidate parser still checks the actual after text. These are different admission rules; neither proves that all conceivable smaller repairs are impossible.
+
+### L and Ln
+
+* [L](implementation/packages/L/mechanism.py) performs file, related-location, and fine-location stages, with caps 1/2/2 and total five. Its [donor logic](implementation/packages/L/donor_logic.py) filters to Python paths while excluding path components beginning with `test`, matches returned file paths, and provides skeleton-based related context and a fine context window of ten. It takes the first three donor-returned files before stable deduplication. Related/fine stages each allow up to two attempts to obtain valid locations; fine locations are resolved to source-line intervals.
+* [Ln](implementation/packages/Ln/mechanism.py) has a two-request successful path: JSON `paths`, source reading, then JSON `locations`. It keeps at most three distinct valid tracked paths and validates inclusive line ranges. It does not run the L related/fine stages or their retry policy. Its prompt builders also have their own 950,000-byte construction bound. This is a different implemented algorithm, not an assertion that all conditions except donor provenance are identical.
+
+### P and Pn
+
+* [P parsing](implementation/packages/P/edit_parser_pkg.py) consumes a single Python fence with SEARCH/REPLACE commands, constructs newline-normalized contexts, deduplicates commands, and applies applicable commands in reverse order; a search can replace multiple occurrences. [Admission](implementation/packages/P/admission_pkg.py) checks modification-only Python files, unchanged modes, staged-content identity, before/after syntax, nonempty after text, and a nonblank/nontrivial change. [Normalization](implementation/packages/P/normalize_pkg.py) uses AST-normalized text with comment/docstring handling to construct diff keys. The [selector](implementation/packages/P/mechanism.py) votes over eligible keys, breaking ties by earlier sample index. The ordinary host submits `selection["vote"]`; the package's additional `first_eligible` output is not the policy scored here.
+* [Pn](implementation/packages/Pn/mechanism.py) parses JSON `edits` with `path`, `old_text`, and `new_text`. Ordered replacements must match exactly once in the current text. It checks after-text Python syntax and a 262,144-byte total before/after limit. Among accepted captured candidates it minimizes `[-hint_path_overlap, touched_file_count, absolute_character_length_delta, total_bytes, sample_index]` lexicographically. Overlap counts hint paths; delta counts characters, not changed lines. Pn does not use P's normalized-diff voting or its complete admission rule.
+
+The [schedule](selection/schedule.json) contains the fixed four package identities. The [Ln/Pn seal](implementation/naive_package_seal.json) also retains original file hashes and selected-attempt information: Ln used attempt 1 of 1 and Pn attempt 2 of 2, with the recorded `source_access=false` and `human_code_repairs=0`. These are recorded provenance claims, not independent certification of the generation process. No raw generation request or response is included.
+
+## Tasks and run schedule
+
+[Selection files](selection/README.md) expose the exact ID input and rules. The original ranking used the pinned SWE-bench Verified revision, excluded its 24 legacy IDs, and sorted the remaining 476 IDs by `SHA256(UTF8(seed) + NUL + UTF8(instance_id))`, with ID tie-breaking. The capacity rule selected the first 16 eligible IDs after rank 193, producing ranks 194–209. Its 217 exclusions are the immediate predecessor's recorded exclusion set plus its eight selected IDs. They should not be replaced by an approximation such as "all first 193 ranked IDs plus 24 legacy IDs."
+
+The four repeat IDs were fixed by sorting the 16 selected IDs using `SHA256("a2s-capacity-20260922-repeat-v1|" + instance_id)` and ID tie-breaking. All tasks have repeat 1; those four also have repeats 2 and 3. The frozen schedule therefore has 24 blocks and 192 logical paths. Arm order rotates by `(task_position + repeat_index - 2) mod 8`. These repeat records do not create 192 independent tasks.
+
+[Local freeze records](selection/freeze_chain.json) bind the selection rule, schedule, policy, scoring plan, solver launch, and score seal. They support the order recorded by the implementation. They do not independently prove the absence of exposure outside the recorded ledger or provide third-party timestamps. New sanitized files cannot be used to recreate an earlier public commitment.
+
+## Score identities and stop dispositions
+
+[policy_outcomes.csv](identities/policy_outcomes.csv) supplies 192 task/policy/repeat rows, linked to [108 score scopes](identities/score_scopes.json), [16 task contracts](identities/task_contracts.json), and the [grader source map](identities/grader_sources.json). The original equivalence key is shown in the [verbatim source excerpt](implementation/score_equivalence_key.py.txt): task ID, base commit, final tree, task-file identities, and scoring-source identities. Score reuse is not based on equal reward values. `scored_patch_sha256` in the CSV belongs to the representative `score_cell`; it is not represented as each solver path's own patch hash.
+
+The recorded grader is `agent2skill_swebench_verified_candidate_syntax_v1`. These are benchmark outcomes under this frozen grader variant. The [grading rule](implementation/analysis/raw_repo_handoff_score_recovery_v1/scorer.py) preserves ordinary portable-grader outcomes. Only an `EMPTY_STATUS_MAP` result can be changed from invalid to unresolved/reward 0, and only when the patch was successfully applied and a [syntax proof](implementation/analysis/raw_repo_handoff_score_recovery_v1/syntax_proof.py) establishes that the base compiles, the candidate does not, and it introduced the same logged syntax exception/site. The proof does not execute candidate code. Unestablished attribution remains invalid. The allowed consumed/reconciliation identity records do not expose the per-score classification basis, so this release does not report how many scores used that exception. It does not infer the count from zero rewards.
+
+The plan's `Remove verifier.collect` change concerns scoring configuration and transport of the already captured submission; it is separate from the substantive grading exception above. Task-file and image identities are retained without test contents. [Commit records](identities/reward_commit_records.json) bind the saved score-consumption identities. Their `artifact_sha256` is a canonical-object self-digest, while `commitment_sha256` is retained with its original field name; neither is silently relabeled as the JSON file's byte SHA-256. Original file-byte digests appear separately in the provenance index.
+
+[Primary stage dispositions](identities/primary_stage_dispositions.json) retain 128 primary rows with discovery/localization status, capacity routing reason, editing-policy status and recorded stop reason, solver terminal status, and stage request counts. These are observed stage fields, not a new failure taxonomy or a causal diagnosis. A null reason means none was recorded in the exported field. A terminal `Completed`, `LimitsExceeded`, or `SELECTION_COMPLETE` is not itself a task reward. Reward values remain separately linked in the identity CSV.
+
+The export checks establish structural consistency of these records: 192 rows map to 108 existing scopes; reused rows share task/base/tree and grader identities; scope hashes and score-consumption links agree; reward-commit self-digests agree. They do not reexecute a scorer, establish full reconstruction of worktrees, or turn hashes alone into independent benchmark replication. The recorded replay/restoration limitations are retained in each score-consumption projection.
+
+## Included code and licensing
+
+The [implementation index](implementation/README.md) describes 35 byte-for-byte copies bound by the original method/launch records, plus two verbatim scoring excerpts. Imports are intentionally not closed into a runnable host. Mini is represented only by project wrappers and its pinned configuration dependency; the upstream mini source distribution is not bundled here. Agentless-derived material is covered by the existing [Agentless MIT license](../experiments/reproduction_regression_v1/sources/agentless/LICENSE). Existing donor provenance and scope qualifications continue to apply.
+
+The comparison concerns these complete installed policies. It does not isolate pure mechanism synergy, capacity-gate causality, model-independent benefit, or an equal-realized-cost effect.

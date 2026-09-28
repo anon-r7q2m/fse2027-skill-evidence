@@ -1,0 +1,4656 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "results_cache/raw_repo_capacity_comparison_v1/scores/001-194-r1-N/trials/a2s-capacity-score-001-194-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/002-194-r1-L/trials/a2s-capacity-score-002-194-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/004-194-r1-LP/trials/a2s-capacity-score-004-194-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/005-194-r1-Ln/trials/a2s-capacity-score-005-194-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/008-194-r1-Hmini/trials/a2s-capacity-score-008-194-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/009-195-r1-L/trials/a2s-capacity-score-009-195-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/010-195-r1-P/trials/a2s-capacity-score-010-195-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/011-195-r1-LP/trials/a2s-capacity-score-011-195-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/014-195-r1-LnPn/trials/a2s-capacity-score-014-195-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/017-196-r1-P/trials/a2s-capacity-score-017-196-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/019-196-r1-Ln/trials/a2s-capacity-score-019-196-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/021-196-r1-LnPn/trials/a2s-capacity-score-021-196-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/025-197-r1-LP/trials/a2s-capacity-score-025-197-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/026-197-r1-Ln/trials/a2s-capacity-score-026-197-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/027-197-r1-Pn/trials/a2s-capacity-score-027-197-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/029-197-r1-Hmini/trials/a2s-capacity-score-029-197-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/030-197-r1-N/trials/a2s-capacity-score-030-197-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/031-197-r1-L/trials/a2s-capacity-score-031-197-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/032-197-r1-P/trials/a2s-capacity-score-032-197-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/033-198-r1-Ln/trials/a2s-capacity-score-033-198-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/034-198-r1-Pn/trials/a2s-capacity-score-034-198-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/039-198-r1-P/trials/a2s-capacity-score-039-198-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/041-199-r1-Pn/trials/a2s-capacity-score-041-199-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/042-199-r1-LnPn/trials/a2s-capacity-score-042-199-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/044-199-r1-N/trials/a2s-capacity-score-044-199-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/047-199-r1-LP/trials/a2s-capacity-score-047-199-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/049-200-r1-LnPn/trials/a2s-capacity-score-049-200-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/053-200-r1-P/trials/a2s-capacity-score-053-200-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/054-200-r1-LP/trials/a2s-capacity-score-054-200-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/056-200-r1-Pn/trials/a2s-capacity-score-056-200-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/057-201-r1-Hmini/trials/a2s-capacity-score-057-201-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/058-201-r1-N/trials/a2s-capacity-score-058-201-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/059-201-r1-L/trials/a2s-capacity-score-059-201-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/060-201-r1-P/trials/a2s-capacity-score-060-201-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/064-201-r1-LnPn/trials/a2s-capacity-score-064-201-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/065-202-r1-N/trials/a2s-capacity-score-065-202-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/066-202-r1-L/trials/a2s-capacity-score-066-202-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/067-202-r1-P/trials/a2s-capacity-score-067-202-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/073-203-r1-L/trials/a2s-capacity-score-073-203-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/074-203-r1-P/trials/a2s-capacity-score-074-203-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/075-203-r1-LP/trials/a2s-capacity-score-075-203-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/081-204-r1-P/trials/a2s-capacity-score-081-204-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/082-204-r1-LP/trials/a2s-capacity-score-082-204-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/083-204-r1-Ln/trials/a2s-capacity-score-083-204-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/084-204-r1-Pn/trials/a2s-capacity-score-084-204-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/085-204-r1-LnPn/trials/a2s-capacity-score-085-204-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/087-204-r1-N/trials/a2s-capacity-score-087-204-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/089-205-r1-LP/trials/a2s-capacity-score-089-205-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/090-205-r1-Ln/trials/a2s-capacity-score-090-205-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/091-205-r1-Pn/trials/a2s-capacity-score-091-205-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/097-206-r1-Ln/trials/a2s-capacity-score-097-206-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/099-206-r1-LnPn/trials/a2s-capacity-score-099-206-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/100-206-r1-Hmini/trials/a2s-capacity-score-100-206-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/103-206-r1-P/trials/a2s-capacity-score-103-206-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/104-206-r1-LP/trials/a2s-capacity-score-104-206-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/105-207-r1-Pn/trials/a2s-capacity-score-105-207-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/106-207-r1-LnPn/trials/a2s-capacity-score-106-207-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/108-207-r1-N/trials/a2s-capacity-score-108-207-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/109-207-r1-L/trials/a2s-capacity-score-109-207-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/111-207-r1-LP/trials/a2s-capacity-score-111-207-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/112-207-r1-Ln/trials/a2s-capacity-score-112-207-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/113-208-r1-LnPn/trials/a2s-capacity-score-113-208-r1-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/114-208-r1-Hmini/trials/a2s-capacity-score-114-208-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/115-208-r1-N/trials/a2s-capacity-score-115-208-r1-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/116-208-r1-L/trials/a2s-capacity-score-116-208-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/117-208-r1-P/trials/a2s-capacity-score-117-208-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/118-208-r1-LP/trials/a2s-capacity-score-118-208-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/119-208-r1-Ln/trials/a2s-capacity-score-119-208-r1-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/120-208-r1-Pn/trials/a2s-capacity-score-120-208-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/121-209-r1-Hmini/trials/a2s-capacity-score-121-209-r1-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/123-209-r1-L/trials/a2s-capacity-score-123-209-r1-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/124-209-r1-P/trials/a2s-capacity-score-124-209-r1-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/125-209-r1-LP/trials/a2s-capacity-score-125-209-r1-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/127-209-r1-Pn/trials/a2s-capacity-score-127-209-r1-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/133-199-r2-P/trials/a2s-capacity-score-133-199-r2-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/134-199-r2-LP/trials/a2s-capacity-score-134-199-r2-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/137-200-r2-Hmini/trials/a2s-capacity-score-137-200-r2-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/141-200-r2-LP/trials/a2s-capacity-score-141-200-r2-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/142-200-r2-Ln/trials/a2s-capacity-score-142-200-r2-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/145-204-r2-LP/trials/a2s-capacity-score-145-204-r2-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/146-204-r2-Ln/trials/a2s-capacity-score-146-204-r2-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/147-204-r2-Pn/trials/a2s-capacity-score-147-204-r2-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/148-204-r2-LnPn/trials/a2s-capacity-score-148-204-r2-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/149-204-r2-Hmini/trials/a2s-capacity-score-149-204-r2-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/150-204-r2-N/trials/a2s-capacity-score-150-204-r2-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/151-204-r2-L/trials/a2s-capacity-score-151-204-r2-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/152-204-r2-P/trials/a2s-capacity-score-152-204-r2-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/153-207-r2-LnPn/trials/a2s-capacity-score-153-207-r2-lnpn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/155-207-r2-N/trials/a2s-capacity-score-155-207-r2-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/157-207-r2-P/trials/a2s-capacity-score-157-207-r2-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/158-207-r2-LP/trials/a2s-capacity-score-158-207-r2-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/160-207-r2-Pn/trials/a2s-capacity-score-160-207-r2-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/164-199-r3-P/trials/a2s-capacity-score-164-199-r3-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/165-199-r3-LP/trials/a2s-capacity-score-165-199-r3-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/171-200-r3-P/trials/a2s-capacity-score-171-200-r3-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/172-200-r3-LP/trials/a2s-capacity-score-172-200-r3-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/173-200-r3-Ln/trials/a2s-capacity-score-173-200-r3-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/176-200-r3-Hmini/trials/a2s-capacity-score-176-200-r3-hmini/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/177-204-r3-Ln/trials/a2s-capacity-score-177-204-r3-ln/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/178-204-r3-Pn/trials/a2s-capacity-score-178-204-r3-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/181-204-r3-N/trials/a2s-capacity-score-181-204-r3-n/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/182-204-r3-L/trials/a2s-capacity-score-182-204-r3-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/183-204-r3-P/trials/a2s-capacity-score-183-204-r3-p/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/184-204-r3-LP/trials/a2s-capacity-score-184-204-r3-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/187-207-r3-L/trials/a2s-capacity-score-187-207-r3-l/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/189-207-r3-LP/trials/a2s-capacity-score-189-207-r3-lp/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/191-207-r3-Pn/trials/a2s-capacity-score-191-207-r3-pn/verifier/reward_commit.json",
+      "results_cache/raw_repo_capacity_comparison_v1/scores/192-207-r3-LnPn/trials/a2s-capacity-score-192-207-r3-lnpn/verifier/reward_commit.json"
+    ],
+    "description": "Original commit metadata only. commitment_sha256 fields are retained as named, not relabeled plain file SHA-256.",
+    "historical_registration": false
+  },
+  "rows": [
+    {
+      "score_cell": "001-194-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/001-194-r1-N/trials/a2s-capacity-score-001-194-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "442243a1e2a644f41f02330dd1c685a2ba4f1cc667c1dec32f2dce707d6e5454",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19374,
+            "commitment_sha256": "d386bc3e1381080232ee9c2158f9253c6a239548ef87f0cfd6e3e822d4d0896b",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "59dcad34f0f68eb24094a5cbf2c7b98974845dde2580bd7d2b33f6044243ca72",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 9104,
+            "commitment_sha256": "b129d2c522759554e2f15ee513b7f09e200c7777608c2b751bbb66c785936643",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "97e8c198035424eccb69c0eb5b28c98375374a944ec4a54786c58485086f8e43",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a638f8e4b16322c496517713e291b9ad42ba1b161e012dd18bf403ddff2c0626",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "002-194-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/002-194-r1-L/trials/a2s-capacity-score-002-194-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f52427fb70f1244451156dfc284417d1e2064bed209134240c9a38f83fb7d5c9",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 20649,
+            "commitment_sha256": "a3bd7c6b8dc54322b136ad30f94ce51d2d08cc9374a59487c6e9972c49ccb301",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "7bd00314865813c0cba5aa6d8163be86bbdd6825ee028f89ceaab1465486bcc1",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 9146,
+            "commitment_sha256": "97d1db03bcc0a182071f20ca4e792ecca3e7aa0924d34e35378c85510674e0cc",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "23676267413798e23366ec65ad8be6add6fd88eddc498a25a378e1e38d3e995b",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "71f9b4a89f0797f345da2821d120f88f229c981f09909432464a67d62fcb1637",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "004-194-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/004-194-r1-LP/trials/a2s-capacity-score-004-194-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "be3131c68b62711954326caf110fc9096f559d290dd4109e64b1a00b5f2ca727",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19306,
+            "commitment_sha256": "cb0b0505ff04f8796512e61cae9d27b5091bb26d4a621551f804ef7d50c51b0e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "59013c1b212169626d10eee2b18aec4434daebb6c92cc6e18953e6dc6ccc85ab",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 9104,
+            "commitment_sha256": "d3dfecc7352c703ca3d7af1180383ea0b34c516b4f59e610cae2d3beb3d8d53a",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "8fb5c1c9102a56dc2cb29fff660f7391bf1be62be1b74691f4896952d44bdc37",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "ee70f81d7780295cad896849f9f20e6aa8a3a7ebb96ebc2ec6e9213de55c041b",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "005-194-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/005-194-r1-Ln/trials/a2s-capacity-score-005-194-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "5f291982a8ce8e4e5f65e8315e32d96d04431d733856b9e7c2d93d85bca2465e",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19396,
+            "commitment_sha256": "431ebeee1c6fa5b5097000dccdb6d9234f7a127e260dc8b527e28d8067325242",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "d18ce7f4f6e1173c40c640c165740bea4c77cdadebcd5a6e0dca6e792cb3729c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 9104,
+            "commitment_sha256": "777f7600aa1828086a1448c916831b948756ff1434f31ba3f8398fd66264361b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e96a4754a413df5fce002e027707903e06cbc636383c35f2d470bd50cb396511",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a6bdcae7a91a91514194f5eba582c4b9e66effab0ae885867f2ff0c6e1e9a8e5",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "008-194-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/008-194-r1-Hmini/trials/a2s-capacity-score-008-194-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "423a573befac1a3ffc0713e9642229dacd2012853207516aac4793d7f02f1099",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26602,
+            "commitment_sha256": "35a531cc3ca3880050287077f9fe23ae5504fdec48d1d0e3c6e5c75250e0a9d5",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "afd0a729221f149effd92cf3d451976ec57bad52b2c930cdf5bd56a6ae147684",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 9104,
+            "commitment_sha256": "0793dc5cf134f3d9aa5303e74b6a6a7433514d01db0ea41905ef994dafa5c2b3",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "4fc9a26baa6fd2b2beb7145513962ff0a28f59e3979bd04ab111a4cc3449b313",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "36754fe05523324c01ee8fcefb48ae35378b2c697b7a38e45b5bbca80c5bcb0c",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "009-195-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/009-195-r1-L/trials/a2s-capacity-score-009-195-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "88fcd426015c95e1948b0de41bb5ba95c14996d58db0dc4ba82c2f08cc187eb6",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 122863,
+            "commitment_sha256": "3789793a9cc989669f25b3acbc6116ceafb7ad222bd40a6496eb398e94bbea07",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "e8b6aa4bafd36d8402d503443c38ed49e796e24d5cff3d791147df90270fa693",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 40578,
+            "commitment_sha256": "104253ea62ecb7adf31028bfbb8e148b1da9f13684739ffa448ec22cf18d301c",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "9d0c6d465303a6fa3595cfb2189de6694844e06a3c6971f7791b9dd28558b1ca",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "f2215276ef031c04bc83df17dd7d5916ee433022375f1cfea3ed64db95fe9d74",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "010-195-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/010-195-r1-P/trials/a2s-capacity-score-010-195-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "5c2860ecf3a9b1d0b8e780a944e7e45a2f37c0b69b1d7adb6872c65f6229dfd0",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 122239,
+            "commitment_sha256": "5ea1c389c61e019f115422d024cb914f4cef83799c7dc71f2b24ef12d6113346",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "92465261114abe615a40f2ee59e210e35376300317227226e7921102f225acd0",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 40578,
+            "commitment_sha256": "6085e258145a8728dc65ede1c6959bb399b647eb83af92a9b51f735f1720ae05",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "24828f32356a6184a0084365c42442bc293a50a01d819afee13d5685e13b542e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "5a9946567a0ab65365187d88965a9eacc920ecc0f7409dff7b3e4ab927ebf499",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "011-195-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/011-195-r1-LP/trials/a2s-capacity-score-011-195-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "92f752e6ac567249aec7828d1a4e22757ad802ec91ec1151c6112de306e37188",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 126008,
+            "commitment_sha256": "4a4a2d19662b91952db7bab0b8a44da50aebe151aff5f25b0d6585d22eb55f07",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "5d5ab025d98d116bb9467e8be72cb68e646503fb1baaf8a44bad240cbba36a24",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 40592,
+            "commitment_sha256": "d876f9b03f13d439ac02ed2fa796f829cebb361732ef886e1832244a5caf674b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "2098ce5597094f53a6fe8dd4db7b9e070d5484383f73a4ffcb1398fe11f0c020",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3d14c0187418362962b3193698b6fbcf4c094adf9799e489804a8a8e19082464",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "014-195-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/014-195-r1-LnPn/trials/a2s-capacity-score-014-195-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "c0431439205034f715bb6ad3ad6182da88b3e358da63dcf7529c45d3e2ca4132",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 122427,
+            "commitment_sha256": "f636c2c559f7e08b1e2abb889056b7c064529468746fc48d72d122e7e7a6e998",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "f40b4cd81ede492772b63e7914d5b66416698d01eab0296981b6f796e81c78f1",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 40576,
+            "commitment_sha256": "4a05375ae0f1076e1f4d53567982607e229827eb85b5f32822a867f0301eb5a7",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e164b7deb2be69059cddadf75d164f98ecb0e7bb4b6735833de24ba167117c61",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "b85d2271d0a5ffd47dcda81e53cb3729b5f8c3bcd4c7e757745816b46808849f",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "017-196-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/017-196-r1-P/trials/a2s-capacity-score-017-196-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "2d81bfaa9fcdfda87b57aa715e5dfd54a8599696b71f0316d7e10bcba102f0b9",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 30361,
+            "commitment_sha256": "503ca14342f18a576bca91c32addd2c0628dc58ad502b19ff5d07e71222624a9",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "bdc3c18ee2d14869b30d48ce9e761593044d51ebe2e39877fd7e92dcf5607cdd",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 26468,
+            "commitment_sha256": "b6371dbadb46e1bf10189a2d55a503fdd109e0d39c130884a87e5670333f436e",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "9755f0283cd45a82759f4ad9714a80b35604ff59fd6c044926810c530cfaaf72",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "7e090ca8fa2a7522d8679bd11c6a258da447499cf30ad652ee53e5769dedb309",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "019-196-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/019-196-r1-Ln/trials/a2s-capacity-score-019-196-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "efc4013777e577c11969c4e582962840ca15afb02c0217ae57d055574de4616a",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 30295,
+            "commitment_sha256": "09a48116a6446fe6dbfbb9222ee15e64852ff6b6745b3e4afbe9c97c40ec8c72",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "17dd8f65a14ac98c848a6d4992776047a6005223e329c7da38f5d50aa0df2412",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 26468,
+            "commitment_sha256": "0801a1d3d094310253c74827320d58456481ab6b9c13de65dcc4dc7c9724a0a5",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "aedd1e099dc73fc7500af13b17ffab6b39118a2036af34a17b894df2dc7fa3ca",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "b456649e2f7753a60afe29bc8d33f3fd6f37a836532ae4049ea8792da2a702e7",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "021-196-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/021-196-r1-LnPn/trials/a2s-capacity-score-021-196-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "18244275b03164d1dc25c8b94d598a1f5a0eae122f540c98c7da9d60bafb95db",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 34201,
+            "commitment_sha256": "8f6efa8f2a47a5faf2ca072426644b0f0b8fc3904a0147194e04668ea55e0e81",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "e0382f2d0739320a9e66957cfff9650bff2da1171767160a2a78841c215e611c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 26506,
+            "commitment_sha256": "a19f0ef7e39bfe34d941eccf020012aedec8c967998f92ddaa539dc5e070012f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "724027cad443f41efeaa964f5f15b5f4d56703d30c3745d7dfc89ed8a8521b6f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "9b6e9b1fd1757f5d1440a123464a091f4f78c1e8ad1fdc75240815f3e6c0c0df",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "025-197-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/025-197-r1-LP/trials/a2s-capacity-score-025-197-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "e626c130c0946cb78dfafdcd2e1ea259dcbcd1774c067c3a86907ee2fb06e027",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 18312,
+            "commitment_sha256": "c018c355baa67121c343091372d3366ffe46902fa47ee7f1a968b371beb040a1",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "b6f46556d0db3d09fcfd59337df0eb508b425c6b4591ea520a83225dab4888c6",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3707,
+            "commitment_sha256": "c6273d0578beeef7cd96224bbd65fb893e087fe0f23bb5d849936010984ccd3d",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "dd572fd3b235fc552914de68558409e1419ab4551b739fce1231cd8889954e96",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "83a0a4edab1056bc090bce72863028b2143869c951807b43ff6361151b368883",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "026-197-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/026-197-r1-Ln/trials/a2s-capacity-score-026-197-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "e70b0a7e6a13d916a408b1143da6c6d764b16a981ace9c15c98493cb86266205",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 18866,
+            "commitment_sha256": "9fe0a12945108e19a5f56eb447da6739d4f60a1c2a69045e3ff18f74e8e4e61d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "c1b76e52ba4e273ebd511bbcf4a34d855e8b15da4b6831a61a27be39f23f52bd",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3771,
+            "commitment_sha256": "9b5c549dc1de9413a1e5a4044fe3eeb809d1802557f4232187555ec8ecf08c5a",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "2bffee3392edcb3fbffca77002d8c8f7224e000399d5b35940a8c5c92fb3c7d6",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "9e257e11e6a743149b0310fdde3675af9f545ec6e68f8bcc838c0b667b4ced55",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "027-197-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/027-197-r1-Pn/trials/a2s-capacity-score-027-197-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "df8510311be10cfab8b55e4c7d920c6266f9b8f8de66f8fb768e9a6a8100b998",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17827,
+            "commitment_sha256": "58ddc3ddc2b2633d89a0b3fd4f91111c497668dea51395700904ef2dbfa50543",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "b5f311f66f7fd4f8e7ce43b642f52bd17813cbde90a4f3f989c6760640139b52",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3707,
+            "commitment_sha256": "c04f1d7f6a9890bf7f4a2e62b5d70ace67a15a0029e79a6d3825b62e5e358078",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "ece8088724ddc09060fb61cd2a206bb2bfc3f2cfaf5d502ad8238b9afdc00790",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "5070efd6288b37e18f82c5b9c3946bdfe7ece2e5ee4be5605a74ca55f16c92f3",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "029-197-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/029-197-r1-Hmini/trials/a2s-capacity-score-029-197-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "93780695272ec6978c54aac1e7ee3f01472a8caf9e6f6d64e58121dd66f8f918",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 18062,
+            "commitment_sha256": "1c6ff1dba6e719b024f1bf4f9ddcbaef89b8b2b89018d1b329cc251dd121cdff",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "3036c9f2cc10ac8aaa4be1a9e0784cd590d160e2af1377456546aad32815dfdb",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3773,
+            "commitment_sha256": "7ca6136f7679c5478410162a980161baf10992aac0542807cadb9e7b0ac344b0",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "8d47fd6fe8f4ae166b829c92711c55cffd6b50b7f81b82df4f76e0049051173f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3eebf7e11ee2a5b8dae931a26f9d548272cba99195356b4b61410e0d6470f338",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "030-197-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/030-197-r1-N/trials/a2s-capacity-score-030-197-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "264cdda91adad38070bf307b56a894c7016d8a1bdbe1be13fc1239f681ef59b6",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19538,
+            "commitment_sha256": "6412de84e5a862dd7e79393ebc21221f102f4ee6b64b058d174b33be257f8875",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "47cb2cc9b961d714ec5e438f9ef799853e9692bef144a670776ea58954787347",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3738,
+            "commitment_sha256": "7c583270350a46d3cae905f5271a0ffb14421942e1c28a59cde1dc948a1808ce",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "fe2f2cdbbf4d1dcb6d2cee648d09e96130c0f4d7b707458a7fad6755b68b0f27",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "231b3cafde2661b36a731c0e3646750ad58214c05ec52bc442d5d3161e50e4e3",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "031-197-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/031-197-r1-L/trials/a2s-capacity-score-031-197-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "84245e9758de1927707c1817fcf094d94d5aecbf6259a427c5a7904c9e70d7a1",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 18210,
+            "commitment_sha256": "e3265a994c9ae16abb844f3e72cff5949a47a000dfeebc65a46191f5cd3ca71d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "e382530885d32cbcdd82c3c052286648bc1ae59b13082560594141dfeaa11c93",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3707,
+            "commitment_sha256": "5719f2baa66c28264fb12b9cd92c176195c2cdca01d350cd19f6dcfafddfa993",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f3a18eb8976ab7360a77d9ff4aa600a8ee1becbd5b4c44604e111ae6bb73a3e4",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "52a43d83cfcb7b7b57ddd11ef6b71cf618ca59daf5fcd6362e5c54a0dc7fcea2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "032-197-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/032-197-r1-P/trials/a2s-capacity-score-032-197-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "24e35dad181581147db6164b447d8fdc03e2692c6ea787ce4f66fd4ab97461bd",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 18082,
+            "commitment_sha256": "6c0c8ace2d78ef0267a69badeb151073f3ea175d2164e4cf8e89abcbcbb149cc",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "a0314b1e872fdf29df657c6fee1f49de375bfd874e07c3ae38df51836d5255e8",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 3707,
+            "commitment_sha256": "7e8700e3d02b4342915dc62fc4ef6afca595678958a407f3f72ed09911033648",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "00248cd100e33e1d8a44d0424c40b6972e09be864237e83a97cb3413ae22e64f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "df5fe8e935edb6922a2a58e776e841a2261be3104473e02ad9cac122021403a1",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "033-198-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/033-198-r1-Ln/trials/a2s-capacity-score-033-198-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f5e55f0ce85d056553eec3aa41fdfd9786fcadbc10f50e000036f3c316572063",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 20340,
+            "commitment_sha256": "febca19140e541096b55faecaa58e0c75f6692b7bf0855d7a8b203002c1e0072",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "09d32b83a077f853813e6b60c1956cc73d51d28f37ac89f2f867d3546cc3574a",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6245,
+            "commitment_sha256": "5edcbaf855e1a4ca912dbba7ec16070c658fa6c2e74fcb5c4d0fb52fe301d382",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "df6027aad1ffab1e4424cea265972ba51601a895b1976805a833d27cae985960",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "1c9942af67719c6ed66765154afb49c214fa0324e5b8a7827f5b2d73a794e12e",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "034-198-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/034-198-r1-Pn/trials/a2s-capacity-score-034-198-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "1c13a2ec2dc7329ee627acef74c357b5b253a21e5b3bf59de2fe30986c752c98",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 20123,
+            "commitment_sha256": "60733dc955e2fb5674e2bad657468feac8782fd5f2793d89f8c831486a8b8946",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "b2e09a5f6d6a8acdd78b3e3b4f11afc34fe5e5f5ba224f65bbc9634fe4cf17e4",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6243,
+            "commitment_sha256": "dd01cf5d037843dae29004eeeb60e5b6f03aa424e6da3950c11a92f2ec06a266",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "2fa859ba72c522ab94e6372b4d69f9b2adf3120661d14f73ece1ff1125491161",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "e01b1eeb0ea7123a816588c944b0d5a1ff1a4ca0a50b4b2f905d6512be9d678c",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "039-198-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/039-198-r1-P/trials/a2s-capacity-score-039-198-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "94edb489ba1f19ba78e11289da68590a6e4b31879943e30efd09e10599bd9aab",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 24916,
+            "commitment_sha256": "2da45d74e93bd24254e85c10f71affcadc5b2da242ee8c625aa07f139bd71e1b",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c0e97314c9856226428c95d0ad408d5a2355ebf9d19bbc611ea3db8ab672c4dc",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6248,
+            "commitment_sha256": "217182734eca7fa16afc555c23cb3e8ee3d1bf446c4be00befb415e20530c47e",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "ad40285c889363a5f3e3d24bc0a56f2afbc716103362008b4912fd72a8896bb9",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "91bf7b8aef949fd89df717f642f232a9ba4d592d7ad7fd740c9c40335f717beb",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "041-199-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/041-199-r1-Pn/trials/a2s-capacity-score-041-199-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "778243e17ca65975ca0e468fd37e3d09ee99c022e2d4b1abc541d16661e29fa8",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 34846,
+            "commitment_sha256": "f01bacd158fc0627360261922b2c65d9ddc27c5f4df73f81b0ba8ec24ac19ee3",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "51af8d8635cdbf785af14f6bb83a58679f3d47077b0fabda13582b8e42ddda43",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17441,
+            "commitment_sha256": "f921a29a708a9fcef06255f1333238e9c76889371873819a1d40bc094232ad1f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "0162e08391a7ba7bc4a353ed90d96fc9141b16b79bf83e48291fe50bd6be514e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "b5a86e3518ce47a5b404f1e57ec4f4d214c48f6221e71252535ba00acbacfb75",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "042-199-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/042-199-r1-LnPn/trials/a2s-capacity-score-042-199-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "a80707281e5f603d5996dcb89a6d039ee271668de12e51aacc516f033145f275",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 34602,
+            "commitment_sha256": "89e9af5e1e202491282deb48f1d1a000f3b54332b6bac734dee9f44ce037e0ca",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "def1d252d0dc356e9ee298fc2cfcd048192dcd9a9eaf43d0fb8d2cb2d37b04c9",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17475,
+            "commitment_sha256": "4bf34480156592ea53cd551b6ffad27b330f2cd99f14f4bec7d0a10665381e14",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "c5bc60826de1d2bd7eeed0bbd0594348578bf08f70e502bcc884161019dbb4ac",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3320b6c73faf1f0a0fb37b85798ec99a72506a1d969c7d5b1ccd2c352c22490d",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "044-199-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/044-199-r1-N/trials/a2s-capacity-score-044-199-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6e6f7c808e87a498937bd27944c1d724674b4d8dcadf91436340c60bd3ef4709",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 34835,
+            "commitment_sha256": "feb7508fa8896aea0237c9a52e1f561f98438acd67521b51161ba62fa1bec06d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "94b3a70da3870e6b44444aac1f3d2436fd28b82375cce3a4d91a0b76e96f166c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17441,
+            "commitment_sha256": "179233fd7a1aec2e70f8dfed15df0bc55f20c11147cef669a622ee4117994011",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "9492b3f233f7bae63bf0a09ab68d5d3bbee44b55b0f6d4b9c92ba6077702092f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3add23843a0990e2a6e0c3fdf05b1eb789bda45e4a3240f3e2db74ea2c938b21",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "047-199-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/047-199-r1-LP/trials/a2s-capacity-score-047-199-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "4b1f5e8e86051241ea42b75411919400ebe0ee6af3661d3561ec4e601a041a58",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 36539,
+            "commitment_sha256": "3e8f78a5e67845ac2f97909edc1fc64b69675b39632842012f0f0c2f2b2785d6",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "85429e04275f7936331325913a175a1251f81243f121fa17403f1cc12a94cc5e",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17523,
+            "commitment_sha256": "36c7ba55f34ff619bd5b4c18af1f042e1207dd96d35abf5ef5bcdebd89b58acc",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "688920a3cd548477fe45fa71cbcd8b765dd625454679e14fde1301c94f40f7fd",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "98ed92e91e3810f4b66c9a4bb85fe3953734a29b6280facc03fff9941e24e391",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "049-200-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/049-200-r1-LnPn/trials/a2s-capacity-score-049-200-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "c4bbb3323cd4dc263658e122d9a71c580e33715cf31a26e6e081e4da574d27ad",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 27875,
+            "commitment_sha256": "83899efa2b40bc41f1145d8553ab68ac08c81eb98006b663bc8b275e4897f467",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "d5a36c0fe68ae9d844144fc61c42b1dd4bb7d389500b981c37e6b0708d9a4509",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2093,
+            "commitment_sha256": "c0be97717036fb0fb488a4f48c3fa043aca515eca8e518fb18065e1660d931d4",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "96eb7a75d28ed663667cfa9a35f0d4803accba2ea6552eafb62aa53344528a1b",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "28efb10faa732ef8456378fe1b5206884a422b4c8130b170e32197558f5d0e2e",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "053-200-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/053-200-r1-P/trials/a2s-capacity-score-053-200-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "4061d081539116c20fe1fc5f86eca0e521fa0044e59975500eded2ac3058a3e8",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19130,
+            "commitment_sha256": "ed73eec0d981e82c44ca2949be64818e0eb4d2efaf793174c2cb756506c12aa9",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "ccb372a79685004e4331ab99dadedea9c23115650ea917b3abc963fffbb2e466",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2036,
+            "commitment_sha256": "88894387fb20a4753dd4a80d3973d3e74d8b1cb3efaae9d449df03bbe617cbea",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "faffad54f9ac7d8d652433dd9fd81279f393ef371d2210de9ffc9840440f22b0",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "4019f4b949052dd2afa90335faef8cd067106c6b0589139aaeb6ed689c9bcf14",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "054-200-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/054-200-r1-LP/trials/a2s-capacity-score-054-200-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "bee7418fc1f7672854cf993ad42c4e96560f9c3f89ed473d8989a30bc2d4781b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17713,
+            "commitment_sha256": "ae68006d87109b04222b757ed64f5bf14fb960906d7a47b0d59491095e6d71c2",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "57854e46dee13873d83390d5cc7a5489a4a343292f21f1b3f71631c559ae6d2f",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "8a1ffa9ee5413fed5da183b9ca5aa2514522c799c331e243cf8972cc350500f8",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e8e036f435b30047ba48bc1bbc29e4800e4a35a15c29569c737202c7d1acc791",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "50fb189daf026693a0d4912ed1dbe652bdead321dd50c5a3e8d7e2c4e61e3eed",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "056-200-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/056-200-r1-Pn/trials/a2s-capacity-score-056-200-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "868507403374e0f40ac989bdf854d44ee66e0e5519dabb0a812d9b81946ffcec",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17395,
+            "commitment_sha256": "49ec375464b135fc4db8ada09ba90579ddb4b2738364cc57bb7b2b7ee54e0533",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "05c504090a99225edf928316a9156be812f4c244615c6ee222d6a7cf931e666d",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "39d72250d1c6a7e68e711e3d0f479c361b22f9539963d752d3cf23050397bce9",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f95ae4b4a3804813276ee89a72532287a38c216f985025c4f281934e3fbf0bf5",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "e6add7723f6d0cbf01851959c8772751140d7c3496cddec7fc86fad810d0e939",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "057-201-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/057-201-r1-Hmini/trials/a2s-capacity-score-057-201-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "1699344f5f90fcecbb8de38ad273319e0bfad3732ec242ec52c982c28ff98c0a",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26698,
+            "commitment_sha256": "70a5dbc4e5f824a7f8ae99af040bd3ac8e1e03ce5f8aaf0763df5b27c452f35d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "0b8ec81111388ca5157002231ade1b4f7da649d4f8f609a90b0fb97af87976a2",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 12248,
+            "commitment_sha256": "8bd2dfaa5cd015672950142eaf207efddaea18cdd523e3846fe358bed171c65c",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f91fd3ab8fda81141c7ba132728f13f035ef704d3c2c97c5d0be0d2eb766f9fc",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "f4d7b6b056b713c23ff29262b01f9be880bcc4dcb60455bd0e94e8b10a82257a",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "058-201-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/058-201-r1-N/trials/a2s-capacity-score-058-201-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "72f8870936cc80e37d6b7a1f45d5c408abc60e933cd352e873b218679a2e6441",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 25279,
+            "commitment_sha256": "69cdb34c05dfffea741cdc7b6d9e9aed40ee91cb049dc679d32942a26bbfdd1e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "73b5e3434008040fcef68d948e1c2bd0d1fd81b18e6dd55fe5e217a81ddb2750",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 12248,
+            "commitment_sha256": "808f94e288db96fe93060af50b02bae92f4df0c9961dda29b24c0f10a08a80f5",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "244a84f4d1a634cb805b191727c6d1952f139f08c308163ed42b1b6e30a4c2f9",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "8f82dce0d788a264ba05a522fa0faed44e0c2feb26ba0b1f11b2dee701bd7acb",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "059-201-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/059-201-r1-L/trials/a2s-capacity-score-059-201-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "3a52a45bd42cd27b4a2b45e138a89f11049076d276350bb14a1ff9d51495ac72",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 25559,
+            "commitment_sha256": "4065719e1e3cd04c1146398130742a5c506ea2054ae664adc6488d6293a345d9",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "16c3e076057159a816958b55d26c0f60403fd0ccc1d19e99d6c718deba49de49",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 12248,
+            "commitment_sha256": "68b48910f8a6b75c2129de1e7deacd2f1094990349ec42a3b13a3672d5c96f89",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "c227ea423bf140f75af2a130b6816e0ec59bd77300084a9f32f864f5b68260fd",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d36667cedf8eebe69712eb6ed42845e5c041218e572d01ecedf2085de5644c11",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "060-201-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/060-201-r1-P/trials/a2s-capacity-score-060-201-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6a8efa2fbcb5ba46a06219a6a9dbc5e4148d976b046923edb43d6cf1ee5f205a",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 25334,
+            "commitment_sha256": "3905d578b0e232f36ff6ff1459292e93934a40c0c2d0bbaebbfe2cc6900c051f",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "a6b646af8670b31c5dd576c766ce34bfbfb98b19ca3d27a013bebc1d538b1754",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 12248,
+            "commitment_sha256": "10b0ac289296f74a8b3723f9404e8fc813bab88993254f503bffc7f45d58abfa",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "560bb3f06c1944784fd1a193c8143ec39a56c9fe5fcc9aa68ab4844982ffcf3e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "2d44b89fff41fe6d9b0c53481585314690f3e487c5b6caaf3505ae9bf49183fd",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "064-201-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/064-201-r1-LnPn/trials/a2s-capacity-score-064-201-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "15e6bb9f3f9132402ea6a84d5caedf5091ae3ce389b512dee17387967e01ea9b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 25073,
+            "commitment_sha256": "2e2507fcfdb3362760cbcf17bdd1517078c80e053abe317053050fc2b8c7b8ba",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "cb368c0d6a14db5d16a1a730ede86a94c9b1610eb80517c016c24dc6615dc6fa",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 12322,
+            "commitment_sha256": "f4c1adef1f92bccde6131ccfa320e3cdc16b58138f1b47aadb910bd4ec96ac7f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a2b81318b6d7f566fd4f4a3e37ea8c756c6405130e5f614e6e01b83019a5a54f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a8e015021272c75e0c00a8ae8d16a63b8ccfbe781455029a9317f8b355534911",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "065-202-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/065-202-r1-N/trials/a2s-capacity-score-065-202-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "318b3ccb09ab6856b71c80a97bc031431e572454ca18ec79dee74792f8752a6b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 88853,
+            "commitment_sha256": "7159f14b3d0af1a899d34d01602274235ec552d6c1d1080c61352a567a279815",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "4921c83351cb18d343745b9c23bcce7bc07f71fecec090fac1ecadf69a0be44a",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 11137,
+            "commitment_sha256": "8cfcc368c9fbcd6782565835525dc482953efc82c975ff6896b10e95dc5838fe",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "05dcee48d0187d5b0fc6a04b6a278f1fe1e2a3834eecf03b5b156e2dcda09d9a",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c16c55fc07ee764d6339b1fdde05175ad90b16d1fec0c2bdf500c6e42170f6eb",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "066-202-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/066-202-r1-L/trials/a2s-capacity-score-066-202-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "56f51448eb02932def7da3ddfad5d456e25bd14b7fa8dd5e4bcede0da5fbb267",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 86273,
+            "commitment_sha256": "e30e3c780b490cee5bd90e973cc59d554edbdd43531dcb85e721a336f321b63f",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "e470b5084ed088ce5ec8019662123052347153f56a18cf3ed7add17bacbd826f",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 11135,
+            "commitment_sha256": "ce5d5bc771272d40814da455b2e5d5a6033449ddaa45598e975ede641fd24d38",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "543f79b704c44bcf3ce07c2796904953f548d2692d3ed1efff01963d6d4bd061",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d9077c522ae101be400810bcb1ca6092f1aafde5cdb0c068b17ca5ef62041865",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "067-202-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/067-202-r1-P/trials/a2s-capacity-score-067-202-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "af024e4e168b729ac3f929cce00633c9f4f4b5e1ae7217ea678b3574dd44697e",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 86381,
+            "commitment_sha256": "11bb714e641cdfe195c8f86bc3ae09d7f983387a7cff0a28f872c1e55cfe335d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "005cdde1bd161e592b0e0c0dd765890162679da2023dd7a6da4472ca64d8e446",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 11135,
+            "commitment_sha256": "275e8e183a51ac639f1e423e2fbce107da32f56f1b60adac310b5b2dab060827",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "6cacd9fa182c13acc0f7dbb0024a9bb6c7327d57cd8a35b51b6a919d7ae30666",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "217057531dee8b9611dc0c90037865b52421a72db240f57e670c436666dfd241",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "073-203-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/073-203-r1-L/trials/a2s-capacity-score-073-203-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "1bdcdd0f975264e9da7cf64862a36a3ed9149167025f8c02dff2acc522d087b7",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 20308,
+            "commitment_sha256": "2d12370c0b35f4568955723c933bbdf795f14a9648910dba7831157ccca2e6f0",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "92a080ad0d2fc2a4ec9063062b8ad7e940b924ef4d6b7b223c6860ac4cfef787",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4959,
+            "commitment_sha256": "0cbcbc3174d78703d4baef39156f319324ada7ce2e442c21fa6305c6957df851",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "ab109bbfc1b064743a65dce6a5ee7660db68bff2285d6c35d6297a0292809f15",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "6c5103f1c1170931b894c9c886aa17b73be41cee595a9bc4c7a78329fd11643b",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "074-203-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/074-203-r1-P/trials/a2s-capacity-score-074-203-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "224f172866972599b108e2a74cb7aceb1965e6e6661e9b14ef89389e55836922",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 21472,
+            "commitment_sha256": "62737305d038290cda72b85f9b0508e58b9b38ace46366af6db6327239862c73",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "a5b36b8b6b3bb8fc1485a57394586edc3735e454c75015505f85e5586cfbe2b9",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4959,
+            "commitment_sha256": "d200cbd6c4cbd731ab840634f6b844e9513a6786c9d7b40d865a7894003bc38c",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "ecaa2fc3edcc48299a667936a0402d205142b99c9053909d4fc0ba558d4d0709",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "59d1b3a30bcdb720e49385e69ecf8cba8e0a0508f397e5adc9d38f99e1aa1c75",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "075-203-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/075-203-r1-LP/trials/a2s-capacity-score-075-203-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6b109ecca07f23ceecf9c8a192843c5ffa19ac82f2989c353492c885cb4373ec",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 20841,
+            "commitment_sha256": "f501164544de561accdfbc6c4f829e03fb6d4f3c45a145ea4d1fcaed7d3dbf9e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "62707559114bd362f0fa3c9bf3ef05b4c0bfa677a4bdbaf8e84275982de8b6ad",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4899,
+            "commitment_sha256": "eea5014f816ef96a09ea07fd759feefd1b51c5d4e73ed21ac8163ade961700a8",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "1afd6eb5eb79fd92ea37ca3b41b2b09ff2b49f141f3df01cede9fb96f058b698",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3bd7c38beb152134a9b025992645b5b67cde67a0a3fb8cc6e8f2638aae6f8167",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "081-204-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/081-204-r1-P/trials/a2s-capacity-score-081-204-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6c18683f6f3d9239978631f2175b25d9d579812df7f8d118e6a0dc7a4b82a346",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169415,
+            "commitment_sha256": "d9ab8116d27944a23a4790b960ddd531400d8768ca0e57d032460c8a60dfc475",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "920e55cfd40c27f0824422262e7ca000fea264d8209fab0221353486ea8c5c80",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "61eb89d7e1ed69ed612300196d0f186af798d07c6bbecdfa1c0c1d161a8169cd",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "1014be41ed2532cd39d6a2c0d3246b6ab03668be41fc501a10d23f73ecee417e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "998c721dc4bae528462d38afd4bbee825c76491b95da64a37d704454ca3f80a6",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "082-204-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/082-204-r1-LP/trials/a2s-capacity-score-082-204-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "3fe05fad77e1cb789ef81f76d45f1049fe0126b29ed30dfca784877e6e387972",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169524,
+            "commitment_sha256": "794143972cac0d17fa176ce3d60fcb5f78b1cee06e5b7d1c6a148c6b59206bb5",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "a7b10ee8586bebb421ee84bce954a8b249597867659473f9d057ba3fc034cf8a",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "9f6ad4216893b7c1769afcab7f5def6196effe0497954619905c7778ed21dd8b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "681c0fd86457350eb8fbf588b6803643b1964c395bafbc025f177e7cbae5f3bf",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "6845a2d77b459fb0a54ad04ddfd7b262a9fae5eaf601fa30096ef075839c4870",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "083-204-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/083-204-r1-Ln/trials/a2s-capacity-score-083-204-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "1f74f6acf17fae508af80af70b1a9b329f1c2473f705235ec9c71a3932768a87",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169465,
+            "commitment_sha256": "faff22ae1206b5a9e637187b441c7150a808784bbf0dfbf95317f5ee81724022",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "0534b91cee0978614556afd8c5525bfbd164b167168d24420490c2d078ffe20d",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "cfee45902e6aa38f99fa6bb836785e13c79e6fe2b9ce6b58c1ba05387a49a227",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "8f1dcfc209c078e870a8c27f288f4130bd54833438eabdef612c51a139e17fed",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "0082dd027bfc4c41811ad9c9651c3d73c8daa2b299a680763a2764ecde3b1051",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "084-204-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/084-204-r1-Pn/trials/a2s-capacity-score-084-204-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "15ab0d2fb940877403cc290156efd0850d5ad1cb93baa233e46e66cb9a0dda41",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 168635,
+            "commitment_sha256": "4fe679c6ebc227d5c27d5538d4e953a31219222fac7e7b07b49941e6ea7f803e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "43cec1be24527b60b0b43b3ef4fbeb44d06284e7b4cfd02a5096c7cbe8ed4bc0",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "91eaf4990a3d49b1f8286b8e59359e16fd2cc3f5fadf798c8da0f62f51e8135f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "3a56184d0df1189fc615b470261deb11b1bc44740d3afebc18610187338b811f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c57e1cf51e71c9fd6c73cb2539e3f5ba14e59fbe036edea526f762f878e89e00",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "085-204-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/085-204-r1-LnPn/trials/a2s-capacity-score-085-204-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "94a726b1bd6508c496d1a3c2c6c2c5c473575c8326e83be9d0aba9a4fd552e9d",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 170617,
+            "commitment_sha256": "16ff017e7723d544082dda829ddf912ef9528f028e51f7443a12bf8e2bc2da13",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "92dfcc2aa0021f24dfd4ed90f7fb647b175ef0b3bb96dbd4ecab578a80e9202a",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14362,
+            "commitment_sha256": "1b33bbfffd7fed036e5ef209bef85a53ed843785be5aca197f2df9ff3ea7d766",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "b2e47461655c8573ddf1666f347028e9be86c7a3aab5bb16baa446d2f0b8558b",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "02ee6b8fb498879871800f03c7a8f9a1df57878fd332a1fef3d8a6b093e3263c",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "087-204-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/087-204-r1-N/trials/a2s-capacity-score-087-204-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f58beb04818f93840ea0df19005e9254ea4cdf0e914e25ec0b360d9dec30f69a",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169668,
+            "commitment_sha256": "ca4eb482c406cb66f1d34462a20e0a64fb7f8f8eef3f9dbad0a985a0bd3ecbce",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "0fdc284b1d58218772d6557618cce66bf38fa00b976b12bf9e0bb38bc191c60e",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "afcb9542240a1f8317d86b3f8ae1dbdcbcf56af92cc16ad7b0ee2553f16affe7",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "2049f2e5ba62bef7cc04836dd35cbbc0392e812a4d713d4964fc50ce49fe6da4",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "de8324a6f762dc29b3a5ce7e0011c67f5b1c4cb4699e51d1d0bd67f5451973f8",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "089-205-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/089-205-r1-LP/trials/a2s-capacity-score-089-205-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "c53f562dd652f44a470c0728a5f034f25819a6265402deb25d3cc72bf6fb2e98",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 36478,
+            "commitment_sha256": "3bf6c7679a1a57546723b37f386f223a0d72d87c1478731a1ae48368dd0c368e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "42a03026f39564b79d1b14b43fc22b903cf763f1c55fc781ab0f61916a3c95e3",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 20819,
+            "commitment_sha256": "63fb0ddbef29f365d0391f1db3b057cc1961922cdcff78a5b31332ff8ab3085f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f2e004894a7b88d8770014bf17f39e50163221a3ce2a880930a14ac4d5145474",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "e9dbd0aad897bef644cec773fba51ae0104439070f413c8f546c42c7e81b6bc1",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "090-205-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/090-205-r1-Ln/trials/a2s-capacity-score-090-205-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "5ccf5a2fa70620a887ce45425f77564b6ad2209f2c07aa87528ee9cd4bf33593",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 35167,
+            "commitment_sha256": "2c5f1f36846c2998790ace5af5284c312170d6948a4fbd87bcfcc0239f4c2bbd",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "1d65bec13168763b66ea2254654890375b3d168a41ada7847c6a2d5e7f9c29d3",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 20855,
+            "commitment_sha256": "6bccbfefc31324320c3136db8d916c765f049fe9ee3e957eafab8ce0a66cfb67",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "3d1727f001992ca7d0ab0d2fdd517ab01f07bebf7696faa458490a3d3f9d2770",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "fe5e82531dc825c855747d2ea6cd0bcd9cd92860366d57685df57d0184956164",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "091-205-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/091-205-r1-Pn/trials/a2s-capacity-score-091-205-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "3f018010a7f0044497057d3fc22c7bf6c4b9ff92dd38ebfa228c4dff72f4f10a",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 35491,
+            "commitment_sha256": "fe38862d4eda0dda82a2fc3013bc5216d88cb590e391e58294cf20f78f29b468",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "b8f19da4baab96ad439b920cabbf2ff5bc6050a1ec301b2e894607a18816d7d0",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 20819,
+            "commitment_sha256": "cc5ea08949d3db1acdec3a35c99dc32aba8ac69c147e4a6d7f4871b46c109cb3",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "45d6395593f61101dea50ba6b8df3626f62a07b222e36e4d2d162a87919133da",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "08f87b81e4609493ee1a9cae1cec02e2a8e24a8e9f87c07e5c157c2a00ad797f",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "097-206-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/097-206-r1-Ln/trials/a2s-capacity-score-097-206-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "70692eb1d04c54e0a3e057174c67763e019ec0b4cc48dfffc9f6dad3be52f8bf",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 15014,
+            "commitment_sha256": "b14606ddaea8d5d67fcf004704881c936db95a8e55a77f2b45b577ed6fb0ab44",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "f4b40a063814d7b53dff5bcc845f4d200cd49d753699931b280e06cdc3b870ee",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1900,
+            "commitment_sha256": "c89154fdeb893d7d6fe1b31f099072c0c3370446ccc54c873b115b5daa1dad5b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "b7c3420cea1ae4eec41bf24c39b02d6c07e6bd9098b2588eb1c946246f0aa764",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "ec3791f382b62997cd4aea3f740898c252a640825a86fc6aed5f1383d5e8b08b",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "099-206-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/099-206-r1-LnPn/trials/a2s-capacity-score-099-206-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "d8792388afc2c1922f6dcefe30f3bb858b7a51b2edb71c4ae0147710e651799b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 15461,
+            "commitment_sha256": "0eadf52831a5070948bfd17d2769e2da4c01c8f93a154127649cae9bb15d2df7",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "5e7eef0a4f97a685fa0a5e3a0c00fb381de4893fdc7926e0b68427f34bf0c7a7",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1750,
+            "commitment_sha256": "c9e879958642da97d38d83bec22eb54a384a82216c8838d4bbf6fc0501be8eb0",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "41cabbf3aa98c011aa749aedbc833f4e889ccebcfad8ed671adbc8550f7f4e22",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a4aa6f57f7351ab568a3f7502457153f8af9e5eabf8a9064b2c819ee98552589",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "100-206-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/100-206-r1-Hmini/trials/a2s-capacity-score-100-206-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "03d7272047bf2be147ab944c9432b6e268ae55e04b654c38d4f9210cfa9ee8f3",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 15021,
+            "commitment_sha256": "7523896b4fca548c1cde97873eaee6428302bcde96451fe6deca83fe16fb4c59",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c6607a80e25b3936ae1f8d2bcabab89ea177ca7e618a55323b47de45adbf5148",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1750,
+            "commitment_sha256": "e13d953228878b9dea8a1cd71f0d8fc28ebac8bd00e99d34697863aae83c14fc",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a0de70c957a6f668525c66f9a3e45ef6587bf124ecab50991c5702fba9010806",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "5c98562b415c9dd2745f013666836e639b167407e1ac71683d570644d9cb14de",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "103-206-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/103-206-r1-P/trials/a2s-capacity-score-103-206-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "2c9ed93fa44d469fedb6b3da13144d1bd580141a3d0122284052eeb705f3d793",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 14694,
+            "commitment_sha256": "0cc2118003b9a642b5ce63321952854392bf894a5efd1951bfb80fd628db64bd",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "1fe0df26366b34beb92363ab1e51345e8524ca7115e39fda87102571aec61957",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1750,
+            "commitment_sha256": "83fd264956fa729b1a21918b94aed803bc5561f60bb5efa1595bdbca19d7f091",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "cfffe9630da08cad2d07525aa83d8eda99bddf1027b86fcb463bf8141adced5d",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c31e86a1cda6826b45fd2d0a323150c4c64be211df2136ed4e2b9bea44c3a531",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "104-206-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/104-206-r1-LP/trials/a2s-capacity-score-104-206-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "b3e8078432eed64a595ce61d9b29f29ef2793082d5e283b27f10e799d1f3a258",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 14941,
+            "commitment_sha256": "cf648564a079563db18abea11802cc74504e3d5e55474820c10ab6e131b08034",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "0a38401a7836530ea21ff14b21170b84dacf6303a61b3b1c8a02f4d2c256aae0",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1750,
+            "commitment_sha256": "c5f7a505b5796023176cb130e2d7dda761558fda1f405ba9e04f5e6a73a903ea",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a7705e41e7aac35676242ee74c1015a13914b33a22e394296302116e698fd42b",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "9368da9039047ffd096205e6411e45cdae5332c380fd3682cbc28e7cdcd5af55",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "105-207-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/105-207-r1-Pn/trials/a2s-capacity-score-105-207-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "877bca7300888ebf4ba791582af23b672e23d93c3bd78760a9c5e5a3572a5e4d",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 66947,
+            "commitment_sha256": "54b4f26908f448a996f567a4250285de7cfa4fefe4dad9a2b684620a2f49e93b",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "8271dd85e93771419daaafddfb45590611a852f51e94f6a0e8b2f34afcabca4c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "c0373213180c5581eb94fa5a88d7349230505cb02494ccf81ec0849782bda321",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "ad112194e2b8ad43da2b2e59e7d9cdf7e2248552ab6143831724107db7aa0c6f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "b7fcb18a10d5fa7212925a80905f7395d6a0088327f605bbe4206cb600dead4d",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "106-207-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/106-207-r1-LnPn/trials/a2s-capacity-score-106-207-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "26bcaedce81e5979aacfb566e407cadce6b44e60f234e398b1d4d90e010e6d7c",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 69745,
+            "commitment_sha256": "f903c4bb0f8c4e4eb6a1b9b5d4a33bda693db9d49708eba06df9f31c5928c0fb",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "8c00b0d33fa8ff8616d4c74843b5bd69147d1108a9cdd4c649a6d4383e31170c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "e875a1aebe1c8ee355b5d149794ae526ea5aa9549ac2e34e46ce77ff1bd2fef5",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e2484128cf237a840e26112949a31e1342773630a526922b73a7c79c09c5afb1",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c885b279dd8b47858bc2ccb10845a35ee41d30fd8d189c3b7dab159084b8e60b",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "108-207-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/108-207-r1-N/trials/a2s-capacity-score-108-207-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "3806f3dcda5ca48c7932b13a5f833f624e103b948587f31035b48f1f7437f9f2",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 68693,
+            "commitment_sha256": "b1d16a5e9334d8e808b59adccf41d131c524c6ff00cbebb47177222e93561f15",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "ef8e2c8402e838c1411b27a404c627886c0e5453edba936502592b66c01e42b4",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "40afa1d3883afdc78af1d9339527578a60641c2a41deafb4f0f4bcc8a0bf8763",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "29a3898c16d2ef29127b4003612e60631de33d75a2efe43c6ad211fcb6191d18",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "61883a359b177c14d945d4e3871c78dbf1854287484d734f3cf9e4d97abd4e7e",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "109-207-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/109-207-r1-L/trials/a2s-capacity-score-109-207-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "391e1320b836eb3f4f9678638d005d41536c694ce60a6c331f9bdb693fa49527",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 70071,
+            "commitment_sha256": "aacae2385be154d60ca1e2f8567e6b5df3f9fdf52684d81d0ded779695890e0e",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "205a3ae4e38cf98062d93bb9a7a42aa9a8c766d5112f819f4ccd5e6944e4e0e7",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "d5226d9651d0d6eb2f612527674af0d23e70ce1ed8d620feadcb163eec7b4a8f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "c8912af7dc62df238e063eca88c8abde11f92accfa79de5e220828d9caa0df5f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d027c1fe42649103c6706cf5b87f8db0d261094a39aeea1ac5e7193f7680474f",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "111-207-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/111-207-r1-LP/trials/a2s-capacity-score-111-207-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "de205d84918c3be70c1fe1a1ecda3ee15cddbb15c5e9792f182a3dc11fd3d580",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 61237,
+            "commitment_sha256": "87a3f4de5324d555deb49b944a4a52d86867e4b3e703e3f474df5e65c3619bf6",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "7c21a32dbdacb5e755a9b9cfd6000dc360e5ea65946196958cd6aee9be8cba56",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6546,
+            "commitment_sha256": "ce4c341448e5a4a8582dda27e62ecb77db6134e3ec287a8e3fa40b3bdd51ada5",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "06b56205d343fb1197c2390f7ab7c6785193fba14bffb60628a1919c2155793d",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d80422b0a05e35d0ec4df30816d33c6cb9cf6678fca4b85d5dc759ff8b1aca66",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "112-207-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/112-207-r1-Ln/trials/a2s-capacity-score-112-207-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "cb2b9fd81811ae7d091be021f95d7ef331d8a5f95c6ed3b299115c4fb55e7a5e",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 68000,
+            "commitment_sha256": "338a84dd01990f551efec43963ee7bd5e60dea1754f4a885f5051c2db2136400",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "ae50875d5f367259f0219bf69471299d134f026e9fd035f878236e29b647516b",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "2546ebcc49482c86aa1b6b7801e58477bceda8ef6cff5696ff2621dafe900bec",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "0540ce226bbe3407a72bd9c247ea944eda4d276f8d85c586a1aa0e502b98026c",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "cdd51579deaee5470d4429733945cedb6e881e1f6f239899540e9c806fda4e70",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "113-208-r1-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/113-208-r1-LnPn/trials/a2s-capacity-score-113-208-r1-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "88ff824489499b32b443385646ea1409fb844dabfeee931c399b0265495a1826",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26432,
+            "commitment_sha256": "a739b31bde9732fb9c727c9ae9fda1e33a0d90414aa154fee70a27ec10a809e4",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "d7523632948bdacf63bdfeda3641d05d8a53ab824dab3110c0f449453763eb78",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "1db5b13c52ec7a2191aa210903bb26145ab8a1f2e6855dcf57072c85caa4ee0a",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "191ed6838324ba04940d7dd03721ab89718d3b324a246bb8e4efeae72686d4e7",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "94719c282fc9f41f6624a45ffa4979b5c412b10faec3a6dfbefb73c8cccc7bce",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "114-208-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/114-208-r1-Hmini/trials/a2s-capacity-score-114-208-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "df80982328b304acf43521f306fd318836bdb6f0a5713fe9020d61d410c1fe91",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 28880,
+            "commitment_sha256": "a23ba0972a2a8102f5d20f7cd85a5e5bd6fb88dc7d18009a9b5c6452fe098880",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "41ccb543b61b96dba931781b6bd584ef8e2515ba3a80c3f8ef89b6b6afec778c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "093cac0ede5250a37b8011a7433def17f12b59803fa3263f18bdaeb0310863a6",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a47796d77d3226b0ad90211bb6e5f0d2b1eb2f32abf504924d166cf5aefe72ec",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "09745fe89fb313ac438db29cf0efd34cff5e430436baf4d4ea72c3b7e91fb6f0",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "115-208-r1-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/115-208-r1-N/trials/a2s-capacity-score-115-208-r1-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "36e7976b956bdc3274a9d205c0d48a0cc607f3dfe127992d8ce14570c5a0e0f9",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26105,
+            "commitment_sha256": "339fe15410a31b93d958cc085df779205250ef516c00cbc3d448e4b54a575049",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "33948e4a1efd7a977d1a317c908025fab7f21a196af9ecd047c2527a3f268668",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "d8f0ebee469ae1f05e2b5ab37375247cc40b9cfca4bc6c0414018b5869ad4731",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "d3326d9adabf09c7da61271185309dea6c4c4e095992d53f6a172a28d41e3107",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "460339b242d3aac86cb834303297c3f55fd7597aa31598e450bc8641aed23110",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "116-208-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/116-208-r1-L/trials/a2s-capacity-score-116-208-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "89f8221a423d101767ab14be1bd42814dd46a17ac699a195460b83bf2e779709",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 27016,
+            "commitment_sha256": "5fe693a58f6f9799ea786499cfadf385d20918d173ea41ac8620142bf5dcb727",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "091e9e7429e7186c726773995e7f50a5509b935cc81132091f2c37f6764a68b5",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "7aba5840779d37acaf6f571c8819fac5ed842d5e38365272394361bd2c73e849",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "8a6b8194c3508393be5077235627b9b1bc214737da1cf1435c5d2bcd8849b839",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "0b6447b5044911621dc0236e93a13c7fe936ecb891a3325769dfe10b10d08a8f",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "117-208-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/117-208-r1-P/trials/a2s-capacity-score-117-208-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "32be4b54d285968d144d9735cdef8d4ad07fc852d13a26f86ba14f0aaab2def7",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26674,
+            "commitment_sha256": "2e7b733aabc77a700ee8be56023242d2660cdf30509ff624ff9b26ad80175dd7",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c1b004ce06c4c38b3e526cad6e3ead1f6329b529efb9010d8c717010b47e3e78",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "47331287827b37543943679f1d7e4477eecde7b39ad7fd5edab8c730eb5f588b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "2501eecf3c840e20d65fa0e1face41f9e909b16c995b666dfec7d1e5aa73744a",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "339ff8c9f9e1548ece8f798dfe5e80fbc594f1998a487b40e47f4a93be213c7a",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "118-208-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/118-208-r1-LP/trials/a2s-capacity-score-118-208-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "2a4d1df6c581ccb24dae12bfcb72b4a04f24d705c375d387a812cee79e09aa50",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26305,
+            "commitment_sha256": "f962c31e6117ea97098dfdb3fe0148aa93a5301554af2f914076be23f1355e45",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "20638315280f5e240fb61bc03d69a8498ffebb60611d5af56f98245d2ba403f7",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "48292411d1ff0913b5a3add215942fa46b73e7e594fd3cbc5cb15a11d8bcfcb8",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f8189258d8fda3d5df4f408ad7b16452c66e62583dbd991b09d99f885b19b730",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "1c40061b6cf501a0a0ed491ef1ec6f8234d15d94bcc7a78ed0ac195f1b495dd2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "119-208-r1-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/119-208-r1-Ln/trials/a2s-capacity-score-119-208-r1-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "37aa023d274a5fe9d129a987c8ce6d4090de1ae9156e3947ebe0b91b451d816b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26753,
+            "commitment_sha256": "71610fe08841923251533aa9fb9f7f8230dfa37553e1057d40836fc09c5e23d2",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "391f08d31406e37ac35e53642c49840677a94aac6f9c7ee59c51707317197751",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "fe9077b765feec8a05a592a84bf742c6a773217839ad523d509f193fa5538f28",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "afd555010444d09af1db0ebc891546738238ed5985824705872a51523fb13881",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "204ccfcea78b697778c73fc9ea17a86db1cf2178554193c098f5bb32898d03a6",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "120-208-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/120-208-r1-Pn/trials/a2s-capacity-score-120-208-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "28421a9674e90d8e162d405c0d0f0db1ba5decd1ba87d5cf1cc39112684bccc3",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 26432,
+            "commitment_sha256": "24604293e3142a213bfe53f98b96826241893405c7e1a8c914c55bbc1627b83d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "3946dd59198132379194044717cb749610b6a3b5a184b60ace3f56e2152bc2a4",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2447,
+            "commitment_sha256": "940090f87a4584101dbeb20cfff1eae0595eefe7e5bcfe75527805a7b0e7328c",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "174536c24a4d2c564d4c876d45e350ca263f3fae66c9599c9ccff1b92ac04af1",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "84067baf18c074dc0de9366ed4dcdd590b41075c95f9a0287efac010c88e960c",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "121-209-r1-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/121-209-r1-Hmini/trials/a2s-capacity-score-121-209-r1-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6529c6de9659e92ec0a107f57d5021b36630da46e2f65fa761ed296e5240ce6f",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 33011,
+            "commitment_sha256": "41512641f9c35ec0ae4fa2515aa9d720ff10f93bb993ac48b30b77f779e57bea",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "479d3d1572e729fca2cf685d2ef4d9b4622d04ffb6c82635cc3f66e04e2e3764",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4186,
+            "commitment_sha256": "f7d08c817bda5c53c8c1726854fa8e3ac8a0aa5aa67fce33972bfd870b5ad489",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "44caaac5ccb17b006b4ab132ec196754093a5360a2d67055a01207e8ac5979e7",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "fb34f2b560bb98d7873904cf0d8142c81cffa50ccbe63bdbe02d8fd1c1c1e33b",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "123-209-r1-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/123-209-r1-L/trials/a2s-capacity-score-123-209-r1-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "e1e4cb74023b173551614a9c02c05c58f4f371df8732cc6125ecc5e2dd64ce02",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 32925,
+            "commitment_sha256": "192e7e618e96d5435dd56469d86830539e1ed150c6d1d037b004f9f1cd351abd",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "bf5aedfd1ab11936d8b5dd7d25284b9b49a405617d2e706ffaee3dfe1979045b",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4132,
+            "commitment_sha256": "0b71e5f94cdd133ad9d0c71bdb7c8f7744a6a96f0b4e2e983af31866a0b45509",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "c2d6d976d6a38690c4c1d6ae6198b1d714602a10f6d5b7faba380e4b9ed98ffa",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c14c8984b792da156e87a76b3c671bdf3a315dc5b28c2431d219c54b15a41cb7",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "124-209-r1-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/124-209-r1-P/trials/a2s-capacity-score-124-209-r1-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "53a27ce2be7f6abc35ec82c2358876291bf37228a3427afddc0885f7b6717586",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 32928,
+            "commitment_sha256": "18cd973a438c8c7789025a1f8f1bfe4e87dbeb3bf8ad8a6575a15a0c4e51dcd7",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "34e817d8a117d112e50fc9a2e02e08b59f194fbf02366936d96c9380594354a4",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4132,
+            "commitment_sha256": "75a74d5fb8c1be538fdb391a332297756bfa45d8f229f2bc17d0feac8d7f4912",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "65e1923ff47f32a01f38fc9041536cc436492765c16f475121ff9b7501daa335",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "b9ae755eeea082cc3fc315123a8eaad579ae2a6e7d71949562e2bf73be2d2d66",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "125-209-r1-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/125-209-r1-LP/trials/a2s-capacity-score-125-209-r1-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "e965d46b96a6ec5fd4548ecec03b8a6758e063ca59fd560927a015df1d5eb587",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 32889,
+            "commitment_sha256": "61e301b5f9bb1a7fbd088ee268e1298ae345186b64defea0bac3ad724145e395",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "2d2155b355ac440e6505a4963fc5ee0b4b8a7b259999a9d1babcee8bb619ba65",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4132,
+            "commitment_sha256": "7594292f026472437b915acd1a33cc7cd6471da6f64e9c6104fb5d3830304886",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "9fc80c8f304a65fcd8740f969d38ca1590d5781db2dfa4ceee27c0b2ec0f2cdc",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a99b00699c9cbacd0668fc83e58720e9e2fbe64d086253575ac60bebf79477dd",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "127-209-r1-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/127-209-r1-Pn/trials/a2s-capacity-score-127-209-r1-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "cacc20b8da28acd2ffe41e0365ba846933e3d1286649ab4b6b2d45fa9f93faa7",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 32688,
+            "commitment_sha256": "f78e1ffab1c0a31bb6804cacb95a2603938905bb2ceeffe5e52a3f396caaffaa",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "9abc5ff6133e2f4d612f35a7fa224d1b7170bee89fa70c0ed03135bbfea52264",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 4132,
+            "commitment_sha256": "a315b4992bfcb93755dd1cf49525403fd5315f345ee1126d14ce0c3cc6cec56c",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "cba0bbd933a4e230cf7625c8f16c9e5c5b432d045d39e8275d2b58734b88dce6",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "5fc006bab7a824dbae55eb3ad563c359cd8361435a13b64905df7f5283b53ba1",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "133-199-r2-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/133-199-r2-P/trials/a2s-capacity-score-133-199-r2-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "714feef23704e84fe528875ff9aa5f08862ac6cf1071c24455f57e30942768d8",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 36240,
+            "commitment_sha256": "10997f15dbcf9424a0469fc525f05be26ef9b225323e8b5badd49946fa84aff9",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c288b2d68737d815d545dfcd73abc37d80edae99a9b26e2648f788ee5267b769",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17475,
+            "commitment_sha256": "cda0e2dad3002233386dbe8614dee7a3dda75fe4124584f3ea155cd04bb37e9a",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "7504f4575918a57dc16e8a4a6025dd98252fdbde1626cb2d0f24e0433e48d6c0",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "878f399865847b8a4755b91bfebc66c0fc6cf2d3e6b3af018f1e02b6823f33fb",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "134-199-r2-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/134-199-r2-LP/trials/a2s-capacity-score-134-199-r2-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "82af5b1ddcd8b8f6a865a280443bca32f7d52879f6a355fb6d53ede6102e6ee1",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 37124,
+            "commitment_sha256": "000d7d17148ae5d626b003e89ed9a467c6740daad5631ce677b1cf8a90c4cc30",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c782f59ee97889e69e0143ef159b942c95d28703611fbd8d76aec14286736a56",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17475,
+            "commitment_sha256": "f19cbc3f770b8a85e319042ce4c98d3971ef3f2b5d4c32e5076ddd80016872be",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "bc9bd778db63f6de693befa361204a93e8cbcda3e0e645a84da538aaaf159e29",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "6dfef00ae741d8487884ca5f12a02eeda968e53cd6b173b879c06d1b898f2361",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "137-200-r2-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/137-200-r2-Hmini/trials/a2s-capacity-score-137-200-r2-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "8895ddfcf6101e1186e640c240ddf0306812afa13675e17cbb711202e5913fff",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17464,
+            "commitment_sha256": "3be02c7a906188b013889a4e16d465e209e468adc4e27b65ef94cd094bf11c06",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "2abe42798db56bdce036b6578b2cb8f1d1dd2350718d463c0a429292851ff92b",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "de3a01bcf76cb1e4d277923e8cb174ed6ec7ace1b4146c89569b5db3b00ec3f1",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "6b2eb548b9ba793d85054173cd12097bed0e9a68221dc67e7376d7d2eed507c7",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c66cbd3b0b7c9164395fd241f856cc56a5fe61561d187812cc73cc079ed303b2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "141-200-r2-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/141-200-r2-LP/trials/a2s-capacity-score-141-200-r2-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6be859e84df63c2ba159bc3ce2ddb49a85ff63cddafbda9c118a8f13229129fe",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17671,
+            "commitment_sha256": "098ae8da3eb004c9589d1c3c76f471740939c50dcf252922ef3aca8816cdf125",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "35d00e72d76eb07d4d54d32b00a7af316c335bf0254a6da7c11084338bd300fe",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "ac18ee13351cc36e3d9f4687b49a3899eb81ff1f332ed7208c868e83cd8465d9",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "293e8bdb2dbbfca3ee7ef5193aa9547a2b228558af3df2d7b16de85a4b478b89",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "20096aa1c6267ad2a355953057b408b31462245f38db8a9efedabb65b8971cdb",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "142-200-r2-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/142-200-r2-Ln/trials/a2s-capacity-score-142-200-r2-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "a9a5f2d37ee96a84f9bcfe5086421db7bc909fbbb6c4e64fef1278564242d372",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19062,
+            "commitment_sha256": "e957f4c9701cedaee4b39a56a02993e0829da4e90e17164a360789ace56b922a",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "aaba18f886f81f02f5fbdd258749dff856f3685bab87e65e23ad28eb5bdce033",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2036,
+            "commitment_sha256": "aaba4c42db6047e6c84a1710daa718f8c9167eabd6a7437b92fcac6a54531ee5",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "93a1f8c74a35b5728f2163bd0d099d9289054a26b9b815405d902e006f95492e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "fc4abd77e42b5b58974b5f083ce53186229455d6f68e70a941f4396f8dad326c",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "145-204-r2-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/145-204-r2-LP/trials/a2s-capacity-score-145-204-r2-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f273d35d319bc73508011ee6161bbfa9bef09f6920808dabb3989ea31e72764b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169265,
+            "commitment_sha256": "dec50f371b0c636406c018b947cdb8f0b96948b7bbc3c0af40bd2aa52e44c01a",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "789b87cbe67a4805f5d7f09a935a997c7559cb4393d294afeed85b77eb9e814c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "9ff3d9e3e119339e59874d57c50483bdc4a0efd2c4d05cf8de0f45a326572651",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a7e98251b94ed52ef32d31829d0383127925fa128adcd7487bebce37cc544db7",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "0610275259891d05a2253a449b80f99938e5a3623125461653ebd0be28c409c4",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "146-204-r2-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/146-204-r2-Ln/trials/a2s-capacity-score-146-204-r2-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "ffc208b07fdfb402143260c98b0e17337ecc5fe489c45d4189bc5c37edab12a8",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169708,
+            "commitment_sha256": "4b20c426ee0c5305787aa850afb7412aff885a45e3ab4b1992d5c868ed560981",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "90bba36094f2faeabfe11ac7afe2ea53bce65b4f9908bc9e0c7e483a7bc24d4b",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "110e28b67cb276792ceedf4036fa53d06693c892778fba8b1a2ecf975d507e43",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f40ce9f5c9d0cf3947b5ef258cbca410b6512bfa9da656cc97eb8fe9edcf03a5",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "f7c5ae183c78eeae172b9629da04d97f2fda3efda35baaf9eccf735b507b6b68",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "147-204-r2-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/147-204-r2-Pn/trials/a2s-capacity-score-147-204-r2-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6d7495adaad63c7e4f0dfbe59bc0382be543ba1e1c380ca8e2da0bb568666b04",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169335,
+            "commitment_sha256": "72e249228804a09e0f19ebc5f260eb5c2098ff3d54a92c940dbc2cc379dfff57",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c15d1e037c15a0afffba0815fe832d3f44eef456b035b908931aeadf1f0ac849",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "bb5e99d3b258ae76a4038a019b9e388236309a472ef60382cbc1bd5ec9165856",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "8c4d3bdb261c128f529e95e1967148ea9655795cea78cc2a0351fa2af27f342f",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "cd352a6ae441362dbe2f28dd71e153c08d823606ac08acd8d3fd32149511f367",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "148-204-r2-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/148-204-r2-LnPn/trials/a2s-capacity-score-148-204-r2-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "b76bfa2368eba062cb7a36099d1f430a4bf26c780fc0bb3bc98cb4a9af66d93d",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169288,
+            "commitment_sha256": "c561a701da0800b6e91938069a82c81a5b195ccfba17b429cd61680faddb2f4d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "646e08ca1fce1a0f933da750224c862f2237e2be409b9566fe814b364961b323",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "13b539543bf1d1a233f0326ea0e86f0bfda4c30cbe0a5a8212048b415e9cee0f",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a7376065bf9065ce03e6b42461bfd92249ea43dde37650c5f26c50e4ac835f0d",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "6be527d4f27cef867168a0d9b0eafbfa3f7678cc2fb4330619ccb3e76bed68a6",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "149-204-r2-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/149-204-r2-Hmini/trials/a2s-capacity-score-149-204-r2-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "4a9f7cf2ab2ebb8bb5e3f2f6fe86d0102eba277644727a74c216e659952211b2",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169682,
+            "commitment_sha256": "53eea521ba928614ba0e700efc1b5162ded648dfce440ae061545e12dbe6d497",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "063c406da0a41584da86558f1f220de169ac97fb5379d0788ef4ffb2c235b5da",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "4b4d7e462236bb3479b261659d351b7d9626eb916eb30dcf7452565d5bc08ae2",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "1ae14d1c7fba44be63a30db439db58249c53ae47252261622504f6594fb4436c",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "802353fa83247a4514fc1d622630cfc2a27a7ca5afb5ac2e602e1f8697aee925",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "150-204-r2-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/150-204-r2-N/trials/a2s-capacity-score-150-204-r2-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "d01ba6cb5943df0916d70df6b40504b3b99c672235c6424f463deee5410143d9",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169416,
+            "commitment_sha256": "1e97f0865a996275f05026394d745048cda415a37029733cd2b47ab871a6f069",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "6d86181d2dea0bcaedf7c22cec558b11ebc972a318387fdfc2c374260bf43485",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "26d5de99f9924f317818792a706abcc4217970659d7fa3bf8aaf5b722ac26495",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "bdb95671cff1a91a0085cf1db7ed28a47f3b6bc5af6b83fc2e92dbe4efedb8d9",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "40abdd1cb9ce16bb1098d36ac0f7650435cb1fcf70593ffab201e216a3f20f33",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "151-204-r2-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/151-204-r2-L/trials/a2s-capacity-score-151-204-r2-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f27d454a7e7a6d5755d1b2b36bfc5a2a41ff51f2ec8310510063bde34daff7c9",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169474,
+            "commitment_sha256": "eeff99ee783badb3071e71c66ea89d9da5ce637f399a758a489319d5598c41aa",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "c0787396357b81b5d430b6c9e16a50a7e0069a826b8bba9d22eb267f6c04e334",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "453c0d4d618a6f54031afbaf8f27768bbcf8b480bf1a6f94dc72c4688d208c07",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "f895b2b6cbc1e1a2a2a0d125dda44d95480d317c8c818d801bb636862e377e1e",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "9425410dd0cf991fcdc93064b143b58ec316e2e7b781df3f6ab47ae8624db1e7",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "152-204-r2-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/152-204-r2-P/trials/a2s-capacity-score-152-204-r2-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "539f34f3184ef285faa59d5d7f9074b4853c16d244bcea016c579bae17188c5f",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169478,
+            "commitment_sha256": "fb69aa6957b180ef4059ac5635139e71b50ce4b2d656528f17ff9525032546cc",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "0838bb0412a90874dfd8fb33d0e01551f714275823812f6ece2a3b89ee0acfd9",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "14a5786f6e33177e48ee68a2bb894f7d96c1f95de2340c23caf753b36b1a6f94",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "93446cc7f2e5eeb62a669dd9c12f98c4c55e2be6b29ed7970dfa91565ff0435a",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3bc03132a2e88a8fcb6c7b5b66ecf23bfd1c7335a95cf588a55048e05282c7ed",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "153-207-r2-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/153-207-r2-LnPn/trials/a2s-capacity-score-153-207-r2-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "2259bf5bd6a350f80df55317bccbf055045d1ec4cb2e4f1d1b990b6d89f55118",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 67725,
+            "commitment_sha256": "4a72bf1e42222a66f82c5a774105818e4bdfedbb3e0dfe8e970ca22c483a48df",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "5ec3dbdadc2b0a68836a92617e506d908e2573ab8b05f68249a784b6f2b61ff9",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "3a028c389202b2a97db68b0e644125a1c16a5a8f4c3d232bbc3c53d0332e8996",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "5b8f7abd01231d9bf5a79fdf08f5497ce8f1273ed07ea02c0e7b40083da533e7",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "05c7f5a9944aedfedb798ceb04b65f4d6ac87d4a31fbc2d9e1de9a2fa7e7c6d2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "155-207-r2-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/155-207-r2-N/trials/a2s-capacity-score-155-207-r2-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "9fd9dccf73de98276509c26242cb0a80e1ddf7babe84ac25bbcd0cd539eebc90",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 70896,
+            "commitment_sha256": "7aa1bcc1f4eeb9ef52cadda3e074643ac09f92e564ff1a6c89602413d592c7ee",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "ca972ca394535cfa10de65d25faa6f5e654708572669b7612d48daedf9af4475",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "42116fc6268a20eb28938dc2e05cd156a769c62fe083e476c28427d3880bc405",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "11502f0ce44d8b229d4cb6d0ee0017079e66a16563594aa0d3cfd7a956c160bf",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "6672a7a28211505ae6e4f87f9be311bfa645e952e6e4bef654e9c4df2220c2af",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "157-207-r2-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/157-207-r2-P/trials/a2s-capacity-score-157-207-r2-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "cecd6a8c540106405e0fd7744f77d4c9be836b7c6b59a85a7bd92d3a0628d4af",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 61420,
+            "commitment_sha256": "14007d64efb1326a8f0cd4fde2a48b8321d59a7227d2f457f7245f6c66c8e248",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "7cdeed6fef229e434db4406613e262da8334a9ae75e2af0bd6c4cae0d250a636",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6546,
+            "commitment_sha256": "9e23196b85deeae632c83a93ecf91bfb077f5b5b46e0ac5a3d0c31cc7fc9889b",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e786359dbb4057d7863f9932ff0ee23128d9f11209a07e76ad17cf489c21744a",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "0a0ae728674352f40b23cb6151df5243477ac4842a121c872661774aa22b3af0",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "158-207-r2-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/158-207-r2-LP/trials/a2s-capacity-score-158-207-r2-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "94f3617303ecfa93ead738a7e63c17118a37ac54788570a014296201c0ac21ab",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 61338,
+            "commitment_sha256": "e0828abce3dcbc7e9095e8edbce364c0b36522f4b778ebd999e141485876d1b0",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "e7392c71a110fce56c1284d6af87279d69ab9a0b76484c1dac6a24f2f87844f3",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6546,
+            "commitment_sha256": "fc5817a81d5c952e4f3ae81a42aff98609b60485743f18595fd309924e786bc4",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "9515585e23a42aa62bc55ac778ed6e4beeaa19df60cb962de50c97437be6bbbb",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "74ed5eb6008215b199b7a08d54685891ac3b23b5940dd683996593f7f7a06ec6",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "160-207-r2-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/160-207-r2-Pn/trials/a2s-capacity-score-160-207-r2-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "99532e12f2ba3cdc690bd8c060c84467869f682c5a612e28bcc0df8d87e11d13",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 68264,
+            "commitment_sha256": "0e8402b732a4da1f1b7bb63429d9a6d5455fce26b6d2fe4a9c0c926a97f21213",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "71b708198fa66469d4d376620cdbcbaa9bad3f896db4438541c02f400f4cf5be",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "0563082689a01105e9c8436ede7431bf94b8afcea33c17b73c9fe2c8205f6713",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "b1b378a5e9e503d9c373971e6e2ca0c0cdcb3ea2285b1c26cfca7af2d2459440",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "7ffac1905cab0a1c9b0bc50ed2e37cf796bf6f4434212280e668ac34339c7ce4",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "164-199-r3-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/164-199-r3-P/trials/a2s-capacity-score-164-199-r3-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "c10e77344113597436bab22ebd64b8a4fcffd60654f5a36b31f3bfe55d615eb4",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 35813,
+            "commitment_sha256": "b2b072ff38b2e0dc45f190fc9c902163b39cb86e3f8206fed3d534de5b013228",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "4dd7c8e2f0aecc7bfff95cb385a0f4419e2308a077bb2a5166b7788a40052abf",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17475,
+            "commitment_sha256": "ef21ee0e71cc5d56b72ac843062544af3cbe93173b0fe63650f6f1c8644951e3",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "92ad0a1f1b411a07ff952548b21a1b87ff8a3c1d92095c11c114f12b24d32331",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "fdac5de5440b2dbdf9e235fdf67338484849a1ee9e1a2cf876c76e52f3c431ac",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "165-199-r3-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/165-199-r3-LP/trials/a2s-capacity-score-165-199-r3-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "89d4380066db2c93ef3668d3d28a95c0129ba198b13387268469248135c243cc",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 35666,
+            "commitment_sha256": "7c2b2edd0fb83884eec798cbd256990866dbf63557c339133a3f1a986c870015",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "be077d74163280c2483ba4e021e6729940131ec6662577c7b4fb17bd5c87ae91",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 17475,
+            "commitment_sha256": "6e42299803e141de778752d035a39736fb3e662e105e8d478e2ea03b233bedcd",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "865212df92eec5f076725831565990e8164263004da3b1a0af96dce542505345",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "8579bf4a62c7f6b5fe5ed5d5a15fdd2db473d2e0c724231c644021ef0a1b7cdc",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "171-200-r3-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/171-200-r3-P/trials/a2s-capacity-score-171-200-r3-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f73c9846215d48640207654daeb6c6b7e844e8dccd7097e8291c0bf179bc058b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17682,
+            "commitment_sha256": "df1c1f4238885686d76bcbd14e09cc7a10bfb5e978dd0dfe1fb85515bc9b4190",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "dc326671b5e766cbfa89f6c73609584ce672d65463d55a47537d9c59677e5098",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "926730cd4c22c159a38522f3b34eddac63c1596950ac4ebfd75045bcd9f6a669",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "cc81909d0e8eb0c8c090d9db8c46f3430a843626b657c92d498a939e53877e34",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "9ef153f31c67581b42f3d184d49969f3efae2fc6b36a1da759c2440eb9629ad0",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "172-200-r3-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/172-200-r3-LP/trials/a2s-capacity-score-172-200-r3-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "9d4577bb662c1087017432301c4054abb9259899f8e5a692be57f67c40fa5ef3",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19174,
+            "commitment_sha256": "a2437545decb4cd892594a3b9111047cd63e96ea9d51ebcaeca6347547ae4dcb",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "5b29478efa2428073ea576da5029aa5560b25db0358f153f1594700e27ce88c9",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2036,
+            "commitment_sha256": "29a2b238bb774b06d8485b04e1459323bee2b5d329351b9553cc53011779e1c7",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "dddd4764592b8885b424ce5ea1f1b919d11cd1376761ad49265a7e702df036aa",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "e50a59ad6cdf769cd59261dc152de94728b0c6696e1ee5fc7a126b5286f861f3",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "173-200-r3-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/173-200-r3-Ln/trials/a2s-capacity-score-173-200-r3-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "11f663c16dfb55df84c10abedec37069ebd2f25933eb3dd06e35a966595765ab",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 19008,
+            "commitment_sha256": "b94cc3995675ad2ed97bf9f0ff6f790882c76534de44cfe0a8b4c391259217ef",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "7cc8422016786e4e2730898f1ce6d6c4383aae844bd79e8d2930d5f2f8ab4874",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 2036,
+            "commitment_sha256": "5afee97b1385bbe7fe5664993a198adbef398f094e156b76881f6c09b440d2d6",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "e971df06d359caa76bbfb935e5845a403165229469bd883c74890aeda7ff7819",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "44fcf04b171f3d72f15f61c8d9b33d9cf8bc0f87a89bf044b6ee9345d1c04dc2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "176-200-r3-Hmini",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/176-200-r3-Hmini/trials/a2s-capacity-score-176-200-r3-hmini/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "10d4decd2ce7a19e6e677d9fb0c6299e0d420be57b19466f9278c67c5a2b45ed",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 17695,
+            "commitment_sha256": "01c5099bbc001ea15e1f27190581e8fcdc173caace4d9a1d791e916d4120ef9d",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 876,
+            "commitment_sha256": "7e59c3c4f26e9ddae9e1a618284203da9e397a4f690b88d7586752ac69eb7a79",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 1977,
+            "commitment_sha256": "2c9dab2d1d463a6d7e4fb7c5554c366088c9c46923703332f29cfbe010405419",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "bc220244a3d831575791d06bef7d674a8941732502c76559cd7c1e1dbef9edf1",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "f85c7329d10aa1b563f448d5a4b0771ee0fd9a1d1d8815f8168abeda40b52257",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "177-204-r3-Ln",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/177-204-r3-Ln/trials/a2s-capacity-score-177-204-r3-ln/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "6f3bdc86fc1a7b7786df77e7b9145f2f29ab8b735ed9cefa86ceaca2aaf592f6",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 168792,
+            "commitment_sha256": "45ec8f8f8cc5b3332fce2cfb48f75b5c88f63a37b0e14d1c9e20ae0cbbf66a6f",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "96584b0cd03829ec133a8b0a121245a7405e2457bd54abc88cd9b3d7c89105f7",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "a47ba7af9103f45818ce7bf17fa320cd715ed71fe234e8e3e824be3c9de24e01",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "570c383f50110c06264b5a2c85e5e7c0325665af753a8199f6346929b9066b00",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "0c50767c7c5b3d88a1442f232acfa0fff0b19a024b552fcc32da16df121b90a1",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "178-204-r3-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/178-204-r3-Pn/trials/a2s-capacity-score-178-204-r3-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f1a5de0e3e5defe6c4b7d041ba35d92e627dac057268a7c9fe271c565875a404",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169219,
+            "commitment_sha256": "acbe6c20fcbc991835d1e37f3f23ed3953f69c7104612f0e4c772d6b76808435",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "562acb825d289727718e7b2bd628608f5645bf7b76f873bf37197ebd201f9d47",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "e2c15fe01edb8392d566c5ede33dcd5e8c232dc84714ad3afbb90277c4e62eb8",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "1272c28b5cc8550b6710ba6c76777dddf043f9256244e0d5231e5fddb96c1f08",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "dce896c433e0b8a946ad28c9a1e8e72ed573b7fcb174e6e58edd0e46fd45bed5",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "181-204-r3-N",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/181-204-r3-N/trials/a2s-capacity-score-181-204-r3-n/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "b0292cc9f51ef60e177c84bbb7c966904fd7ef14a319d674e77dc0da538673aa",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169633,
+            "commitment_sha256": "5d5b7a9f82800b585fda505d5e5935d7ad8dbe9a98a82c95aa1771c4becaadf3",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "8bf738f8d7db0e51f8eba2e2474ccd1c420bc4556cf26a2f4c270f970223bebd",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "cc66b8be616fb1762b7d1ff2b2934f2707ddd5bdc3efa108ca4fd9a0abe5f7a7",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "7ffd0349425e7746647853302a1c6674fc62cff5f2b9cc6f986fb90731767dfc",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "bc5eeecc5f266619d8ee0f365988c5df99285f5b519c8fd7d9a1e1262e6895e3",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "182-204-r3-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/182-204-r3-L/trials/a2s-capacity-score-182-204-r3-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "78a386ed7def83e57b8aa8843fed9f2f3a5e5ddf945f0fa1db17de503bee655b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169585,
+            "commitment_sha256": "335309d2b29b70bfd1eef066962ddacb5fcb894c50e84264246a3905dfceec5c",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "f40403557bf0daea211525a5ddcb4fcea001802c3bcf38112758ff8216b22851",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "9ceb2e4cc3ff7814a03730d71370b537df1c214ec1abbc24a5820b16cf1c5d44",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "707d7d0d43a9eb1b01595b1301504a2bdd6fb0692a9fe5d102c9d21277ec524a",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "c09c425a311acb019fdc8cafacc98ef0b85fa9f5cd3eaa3402c6eabb52465fc6",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "183-204-r3-P",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/183-204-r3-P/trials/a2s-capacity-score-183-204-r3-p/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "e10e049ba7bdbb66a8782bc13b13f7a4d6b962e8c86a451cdd867fd338b5d85b",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169315,
+            "commitment_sha256": "11289e37d9b594390ff9e2839d9f2376d2ae8c4eb5dd1a25e2b90c6fbb8c326f",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "5d9970e1f6d604adcf7150e6e6399f8d1cf83d8e763d61a3f99b967cd180ced4",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "20def8fbf6b86f44622c4d99a81c5a356f5cdb91afc72574e49e87c8ba150f10",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "7d9c4dbfb14f3fcb50a575e48843b4fbc7a6c4074b7693b0b3f714cb7524da82",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "a4231c34f3fd8ec4aabb6725f7c256266219ef49bf1db1a73b6475e1ed65ebb2",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "184-204-r3-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/184-204-r3-LP/trials/a2s-capacity-score-184-204-r3-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "fffe3dae2acb5e64d8065070aa6033ba8f74537e4336c588b33f29a80478fa3f",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 169483,
+            "commitment_sha256": "38a7917eedfb7e15cc3d2e477a30a8e2232d8d567382b79fc54a632645f47829",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "73881b40c197486428a86f0e9607ca77851cb1d2fe1c86a27b07a73a663163a6",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 14360,
+            "commitment_sha256": "142b7c5b3b30e7bc30fc23a92edcd005baa645e6bd9a18675c1cc4c3dbf0e319",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "37d66d4290372517d84c316a76ac1ee831e35cbf6b4eb5805ee253ba24504af2",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "da89be5dd98787cea0ee176ae90701ea0beb97919d8219f2a5cf228d49f66347",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "187-207-r3-L",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/187-207-r3-L/trials/a2s-capacity-score-187-207-r3-l/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "4ef7f6e9fd05736135f9ae55e1b2ba97b0e3df89f7fa608efe23dfd9df1254bf",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 69835,
+            "commitment_sha256": "ff59681c49141f7be910021b9caa39493b5e35792f7992e9ec8646d48c4093e9",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "4970de45682d2c93558ea523781519fce7643c52e994723132adfdae9cfc4b8f",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "dd4f46ee5a730dc78bb5d34edecc56520efb3710a089fc6565e2b5e66e2c108e",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "d26f816c77e88b6474361efc004cde80261e04a9951b6eded034f786bbff5e90",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d9066811d8a422d68b0c15b1e56b567de0437d3fe4e8bc0028ac8694dfb954ed",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "189-207-r3-LP",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/189-207-r3-LP/trials/a2s-capacity-score-189-207-r3-lp/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "701fb1c1a5876f94cbd2a93d2eee51658bcd61919fb81bcd26a14f10bbaa965e",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 69759,
+            "commitment_sha256": "65a4f2468b4ff9f170ea49a3285ac3a45391aeb80d699a07abcbba7ae4cc2aa8",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "9e4d4bf4b609551efbdae803f50c248371bf32ee58a2af49a2c74a528671f15c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "916f014acbc686bf212c546b85d0d6427c2e09bf330bf89fb8ba0340415b8681",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "45c702dd63b3be08dbe549ed97470455b3e6edd620f5a30e4d8d659d86fed0d1",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "3baf11e5a56fd924eac05c98c4c4f7928d514a589df79dcdc90efd0d4f8c5024",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "191-207-r3-Pn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/191-207-r3-Pn/trials/a2s-capacity-score-191-207-r3-pn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "f4982336fc4bbbe6e7ce544d2a0c401c895829bc67c30700703e7d56574ce0b0",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 68359,
+            "commitment_sha256": "f2bee9f7716b96484433565e8bc4a18a45573bdae567f8221aff7a58a2aa0a09",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "9e837b6ebcc68346368455c04e06349452f2f1dc3a70510f2b0be114a270a389",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "beb8d02af55b9812d25fd87be0174c07cc9de465f19a2d472395b95e3fcbffd6",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "a63f0aa9f5032021dd26af84d46af6c05f315d29a89fad61f31407b858a06bad",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "d0af114d68dc053f884cb858f5648e9be72cadae753acf2ab848d538beff0ffc",
+            "name": "reward.txt"
+          }
+        }
+      }
+    },
+    {
+      "score_cell": "192-207-r3-LnPn",
+      "source_path": "results_cache/raw_repo_capacity_comparison_v1/scores/192-207-r3-LnPn/trials/a2s-capacity-score-192-207-r3-lnpn/verifier/reward_commit.json",
+      "record": {
+        "schema_version": 1,
+        "artifact_type": "agent2skill.phase4-reward-commit.v6",
+        "artifact_sha256": "7279e4bf7b1dc025508c85b0f972ece2dfe06dc706d9d4c2186e2619c5ba3dec",
+        "commit_marker_written_last": true,
+        "publication_order": [
+          "reward.json",
+          "reward.txt",
+          "reward_commit.json"
+        ],
+        "files": {
+          "eval.log": {
+            "bytes": 71355,
+            "commitment_sha256": "316882f1b7d7ddf92ddd42fcaf82e13bcdedc90838e476cdddc5ce8a593871d5",
+            "name": "eval.log"
+          },
+          "eval_stages.json": {
+            "bytes": 877,
+            "commitment_sha256": "150b89da2f90ecd76ea97a8d28d771933e6471c848983dd60ebef7220d9b919c",
+            "name": "eval_stages.json"
+          },
+          "grading_report.json": {
+            "bytes": 6548,
+            "commitment_sha256": "915b29b6473a16e4e6e5df2b786429ea3d07ffcfb1d06749ab2b116102641b87",
+            "name": "grading_report.json"
+          },
+          "reward.json": {
+            "bytes": 99,
+            "commitment_sha256": "cd945a6f5a7caff2fdc4a9015036523fe1876b3035eb9cc416fb9fd072d7ad41",
+            "name": "reward.json"
+          },
+          "reward.txt": {
+            "bytes": 67,
+            "commitment_sha256": "8248b88ab9ca05a6ffd4c241ed106202b06696c283be1e416b3eb9e7f1940277",
+            "name": "reward.txt"
+          }
+        }
+      }
+    }
+  ]
+}

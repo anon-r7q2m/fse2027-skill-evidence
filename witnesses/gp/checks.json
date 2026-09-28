@@ -1,0 +1,86 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "early_public_check",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/G_effects/execution_002/raw_receipt.json",
+        "sha256": "709d9453a99212d3eb7a2a04e47a7fad3c16c157c422cb696ec4306456e1d648"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/request_id": "req-2",
+        "/session_id": "a2s-g-exec-a87de31d59e9",
+        "/snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/stage": "completed",
+        "/execution_spec/command": "env LC_ALL=C.UTF-8 PYTHONPATH=/testbed:/testbed/tests PYTHONDONTWRITEBYTECODE=1 /opt/miniconda3/envs/testbed/bin/python -B tests/runtests.py --settings=test_sqlite --parallel=1 --verbosity=2 --noinput check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_auto_created_pk check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_default_auto_field_setting check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_explicit_pk check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_app_default_auto_field",
+        "/execution_spec/cwd": "/testbed",
+        "/return_code": 0,
+        "/stdout": "Testing against Django installed in '/testbed/django'\nImporting application check_framework\nSkipping setup of unused database(s): default, other.\nSystem check identified no issues (0 silenced).\ntest_auto_created_pk (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_default_auto_field_setting (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_explicit_pk (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_app_default_auto_field (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.005s\n\nOK\n",
+        "/stderr": "",
+        "/timed_out": false,
+        "/truncated": false,
+        "/cancelled": false,
+        "/environment_deleted": true,
+        "/projection/applied": true,
+        "/projection/candidate_file_count": 1,
+        "/projection/candidate_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/projection/guard_changed": [],
+        "/projection/preserved_candidate_entries": {},
+        "/projection/projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/projection/reason": "DECLARED_PROJECTION_APPLIED",
+        "/projection/replace_from_base": [
+          "tests/check_framework/test_model_checks.py",
+          "tests/check_framework/__init__.py",
+          "tests/check_framework/apps.py",
+          "tests/check_framework/models.py"
+        ],
+        "/projection/replaced_files": 4
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "later_public_check",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/G_effects/execution_003/raw_receipt.json",
+        "sha256": "cd5cd25c402b51203d5b8c2070df764e53cb29f77cee1822190411248c03e735"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/request_id": "req-3",
+        "/session_id": "a2s-g-exec-b3446ba35c6f",
+        "/snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "/stage": "completed",
+        "/execution_spec/command": "env LC_ALL=C.UTF-8 PYTHONPATH=/testbed:/testbed/tests PYTHONDONTWRITEBYTECODE=1 /opt/miniconda3/envs/testbed/bin/python -B tests/runtests.py --settings=test_sqlite --parallel=1 --verbosity=2 --noinput check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_auto_created_pk check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_default_auto_field_setting check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_explicit_pk check_framework.test_model_checks.ModelDefaultAutoFieldTests.test_app_default_auto_field",
+        "/execution_spec/cwd": "/testbed",
+        "/return_code": 0,
+        "/stdout": "Testing against Django installed in '/testbed/django'\nImporting application check_framework\nSkipping setup of unused database(s): default, other.\nSystem check identified no issues (0 silenced).\ntest_auto_created_pk (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_default_auto_field_setting (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_explicit_pk (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\ntest_app_default_auto_field (check_framework.test_model_checks.ModelDefaultAutoFieldTests) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.004s\n\nOK\n",
+        "/stderr": "",
+        "/timed_out": false,
+        "/truncated": false,
+        "/cancelled": false,
+        "/environment_deleted": true,
+        "/projection/applied": true,
+        "/projection/candidate_file_count": 1,
+        "/projection/candidate_tree": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "/projection/guard_changed": [],
+        "/projection/preserved_candidate_entries": {},
+        "/projection/projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "/projection/reason": "DECLARED_PROJECTION_APPLIED",
+        "/projection/replace_from_base": [
+          "tests/check_framework/test_model_checks.py",
+          "tests/check_framework/__init__.py",
+          "tests/check_framework/apps.py",
+          "tests/check_framework/models.py"
+        ],
+        "/projection/replaced_files": 4
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

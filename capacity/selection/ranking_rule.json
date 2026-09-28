@@ -1,0 +1,19 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "experiments/submit_review_host_effect_v1/selection_rule.json"
+    ],
+    "description": "Whitelist projection; original ranking specification.",
+    "historical_registration": false
+  },
+  "dataset_id": "SWE-bench/SWE-bench_Verified",
+  "dataset_revision": "91aa3ed51b709be6457e12d00300a6a596d4c6a3",
+  "parquet_sha256": "43ed5a3d1d98da36472c1ade65ddd2085d7b4ff694fcaf6a023a07c5c1f32f21",
+  "seed": "agent2skill-successor-development-2026-09-08-v1",
+  "ranking": "SHA256(UTF8(seed) + byte(0) + UTF8(instance_id)), ascending by (hash, instance_id)",
+  "excluded_roster": "results_cache/single_model_baseline_matrix_v1/swebench_verified_v1/identity_freeze_v1/public_manifest.json",
+  "selection_exclusions": "All 24 identities in the legacy public manifest; no result, mechanism-fit, repository, difficulty or image-availability filter",
+  "frozen_before_roster_projection": true
+}

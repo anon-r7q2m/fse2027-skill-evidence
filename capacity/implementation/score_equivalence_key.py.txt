@@ -1,0 +1,79 @@
+def derive_seal(plan, endpoints, *, plan_sha256, live_sha256):
+    """Reconstruct every score identity from the original live policy endpoints."""
+    representatives, policies, unique, scopes = {}, [], [], {}
+    for slot in plan["slots"]:
+        task = plan["tasks"][slot["instance_id"]]
+        policy = endpoints[slot["cell_id"]]
+        publication = policy["publication"]
+        source = Path(publication["original_capture"])
+        require(
+            source.is_relative_to(RESULTS / "live") and not source.is_symlink(),
+            "new captured tree only",
+        )
+        scope = {
+            **task,
+            **slot,
+            "run_kind": plan["run_kind"],
+            "sources": plan["sources"],
+            "grader_id": plan["grader_id"],
+            "bundle_path": str(source),
+            "bundle_sha256": publication["original_bundle_hashes"],
+            "selected_capture": {
+                k: publication[k]
+                for k in (
+                    "base_commit",
+                    "final_tree",
+                    "manifest_sha256",
+                    "patch_sha256",
+                    "patch_bytes",
+                )
+            },
+            "selection": policy["selection"],
+            "score_plan_sha256": plan_sha256,
+        }
+        _, manifest = original_bundle(scope)
+        key = digest(
+            {
+                "task": task["instance_id"],
+                "base": task["base_commit"],
+                "tree": manifest["final_tree"],
+                "scorer": task["task_files"],
+                "scorer_sources": plan["sources"],
+            }
+        )
+        first = representatives.get(key)
+        if first is None:
+            representatives[key] = slot["cell_id"]
+            first = slot["cell_id"]
+            scopes[first] = scope
+            unique.append(
+                {
+                    **slot,
+                    "scope_sha256": hashlib.sha256(canonical(scope) + b"\n").hexdigest(),
+                }
+            )
+        policies.append(
+            {
+                "cell_id": slot["cell_id"],
+                "instance_id": slot["instance_id"],
+                "policy": slot["policy_name"],
+                "repeat_index": slot["repeat_index"],
+                "block_id": slot["block_id"],
+                "score_cell": first,
+                "final_tree": manifest["final_tree"],
+                "shared_score": first != slot["cell_id"],
+            }
+        )
+    value = {
+        "status": "ALL_288_REPEAT_ENDPOINTS_SEALED",
+        "policies": policies,
+        "unique_slots": unique,
+        "score_plan_sha256": plan_sha256,
+        "live_terminal_sha256": live_sha256,
+        "official_scores_exposed": False,
+        "max_actual_scorer_starts": len(unique),
+    }
+    return value, scopes
+
+
+def seal():

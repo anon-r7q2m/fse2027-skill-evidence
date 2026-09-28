@@ -1,0 +1,35 @@
+{
+  "_release": {
+    "kind": "NEW_FIELD_PROJECTION_OF_EXISTING_RECORDS",
+    "exported_utc": "2026-09-28T18:13:58.821925+00:00",
+    "source_paths": [
+      "experiments/raw_repo_capacity_comparison_v1/policy.json"
+    ],
+    "description": "Explicit whitelist; endpoint, credential_mode and all transport/account details omitted.",
+    "historical_registration": false
+  },
+  "model": "gpt-5-mini",
+  "accepted_response_models": [
+    "gpt-5-mini",
+    "gpt-5-mini-2025-08-07"
+  ],
+  "reasoning_effort": "medium",
+  "calls_per_start": 9,
+  "input_token_limit": 65536,
+  "output_token_limit": 8192,
+  "request_timeout_seconds": 300,
+  "execution_scope": "REAL_GROUNDED",
+  "input_estimator": {
+    "encoding": "o200k_base",
+    "fixed_margin": 2048,
+    "full_canonical_body": false,
+    "no_truncation": true,
+    "per_input_item_margin": 64,
+    "projection": "canonical body without encrypted_content, plus once-per-response retained reasoning token bound",
+    "reasoning_fallback": "authoritative output_tokens for a response with missing reasoning detail",
+    "scope": "LOCAL_ESTIMATE_NOT_SERVER_EXACT; verify authoritative usage after every request"
+  },
+  "tokenizer_encoding": "o200k_base",
+  "tokenizer_version": "0.12.0",
+  "stage_id": "raw-repo-capacity-comparison-v1"
+}

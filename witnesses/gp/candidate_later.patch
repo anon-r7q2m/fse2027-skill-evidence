@@ -1,0 +1,25 @@
+diff --git a/tests/check_framework/test_model_checks.py b/tests/check_framework/test_model_checks.py
+index d4342ada0736cee4dc8b3d8812f37ef16439e862..fc4a2529b8e93217b72aa1afbb7fad70b46df59f 100644
+--- a/tests/check_framework/test_model_checks.py
++++ b/tests/check_framework/test_model_checks.py
+@@ -415,3 +415,20 @@ class ModelDefaultAutoFieldTests(SimpleTestCase):
+                 app_label = 'check_framework.apps.CheckPKConfig'
+ 
+         self.assertEqual(checks.run_checks(app_configs=apps.get_app_configs()), [])
++
++    def test_inherited_explicit_pk_from_abstract_base(self):
++        class AbstractBase(models.Model):
++            id = models.BigAutoField(primary_key=True)
++
++            class Meta:
++                abstract = True
++
++        class Child(AbstractBase):
++            pass
++
++        # Child should inherit the explicit primary key from the abstract
++        # base and therefore should not trigger W042.
++        self.assertEqual(
++            checks.run_checks(app_configs=self.apps.get_app_configs()),
++            []
++        )

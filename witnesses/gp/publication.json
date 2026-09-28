@@ -1,0 +1,62 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "selected_bundle_publication",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/publication_receipt.json",
+        "sha256": "6c2b74fe634a35e79ae3aea2bb26f22b30db1e909d48faa9e7541d4b67f49ad1"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/base_commit": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/current_snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "/final_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/manifest_sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+        "/patch_bytes": 1074,
+        "/patch_sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/run_id": "5ab3cad83aa16e62f0090fa2c42cf6af8da9742f6fe06f33597766f2cdffbade",
+        "/score_claim": false,
+        "/status": "PASS_SELECTED_BUNDLE_PUBLICATION",
+        "/selection/kind": "select_submission_snapshot",
+        "/selection/mode": "candidate",
+        "/selection/reason": "MAJORITY_VOTE",
+        "/selection/snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/selection/counts/comparable": 2,
+        "/selection/counts/eligible": 2,
+        "/selection/counts/minimum_failures": 0,
+        "/selection/counts/pool": 2,
+        "/selection/counts/winning_votes": 1,
+        "/original_bundle_hashes/agent.patch": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/original_bundle_hashes/capture_manifest.json": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+        "/original_bundle_hashes/capture_manifest.json.sha256": "22b3692d1dfff3ce388dbd147e885917d0cadcbdf41ab6e49f5411f3643f2b2b"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "selected_capture",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/selected_capture_provenance.json",
+        "sha256": "7d3c9fe2c170e8aa1e72f43137bada2e942468a753b4ee27d563b8cacd7ee2ea"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/run_id": "5ab3cad83aa16e62f0090fa2c42cf6af8da9742f6fe06f33597766f2cdffbade",
+        "/snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/bundle/base_commit": "0c42cdf0d2422f4c080e93594d5d15381d6e955e",
+        "/bundle/final_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "/bundle/manifest_sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+        "/bundle/patch_bytes": 1074,
+        "/bundle/patch_sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "/number": 14,
+        "/files": 1
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}

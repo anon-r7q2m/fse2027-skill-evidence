@@ -1,7 +1,7 @@
 # What Does PASS Mean? Anonymous review artifact
 
 This artifact accompanies **What Does PASS Mean? Evidence and Decisions in
-Agent Skill Reuse**. It contains an unchanged generated SEARCH/REPLACE package,
+Coding Agent Workflows**. It contains an unchanged generated SEARCH/REPLACE package,
 its public parser replay, three bounded source-slice replay bundles, and
 public audit reports. It also includes the fully released sixteen-task
 comparison matrix and analysis. Finite executable cases support the stated observations;
@@ -69,6 +69,8 @@ under `records/`; public receipts are distinguished from executable replays.
 - Group-specific source boundaries, protocols and results: [GP](principles/gp/README.md), [feedback](principles/feedback/README.md), [Pro](principles/pro/README.md).
 - [Historical evidence guide](EVIDENCE.md), [audit guide](audit/README.md), and retrospective evidence maps under `study/`.
 - [Released capacity comparison](capacity/README.md): all 192 logical outcomes, original analysis, frozen design and execution aggregates. This is released benchmark data, separate from the 20 offline conditions; official grading is not rerun by the bundle.
+- [Installed policies and original identity records](capacity/METHODS.md): task-selection inputs, fixed implementation definitions, stop records, and the 192-to-108 submission/grader mapping. `python3 -B capacity/summarize_outcomes.py` recomputes counts and exact paired tests from the released CSV, without a solver or grader.
+- Minimal historical decision chains: [GP](witnesses/gp/README.md) and [feedback](witnesses/feedback/README.md). These supplement the local replay with original-record extracts; saved branch inputs are distinguished from the unbundled full provider-request comparison.
 - Historical GP, feedback and PQ reports are under `principles/evidence/`. References from those reports into the research repository identify original evidence; this bundle does not reproduce every referenced study.
 
 ## Preserved code and provenance
@@ -102,6 +104,6 @@ records. The public review repository is
 
 Public audit summaries describe scoped static triage across six benchmarks;
 they neither release restricted individual annotations nor establish formal
-blacklist authority. The bundle excludes model trajectories, independent
+blacklist authority. The bundle excludes complete model trajectories, independent
 evaluator cases, private task annotations and account material. It is not a
 full-host, full-database or official-score reproduction.

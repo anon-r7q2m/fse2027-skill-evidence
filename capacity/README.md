@@ -51,3 +51,17 @@ benchmark performance. It does not authorize sample expansion.
 The matrix supports inspection and arithmetic recomputation. This bundle does
 not execute the original agents or reproduce official grading. The separate
 20-condition principles replays did not generate these benchmark results.
+
+## Methods and original-record additions
+
+See [METHODS.md](METHODS.md) for the installed algorithms, original task-ID
+selection records, primary stop records and submission/grader equivalence
+classes. These are explicitly dated exports of existing records, not new
+experiments or newly created historical commitments. The recorded grader is
+`agent2skill_swebench_verified_candidate_syntax_v1`; the exact adaptation and
+source identities are supplied with that guide.
+
+Run `python3 -B capacity/summarize_outcomes.py` from the artifact root to
+recompute primary counts, discordant pairs, exact one-sided McNemar tests,
+Holm corrections and fixed repeats. This arithmetic entry does not inspect
+private tests, execute an agent, or independently reproduce a reward.

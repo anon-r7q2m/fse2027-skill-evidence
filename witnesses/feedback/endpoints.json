@@ -1,0 +1,162 @@
+{
+  "schema_version": "skill-evidence.case-field-projections.v1",
+  "source_path_convention": "Paths are relative to the original project root.",
+  "records": [
+    {
+      "id": "b_sealed",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/B_sealed.json",
+        "sha256": "8f0e263e8b1c09326839ac7a1387db6a632116d6df3a4bf98ff064c12356f4a7"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/run_id": "raw-issue-feedback-effect-v2-192",
+        "/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/bundle/final_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/bundle/manifest_sha256": "511ff33a927dd47907b1fb961e2443ab05ab800b11eba2c8eb2ade01e068c8b7",
+        "/bundle/patch_bytes": 2602,
+        "/bundle/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/manifest/base_tree": "72cda8bf81eb3bbd3e104850f72e6a145c9008fe",
+        "/manifest/files/0/path": "django/db/models/fields/json.py",
+        "/manifest/files/0/change": "M"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "both_branches_sealed",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/both_branches_sealed.json",
+        "sha256": "f06e708b25d7029c9ca05d6af91fd6812c9c2048fc0c6090f3ed0bd9511252c5"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/U/run_id": "raw-issue-feedback-effect-v2-192-U",
+        "/U/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/U/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/U/bundle/final_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/U/bundle/manifest_sha256": "511ff33a927dd47907b1fb961e2443ab05ab800b11eba2c8eb2ade01e068c8b7",
+        "/U/bundle/patch_bytes": 2602,
+        "/U/bundle/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/V/run_id": "raw-issue-feedback-effect-v2-192-V",
+        "/V/snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/V/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/V/bundle/final_tree": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/V/bundle/manifest_sha256": "756eb68b896cfa269b8a7a94d966c827f2cc42be5f0e2263125e6fcb44a767be",
+        "/V/bundle/patch_bytes": 2604,
+        "/V/bundle/patch_sha256": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349",
+        "/U/manifest/base_tree": "72cda8bf81eb3bbd3e104850f72e6a145c9008fe",
+        "/U/manifest/files/0/path": "django/db/models/fields/json.py",
+        "/V/manifest/base_tree": "72cda8bf81eb3bbd3e104850f72e6a145c9008fe",
+        "/V/manifest/files/0/path": "django/db/models/fields/json.py"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "u_initial_ready",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/U/host/initial_ready.json",
+        "sha256": "61318c056b59082bfc018534d97c0d9f4ee3ec541a3386d9ad395a74a0ea7b90"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/model_requests": 0,
+        "/request_limit": 4,
+        "/fresh_workspace": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "v_initial_ready",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/V/host/initial_ready.json",
+        "sha256": "61318c056b59082bfc018534d97c0d9f4ee3ec541a3386d9ad395a74a0ea7b90"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/model_requests": 0,
+        "/request_limit": 4,
+        "/fresh_workspace": true
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "gate",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/gate.json",
+        "sha256": "b31324c479b1d6df72847e6e3c59411811031a9e39598ae659a17517d5e19d52"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/activated": true,
+        "/base_decision": "REPRODUCED",
+        "/B_decision": "REPRODUCED"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    },
+    {
+      "id": "sealed_policy_selection",
+      "representation": "original_record_field_projection",
+      "not_byte_identical_to_source": true,
+      "source": {
+        "path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/policy_endpoints.json",
+        "sha256": "b2d3fd6492b6c34b57226226d03863f53ee2367ce7838de1e93a76c9a26d580f"
+      },
+      "field_path_format": "RFC 6901 JSON Pointer",
+      "fields": {
+        "/instance_id": "django__django-15503",
+        "/rank": 192,
+        "/position": 7,
+        "/host_policy": "CAPACITY_GATED_LP_V2",
+        "/activated": true,
+        "/status": "TASK_POLICIES_SEALED_BEFORE_OFFICIAL_SCORING",
+        "/official_scores": null,
+        "/post_decisions/U": "REPRODUCED",
+        "/post_decisions/V": "COVERED_PASS",
+        "/policies/B/run_id": "raw-issue-feedback-effect-v2-192",
+        "/policies/B/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/B/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/policies/B/bundle/final_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/B/bundle/manifest_sha256": "511ff33a927dd47907b1fb961e2443ab05ab800b11eba2c8eb2ade01e068c8b7",
+        "/policies/B/bundle/patch_bytes": 2602,
+        "/policies/B/bundle/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/policies/U/run_id": "raw-issue-feedback-effect-v2-192-U",
+        "/policies/U/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/U/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/policies/U/bundle/final_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/U/bundle/manifest_sha256": "511ff33a927dd47907b1fb961e2443ab05ab800b11eba2c8eb2ade01e068c8b7",
+        "/policies/U/bundle/patch_bytes": 2602,
+        "/policies/U/bundle/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/policies/G_U/run_id": "raw-issue-feedback-effect-v2-192",
+        "/policies/G_U/snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/G_U/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/policies/G_U/bundle/final_tree": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "/policies/G_U/bundle/manifest_sha256": "511ff33a927dd47907b1fb961e2443ab05ab800b11eba2c8eb2ade01e068c8b7",
+        "/policies/G_U/bundle/patch_bytes": 2602,
+        "/policies/G_U/bundle/patch_sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+        "/policies/G_V/run_id": "raw-issue-feedback-effect-v2-192-V",
+        "/policies/G_V/snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/policies/G_V/bundle/base_commit": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+        "/policies/G_V/bundle/final_tree": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "/policies/G_V/bundle/manifest_sha256": "756eb68b896cfa269b8a7a94d966c827f2cc42be5f0e2263125e6fcb44a767be",
+        "/policies/G_V/bundle/patch_bytes": 2604,
+        "/policies/G_V/bundle/patch_sha256": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349"
+      },
+      "omission_notice": "Unlisted source fields are omitted; retained values are unchanged."
+    }
+  ]
+}
