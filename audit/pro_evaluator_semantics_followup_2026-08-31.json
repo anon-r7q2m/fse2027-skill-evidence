@@ -1,0 +1,131 @@
+{
+  "schema_version": "agent2skill.fse_hard_audit.pro_evaluator_semantics_followup.v1",
+  "recorded_at": "2026-08-31",
+  "benchmark_id": "swe_bench_pro",
+  "status": "PINNED_STANDALONE_SEMANTICS_FROZEN_LIVE_CONTRACT_TBD",
+  "scope": "OFFICIAL_STANDALONE_EVALUATOR_AT_PINNED_COMMIT_ONLY",
+  "sources": {
+    "evaluator": {
+      "revision": "ca10a60a5fcae51e6948ffe1485d4153d421e6c5",
+      "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/ca10a60a5fcae51e6948ffe1485d4153d421e6c5/swe_bench_pro_eval.py",
+      "sha256": "bb5d4c5486be296e464e695df3747064aaa3bb197394bc6d39980634afec2034",
+      "verified_at": "2026-08-31"
+    },
+    "image_uri_helper": {
+      "revision": "ca10a60a5fcae51e6948ffe1485d4153d421e6c5",
+      "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/ca10a60a5fcae51e6948ffe1485d4153d421e6c5/helper_code/image_uri.py",
+      "sha256": "d1a858866dd2622c0e37986dd7b86698e5ea53546f30901d1bf0d6ba1b97384f",
+      "verified_at": "2026-08-31"
+    }
+  },
+  "semantic_findings": [
+    {
+      "id": "EXTRA_PREDICTIONS_FILTERED",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "489-505",
+      "finding": "Prediction IDs absent from the supplied raw sample are removed before scheduling.",
+      "score_effect": "Extra IDs do not enter the standalone denominator."
+    },
+    {
+      "id": "MISSING_PREDICTIONS_OMITTED",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "489-571",
+      "finding": "Only supplied valid predictions are scheduled; absent official tasks are never inserted as false.",
+      "score_effect": "Missing official tasks disappear from the standalone mean."
+    },
+    {
+      "id": "DUPLICATES_COMPLETION_ORDER_OVERWRITE",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "519-559",
+      "finding": "Duplicate IDs are not rejected and concurrent completions assign one dictionary key.",
+      "score_effect": "The last completed duplicate overwrites the earlier result."
+    },
+    {
+      "id": "DUPLICATES_SHARE_WORKSPACE",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "165-175,519-536",
+      "finding": "Runs for the same task share output_dir/task_id/workspace; output and patch names add only prefix.",
+      "score_effect": "Duplicate jobs can race on workspace state and equal-prefix artifacts."
+    },
+    {
+      "id": "CACHE_NOT_INPUT_BOUND",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "165-175,283-285,361-364",
+      "finding": "With redo disabled, task_id/prefix_output.json is reused without an input or environment manifest.",
+      "score_effect": "A stale output can be accepted after patch, source, evaluator, asset, image, or runtime changes."
+    },
+    {
+      "id": "PATCH_APPLY_NOT_FAIL_CLOSED",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "95-126",
+      "finding": "The generated shell script has no set -e and does not check reset, checkout, or git apply return codes.",
+      "score_effect": "Testing and parsing can continue after patch-application failure."
+    },
+    {
+      "id": "NONZERO_ENTRY_STATUS_CAN_STILL_SCORE",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "323-345,416-426",
+      "finding": "Both runtimes log nonzero execution status and still attempt to collect output.json.",
+      "score_effect": "Nonzero execution is not a typed terminal failure when parser output exists."
+    },
+    {
+      "id": "ERRORS_COLLAPSE_TO_FALSE",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "279-355,358-430,538-568",
+      "finding": "Returned None, result-processing failures, and caught exceptions become boolean false.",
+      "score_effect": "Patch, evaluator, image, and some infrastructure failures are conflated with unresolved tasks."
+    },
+    {
+      "id": "BINARY_HUNKS_REMOVED",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "75-92,183-198",
+      "finding": "Recognized binary diff sections are stripped before evaluation.",
+      "score_effect": "Submitted binary modifications are outside the evaluated patch semantics."
+    },
+    {
+      "id": "REDUCER_USES_SURVIVING_RESULT_KEYS",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "538-571",
+      "finding": "Accuracy is sum(eval_results.values()) divided by len(eval_results).",
+      "score_effect": "Equal weight applies only to unique result keys produced by the supplied run, not necessarily all 731 official tasks."
+    },
+    {
+      "id": "EMPTY_VALID_SET_NOT_TOTALIZED",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "489-505,569-571",
+      "finding": "No guard handles zero valid predictions before the final division.",
+      "score_effect": "The final reducer raises division by zero when no valid result key exists."
+    },
+    {
+      "id": "ENVIRONMENT_IDENTITY_MUTABLE",
+      "status": "CONFIRMED_STATIC",
+      "evaluator_lines": "299-316,377-414,449-465",
+      "helper_lines": "10-28",
+      "finding": "The evaluator consumes a Docker Hub repository:tag rather than a digest; network and platform settings are optional, and local Docker has no explicit evaluator timeout.",
+      "score_effect": "Runtime bytes and platform/network policy are not frozen by the standalone script."
+    }
+  ],
+  "minimal_fail_closed_contract": [
+    "Require exact submitted-ID set equality with the frozen 731-task manifest before scheduling.",
+    "Reject duplicate, missing, and extra prediction IDs.",
+    "Use an isolated immutable run directory for every submission row.",
+    "Bind cache reuse to patch, task-row, evaluator, parser, run-script, OCI digest, platform, network, and runtime hashes.",
+    "Stop on reset, checkout, patch-apply, setup, test, parser, or container failure.",
+    "Represent resolved, unresolved, invalid-submission, evaluator-error, infrastructure-error, and timeout as distinct states.",
+    "Freeze denominator, retries, trials, rescores, and supersession before score publication."
+  ],
+  "remaining_gaps": [
+    "LIVE_LEADERBOARD_INTAKE_POLICY",
+    "RETRY_AND_TRIAL_AGGREGATION",
+    "RESCORE_AND_SUPERSESSION_POLICY",
+    "END_TO_END_REPLAY",
+    "FALSE_ACCEPT_FALSE_REJECT_RATES"
+  ],
+  "authority": {
+    "formal_authority": false,
+    "BVC": "TBD",
+    "strict_blacklist_rate": null,
+    "blacklist_published": false
+  },
+  "claim_ceiling": "This artifact freezes only the pinned standalone evaluator's observable control flow. It does not establish the live leaderboard contract, task validity, a strict exclusion set, BVC, or model performance."
+}

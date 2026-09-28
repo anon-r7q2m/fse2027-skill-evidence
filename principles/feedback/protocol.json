@@ -1,0 +1,386 @@
+{
+  "schema": "skill-reuse-principles-feedback-v1",
+  "frozen_at_utc": "2026-09-28T09:49:28.526451+00:00",
+  "status": "FROZEN_BEFORE_OFFLINE_REPLAY",
+  "instance_id": "django__django-15503",
+  "fixture_limit": 8,
+  "fixture_unit": "one snapshot and check policy; not an independent task",
+  "source_revision": "859a87d873ce7152af73ab851653b4e1c3ffea4c",
+  "source_url": "https://raw.githubusercontent.com/django/django/859a87d873ce7152af73ab851653b4e1c3ffea4c/django/db/models/fields/json.py",
+  "source_objects": {
+    "Base": {
+      "full_module_sha256": "391283f06550c3d4cfacabb8a3c56e8654e9b87eb5132c981626319bfd5923dc",
+      "git_blob": "fdca700c9da92e232707f33512854c2b90af5d8e",
+      "slice": "source/Base.py",
+      "segments": [
+        {
+          "symbol": "compile_json_path",
+          "start_line": 129,
+          "end_line": 139,
+          "sha256": "5c1799e08957927609779c9da5a9d3dbd3d2c91e374788bfcc4de2bfea986c0d"
+        },
+        {
+          "symbol": "KeyTransform.__init__",
+          "start_line": 308,
+          "end_line": 310,
+          "sha256": "c1cb50d80413a276b6380c796aed57adce63cbef11ace4ef9d7a9638aeb9c79c"
+        },
+        {
+          "symbol": "KeyTransform.preprocess_lhs",
+          "start_line": 312,
+          "end_line": 322,
+          "sha256": "ef3c1731ed8f604515a6e1afadf4f0606ef25e6db3040150b38464bcb6ba20f4"
+        },
+        {
+          "symbol": "KeyTransform.as_mysql",
+          "start_line": 324,
+          "end_line": 327,
+          "sha256": "36831a06fb86c88107cf3239ac949d013b73c3460eeb050cf143b45de89c9b62"
+        },
+        {
+          "symbol": "HasKeyLookup.logical_operator",
+          "start_line": 173,
+          "end_line": 173,
+          "sha256": "bd16337b696453e9eadc37c5b9ee3480774f806cc5e96c9cc019c32c001386d8"
+        },
+        {
+          "symbol": "HasKeyLookup.as_sql",
+          "start_line": 175,
+          "end_line": 206,
+          "sha256": "abe2bc1d6e1a6b596e30623fe3df4a232fb51d11abfa6c4e6df2fe388a6ae370"
+        },
+        {
+          "symbol": "HasKeyLookup.as_mysql",
+          "start_line": 208,
+          "end_line": 211,
+          "sha256": "93bbf6a690a7a6d18db847e0c1743a87c78237fbf07f29e84515e688e9d9b65e"
+        }
+      ]
+    },
+    "B": {
+      "full_module_sha256": "3830606a4c4324b773483e34c2a923d49b10684a2b7c6c36925ae273f91beb2b",
+      "git_blob": "bde7984ac9c5dd33b546882dfe23b23c88732238",
+      "slice": "source/B.py",
+      "segments": [
+        {
+          "symbol": "compile_json_path",
+          "start_line": 130,
+          "end_line": 146,
+          "sha256": "4dc33bb48c86238984a8861bda9a47a6b68eff7990ab21a20ec86df404ae3284"
+        },
+        {
+          "symbol": "KeyTransform.__init__",
+          "start_line": 318,
+          "end_line": 320,
+          "sha256": "c1cb50d80413a276b6380c796aed57adce63cbef11ace4ef9d7a9638aeb9c79c"
+        },
+        {
+          "symbol": "KeyTransform.preprocess_lhs",
+          "start_line": 322,
+          "end_line": 332,
+          "sha256": "ef3c1731ed8f604515a6e1afadf4f0606ef25e6db3040150b38464bcb6ba20f4"
+        },
+        {
+          "symbol": "KeyTransform.as_mysql",
+          "start_line": 334,
+          "end_line": 337,
+          "sha256": "36831a06fb86c88107cf3239ac949d013b73c3460eeb050cf143b45de89c9b62"
+        },
+        {
+          "symbol": "HasKeyLookup.logical_operator",
+          "start_line": 180,
+          "end_line": 180,
+          "sha256": "bd16337b696453e9eadc37c5b9ee3480774f806cc5e96c9cc019c32c001386d8"
+        },
+        {
+          "symbol": "HasKeyLookup.as_sql",
+          "start_line": 182,
+          "end_line": 216,
+          "sha256": "74d13000409422f889ab3c68effd67885a0aca8520a8c442786713c9b8733aff"
+        },
+        {
+          "symbol": "HasKeyLookup.as_mysql",
+          "start_line": 218,
+          "end_line": 221,
+          "sha256": "93bbf6a690a7a6d18db847e0c1743a87c78237fbf07f29e84515e688e9d9b65e"
+        }
+      ]
+    },
+    "V": {
+      "full_module_sha256": "6e57a1d001233e5f8f849c95eeeb88ea17422cc837dc646e206c19ecbb4c5421",
+      "git_blob": "3e894234833d2dfe261c9d7dda0e0c9e2a49ffe2",
+      "slice": "source/V.py",
+      "segments": [
+        {
+          "symbol": "compile_json_path",
+          "start_line": 130,
+          "end_line": 144,
+          "sha256": "470e034d5e00edd4014bb82c8459351650e13361287d6252bb857d369b5d632d"
+        },
+        {
+          "symbol": "KeyTransform.__init__",
+          "start_line": 316,
+          "end_line": 318,
+          "sha256": "c1cb50d80413a276b6380c796aed57adce63cbef11ace4ef9d7a9638aeb9c79c"
+        },
+        {
+          "symbol": "KeyTransform.preprocess_lhs",
+          "start_line": 320,
+          "end_line": 330,
+          "sha256": "ef3c1731ed8f604515a6e1afadf4f0606ef25e6db3040150b38464bcb6ba20f4"
+        },
+        {
+          "symbol": "KeyTransform.as_mysql",
+          "start_line": 332,
+          "end_line": 335,
+          "sha256": "36831a06fb86c88107cf3239ac949d013b73c3460eeb050cf143b45de89c9b62"
+        },
+        {
+          "symbol": "HasKeyLookup.logical_operator",
+          "start_line": 178,
+          "end_line": 178,
+          "sha256": "bd16337b696453e9eadc37c5b9ee3480774f806cc5e96c9cc019c32c001386d8"
+        },
+        {
+          "symbol": "HasKeyLookup.as_sql",
+          "start_line": 180,
+          "end_line": 214,
+          "sha256": "74d13000409422f889ab3c68effd67885a0aca8520a8c442786713c9b8733aff"
+        },
+        {
+          "symbol": "HasKeyLookup.as_mysql",
+          "start_line": 216,
+          "end_line": 219,
+          "sha256": "93bbf6a690a7a6d18db847e0c1743a87c78237fbf07f29e84515e688e9d9b65e"
+        }
+      ]
+    }
+  },
+  "input_provenance": {
+    "source_view": {
+      "repository_relative_path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/B/host/source_view.json",
+      "sha256": "63ba5ba0af78314f9101a3dab60ca3829f7fe6c2968213cda094cb90e868ece1"
+    },
+    "B_patch": {
+      "repository_relative_path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/B/host/snapshots/capture_002/agent.patch",
+      "sha256": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657"
+    },
+    "V_patch": {
+      "repository_relative_path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/V/host/snapshots/capture_006/agent.patch",
+      "sha256": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349"
+    },
+    "checker": {
+      "repository_relative_path": "results_cache/raw_issue_feedback_effect_v2/live/192/entry/checker/generated/script.py",
+      "sha256": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb"
+    },
+    "issue": {
+      "repository_relative_path": "experiments/raw_issue_feedback_effect_v2/screen/192/public_issue.json",
+      "sha256": "c3d5d6b8bb694f3d3dc19e2f93ccdaf3b1a583e308c192671fba685b68513e4f"
+    }
+  },
+  "documentation": {
+    "url": "https://raw.githubusercontent.com/django/django/859a87d873ce7152af73ab851653b4e1c3ffea4c/docs/topics/db/queries.txt",
+    "full_file_sha256": "9c148d97a7bbca327ccd465296f657dcffb672d6e363613a2b4db55c493fbe41",
+    "excerpt_start_line": 938,
+    "excerpt_end_line": 942,
+    "interpretation": "Integer key transforms must preserve array-index semantics. This public lookup-specific issue does not authorize changing that documented behavior."
+  },
+  "license": {
+    "django": "BSD-3-Clause; retained in LICENSE-Django.txt",
+    "url": "https://raw.githubusercontent.com/django/django/859a87d873ce7152af73ab851653b4e1c3ffea4c/LICENSE",
+    "note": "B/V are recorded modifications of the BSD-licensed source. Newly authored replay/metadata remain project-author material; no repository-wide license is inferred."
+  },
+  "execution_boundary": {
+    "kind": "EXACT_AST_SELECTED_METHODS_WITH_EXPLICIT_MOCKS",
+    "real_methods": [
+      "compile_json_path",
+      "KeyTransform.__init__",
+      "KeyTransform.preprocess_lhs",
+      "KeyTransform.as_mysql",
+      "HasKeyLookup.as_sql",
+      "HasKeyLookup.as_mysql"
+    ],
+    "mocked": [
+      "Transform.__init__: stores lhs only",
+      "PostgresOperatorLookup.process_lhs: compiles mock column",
+      "compiler.compile: COLUMN to SQL COLUMN with no parameters",
+      "connection.vendor: mysql"
+    ],
+    "not_executed": [
+      "full Django imports",
+      "ORM query resolution",
+      "database execution",
+      "SQLite/Oracle backends",
+      "LLM",
+      "Docker",
+      "official scoring"
+    ]
+  },
+  "assertion_roles": {
+    "original_numeric_string": "FAULTY_PROXY_OBSERVATION_ONLY; not an issue-correctness ground truth",
+    "original_controls": [
+      "direct helper ['foo'] -> $.\"foo\"",
+      "direct helper [3] -> $[3]"
+    ],
+    "production_controls": [
+      "original KeyTransform('foo', COLUMN).as_mysql -> $.\"foo\"",
+      "original KeyTransform(3, COLUMN).as_mysql -> $[3]"
+    ],
+    "equivalent_helper_controls": [
+      "direct helper ['foo'] -> $.\"foo\"",
+      "direct helper ['3'] -> $[3]"
+    ],
+    "legal_lookup_controls": [
+      "B HasKeyLookup RHS '1111' -> $.\"1111\"",
+      "B HasKeyLookup RHS 'foo' -> $.\"foo\""
+    ]
+  },
+  "interpretation_rules": [
+    "All three compared preservation policies use exactly two controls; only the original checker additionally has the separately labelled faulty issue assertion.",
+    "Original full-checker rejection of Base/B is not evidence of failure of the public issue or of the array-index preservation obligation.",
+    "Legal adaptation is certified only for the two exercised SQL-path constructions, not the complete candidate or issue.",
+    "If equivalent direct-helper controls detect the same V regression, the path aids control derivation, not unique or general superiority.",
+    "FAIL means an executed assertion is false; UNKNOWN means missing source, an execution exception, or missing evidence.",
+    "No benchmark score, population rate, or new independent confirmation follows from these exposed fixtures."
+  ],
+  "fixtures": [
+    {
+      "id": "Base_original",
+      "snapshot": "Base",
+      "mode": "original_checker",
+      "expected_statuses": [
+        "FAIL",
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$[1111]",
+        "$.\"foo\"",
+        "$[3]"
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 1
+    },
+    {
+      "id": "Base_production_path",
+      "snapshot": "Base",
+      "mode": "production_path",
+      "expected_statuses": [
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$.\"foo\"",
+        "$[3]"
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 0
+    },
+    {
+      "id": "B_original",
+      "snapshot": "B",
+      "mode": "original_checker",
+      "expected_statuses": [
+        "FAIL",
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$[1111]",
+        "$.\"foo\"",
+        "$[3]"
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 1
+    },
+    {
+      "id": "B_production_path",
+      "snapshot": "B",
+      "mode": "production_path",
+      "expected_statuses": [
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$.\"foo\"",
+        "$[3]"
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 0
+    },
+    {
+      "id": "V_original",
+      "snapshot": "V",
+      "mode": "original_checker",
+      "expected_statuses": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$.\"1111\"",
+        "$.\"foo\"",
+        "$[3]"
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 1
+    },
+    {
+      "id": "V_production_path",
+      "snapshot": "V",
+      "mode": "production_path",
+      "expected_statuses": [
+        "PASS",
+        "FAIL"
+      ],
+      "expected_outputs": [
+        "$.\"foo\"",
+        "$.\"3\""
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 0
+    },
+    {
+      "id": "V_equivalent_helper",
+      "snapshot": "V",
+      "mode": "equivalent_helper",
+      "expected_statuses": [
+        "PASS",
+        "FAIL"
+      ],
+      "expected_outputs": [
+        "$.\"foo\"",
+        "$.\"3\""
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 0
+    },
+    {
+      "id": "B_legal_lookup_adaptation",
+      "snapshot": "B",
+      "mode": "legal_lookup",
+      "expected_statuses": [
+        "PASS",
+        "PASS"
+      ],
+      "expected_outputs": [
+        "$.\"1111\"",
+        "$.\"foo\""
+      ],
+      "control_count": 2,
+      "issue_proxy_count": 0
+    }
+  ],
+  "files_sha256": {
+    "LICENSE-Django.txt": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+    "replay.py": "347766bfbb5d6cddccde60fb033792664a5d207bd4d06ad1d63de8686673494b",
+    "source/B.patch": "edc8a1644306aaf304bd9649a76fd372a829a3f3e7ea545a4f894a9acf9a8657",
+    "source/B.py": "aa9cde847cfa896e40ad7b1e6f2cb48add87f76092d6c108fe4c1989a9ff64e1",
+    "source/Base.py": "4c763881f3320f3187d54b53ac0609ba2b8a25e3d79d68fb313190b002190dbe",
+    "source/V.patch": "d033ede43f885131838b576f6c4dc727e0acaf19131a46482b87a406a1e19349",
+    "source/V.py": "0517601cc706c3bbebd3de85fb77863a1b2a2b2642916c8f4126f1560ef59374",
+    "source/documented_index_obligation.txt": "8848a062a2f24cbae0c8e624727f13b2d0260d6e6042717432107d9276beee09",
+    "source/original_checker.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+    "source/public_requirement.txt": "63956bc40c74768bbf1c975cd72bc075f0ddcb82096e488370d19db90afe1562"
+  }
+}

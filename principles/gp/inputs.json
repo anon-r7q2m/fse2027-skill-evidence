@@ -1,0 +1,141 @@
+{
+  "historical": {
+    "candidate_additions": [
+      {
+        "after_sha256": "e1ad04bd10930e16547d48654e5f6b51a73c55fd7907f5c1977d211e536ea720",
+        "before_sha256": "7711dd17c83196b8dfd4af610c2ec7f69e3e25a8f2c9e1600154150f693543c9",
+        "exact_generated_suffix": "+\n+    def test_inherited_explicit_pk_from_abstract_base(self):\n+        class AbstractBase(models.Model):\n+            id = models.BigAutoField(primary_key=True)\n+\n+            class Meta:\n+                abstract = True\n+\n+        class Child(AbstractBase):\n+            pass\n+\n+        # Child should inherit the explicit primary key from the abstract\n+        # base and therefore should not trigger W042.\n+        self.assertEqual(\n+            checks.run_checks(app_configs=self.apps.get_app_configs()),\n+            []\n+        )\n",
+        "path": "tests/check_framework/test_model_checks.py",
+        "scope": "Generated suffix only; the unchanged Django file is not bundled",
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "suffix_offset_characters": 14796
+      },
+      {
+        "after_sha256": "86c5a37fb68be83ff28a5bf8c96e49550e74fc0bf2958b9a3f907a0cd60107b8",
+        "before_sha256": "7711dd17c83196b8dfd4af610c2ec7f69e3e25a8f2c9e1600154150f693543c9",
+        "exact_generated_suffix": "\n    def test_inherited_explicit_pk_from_abstract_base(self):\n        class AbstractBase(models.Model):\n            id = models.BigAutoField(primary_key=True)\n\n            class Meta:\n                abstract = True\n\n        class Child(AbstractBase):\n            pass\n\n        # Child should inherit the explicit primary key from the abstract\n        # base and therefore should not trigger W042.\n        self.assertEqual(\n            checks.run_checks(app_configs=self.apps.get_app_configs()),\n            []\n        )\n",
+        "path": "tests/check_framework/test_model_checks.py",
+        "scope": "Generated suffix only; the unchanged Django file is not bundled",
+        "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "suffix_offset_characters": 14796
+      }
+    ],
+    "current_snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+    "original_selection": {
+      "counts": {
+        "comparable": 2,
+        "eligible": 2,
+        "minimum_failures": 0,
+        "pool": 2,
+        "winning_votes": 1
+      },
+      "kind": "select_submission_snapshot",
+      "mode": "candidate",
+      "reason": "MAJORITY_VOTE",
+      "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+    },
+    "pool": [
+      {
+        "fallback_reason": "NORMALIZATION_EXCEPTION",
+        "file_count": 1,
+        "g_first": {
+          "comparable": true,
+          "failure_count": 0,
+          "request_id": "req-2",
+          "status": "available"
+        },
+        "key": "RAW:dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "key_kind": "raw",
+        "manifest_sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+        "ordinal": 1,
+        "raw_patch_bytes": 1074,
+        "raw_patch_sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+        "reproduced": null,
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+      },
+      {
+        "fallback_reason": null,
+        "file_count": 1,
+        "g_first": {
+          "comparable": true,
+          "failure_count": 0,
+          "request_id": "req-3",
+          "status": "available"
+        },
+        "key": "PY:af023ab55533c1975c197fd8a0af253cdcc5fd559badebc58c579cfbd9d7fc9e",
+        "key_kind": "python",
+        "manifest_sha256": "cf4ee0a814fc0f5809fb4cc1ead585fa887411ac884a62af5ba235e32b9c7549",
+        "ordinal": 2,
+        "raw_patch_bytes": 1057,
+        "raw_patch_sha256": "91d61d38f282d117868c73a0c2d36f298a177bcb63912326fe360a30b92945f0",
+        "reproduced": null,
+        "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2"
+      }
+    ],
+    "projection_receipts": [
+      {
+        "evidence_level": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+        "issue_fixed": null,
+        "projection": {
+          "applied": true,
+          "candidate_file_count": 1,
+          "candidate_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+          "guard_changed": [],
+          "preserved_candidate_entries": {},
+          "projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+          "reason": "DECLARED_PROJECTION_APPLIED",
+          "replace_from_base": [
+            "tests/check_framework/test_model_checks.py",
+            "tests/check_framework/__init__.py",
+            "tests/check_framework/apps.py",
+            "tests/check_framework/models.py"
+          ],
+          "replaced_files": 4
+        },
+        "recorded_preservation_passes": 4,
+        "recorded_preservation_status": "PRESERVED",
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+      },
+      {
+        "evidence_level": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+        "issue_fixed": null,
+        "projection": {
+          "applied": true,
+          "candidate_file_count": 1,
+          "candidate_tree": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+          "guard_changed": [],
+          "preserved_candidate_entries": {},
+          "projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+          "reason": "DECLARED_PROJECTION_APPLIED",
+          "replace_from_base": [
+            "tests/check_framework/test_model_checks.py",
+            "tests/check_framework/__init__.py",
+            "tests/check_framework/apps.py",
+            "tests/check_framework/models.py"
+          ],
+          "replaced_files": 4
+        },
+        "recorded_preservation_passes": 4,
+        "recorded_preservation_status": "PRESERVED",
+        "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2"
+      }
+    ],
+    "recorded_syntax_observation": {
+      "evidence_level": "RECORDED_PUBLIC_EXECUTION",
+      "line": 418,
+      "message": "SyntaxError: invalid syntax",
+      "path": "tests/check_framework/test_model_checks.py",
+      "query_id": 14,
+      "return_code": 1,
+      "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+    },
+    "state": {
+      "base_snapshot_ref": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+      "flags": {
+        "regression": true,
+        "reproduction": false
+      }
+    }
+  },
+  "schema_version": "agent2skill.principles.gp_inputs.v1"
+}

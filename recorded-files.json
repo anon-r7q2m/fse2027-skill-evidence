@@ -1,0 +1,36 @@
+{
+  "scope": "public reports, contracts, receipts; no sealed inputs",
+  "copied_relative_paths": [
+    "results_cache/g_native_log_repair_v1/REPORT.md",
+    "results_cache/r_behavior_api_v1/REPORT.md",
+    "results_cache/moatless_cleanup_transfer_v1/REPORT.md",
+    "results_cache/openhands_summary_transfer_v1/REPORT.md",
+    "results_cache/search_replace_transfer_v1/REPORT.md",
+    "results_cache/discovery_observable_v1/REPORT.md",
+    "results_cache/localization_issue_boundary_v1/REPORT.md",
+    "results_cache/sweagent_chooser_repair_v1/REPORT.md",
+    "results_cache/aider_architect_transfer_v1/REPORT.md",
+    "results_cache/aider_architect_entry_v1/REPORT.md",
+    "results_cache/aider_architect_comparison_v1/REPORT.md",
+    "results_cache/discovery_source_set_v2/REPORT.md",
+    "results_cache/discovery_mapping_repair_v1/REPORT.md",
+    "results_cache/discovery_successor_v1/REPORT.md",
+    "results_cache/gc_generated_effect_v2/DIAGNOSIS.md",
+    "results_cache/search_replace_confirmation_v1/REPORT.md",
+    "results_cache/search_replace_source_value_v1/REPORT.md",
+    "docs/reviews/context_strategy_source_review_20260911.md",
+    "experiments/aider_architect_transfer_v1/PUBLIC_CONTRACT.md",
+    "experiments/r_behavior_transfer_v1/PUBLIC_CONTRACT.md",
+    "experiments/g_guard_repair_v1/CONTRACT.md",
+    "experiments/openhands_summary_transfer_v1/HOST_PROFILE.md",
+    "experiments/observation_context_v1/HOST_PROFILE.md",
+    "experiments/discovery_mapping_repair_v1/PLAN.md",
+    "results_cache/aider_architect_entry_v1/public_v2/terminal.json",
+    "results_cache/discovery_source_set_v2/generation/public_references/nexahe_direct/mapping_witness.json",
+    "results_cache/discovery_source_set_v2/generation/public_references/nexahe_direct/calibration_outcome.json",
+    "results_cache/discovery_mapping_repair_v1/generation/public_references/nexahe_direct/calibration_outcome.json"
+  ],
+  "anonymized_distribution_files": [
+    "principles/pro/validation.json"
+  ]
+}

@@ -1,0 +1,61 @@
+diff --git a/django/db/models/fields/json.py b/django/db/models/fields/json.py
+index fdca700c9da92e232707f33512854c2b90af5d8e..bde7984ac9c5dd33b546882dfe23b23c88732238 100644
+--- a/django/db/models/fields/json.py
++++ b/django/db/models/fields/json.py
+@@ -1,3 +1,4 @@
++
+ import json
+ 
+ from django import forms
+@@ -126,16 +127,22 @@ class JSONField(CheckFieldDefaultMixin, Field):
+         )
+ 
+ 
+-def compile_json_path(key_transforms, include_root=True):
++def compile_json_path(key_transforms, include_root=True, allow_array_index=True):
+     path = ["$"] if include_root else []
+     for key_transform in key_transforms:
+         try:
+             num = int(key_transform)
+-        except ValueError:  # non-integer
++        except (ValueError, TypeError):  # non-integer or non-convertible
+             path.append(".")
+             path.append(json.dumps(key_transform))
+         else:
+-            path.append("[%s]" % num)
++            if allow_array_index:
++                path.append("[%s]" % num)
++            else:
++                # Treat numeric-looking keys as object keys (quoted) when array
++                # index interpretation is not allowed.
++                path.append(".")
++                path.append(json.dumps(key_transform))
+     return "".join(path)
+ 
+ 
+@@ -191,15 +198,18 @@ class HasKeyLookup(PostgresOperatorLookup):
+         for key in rhs:
+             if isinstance(key, KeyTransform):
+                 *_, rhs_key_transforms = key.preprocess_lhs(compiler, connection)
++                rhs_path = compile_json_path(rhs_key_transforms, include_root=False)
+             else:
+                 rhs_key_transforms = [key]
+-            rhs_params.append(
+-                "%s%s"
+-                % (
+-                    lhs_json_path,
+-                    compile_json_path(rhs_key_transforms, include_root=False),
+-                )
+-            )
++                # On SQLite, MySQL and Oracle, numeric-looking object keys
++                # should be treated as quoted object keys, not array indices.
++                if connection.vendor in ("sqlite", "mysql", "oracle"):
++                    rhs_path = compile_json_path(
++                        rhs_key_transforms, include_root=False, allow_array_index=False
++                    )
++                else:
++                    rhs_path = compile_json_path(rhs_key_transforms, include_root=False)
++            rhs_params.append("%s%s" % (lhs_json_path, rhs_path))
+         # Add condition for each key.
+         if self.logical_operator:
+             sql = "(%s)" % self.logical_operator.join([sql] * len(rhs_params))

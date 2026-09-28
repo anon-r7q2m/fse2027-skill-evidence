@@ -1,0 +1,13 @@
+{
+  "schema_version": "agent2skill.principles.gp_execution.v1",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "initial_execution_working_directory_outside_checkout": true,
+  "fixture_execution_passes": 1,
+  "fixture_conditions": 6,
+  "implementation_fix_passes": 0,
+  "model_calls": 0,
+  "benchmark_starts": 0,
+  "scorer_starts": 0,
+  "network_calls": 0,
+  "status": "COMPLETED"
+}

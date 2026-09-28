@@ -1,0 +1,14 @@
+{
+  "fix_number": 1,
+  "recorded_before_corrected_execution_utc": "2026-09-28T09:51:41.949448+00:00",
+  "frozen_protocol_sha256": "01a0e2f214a123c30be06557f9a4cde9e3e12a1ce047f75cbda87696a495d92f",
+  "original_runner_sha256": "347766bfbb5d6cddccde60fb033792664a5d207bd4d06ad1d63de8686673494b",
+  "replacement_runner_sha256": "20dbe4a20cf97961bae70481df5e7ef2679e4b804bd304f3ef439a58a0afa186",
+  "preserved_initial_result_sha256": "b23a84919b1e415589d8bd5b0c5406dae69e286213b24ecdf4d1d517636d19e2",
+  "reason": "The reducer compared the helper substring without root to the final SQL-path value for legal lookup checks. Compare the actual asserted returned value instead. The original checker continues to use its logged helper return.",
+  "changed_inputs": false,
+  "changed_controls": false,
+  "changed_assertions": false,
+  "changed_expected": false,
+  "decision": "Use the single permitted implementation-fix pass; no fixture expansion."
+}

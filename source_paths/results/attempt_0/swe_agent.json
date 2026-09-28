@@ -1,0 +1,154 @@
+{
+  "host": "SWE-agent",
+  "revision": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "exposure": "unknown",
+  "conditions": [
+    {
+      "id": "S-A",
+      "model_response": {
+        "message": "Run the fixed command.",
+        "tool_calls": [
+          {
+            "id": "call-0",
+            "function": {
+              "name": "bash",
+              "arguments": "{\"command\": \"true\"}"
+            }
+          }
+        ]
+      },
+      "runtime_output": "",
+      "runtime_exit_code": 0,
+      "parsed_action": "true",
+      "runtime_calls": [
+        {
+          "command": "true",
+          "timeout": 30,
+          "check": "silent"
+        }
+      ],
+      "returned_observation": "",
+      "consumer_message": "Your command ran successfully and did not produce any output.",
+      "consumer_tool_call_ids": [
+        "call-0"
+      ],
+      "success_asserted": true,
+      "S1": "supported",
+      "S2": "supported",
+      "direct_rendered_message": "Your command ran successfully and did not produce any output.",
+      "direct_check_same_judgment": true,
+      "status_visible_to_renderer": false
+    },
+    {
+      "id": "S-B",
+      "model_response": {
+        "message": "Run the fixed command.",
+        "tool_calls": [
+          {
+            "id": "call-0",
+            "function": {
+              "name": "bash",
+              "arguments": "{\"command\": \"false\"}"
+            }
+          }
+        ]
+      },
+      "runtime_output": "",
+      "runtime_exit_code": 1,
+      "parsed_action": "false",
+      "runtime_calls": [
+        {
+          "command": "false",
+          "timeout": 30,
+          "check": "silent"
+        }
+      ],
+      "returned_observation": "",
+      "consumer_message": "Your command ran successfully and did not produce any output.",
+      "consumer_tool_call_ids": [
+        "call-0"
+      ],
+      "success_asserted": true,
+      "S1": "supported",
+      "S2": "violated",
+      "direct_rendered_message": "Your command ran successfully and did not produce any output.",
+      "direct_check_same_judgment": true,
+      "status_visible_to_renderer": false
+    },
+    {
+      "id": "S-C",
+      "model_response": {
+        "message": "Run the fixed command.",
+        "tool_calls": [
+          {
+            "id": "call-0",
+            "function": {
+              "name": "bash",
+              "arguments": "{\"command\": \"printf 'error\\\\n'; false\"}"
+            }
+          }
+        ]
+      },
+      "runtime_output": "error\n",
+      "runtime_exit_code": 1,
+      "parsed_action": "printf 'error\\n'; false",
+      "runtime_calls": [
+        {
+          "command": "printf 'error\\n'; false",
+          "timeout": 30,
+          "check": "silent"
+        }
+      ],
+      "returned_observation": "error\n",
+      "consumer_message": "OBSERVATION:\nerror\n",
+      "consumer_tool_call_ids": [
+        "call-0"
+      ],
+      "success_asserted": false,
+      "S1": "supported",
+      "S2": "supported",
+      "direct_rendered_message": "OBSERVATION:\nerror\n",
+      "direct_check_same_judgment": true,
+      "status_visible_to_renderer": false
+    },
+    {
+      "id": "S-D",
+      "model_response": {
+        "message": "Run the fixed command.",
+        "tool_calls": [
+          {
+            "id": "call-0",
+            "function": {
+              "name": "bash",
+              "arguments": "{\"command\": \"true\"}"
+            }
+          },
+          {
+            "id": "call-1",
+            "function": {
+              "name": "bash",
+              "arguments": "{\"command\": \"true\"}"
+            }
+          }
+        ]
+      },
+      "runtime_output": null,
+      "runtime_exit_code": null,
+      "parser_error": "multiple",
+      "runtime_calls": [],
+      "S1": "supported",
+      "S2": "not_applicable",
+      "consumer_message": null,
+      "direct_parser_error": "multiple",
+      "direct_check_same_judgment": true
+    }
+  ],
+  "upstream_tests_inspected_not_executed": [
+    "tests/test_agent.py::test_function_calling",
+    "tests/test_agent.py::test_show_no_output_template",
+    "tests/test_parsing.py::test_function_calling_parser"
+  ],
+  "native_runtime_executed": false,
+  "model_called": false,
+  "execution_status": "completed"
+}

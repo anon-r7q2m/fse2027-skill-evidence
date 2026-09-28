@@ -1,0 +1,194 @@
+[
+  {
+    "path": "public_source/swe_agent/sweagent/tools/utils.py",
+    "symbol": "_should_quote",
+    "start": 39,
+    "end": 43
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/tools/parsing.py",
+    "symbol": "FunctionCallingParser._parse_tool_call",
+    "start": 397,
+    "end": 439
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/tools/parsing.py",
+    "symbol": "FunctionCallingParser.__call__",
+    "start": 441,
+    "end": 454
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/tools/tools.py",
+    "symbol": "ToolHandler.should_block_action",
+    "start": 353,
+    "end": 367
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/tools/tools.py",
+    "symbol": "ToolHandler.check_for_submission_cmd",
+    "start": 372,
+    "end": 376
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/tools/tools.py",
+    "symbol": "ToolHandler.parse_actions",
+    "start": 378,
+    "end": 380
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/environment/swe_env.py",
+    "symbol": "SWEEnv.communicate",
+    "start": 197,
+    "end": 232
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/history_processors.py",
+    "symbol": "_get_content_text",
+    "start": 31,
+    "end": 35
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/history_processors.py",
+    "symbol": "_clear_cache_control",
+    "start": 46,
+    "end": 50
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/history_processors.py",
+    "symbol": "_set_cache_control",
+    "start": 53,
+    "end": 67
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/history_processors.py",
+    "symbol": "CacheControlHistoryProcessor.__call__",
+    "start": 288,
+    "end": 302
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent.messages",
+    "start": 540,
+    "end": 551
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent._append_history",
+    "start": 556,
+    "end": 559
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent._get_format_dict",
+    "start": 658,
+    "end": 673
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent._add_templated_messages_to_history",
+    "start": 675,
+    "end": 712
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent.add_step_to_history",
+    "start": 714,
+    "end": 746
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent.handle_submission",
+    "start": 870,
+    "end": 905
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent.handle_action",
+    "start": 936,
+    "end": 1004
+  },
+  {
+    "path": "public_source/swe_agent/sweagent/agent/agents.py",
+    "symbol": "DefaultAgent.forward",
+    "start": 1006,
+    "end": 1060
+  },
+  {
+    "path": "public_source/openhands/openhands/events/observation/commands.py",
+    "symbol": "CmdOutputObservation.to_agent_observation",
+    "start": 156,
+    "end": 164
+  },
+  {
+    "path": "public_source/openhands/openhands/events/serialization/event.py",
+    "symbol": "truncate_content",
+    "start": 159,
+    "end": 170
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory.process_events",
+    "start": 72,
+    "end": 163
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._apply_user_message_formatting",
+    "start": 165,
+    "end": 180
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._process_action",
+    "start": 182,
+    "end": 326
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._process_observation",
+    "start": 328,
+    "end": 656
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._filter_unmatched_tool_calls",
+    "start": 722,
+    "end": 774
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._ensure_system_message",
+    "start": 776,
+    "end": 796
+  },
+  {
+    "path": "public_source/openhands/openhands/memory/conversation_memory.py",
+    "symbol": "ConversationMemory._ensure_initial_user_message",
+    "start": 798,
+    "end": 833
+  },
+  {
+    "path": "public_source/openhands/openhands/agenthub/codeact_agent/codeact_agent.py",
+    "symbol": "CodeActAgent.step",
+    "start": 150,
+    "end": 203
+  },
+  {
+    "path": "public_source/openhands/openhands/agenthub/codeact_agent/codeact_agent.py",
+    "symbol": "CodeActAgent._get_initial_user_message",
+    "start": 205,
+    "end": 223
+  },
+  {
+    "path": "public_source/openhands/openhands/agenthub/codeact_agent/codeact_agent.py",
+    "symbol": "CodeActAgent._get_messages",
+    "start": 225,
+    "end": 272
+  },
+  {
+    "path": "public_source/openhands/openhands/controller/agent_controller.py",
+    "symbol": "AgentController._on_event",
+    "start": 408,
+    "end": 433
+  }
+]

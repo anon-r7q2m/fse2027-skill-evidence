@@ -1,0 +1,76 @@
+{
+  "basis": [
+    {
+      "path": "experiments/discovery_mapping_repair_v1/PLAN.md",
+      "sha256": "06bc37cde3b62d366d3002a12d1892e0bad7d46c0e11e3eb72b235caa548ab44"
+    },
+    {
+      "path": "docs/reviews/discovery_mapping_followup_direction_20260922.md",
+      "sha256": "ce567965cfe949669e144b26f3a34b2585ae6417a4c545b4bcf54492493055f2"
+    },
+    {
+      "path": "experiments/observation_context_v1/HOST_PROFILE.md",
+      "sha256": "d9295f1530dfaf320fad64fe91f64deb0ea1abe260d0aa6928f9ddea01784c10"
+    },
+    {
+      "path": "analysis/discovery_mapping_repair_v1/lineage.py",
+      "sha256": "c8b194ad80baa7ae06bcb86d967a44273cb64e9225cfc9f3c822c713960dfc57"
+    },
+    {
+      "path": "analysis/r_full_package_v1/runtime.py",
+      "sha256": "3575e9184dd376c5748b1e5f826631a2f43ae933f8ea0bb0d3ed315128c063de"
+    },
+    {
+      "path": "analysis/observation_context_v1/session.py",
+      "sha256": "d5bf714922e5589cd9342232d97588338be524e2885a867db5318fd21db85778"
+    },
+    {
+      "path": "results_cache/discovery_source_set_v1/source_packs/nexahe/ahe/blobs/220b5a067f5b6253849d26463d6bf0fe9d60a578",
+      "sha256": "0bbfac3fbd6389538b51ee355d232e586d4c25625d2df68851bbc1558051c0ce"
+    }
+  ],
+  "candidate_sha256": "e0c1d872a86075502ffdc264617973ad844b505fd83504026d9772018b1a67c0",
+  "checkpoint_sha256": "71445d22bab008d650891941abffac9675c546cda2489376f5edc5c5251055b9",
+  "continuation": "No code migration authorized by this calibration. The original runner must close with zero migration requests; this evaluator does not modify the budget ledger.",
+  "frozen_mapping_declarations": {
+    "events": [
+      "before_solver_request"
+    ],
+    "inputs": "An ordered message trace containing assistant, user/framework, and tool-result messages, plus a configured keep_iterations >= 1 with keep_user_rounds disabled.",
+    "required_domain": [],
+    "state": "Configured keep_iterations value and a record keyed by observation occurrence_id/current_wire_sha256 so later before_solver_request boundaries do not re-project unchanged already-derived observations after a prior projection changed their current_wire_sha256 and charged output again."
+  },
+  "generated_code_failure_established": false,
+  "historical_donor_execution": {
+    "behavior_cases": 4,
+    "compact_invocations": 4,
+    "completed_processes": 1,
+    "new_execution": false,
+    "process_attempts": 2,
+    "reuse_record": "donor_reuse.json",
+    "reuse_record_sha256": "edda432fc9cb83ebffb3e6009990d4dcd6e627acbf42b899114d154f6960f5af"
+  },
+  "host_impossibility_established": false,
+  "independence": "MODEL_MEDIATED_EVALUATION",
+  "internal_state_key_naming_is_not_the_issue": true,
+  "new_execution_counts": {
+    "actual_entry_runs": 0,
+    "benchmark_scores": 0,
+    "donor_processes": 0,
+    "generated_packages": 0,
+    "hidden_executions": 0,
+    "hidden_fixtures": 0,
+    "migration_requests": 0,
+    "target_controls": 0,
+    "wrong_controls": 0
+  },
+  "ownership_mapping_revised": true,
+  "parent_candidate_sha256": "d6b973571e9d7b2871ec0b6dccbd39d443f6819ce79224c9ee1852cf3c3ea40a",
+  "reason": "BEHAVIOR_CARD_REJECTED: the revised mapping corrects host ownership, but leaves the delivery and initialization of configurable keep_iterations undefined. The unchanged source input domain is configured keep_iterations >= 1; the target declares required_domain=[] and supplies no configuration channel or fixed-default adaptation. Naming the value in package-owned JSON state does not specify its origin; the actual host starts with empty state. The pinned create_compaction_strategy explicitly passes config.keep_iterations, so the constructor default 3 does not uniquely determine this call chain. Choosing a domain key/value or testing only 3 would complete or narrow the mapping on the evaluator side. This fails the frozen mapping-repair PLAN requirement to specify configuration; it is not a host-impossibility finding or generated-code failure. Historical donor O1/O2 evidence is reused unchanged. No new donor process, target control, hidden fixture, migration code, actual entry or score was attempted.",
+  "rejection_layer": "FROZEN_TARGET_CONFIGURATION_DELIVERY_UNDERSPECIFIED",
+  "reviewer": "/root/feedback_v2_outcome_review",
+  "source_behavior_changed": false,
+  "status": "BEHAVIOR_CARD_REJECTED",
+  "unresolved_non_decisive_observation": "No host representation conclusion is made from an abstract >64 replacement trace; actual reachability was not established or needed for this disposition.",
+  "visibility": "PUBLIC"
+}

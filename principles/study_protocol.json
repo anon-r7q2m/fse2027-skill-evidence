@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "study_id": "skill_reuse_principles_v1",
+  "date": "2026-09-28",
+  "authorization": "User requested acceleration after accepting the reviewed bounded principles proposal.",
+  "design_type": "Retrospective fixed-case analysis and prospective offline diagnostic replay of exposed cases",
+  "independent_prediction_validation": false,
+  "new_model_calls": 0,
+  "new_benchmark_runs": 0,
+  "fixture_condition_cap": 20,
+  "group_caps": {"gp": 6, "feedback": 8, "pro": 6},
+  "explanatory_families": ["gp", "feedback_v2", "nexau_mapping_lineage", "moatless_separate_source_and_cleanup_cases", "aider_handoff", "pinned_pro_evaluator"],
+  "complete_context_panels": [
+    "gp_generated_effect_v1: four tasks, all P/GP paths, separate original arm outcomes",
+    "raw_issue_feedback_effect_v2: all eight tasks and shared-prefix policies",
+    "search_replace_chooser_v1: all four tasks and original paired endpoints"
+  ],
+  "claim_labels": ["supported", "violated", "unassessed", "not_applicable"],
+  "claim_unit": "An explicitly stated property relative to an identified object, consumer and use, not an entire skill",
+  "roles": ["hard_admission", "soft_signal", "empirical_task_utility"],
+  "principles": [
+    {"id": "P1", "statement": "Define the intended use before choosing the extraction boundary.", "condition": "Preserve or explicitly adapt the input, state, configuration and consumer dependencies relevant to that use; reachability does not guarantee utility."},
+    {"id": "P2", "statement": "Carry the checked object and asserted property with the evidence.", "condition": "Do not transfer a hard guarantee to a different object or property without justification; limited evidence may still be useful as a soft signal."},
+    {"id": "P3", "statement": "Derive controls from the actual producer path and an explicit obligation.", "condition": "Use real input transformations for properties that requirements or adaptations actually require preserving; old behavior alone is not authority."}
+  ],
+  "hypotheses": {
+    "H1": "Identify what evidence tracing adds beyond a concrete original-object syntax admission fix.",
+    "H1_factorial_decision": "CANCELLED_BEFORE_REPLAY: no distinct operational scope treatment was identified; scope metadata alone does not change the policy, and the old receipt already recorded issue_fixed=null.",
+    "H1_allowed_conclusion": "A syntax intervention may demonstrate a local policy change; extra prevention value of generic scope handling remains unestablished.",
+    "H2": "Compare fixed direct-helper controls and controls derived from the actual producer path on the recorded JSON-path variants.",
+    "H2_competing_explanation": "An equivalent direct-helper control may detect the same difference; production-path analysis may provide control construction rather than a uniquely stronger oracle."
+  },
+  "group_protocols": ["gp_protocol.json", "feedback_protocol.json", "pro_protocol.json"],
+  "freeze_rule": "Each group protocol fixes exact fixtures, input sources, expected observations and mock boundaries before its first execution.",
+  "execution_boundaries": [
+    "Read only public pinned source and explicitly identified public records; never credentials, private task annotations or hidden tests.",
+    "No model calls, containers, donor entry programs with external side effects, benchmark jobs or scoring jobs.",
+    "Leave all historical frozen code, artifacts, score populations and outcomes unchanged.",
+    "Record exact source slices and mocks; do not present a surrogate implementation as the original program.",
+    "Existing original scoring continuation is separate; no individual scores before its complete release."
+  ],
+  "stopping_rules": [
+    "At most two working-day batches and the group fixture caps; do not expand samples to rescue a hypothesis.",
+    "Allow at most one ordinary implementation-fix pass in a group. Retain any failed attempt and distinguish implementation fixes from changed hypotheses.",
+    "Changing a principle, property or control to obtain a favorable result ends that version; do not relabel it as the same confirmation.",
+    "Missing source or dependencies remain unassessed. New reduced models must be labeled illustrative.",
+    "Report legitimate-control rejection, abstention, unresolved evidence and additional human interpretation along with detection.",
+    "Do not pool heterogeneous fixtures into a success rate or interpret replay agreement as new benchmark gains."
+  ]
+}

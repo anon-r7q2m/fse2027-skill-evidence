@@ -1,0 +1,300 @@
+{
+  "fixture_count": 6,
+  "limitations": [
+    "No real task, patch grading, Docker, model, network or leaderboard execution occurs during replay.",
+    "Worker results are constructed, not observed task outcomes.",
+    "Duplicate completion order is deterministic; no true thread or workspace race is measured.",
+    "The input-frame adapter supports only the unique synthetic rows used here, not general pandas semantics.",
+    "Proposed report admission is new harness code, not an official evaluator repair.",
+    "Only patch identity changes in the cache contrast; other environment bindings are outside this fixture.",
+    "Cases are exposed diagnostic examples, not independent validation or error-rate estimates."
+  ],
+  "matched_expectations": 6,
+  "normal_controls_rejected": 0,
+  "records": [
+    {
+      "actual": {
+        "cache_hits": 0,
+        "consumer_action": "abstain_from_claimed_population_mean",
+        "fresh_worker_calls": 1,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "declared_population_not_covered",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "control": false,
+      "expected": {
+        "cache_hits": 0,
+        "consumer_action": "abstain_from_claimed_population_mean",
+        "fresh_worker_calls": 1,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "declared_population_not_covered",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "fixture_id": "missing_full_claim",
+      "matches_expected": true,
+      "original_stdout": "Overall accuracy:  1.0\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_pass_a",
+          "prefix": "first",
+          "source": "mock_uncached_worker"
+        }
+      ]
+    },
+    {
+      "actual": {
+        "cache_hits": 0,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 1,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": 1.0,
+        "reason": "declared_subset_population_supported",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "control": true,
+      "expected": {
+        "cache_hits": 0,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 1,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": 1.0,
+        "reason": "declared_subset_population_supported",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "fixture_id": "declared_subset_control",
+      "matches_expected": true,
+      "original_stdout": "Overall accuracy:  1.0\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_pass_a",
+          "prefix": "first",
+          "source": "mock_uncached_worker"
+        }
+      ]
+    },
+    {
+      "actual": {
+        "cache_hits": 0,
+        "consumer_action": "abstain_from_claimed_population_mean",
+        "fresh_worker_calls": 2,
+        "overall_accuracy": 0.0,
+        "progress": [
+          "Accuracy: 100.00%",
+          "Accuracy: 0.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "duplicate_submission_identity",
+        "results": {
+          "case_a": false
+        },
+        "scheduled": 2
+      },
+      "control": false,
+      "expected": {
+        "cache_hits": 0,
+        "consumer_action": "abstain_from_claimed_population_mean",
+        "fresh_worker_calls": 2,
+        "overall_accuracy": 0.0,
+        "progress": [
+          "Accuracy: 100.00%",
+          "Accuracy: 0.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "duplicate_submission_identity",
+        "results": {
+          "case_a": false
+        },
+        "scheduled": 2
+      },
+      "fixture_id": "duplicate_controlled_completion",
+      "matches_expected": true,
+      "original_stdout": "Overall accuracy:  0.0\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_pass_a",
+          "prefix": "first",
+          "source": "mock_uncached_worker"
+        },
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_fail_a",
+          "prefix": "second",
+          "source": "mock_uncached_worker"
+        }
+      ]
+    },
+    {
+      "actual": {
+        "cache_hits": 0,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 2,
+        "overall_accuracy": 0.5,
+        "progress": [
+          "Accuracy: 100.00%",
+          "Accuracy: 50.00%"
+        ],
+        "published_accuracy": 0.5,
+        "reason": "declared_full_population_supported",
+        "results": {
+          "case_a": true,
+          "case_b": false
+        },
+        "scheduled": 2
+      },
+      "control": true,
+      "expected": {
+        "cache_hits": 0,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 2,
+        "overall_accuracy": 0.5,
+        "progress": [
+          "Accuracy: 100.00%",
+          "Accuracy: 50.00%"
+        ],
+        "published_accuracy": 0.5,
+        "reason": "declared_full_population_supported",
+        "results": {
+          "case_a": true,
+          "case_b": false
+        },
+        "scheduled": 2
+      },
+      "fixture_id": "unique_complete_control",
+      "matches_expected": true,
+      "original_stdout": "Overall accuracy:  0.5\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_pass_a",
+          "prefix": "first",
+          "source": "mock_uncached_worker"
+        },
+        {
+          "instance_id": "case_b",
+          "patch": "synthetic_fail_b",
+          "prefix": "second",
+          "source": "mock_uncached_worker"
+        }
+      ]
+    },
+    {
+      "actual": {
+        "cache_hits": 1,
+        "consumer_action": "request_recompute_without_publishing_cached_mean",
+        "fresh_worker_calls": 0,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "externally_known_cache_patch_mismatch",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "control": false,
+      "expected": {
+        "cache_hits": 1,
+        "consumer_action": "request_recompute_without_publishing_cached_mean",
+        "fresh_worker_calls": 0,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": null,
+        "reason": "externally_known_cache_patch_mismatch",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "fixture_id": "cache_patch_mismatch",
+      "matches_expected": true,
+      "original_stdout": "Skipping case_a - output already exists\nOverall accuracy:  1.0\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_new_fail_a",
+          "prefix": "same",
+          "source": "legacy_cache"
+        }
+      ]
+    },
+    {
+      "actual": {
+        "cache_hits": 1,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 0,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": 1.0,
+        "reason": "declared_full_population_supported",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "control": true,
+      "expected": {
+        "cache_hits": 1,
+        "consumer_action": "publish_original_mean",
+        "fresh_worker_calls": 0,
+        "overall_accuracy": 1.0,
+        "progress": [
+          "Accuracy: 100.00%"
+        ],
+        "published_accuracy": 1.0,
+        "reason": "declared_full_population_supported",
+        "results": {
+          "case_a": true
+        },
+        "scheduled": 1
+      },
+      "fixture_id": "cache_identity_match_control",
+      "matches_expected": true,
+      "original_stdout": "Skipping case_a - output already exists\nOverall accuracy:  1.0\n",
+      "worker_trace_in_controlled_completion_order": [
+        {
+          "instance_id": "case_a",
+          "patch": "synthetic_old_pass_a",
+          "prefix": "same",
+          "source": "legacy_cache"
+        }
+      ]
+    }
+  ],
+  "scope": "SYNTHETIC_STANDALONE_ORCHESTRATION_REDUCTION_AND_CACHE_REPLAY",
+  "source_revision": "ca10a60a5fcae51e6948ffe1485d4153d421e6c5"
+}

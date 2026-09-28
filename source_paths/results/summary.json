@@ -1,0 +1,16 @@
+{
+  "closed": true,
+  "paths": 2,
+  "conditions": 8,
+  "fixture_corrections": 0,
+  "live_runtime_calls": 0,
+  "model_calls": 0,
+  "benchmark_calls": 0,
+  "condition_counts_are_not_independent_tasks": true,
+  "cross_host_transplantation": false,
+  "independent_unseen_objects": false,
+  "swe_agent_observation": "empty output with status 0 and 1 maps to the same successful-command sentence",
+  "openhands_observation": "known status and complete tool groups retained; incomplete and orphan groups legally omitted",
+  "direct_tests": "same-input direct checks give the same judgments for every condition",
+  "source_manifest_files": 21
+}

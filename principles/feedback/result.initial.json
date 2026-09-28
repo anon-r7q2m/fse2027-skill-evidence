@@ -1,0 +1,483 @@
+{
+  "schema": "skill-reuse-principles-feedback-result-v1",
+  "protocol_sha256": "01a0e2f214a123c30be06557f9a4cde9e3e12a1ce047f75cbda87696a495d92f",
+  "executed_at_utc": "2026-09-28T09:49:41.343865+00:00",
+  "execution_kind": "EXACT_AST_SELECTED_METHODS_WITH_EXPLICIT_MOCKS",
+  "fixture_conditions": 8,
+  "fixture_condition_is_not_independent_task": true,
+  "all_frozen_observations_match": false,
+  "unknown_assertions": 0,
+  "known_regression_detection": {
+    "original_direct_controls": {
+      "detected": 0,
+      "missed": 1,
+      "unknown": 0,
+      "denominator": "one reused V source object"
+    },
+    "production_path_controls": {
+      "detected": 1,
+      "missed": 0,
+      "unknown": 0,
+      "denominator": "one reused V source object"
+    },
+    "equivalent_direct_controls": {
+      "detected": 1,
+      "missed": 0,
+      "unknown": 0,
+      "denominator": "one reused V source object"
+    }
+  },
+  "nonregressing_obligation_conditions": {
+    "count": 5,
+    "false_rejections": 0,
+    "unknown": 0,
+    "not_a_whole_patch_correctness_label": true
+  },
+  "conclusion": "Production-path controls and equally small equivalent direct-helper controls detect the same V array-index regression; the original two direct controls miss it. The real path supplies the relevant input transformation, not a unique testing capability. The B scalar lookup adaptation is retained on two exercised paths.",
+  "benchmark_gain_claim": false,
+  "independent_confirmation": false,
+  "rows": [
+    {
+      "id": "Base_original",
+      "snapshot": "Base",
+      "mode": "original_checker",
+      "observations": [
+        {
+          "name": "test_numeric_string_key_quoted",
+          "role": "faulty_issue_proxy",
+          "status": "FAIL",
+          "assertion": "'$[1111]' != '$.\"1111\"'\n- $[1111]\n+ $.\"1111\"\n",
+          "helper_calls": [
+            {
+              "keys": [
+                "1111"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[1111]"
+            }
+          ]
+        },
+        {
+          "name": "test_non_numeric_string_key",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "test_integer_index",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                3
+              ],
+              "key_types": [
+                "int"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[3]"
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": true
+    },
+    {
+      "id": "Base_production_path",
+      "snapshot": "Base",
+      "mode": "production_path",
+      "observations": [
+        {
+          "name": "KeyTransform('foo').as_mysql",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$.\"foo\"",
+          "expected": "$.\"foo\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "KeyTransform(3).as_mysql",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$[3]",
+          "expected": "$[3]",
+          "helper_calls": [
+            {
+              "keys": [
+                "3"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[3]"
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": true
+    },
+    {
+      "id": "B_original",
+      "snapshot": "B",
+      "mode": "original_checker",
+      "observations": [
+        {
+          "name": "test_numeric_string_key_quoted",
+          "role": "faulty_issue_proxy",
+          "status": "FAIL",
+          "assertion": "'$[1111]' != '$.\"1111\"'\n- $[1111]\n+ $.\"1111\"\n",
+          "helper_calls": [
+            {
+              "keys": [
+                "1111"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[1111]"
+            }
+          ]
+        },
+        {
+          "name": "test_non_numeric_string_key",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "test_integer_index",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                3
+              ],
+              "key_types": [
+                "int"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[3]"
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": true
+    },
+    {
+      "id": "B_production_path",
+      "snapshot": "B",
+      "mode": "production_path",
+      "observations": [
+        {
+          "name": "KeyTransform('foo').as_mysql",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$.\"foo\"",
+          "expected": "$.\"foo\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "KeyTransform(3).as_mysql",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$[3]",
+          "expected": "$[3]",
+          "helper_calls": [
+            {
+              "keys": [
+                "3"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[3]"
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": true
+    },
+    {
+      "id": "V_original",
+      "snapshot": "V",
+      "mode": "original_checker",
+      "observations": [
+        {
+          "name": "test_numeric_string_key_quoted",
+          "role": "faulty_issue_proxy",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                "1111"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"1111\""
+            }
+          ]
+        },
+        {
+          "name": "test_non_numeric_string_key",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "test_integer_index",
+          "role": "control",
+          "status": "PASS",
+          "helper_calls": [
+            {
+              "keys": [
+                3
+              ],
+              "key_types": [
+                "int"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$[3]"
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": true
+    },
+    {
+      "id": "V_production_path",
+      "snapshot": "V",
+      "mode": "production_path",
+      "observations": [
+        {
+          "name": "KeyTransform('foo').as_mysql",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$.\"foo\"",
+          "expected": "$.\"foo\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "KeyTransform(3).as_mysql",
+          "role": "control",
+          "status": "FAIL",
+          "actual": "$.\"3\"",
+          "expected": "$[3]",
+          "helper_calls": [
+            {
+              "keys": [
+                "3"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"3\""
+            }
+          ]
+        }
+      ],
+      "control_status": "FAIL",
+      "expected_observations_match": true
+    },
+    {
+      "id": "V_equivalent_helper",
+      "snapshot": "V",
+      "mode": "equivalent_helper",
+      "observations": [
+        {
+          "name": "compile_json_path(['foo'])",
+          "role": "control",
+          "status": "PASS",
+          "actual": "$.\"foo\"",
+          "expected": "$.\"foo\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"foo\""
+            }
+          ]
+        },
+        {
+          "name": "compile_json_path(['3'])",
+          "role": "control",
+          "status": "FAIL",
+          "actual": "$.\"3\"",
+          "expected": "$[3]",
+          "helper_calls": [
+            {
+              "keys": [
+                "3"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {},
+              "output": "$.\"3\""
+            }
+          ]
+        }
+      ],
+      "control_status": "FAIL",
+      "expected_observations_match": true
+    },
+    {
+      "id": "B_legal_lookup_adaptation",
+      "snapshot": "B",
+      "mode": "legal_lookup",
+      "observations": [
+        {
+          "name": "HasKeyLookup(rhs='1111').as_mysql",
+          "role": "authorized_lookup_control",
+          "status": "PASS",
+          "actual": "$.\"1111\"",
+          "expected": "$.\"1111\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "1111"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {
+                "include_root": false,
+                "allow_array_index": false
+              },
+              "output": ".\"1111\""
+            }
+          ]
+        },
+        {
+          "name": "HasKeyLookup(rhs='foo').as_mysql",
+          "role": "authorized_lookup_control",
+          "status": "PASS",
+          "actual": "$.\"foo\"",
+          "expected": "$.\"foo\"",
+          "helper_calls": [
+            {
+              "keys": [
+                "foo"
+              ],
+              "key_types": [
+                "str"
+              ],
+              "args": [],
+              "kwargs": {
+                "include_root": false,
+                "allow_array_index": false
+              },
+              "output": ".\"foo\""
+            }
+          ]
+        }
+      ],
+      "control_status": "PASS",
+      "expected_observations_match": false
+    }
+  ]
+}

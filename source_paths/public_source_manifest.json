@@ -1,0 +1,128 @@
+[
+  {
+    "host": "swe_agent",
+    "path": "LICENSE",
+    "git_blob_oid": "e702436e21844c5c519de31ab68277a6d3b427d9",
+    "bytes": 1147
+  },
+  {
+    "host": "swe_agent",
+    "path": "config/default.yaml",
+    "git_blob_oid": "fb79208113c3e803c091f3886e240a7918c3cd7f",
+    "bytes": 3242
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/agent/agents.py",
+    "git_blob_oid": "4844aeb7c42e06121fe37ba223e9263c04b53c3b",
+    "bytes": 55804
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/agent/history_processors.py",
+    "git_blob_oid": "2ca8c03dfa7a2f8f8f4bd9b7f47108f37d972b2b",
+    "bytes": 14869
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/environment/swe_env.py",
+    "git_blob_oid": "cbe01952643decdf8c519b10a659e254e9a02384",
+    "bytes": 10989
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/tools/commands.py",
+    "git_blob_oid": "e7444520ccfaa73b2a4a98002f55c92acc15a573",
+    "bytes": 8233
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/tools/parsing.py",
+    "git_blob_oid": "d2af956ca3236bc6eae9d7490cdcf79d9d84c669",
+    "bytes": 25145
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/tools/tools.py",
+    "git_blob_oid": "13047c56b7510ae9ef6e6e9cdb0506375f7647b3",
+    "bytes": 16743
+  },
+  {
+    "host": "swe_agent",
+    "path": "sweagent/tools/utils.py",
+    "git_blob_oid": "4e90e898309796cd498bc7304a0f201a9d5c63d8",
+    "bytes": 4044
+  },
+  {
+    "host": "swe_agent",
+    "path": "tests/test_agent.py",
+    "git_blob_oid": "dc0e610ec578d9bcae70e6ba2dad5f7824870b30",
+    "bytes": 10366
+  },
+  {
+    "host": "swe_agent",
+    "path": "tests/test_history_processors.py",
+    "git_blob_oid": "2596e5af677e7f9f050364774b90e4e5395b6820",
+    "bytes": 1437
+  },
+  {
+    "host": "swe_agent",
+    "path": "tests/test_parsing.py",
+    "git_blob_oid": "c66d07a1b72487ce1130acc985d7fc0be1eca8e4",
+    "bytes": 4415
+  },
+  {
+    "host": "swe_agent",
+    "path": "tests/test_tools_command_parsing.py",
+    "git_blob_oid": "139cdaac057348a86340a7d016af2c745d5c13e1",
+    "bytes": 7235
+  },
+  {
+    "host": "openhands",
+    "path": "LICENSE",
+    "git_blob_oid": "af1393b388a10f9a4bcdea4ecee8a89f227b975b",
+    "bytes": 1095
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/agenthub/codeact_agent/codeact_agent.py",
+    "git_blob_oid": "ca34cdb66a763525f628bd256f985f1e44af6ad2",
+    "bytes": 12177
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/controller/agent_controller.py",
+    "git_blob_oid": "a1ce7dfbf393771d34ac3c33718c5198d8924717",
+    "bytes": 47130
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/controller/state/state.py",
+    "git_blob_oid": "ac8f25dabab1be73d9dc78f92f1ad9a05ddff6ee",
+    "bytes": 10978
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/core/config/agent_config.py",
+    "git_blob_oid": "ef280ff965564cb95566059b41376e9048785ddc",
+    "bytes": 6507
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/events/observation/commands.py",
+    "git_blob_oid": "5a413662d1ace504268440096c3dfa4025fe4b99",
+    "bytes": 6472
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/events/serialization/event.py",
+    "git_blob_oid": "1bd669c7c379e50aa271d5bce6512040a7bf6957",
+    "bytes": 6014
+  },
+  {
+    "host": "openhands",
+    "path": "openhands/memory/conversation_memory.py",
+    "git_blob_oid": "ba4c4b0319ecc585f19b15d0d7b60d272ed8abee",
+    "bytes": 38714
+  }
+]

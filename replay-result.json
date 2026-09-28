@@ -1,0 +1,15 @@
+{
+  "scope": "PUBLIC_PARSER_DEMO_ONLY",
+  "python_version": "3.13.11",
+  "public_case_groups": 4,
+  "public_samples_passed": 14,
+  "source_semantics_cases_passed": [
+    "repeated_matches",
+    "reverse_commands",
+    "partial_miss",
+    "boundary_newlines"
+  ],
+  "benchmark_scores_reproduced": false,
+  "independent_evaluation_reproduced": false,
+  "host_execution_reproduced": false
+}

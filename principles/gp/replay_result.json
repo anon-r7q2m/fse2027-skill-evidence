@@ -1,0 +1,351 @@
+{
+  "all_bad_abstention": true,
+  "boundaries": [
+    "No benchmark outcome is generated or attributed to the new policy",
+    "Historical G PASS and projection identities are recorded evidence, not new runtime results",
+    "Only four exact original source functions run; transport, normalization, G execution and full host are not reproduced",
+    "The historical policy is not retroactively invalidated by the new hard exclusion",
+    "Synthetic examples are not independent real-task observations",
+    "One historical pair changing selection cannot establish general policy utility",
+    "No independent predictive validation is claimed"
+  ],
+  "conditions": [
+    {
+      "abstained": false,
+      "checks": {
+        "abstention": true,
+        "exact_original_effect": true,
+        "recorded_projection": true,
+        "rejection": true,
+        "selection": true,
+        "suffix_parse_only": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "counts": {
+          "comparable": 2,
+          "eligible": 2,
+          "minimum_failures": 0,
+          "pool": 2,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+      },
+      "expectations_met": true,
+      "fixture_id": "historical_original",
+      "historical_hard_syntax_guarantee": "not_applicable",
+      "issue_repair": "unassessed",
+      "kind": "historical_recorded_pool",
+      "official_outcome": null,
+      "policy": "original",
+      "projection": {
+        "kind": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+        "preservation_pass_counts": [
+          4,
+          4
+        ],
+        "projected_equal": true
+      },
+      "rejected_candidates": [],
+      "selected_snapshot": "508c251e5b694a2d7328145f19dd44f31ab16857",
+      "syntax": {
+        "508c251e5b694a2d7328145f19dd44f31ab16857": {
+          "label": "violated",
+          "reason": "RECORDED_PUBLIC_QUERY_14_SYNTAX_ERROR"
+        },
+        "befc36e3265f789e28c1168e8ee6468c42631bb2": {
+          "label": "unassessed",
+          "reason": "WHOLE_FILE_NOT_REEXECUTED_IN_BUNDLE"
+        }
+      }
+    },
+    {
+      "abstained": false,
+      "checks": {
+        "abstention": true,
+        "rejection": true,
+        "selection": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "counts": {
+          "comparable": 1,
+          "eligible": 1,
+          "minimum_failures": 0,
+          "pool": 1,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2"
+      },
+      "expectations_met": true,
+      "fixture_id": "historical_syntax_exclusion",
+      "historical_hard_syntax_guarantee": "not_applicable",
+      "issue_repair": "unassessed",
+      "kind": "historical_recorded_pool_new_policy",
+      "official_outcome": null,
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "projection": {
+        "kind": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+        "preservation_pass_counts": [
+          4,
+          4
+        ],
+        "projected_equal": true
+      },
+      "rejected_candidates": [
+        "508c251e5b694a2d7328145f19dd44f31ab16857"
+      ],
+      "selected_snapshot": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+      "syntax": {
+        "508c251e5b694a2d7328145f19dd44f31ab16857": {
+          "label": "violated",
+          "reason": "RECORDED_PUBLIC_QUERY_14_SYNTAX_ERROR"
+        },
+        "befc36e3265f789e28c1168e8ee6468c42631bb2": {
+          "label": "unassessed",
+          "reason": "WHOLE_FILE_NOT_REEXECUTED_IN_BUNDLE"
+        }
+      }
+    },
+    {
+      "abstained": false,
+      "checks": {
+        "abstention": true,
+        "projection": true,
+        "rejection": true,
+        "selection": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "counts": {
+          "comparable": 2,
+          "eligible": 2,
+          "minimum_failures": 0,
+          "pool": 2,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "test_only_first"
+      },
+      "expectations_met": true,
+      "fixture_id": "synthetic_legitimate_test_only",
+      "historical_hard_syntax_guarantee": null,
+      "issue_repair": "unassessed",
+      "kind": "synthetic_normal_control",
+      "official_outcome": null,
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "projection": {
+        "kind": "DECLARED_SYNTHETIC_MAP_NOT_ORIGINAL_G_EXECUTION",
+        "normal_value_results": [],
+        "projected_equal": true,
+        "restored_files": [
+          "tests/test_value.py"
+        ]
+      },
+      "rejected_candidates": [],
+      "selected_snapshot": "test_only_first",
+      "syntax": {
+        "test_only_first": {
+          "label": "supported",
+          "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+        },
+        "test_only_second": {
+          "label": "supported",
+          "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+        }
+      }
+    },
+    {
+      "abstained": false,
+      "checks": {
+        "abstention": true,
+        "declared_value_property": true,
+        "projection": true,
+        "rejection": true,
+        "selection": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "counts": {
+          "comparable": 2,
+          "eligible": 2,
+          "minimum_failures": 0,
+          "pool": 2,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "safe_first"
+      },
+      "expectations_met": true,
+      "fixture_id": "synthetic_safe_projection",
+      "historical_hard_syntax_guarantee": null,
+      "issue_repair": "unassessed",
+      "kind": "synthetic_normal_control",
+      "official_outcome": null,
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "projection": {
+        "kind": "DECLARED_SYNTHETIC_MAP_NOT_ORIGINAL_G_EXECUTION",
+        "normal_value_results": [
+          1,
+          1
+        ],
+        "projected_equal": false,
+        "restored_files": [
+          "tests/test_value.py"
+        ]
+      },
+      "rejected_candidates": [],
+      "selected_snapshot": "safe_first",
+      "syntax": {
+        "safe_first": {
+          "label": "supported",
+          "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+        },
+        "safe_second": {
+          "label": "supported",
+          "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+        }
+      }
+    },
+    {
+      "abstained": false,
+      "checks": {
+        "abstention": true,
+        "rejection": true,
+        "selection": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "counts": {
+          "comparable": 2,
+          "eligible": 2,
+          "minimum_failures": 0,
+          "pool": 2,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "unknown_first"
+      },
+      "expectations_met": true,
+      "fixture_id": "synthetic_size_limit_unknown",
+      "historical_hard_syntax_guarantee": null,
+      "issue_repair": "unassessed",
+      "kind": "synthetic_uncertainty_control",
+      "official_outcome": null,
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "projection": {
+        "kind": "DECLARED_SYNTHETIC_MAP_NOT_ORIGINAL_G_EXECUTION",
+        "normal_value_results": [],
+        "projected_equal": null,
+        "restored_files": []
+      },
+      "rejected_candidates": [],
+      "selected_snapshot": "unknown_first",
+      "syntax": {
+        "known_second": {
+          "label": "supported",
+          "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+        },
+        "unknown_first": {
+          "label": "unassessed",
+          "reason": "SOURCE_NOT_AVAILABLE_OR_TEXT_SIZE_LIMIT"
+        }
+      }
+    },
+    {
+      "abstained": true,
+      "checks": {
+        "abstention": true,
+        "rejection": true,
+        "selection": true,
+        "syntax_labels": true
+      },
+      "effect": {
+        "mode": "abstain",
+        "reason": "ALL_CANDIDATES_HAVE_CONFIRMED_SYNTAX_ERROR",
+        "snapshot_ref": null
+      },
+      "expectations_met": true,
+      "fixture_id": "synthetic_all_confirmed_bad",
+      "historical_hard_syntax_guarantee": null,
+      "issue_repair": "unassessed",
+      "kind": "synthetic_known_error_control",
+      "official_outcome": null,
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "projection": {
+        "kind": "DECLARED_SYNTHETIC_MAP_NOT_ORIGINAL_G_EXECUTION",
+        "normal_value_results": [],
+        "projected_equal": false,
+        "restored_files": []
+      },
+      "rejected_candidates": [
+        "bad_first",
+        "bad_current"
+      ],
+      "selected_snapshot": null,
+      "syntax": {
+        "bad_current": {
+          "label": "violated",
+          "line": 1,
+          "reason": "SyntaxError"
+        },
+        "bad_first": {
+          "label": "violated",
+          "line": 1,
+          "reason": "SyntaxError"
+        }
+      }
+    }
+  ],
+  "expectations_met": 6,
+  "fixture_conditions": 6,
+  "generated_suffix_syntax_illustration": [
+    {
+      "scope": "Exact generated additions under a synthetic class wrapper, not full Django-file or test execution",
+      "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857",
+      "syntax": {
+        "label": "violated",
+        "line": 3,
+        "reason": "SyntaxError"
+      }
+    },
+    {
+      "scope": "Exact generated additions under a synthetic class wrapper, not full Django-file or test execution",
+      "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+      "syntax": {
+        "label": "supported",
+        "reason": "COMPLETE_SYNTHETIC_FILE_AST_PARSE"
+      }
+    }
+  ],
+  "h1_factorial": {
+    "reason": "Scope metadata alone leaves the original consumer unchanged; a syntax-dependent scope gate duplicates syntax admission. No independent scope treatment is asserted.",
+    "status": "CANCELLED_NOT_OPERATIONALLY_DISTINCT"
+  },
+  "historical_pair": {
+    "benchmark_effect": "NOT_MEASURED",
+    "new_local_policy_selection": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+    "original_selection": "508c251e5b694a2d7328145f19dd44f31ab16857",
+    "selection_changed": true
+  },
+  "implementation_fix_passes": 0,
+  "normal_control_candidates": 4,
+  "normal_control_candidates_rejected": 0,
+  "normal_control_conditions": 2,
+  "protocol_sha256": "bd55989b6044d59ee19135850d88f1b628bb8fadd3ad5cfae6e618f4c8b0a4c7",
+  "schema_version": "agent2skill.principles.gp_replay_result.v1",
+  "source_slice_sha256": "2011a3cfc4b62664b2252435fc04930127c3f88aa661761e3e733a3603c04130",
+  "status": "COMPLETED"
+}

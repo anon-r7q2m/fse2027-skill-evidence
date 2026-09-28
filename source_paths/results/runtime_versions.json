@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3",
+  "Jinja2": "3.1.2",
+  "PyYAML": "6.0.1",
+  "packages_installed_for_this_check": false,
+  "purpose": "Recorded environment used for attempt_0; full upstream dependencies are not installed or required"
+}

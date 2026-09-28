@@ -1,0 +1,246 @@
+{
+  "host": "OpenHands",
+  "revision": "34bf9c2579ca5a25e452583eed38c6c0e45cebd6",
+  "exposure": "previously_exposed",
+  "conditions": [
+    {
+      "id": "O-A",
+      "boundary": "complete",
+      "runtime_exit_code_supplied_by_fixture": 0,
+      "original_content": "",
+      "native_formatted_observation": "\n[Command finished with exit code 0]",
+      "history_event_types": [
+        "SystemMessageAction",
+        "MessageAction",
+        "CmdRunAction",
+        "CmdObservation"
+      ],
+      "consumer_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "tool_call_ids": [
+            "call-a"
+          ],
+          "tool_call_id": null
+        },
+        {
+          "role": "tool",
+          "text": "\n[Command finished with exit code 0]",
+          "tool_call_ids": [],
+          "tool_call_id": "call-a"
+        }
+      ],
+      "O1": "supported",
+      "O2": "supported",
+      "direct_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "tool_call_ids": [
+            "call-a"
+          ],
+          "tool_call_id": null
+        },
+        {
+          "role": "tool",
+          "text": "\n[Command finished with exit code 0]",
+          "tool_call_ids": [],
+          "tool_call_id": "call-a"
+        }
+      ],
+      "direct_check_same_judgment": true,
+      "native_scheduler_reachability": "not_executed"
+    },
+    {
+      "id": "O-B",
+      "boundary": "complete",
+      "runtime_exit_code_supplied_by_fixture": 1,
+      "original_content": "",
+      "native_formatted_observation": "\n[Command finished with exit code 1]",
+      "history_event_types": [
+        "SystemMessageAction",
+        "MessageAction",
+        "CmdRunAction",
+        "CmdObservation"
+      ],
+      "consumer_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "tool_call_ids": [
+            "call-a"
+          ],
+          "tool_call_id": null
+        },
+        {
+          "role": "tool",
+          "text": "\n[Command finished with exit code 1]",
+          "tool_call_ids": [],
+          "tool_call_id": "call-a"
+        }
+      ],
+      "O1": "supported",
+      "O2": "supported",
+      "direct_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "assistant",
+          "text": "",
+          "tool_call_ids": [
+            "call-a"
+          ],
+          "tool_call_id": null
+        },
+        {
+          "role": "tool",
+          "text": "\n[Command finished with exit code 1]",
+          "tool_call_ids": [],
+          "tool_call_id": "call-a"
+        }
+      ],
+      "direct_check_same_judgment": true,
+      "native_scheduler_reachability": "not_executed"
+    },
+    {
+      "id": "O-C",
+      "boundary": "partial",
+      "runtime_exit_code_supplied_by_fixture": 0,
+      "original_content": "",
+      "native_formatted_observation": "\n[Command finished with exit code 0]",
+      "history_event_types": [
+        "SystemMessageAction",
+        "MessageAction",
+        "CmdRunAction",
+        "CmdObservation"
+      ],
+      "consumer_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        }
+      ],
+      "O1": "not_applicable",
+      "O2": "supported",
+      "direct_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        }
+      ],
+      "direct_check_same_judgment": true,
+      "native_scheduler_reachability": "unknown"
+    },
+    {
+      "id": "O-D",
+      "boundary": "orphan",
+      "runtime_exit_code_supplied_by_fixture": 1,
+      "original_content": "",
+      "native_formatted_observation": "\n[Command finished with exit code 1]",
+      "history_event_types": [
+        "SystemMessageAction",
+        "MessageAction",
+        "CmdObservation"
+      ],
+      "consumer_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        }
+      ],
+      "O1": "not_applicable",
+      "O2": "supported",
+      "direct_messages": [
+        {
+          "role": "system",
+          "text": "Fixed local source-path fixture.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        },
+        {
+          "role": "user",
+          "text": "Run the fixed command.",
+          "tool_call_ids": [],
+          "tool_call_id": null
+        }
+      ],
+      "direct_check_same_judgment": true,
+      "native_scheduler_reachability": "unknown"
+    }
+  ],
+  "upstream_test_implementation": "not_locally_available_not_inspected_or_executed",
+  "native_runtime_executed": false,
+  "model_called": false,
+  "execution_status": "completed"
+}

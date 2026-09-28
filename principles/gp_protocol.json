@@ -1,0 +1,141 @@
+{
+  "schema_version": "agent2skill.principles.gp_protocol.v1",
+  "status": "FROZEN_BEFORE_OFFLINE_EXECUTION",
+  "scope": "Six deterministic local conditions; no model, benchmark, grader, network, or original artifact mutation",
+  "max_fixture_conditions": 6,
+  "max_implementation_fix_passes": 1,
+  "h1_factorial": {
+    "status": "CANCELLED_NOT_OPERATIONALLY_DISTINCT",
+    "reason": "Scope metadata alone leaves the original consumer unchanged; a syntax-dependent scope gate duplicates syntax admission. No independent scope treatment is asserted."
+  },
+  "source": {
+    "trajectory": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/trajectory.json",
+    "trajectory_sha256": "a82446490f37c5a7634ca71f4b07126259a8bc35c44856a52c9a330254250214",
+    "mechanism": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package/mechanism.py",
+    "mechanism_sha256": "256792508d842905cf950d894e18c572d6fc94d8507f6d3c7ef11a556066c756",
+    "package_sha256": "5f70bae4b1b6732fd16a06e8802fdb6628fdcb6d68e240ba434477e202da6e93",
+    "source_functions": ["_choose_submission_effect", "_majority_vote", "_candidate_has_nonempty_key", "_select_effect"],
+    "donor": "OpenAutoCoder/Agentless",
+    "donor_revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71",
+    "donor_license": "experiments/reproduction_regression_v1/sources/agentless/LICENSE",
+    "diagnosis": "results_cache/gp_generated_effect_v1/DIAGNOSIS.md",
+    "base_snapshot": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+    "early_snapshot": "508c251e5b694a2d7328145f19dd44f31ab16857",
+    "later_snapshot": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+    "modified_path": "tests/check_framework/test_model_checks.py",
+    "syntax_error_query": 14
+  },
+  "policy": {
+    "name": "reject_confirmed_original_syntax_error_v1",
+    "role": "New local hard exclusion of confirmed syntax errors before unchanged soft ranking",
+    "not_a_certificate": "Unknown syntax remains eligible with an unassessed label; eligibility is not a claim that the entire candidate parses or fixes the issue",
+    "historical_input": "Use the recorded public query-14 SyntaxError to exclude the early candidate; the later candidate remains unassessed at whole-file syntax level in this small bundle",
+    "synthetic_input": "Parse complete synthetic files up to max_syntax_bytes; SyntaxError is violated, successful parsing supported, absent or over-limit input unassessed",
+    "max_syntax_bytes": 262144,
+    "all_confirmed_bad": "Abstain with null snapshot; do not delegate empty-pool fallback to a known-bad current snapshot",
+    "projection_use": "Recorded G preservation receipts remain scoped preservation evidence, not original syntax or issue-repair evidence",
+    "suffix_syntax_wrapper": "class ReplayContainer:\n    pass\n",
+    "suffix_syntax_scope": "Exact generated additions under a synthetic class wrapper, not full Django-file or test execution"
+  },
+  "fixtures": [
+    {
+      "id": "historical_original",
+      "kind": "historical_recorded_pool",
+      "policy": "original",
+      "expected_selected": "508c251e5b694a2d7328145f19dd44f31ab16857",
+      "expected_rejected": [],
+      "expected_abstain": false,
+      "expected_syntax": ["violated", "unassessed"],
+      "invariant": "Exact original selection and counts; two distinct keys, one vote each, equal recorded preservation, original RAW fallback and order"
+    },
+    {
+      "id": "historical_syntax_exclusion",
+      "kind": "historical_recorded_pool_new_policy",
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "expected_selected": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+      "expected_rejected": ["508c251e5b694a2d7328145f19dd44f31ab16857"],
+      "expected_abstain": false,
+      "expected_syntax": ["violated", "unassessed"],
+      "invariant": "Only the explicitly new exclusion changes; candidate bytes, keys, projection, receipts and remaining tie-break are retained"
+    },
+    {
+      "id": "synthetic_legitimate_test_only",
+      "kind": "synthetic_normal_control",
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "requirement": "Add valid regression test coverage; production edits are not required",
+      "base_files": {"tests/test_value.py": "def test_base():\n    assert 1 == 1\n"},
+      "replace_from_base": ["tests/test_value.py"],
+      "candidates": [
+        {"id": "test_only_first", "path": "tests/test_value.py", "code": "def test_base():\n    assert 1 == 1\n\ndef test_added():\n    assert 2 == 2\n", "key_kind": "python", "fallback_reason": null},
+        {"id": "test_only_second", "path": "tests/test_value.py", "code": "def test_base():\n    assert 1 == 1\n\ndef test_other():\n    assert 3 == 3\n", "key_kind": "python", "fallback_reason": null}
+      ],
+      "expected_selected": "test_only_first",
+      "expected_rejected": [],
+      "expected_abstain": false,
+      "expected_syntax": ["supported", "supported"],
+      "expected_projected_equal": true,
+      "invariant": "Test-only changes and zero projected delta are not exclusions; preservation projection can be legitimate"
+    },
+    {
+      "id": "synthetic_safe_projection",
+      "kind": "synthetic_normal_control",
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "requirement": "Keep runtime value() returning 1; differences in comments need not affect the declared value property",
+      "base_files": {"runtime.py": "def value():\n    return 1\n", "tests/test_value.py": "assert True\n"},
+      "replace_from_base": ["tests/test_value.py"],
+      "candidates": [
+        {"id": "safe_first", "path": "runtime.py", "code": "# first explanation\ndef value():\n    return 1\n", "extra_files": {"tests/test_value.py": "# first local instrumentation\nassert True\n"}, "key_kind": "python", "fallback_reason": null},
+        {"id": "safe_second", "path": "runtime.py", "code": "# second explanation\ndef value():\n    return 1\n", "extra_files": {"tests/test_value.py": "# second local instrumentation\nassert True\n"}, "key_kind": "python", "fallback_reason": null}
+      ],
+      "expected_selected": "safe_first",
+      "expected_rejected": [],
+      "expected_abstain": false,
+      "expected_syntax": ["supported", "supported"],
+      "expected_projected_equal": false,
+      "invariant": "Projection retains changed production files; both execute the explicitly synthetic value property successfully"
+    },
+    {
+      "id": "synthetic_size_limit_unknown",
+      "kind": "synthetic_uncertainty_control",
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "requirement": "Missing syntax evidence is not evidence of a syntax error",
+      "base_files": {},
+      "replace_from_base": [],
+      "candidates": [
+        {"id": "unknown_first", "path": "large.py", "code": null, "reported_text_bytes": 262145, "key_kind": "raw", "fallback_reason": "TEXT_SIZE_LIMIT"},
+        {"id": "known_second", "path": "small.py", "code": "value = 1\n", "key_kind": "python", "fallback_reason": null}
+      ],
+      "expected_selected": "unknown_first",
+      "expected_rejected": [],
+      "expected_abstain": false,
+      "expected_syntax": ["unassessed", "supported"],
+      "invariant": "Unknown original syntax and TEXT_SIZE_LIMIT do not become violated; the selected candidate remains explicitly unassessed"
+    },
+    {
+      "id": "synthetic_all_confirmed_bad",
+      "kind": "synthetic_known_error_control",
+      "policy": "reject_confirmed_original_syntax_error_v1",
+      "requirement": "The new exclusion must not publish either confirmed syntax-error candidate",
+      "base_files": {},
+      "replace_from_base": [],
+      "candidates": [
+        {"id": "bad_first", "path": "first.py", "code": "def broken(:\n    pass\n", "key_kind": "raw", "fallback_reason": "NORMALIZATION_EXCEPTION"},
+        {"id": "bad_current", "path": "second.py", "code": "if:\n    pass\n", "key_kind": "raw", "fallback_reason": "NORMALIZATION_EXCEPTION"}
+      ],
+      "expected_selected": null,
+      "expected_rejected": ["bad_first", "bad_current"],
+      "expected_abstain": true,
+      "expected_syntax": ["violated", "violated"],
+      "invariant": "This is a test of the new wrapper, not original-source fidelity; no fallback to a known-bad current"
+    }
+  ],
+  "global_invariants": [
+    "No benchmark outcome is generated or attributed to the new policy",
+    "Historical G PASS and projection identities are recorded evidence, not new runtime results",
+    "Only four exact original source functions run; transport, normalization, G execution and full host are not reproduced",
+    "The historical policy is not retroactively invalidated by the new hard exclusion",
+    "Synthetic examples are not independent real-task observations",
+    "One historical pair changing selection cannot establish general policy utility",
+    "No independent predictive validation is claimed"
+  ]
+}

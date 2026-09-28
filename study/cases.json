@@ -1,0 +1,1081 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "study_type": "retrospective evidence-linked case synthesis",
+  "new_model_calls": 0,
+  "new_benchmark_runs": 0,
+  "unit_rules": {
+    "catalog_class": "Behavior family; versions and repairs remain longitudinal, not independent extraction attempts.",
+    "mechanism_instance": "Pinned donor revision plus behavior plus declared target-host profile; package bytes identify a version within this tuple.",
+    "discovery_cell": "Frozen source-method-epoch cell; output limits, abstention and proposal rejection are not generated-code failures.",
+    "effect_block": "Original frozen task population, package versions, protocol and trial reducer; no pooling across blocks."
+  },
+  "scope_limitations": [
+    "Purposive development sample, not a prevalence estimate.",
+    "No category frequency, automated extraction success rate or scale-fragility curve is estimated.",
+    "Existing independent cases may be reused regression checks; fixture evidence is not a benchmark score.",
+    "Current capacity scoring is excluded until the original full release.",
+    "Candidate-level repair does not retrospectively change the original outcome."
+  ],
+  "donors": {
+    "agentless": {
+      "repository": "https://github.com/OpenAutoCoder/Agentless",
+      "revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71"
+    },
+    "moatless": {
+      "repository": "https://github.com/aorwall/moatless-tools",
+      "revision": "011ead57a5c81664e9c45e07e1f50b17e695cc63"
+    },
+    "openhands": {
+      "repository": "https://github.com/All-Hands-AI/OpenHands",
+      "revision": "34bf9c2579ca5a25e452583eed38c6c0e45cebd6"
+    },
+    "trae": {
+      "repository": "https://github.com/bytedance/trae-agent",
+      "revision": "e839e559ac61bdd0e057c375dd1dee391fee797d"
+    },
+    "sweagent": {
+      "repository": "https://github.com/SWE-agent/SWE-agent",
+      "revision": "3ea751c087f32b16e039a2233dd6eefecef325d5"
+    },
+    "aider": {
+      "repository": "https://github.com/Aider-AI/aider",
+      "revision": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c"
+    },
+    "ahe": {
+      "repository": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+      "revision": "8b2a55d97590363fe50c3cc6b5e833b020a4bb4c"
+    },
+    "nexau": {
+      "repository": "https://github.com/nex-agi/NexAU",
+      "revision": "35ee1861546db3cb280a6e17e38a74060d7c96c3"
+    },
+    "refact": {
+      "repository": "https://github.com/smallcloudai/refact",
+      "revision": "27f86def9423b1153f1ff857a51329a88bbbe292"
+    }
+  },
+  "catalog_cases": [
+    {
+      "id": "G",
+      "donors": [
+        "agentless"
+      ],
+      "behavior": "Existing-test preservation checking",
+      "target_host_profile": "agent2skill.json-effects.g.trial-v1",
+      "profile_reference": "experiments/g_guard_repair_v1/CONTRACT.md",
+      "package": "results_cache/g_native_log_repair_v1/generation/a2s/final_package",
+      "fields": {
+        "source_preconditions": "An actual base-PASSED inventory and tests that can be related to the candidate snapshot.",
+        "actual_consumer": "Source regression selection/reranking; in the target, the next solver request and, in the historical GP block, the candidate selector.",
+        "dependencies": "Native-log parsing, frozen preservation obligations, snapshot identity, isolated execution and original-test projection.",
+        "host_mapping": "Offline regression evidence becomes in-loop checking and delivered feedback. Complete inventory, three-state obligations and native syntax are declared adaptations.",
+        "observed_boundary": "Historical GP projection erased test-only candidate differences. Complete preservation receipts did not assert issue repair. The model's source metadata was invalid; independent source review supplied traceability.",
+        "counterexample_or_repair": "A model repaired only native_logs.py; inherited modules were unchanged. Public 31/31, reused regression 8/8 and the same-package recorded entry passed. A GP path with one candidate solved its task; selector increment was unmeasured."
+      },
+      "references": [
+        "results_cache/g_native_log_repair_v1/REPORT.md",
+        "docs/reviews/g_native_log_repair_v1_source_review.md",
+        "results_cache/gp_generated_effect_v1/DIAGNOSIS.md"
+      ]
+    },
+    {
+      "id": "R",
+      "donors": [
+        "agentless"
+      ],
+      "behavior": "Issue reproduction and post-change checking",
+      "target_host_profile": "r_full_package_v1 effect grammar; r_behavior_transfer_v1 complete-script contract; r_behavior_api_v1 prompt adaptation",
+      "profile_reference": "experiments/r_behavior_transfer_v1/PUBLIC_CONTRACT.md",
+      "package": "results_cache/r_behavior_api_v1/generation/direct/final_package",
+      "fields": {
+        "source_preconditions": "An issue behavior that can be exercised through the required public operation chain; a generated script must meet base-admission conditions.",
+        "actual_consumer": "Source reproduction execution/reranking; target solver feedback and candidate checking in RP.",
+        "dependencies": "Source context, generation prompts, script extraction, observable assertions, isolated execution, frozen scripts and snapshot-bound receipts.",
+        "host_mapping": "Prepare, execute on base, admit, freeze and recheck. API operations, observed results and assertions are explicit target adaptations.",
+        "observed_boundary": "The current R/RP block admitted no reproducer in eight relevant paths. Some SIGKILL causes remain UNKNOWN. Older R versions and their scores are separate.",
+        "counterexample_or_repair": "The current package passed public 8/8 and reused independent 22/22. A same-fixture generated checker accepted the complete repair and rejected two shallow repairs; this is exposed development evidence."
+      },
+      "references": [
+        "results_cache/r_behavior_api_v1/REPORT.md",
+        "results_cache/r_behavior_api_checker_v1/REPORT.md",
+        "results_cache/r_behavior_composition_v1/REPORT.md"
+      ]
+    },
+    {
+      "id": "C",
+      "donors": [
+        "moatless"
+      ],
+      "behavior": "Context removal, duplicate bookkeeping and feedback",
+      "target_host_profile": "checking_context_hook_v1",
+      "profile_reference": "results_cache/moatless_cleanup_transfer_v1/generation/a2s/final_package/package.json",
+      "package": "results_cache/moatless_cleanup_transfer_v1/generation/a2s/final_package",
+      "fields": {
+        "source_preconditions": "Known FileContext members and ordered removal requests, including repeated keys.",
+        "actual_consumer": "Source CleanupContext Observation; target ModelView and the next solver request.",
+        "dependencies": "Membership state, deletion bookkeeping and feedback; target observation identities, selection policy and pressure threshold.",
+        "host_mapping": "File keys become eligible observation IDs. The package requests projection and the host delivers it. The selector and pressure policy are adaptations, not donor-provided generic compression.",
+        "observed_boundary": "All 30 recorded replacements were delivered, but there were zero input readmissions. Deleted content was sometimes read again; logs with an outer zero exit code could contain failures. No causal score loss is identified.",
+        "counterexample_or_repair": "Both implementations passed public 9/9 and independent 6/6; the accepted unchanged package passed ordinary and one-request-left entries. Two implementations count as one class."
+      },
+      "references": [
+        "results_cache/moatless_cleanup_transfer_v1/REPORT.md",
+        "results_cache/gc_generated_effect_v2/DIAGNOSIS.md",
+        "docs/reviews/context_strategy_source_review_20260911.md"
+      ]
+    },
+    {
+      "id": "S",
+      "donors": [
+        "openhands"
+      ],
+      "behavior": "Rolling summary of completed history groups",
+      "target_host_profile": "checking_history_hook_v1",
+      "profile_reference": "results_cache/openhands_summary_transfer_v1/generation/a2s/final_package/package.json",
+      "package": "results_cache/openhands_summary_transfer_v1/generation/a2s/final_package",
+      "fields": {
+        "source_preconditions": "A history threshold, completed interaction groups, prior summary and identifiable replaceable history.",
+        "actual_consumer": "Source ConversationMemory and CodeActAgent.step; target next solver request.",
+        "dependencies": "Grouping, prior summary, original summarization prompt, model request, projection, delivery acknowledgment and shared budget.",
+        "host_mapping": "Source events become complete interaction groups with disclosed 16/1/10000 settings. The authoritative history remains intact; only the model view is projected.",
+        "observed_boundary": "A separate Direct package supplied null instructions where the runner required a string; the frozen profile omitted that explicit type. The accepted A2S package did not have this failure. The GS effect block was interrupted.",
+        "counterexample_or_repair": "The accepted package passed public 5/5, independent 5/5 and the recorded entry. Repeated summarization and skipping when insufficient requests remain were exercised; benchmark benefit remains TBD."
+      },
+      "references": [
+        "results_cache/openhands_summary_transfer_v1/REPORT.md",
+        "results_cache/openhands_summary_transfer_v1/host_calibration/REPORT.md",
+        "docs/MECHANISM_EVIDENCE_INDEX.md"
+      ]
+    },
+    {
+      "id": "P",
+      "donors": [
+        "agentless"
+      ],
+      "behavior": "Patch construction, admission, normalization and selection",
+      "target_host_profile": "same_base_selection_v2",
+      "profile_reference": "results_cache/search_replace_transfer_v1/generation/direct/final_package/package.json",
+      "package": "results_cache/search_replace_transfer_v1/generation/direct/final_package",
+      "linked_versions": [
+        {
+          "label": "Historical GP selector",
+          "profile": "candidate_selection_hook_v1",
+          "package": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package",
+          "identity": "5f70bae4...6e93"
+        },
+        {
+          "label": "Same-base coordinate predecessor P2",
+          "package": "results_cache/same_base_selection_v2/source_repair/generation/direct/final_package",
+          "identity": "ed34d924...34d6"
+        },
+        {
+          "label": "Separate fresh source-access diagnostic",
+          "reference": "results_cache/search_replace_source_value_v1/REPORT.md",
+          "identity": "0064b0...fe75",
+          "inherits_current_scores": false
+        }
+      ],
+      "fields": {
+        "source_preconditions": "Declared nonempty Python files, original same-base text, bounded candidate pool and source parsing/admission/normalization rules.",
+        "actual_consumer": "Source repair/postprocess/reranking; target publishes the original candidate snapshot selected by the package.",
+        "dependencies": "Prompt and parser, candidate identity, admission, normalization, voting and first-occurrence tie-break. The host executes model requests and materializes candidates.",
+        "host_mapping": "Four same-base callbacks; full-file intervals and declared paths replace the donor wrapper's eval. Special ellipsis forms are outside the domain. Only prompt/parser replace the predecessor's slots.",
+        "observed_boundary": "The accepted SEARCH/REPLACE package admitted 48/48 candidates but tied N at 6/12. The historical GP selector's RAW fallback/tie-break and the fresh source-access package's donor-detail failures belong to different packages.",
+        "counterexample_or_repair": "Current public 4/4, corrected independent 5/5 and same-package entry passed. An initial separate four-task block measured 4/4 versus N 1/4; the twelve-task host advantage did not recur."
+      },
+      "references": [
+        "results_cache/search_replace_transfer_v1/REPORT.md",
+        "results_cache/search_replace_confirmation_v1/REPORT.md",
+        "results_cache/search_replace_source_value_v1/REPORT.md",
+        "results_cache/gp_generated_effect_v1/DIAGNOSIS.md"
+      ]
+    },
+    {
+      "id": "F",
+      "donors": [
+        "trae"
+      ],
+      "behavior": "Tool-failure reflection",
+      "target_host_profile": "checking_context_hook_v1",
+      "profile_reference": "results_cache/discovery_observable_v1/generation/trae_direct/migration/candidate_2/package.json",
+      "package": "results_cache/discovery_observable_v1/generation/trae_direct/migration/candidate_2",
+      "fields": {
+        "source_preconditions": "Completed tool results with a source failure condition and visible error details.",
+        "actual_consumer": "BaseAgent reflection enters the next conversation turn; target feedback is delivered to the next solver request.",
+        "dependencies": "Failure predicate, error carrier and fixed advice; host action events, message identity and delivery state.",
+        "host_mapping": "Assistant reflection becomes a user observation; multi-result handling becomes per-action handling under the host's bounded error-detail domain.",
+        "observed_boundary": "The default TraeAgent override disables the BaseAgent behavior. The ordinary host already provides the same error; the additional content is fixed advice. This class has no benchmark score.",
+        "counterexample_or_repair": "The model-selected target after same-source development passed public 6/6 and independent 6/6; failure feedback was delivered and acknowledged while successes remained silent."
+      },
+      "references": [
+        "results_cache/discovery_observable_v1/SOURCE_REVIEW.md",
+        "results_cache/discovery_observable_v1/REPORT.md",
+        "docs/reviews/trae_feedback_opportunity_20260919.md"
+      ]
+    },
+    {
+      "id": "L",
+      "donors": [
+        "agentless"
+      ],
+      "behavior": "Hierarchical localization, without the older first-repair stage",
+      "target_host_profile": "localization_only_v1",
+      "profile_reference": "results_cache/localization_issue_boundary_v1/generation/direct/final_package/package.json",
+      "package": "results_cache/localization_issue_boundary_v1/generation/direct/final_package",
+      "fields": {
+        "source_preconditions": "Issue text, repository structure and readable source; file/symbol/line responses must be parsed.",
+        "actual_consumer": "Source repair stage; target ordinary solver continuation or the LP editing pool.",
+        "dependencies": "Generated controller, inherited donor helper, staged model requests, source reads, range parsing and handoff.",
+        "host_mapping": "Localization returns immutable file/range context and the remaining shared budget. The current package does not perform the older L version's first repair.",
+        "observed_boundary": "A predecessor applied a 256-byte identifier bound to issue text with a 100000-byte public limit, stopping an unscored block. This is a concrete implementation defect, not evidence of intrinsic inseparability.",
+        "counterexample_or_repair": "A model changed one issue predicate/call site; helper bytes and other AST nodes were unchanged. New public boundary 2/2, independent boundary 8/8 and recorded L/LP entries passed. These are not full-domain requalification."
+      },
+      "references": [
+        "results_cache/localization_source_repair_v1/REPORT.md",
+        "results_cache/localization_only_capacity_v1/REPORT.md",
+        "results_cache/localization_issue_boundary_v1/REPORT.md"
+      ]
+    },
+    {
+      "id": "Q",
+      "donors": [
+        "sweagent"
+      ],
+      "behavior": "Independent model choice among candidate snapshots",
+      "target_host_profile": "sweagent_chooser_v1",
+      "profile_reference": "results_cache/sweagent_chooser_repair_v1/generation/direct/final_package/package.json",
+      "package": "results_cache/sweagent_chooser_repair_v1/generation/direct/final_package",
+      "fields": {
+        "source_preconditions": "Bounded candidates, submitted state and matching source/hunk context; source preselection disabled.",
+        "actual_consumer": "Source reviewer selection; target publishes the selected original complete snapshot.",
+        "dependencies": "Submitted filter, PatchFormatter and template, separate model request, trailing-number parser, fallback and identity cache.",
+        "host_mapping": "At most four candidates; JSON snapshot/hunk metadata substitutes for environment reads. Noncompleted choice requests become UNAVAILABLE.",
+        "observed_boundary": "After a template repair, the independent stager's directory permissions caused all 20 cases to fail before package import. This was an evaluation infrastructure fault, not 20 mechanism failures.",
+        "counterexample_or_repair": "The same package passed public 12/12 and, after staging repair, reused independent 20/20 cases and 78/78 steps. Its actual entry passed. Changed selected trees did not establish a score gain; unselected candidates were not all scored."
+      },
+      "references": [
+        "results_cache/sweagent_chooser_repair_v1/REPORT.md",
+        "results_cache/sweagent_chooser_repair_v1/source_review.json",
+        "results_cache/search_replace_chooser_v1/REPORT.md"
+      ]
+    },
+    {
+      "id": "A",
+      "donors": [
+        "aider"
+      ],
+      "behavior": "Architect-to-editor handoff",
+      "target_host_profile": "aider_architect_v1",
+      "profile_reference": "results_cache/aider_architect_transfer_v1/generation/direct/final_package/package.json",
+      "package": "results_cache/aider_architect_transfer_v1/generation/direct/final_package",
+      "fields": {
+        "source_preconditions": "Completed nonempty architect text, inheritable file/read-only context and remaining editor budget.",
+        "actual_consumer": "Source ArchitectCoder.reply_completed creates an editor; target ordinary A editor or AP SEARCH/REPLACE editor.",
+        "dependencies": "Original prompt/text, empty editor history, inherited files, editor settings and usage/budget accounting.",
+        "host_mapping": "The ordinary host or unchanged SEARCH/REPLACE package replaces the Aider editor. AP places the complete architect advice in the editing issue field. This is not complete Aider.",
+        "observed_boundary": "An initial host bridge prepended context and shifted registered tool-observation indices. The delivery check caught it; the package was unchanged. Four-task composition did not exceed its best single component.",
+        "counterexample_or_repair": "Preserving existing observation indices repaired the bridge; both A/AP entries passed. Public 5/5 and independent 8/8 passed. N/A/P/AP solved 2/3/3/3 tasks in its own four-task block."
+      },
+      "references": [
+        "results_cache/aider_architect_transfer_v1/REPORT.md",
+        "results_cache/aider_architect_entry_v1/REPORT.md",
+        "results_cache/aider_architect_comparison_v1/REPORT.md"
+      ]
+    }
+  ],
+  "source_boundary_cases": [
+    {
+      "id": "moatless_history",
+      "lineage": "static_context_screening",
+      "donors": [
+        "moatless"
+      ],
+      "status": "STATIC_CONDITIONAL_CANDIDATE",
+      "evidence_type": "static source and consumer tracing",
+      "fields": {
+        "source_preconditions": "Older observations exceed a threshold and already have typed summaries; the last executed node remains complete.",
+        "actual_consumer": "ActionAgent passes MessageHistoryGenerator output to completion_model.create_completion.",
+        "dependencies": "ViewCode/RunTests summary producers, node/action pairing, file/test state and threshold configuration.",
+        "host_mapping": "Generic shell observations would require equivalent typed producers or a separately declared new summarizer.",
+        "observed_boundary": "The selector alone is not a complete donor-derived generic shell summarizer. The proposed control cases in the source review were not executed.",
+        "counterexample_or_repair": "The source path really does feed the model. A separate Moatless cleanup package was accepted under explicit observation-projection adaptations; it is a different mechanism."
+      },
+      "references": [
+        "docs/reviews/context_strategy_source_review_20260911.md"
+      ]
+    },
+    {
+      "id": "trae_lakeview",
+      "lineage": "lakeview_source_and_discovery",
+      "donors": [
+        "trae"
+      ],
+      "status": "BEHAVIOR_CARD_REJECTED_AND_STATIC_CONSUMER_BOUNDARY",
+      "evidence_type": "reported donor calibration plus separate static consumer tracing",
+      "fields": {
+        "source_preconditions": "Step text and tool-call metadata; tag extraction assumes a valid match.",
+        "actual_consumer": "SimpleCLIConsole renders LakeView descriptions/tags in a Panel; this path does not replace solver history.",
+        "dependencies": "Description/tag prompts, regex match and display callback. _agent_step_str does not consume tool-result bodies.",
+        "host_mapping": "Using these annotations as a solver-facing compressor would add new input selection, trigger and consumer behavior.",
+        "observed_boundary": "Two discovery cards promised malformed-tag retry, but the donor raised IndexError. Separately, the static source review found a UI consumer rather than the intended model-context consumer.",
+        "counterexample_or_repair": "A different BaseAgent tool-failure reflection target from the same donor was accepted as catalog F. This does not repair or validate either LakeView card."
+      },
+      "references": [
+        "results_cache/discovery_successor_v1/REPORT.md",
+        "docs/reviews/context_strategy_source_review_20260911.md",
+        "results_cache/discovery_observable_v1/REPORT.md"
+      ]
+    },
+    {
+      "id": "moatless_cleanup_observability",
+      "lineage": "moatless_cleanup_development",
+      "donors": [
+        "moatless"
+      ],
+      "status": "REFERENCE_CALIBRATION_FAILED",
+      "evidence_type": "reported donor execution and reference-discrimination failure",
+      "fields": {
+        "source_preconditions": "FileContext membership and removal/accounting behavior in the submitted card.",
+        "actual_consumer": "Cleanup feedback in the donor; the candidate's declared evaluator observed effects only.",
+        "dependencies": "Internal accounting state and whether the contract requires exposing it.",
+        "host_mapping": "The original card permitted state-only accounting and optional output; its evaluator could not observe the required difference.",
+        "observed_boundary": "Correct and incorrect internal accounting were indistinguishable to effects-only acceptance. This stopped reference calibration, not generated-code testing.",
+        "counterexample_or_repair": "A later given-target C transfer used an explicitly observable mapping and was accepted. It is a new contract/profile, not a retroactive success for the discovery card."
+      },
+      "references": [
+        "results_cache/discovery_successor_v1/REPORT.md",
+        "results_cache/moatless_cleanup_transfer_v1/REPORT.md"
+      ]
+    },
+    {
+      "id": "nexahe_compaction",
+      "lineage": "nexahe_tool_result_compaction",
+      "donors": [
+        "ahe",
+        "nexau"
+      ],
+      "status": "BEHAVIOR_CARD_REJECTED_NO_GENERATED_PACKAGE",
+      "target_host_profile": "checking_context_hook_v1 with only project_observations declared",
+      "evidence_type": "four original-donor cases and an actual-host-class mapping witness; no generated target execution",
+      "candidate_identities": {
+        "initial": "d6b973571e9d7b2871ec0b6dccbd39d443f6819ce79224c9ee1852cf3c3ea40a",
+        "continuation": "e0c1d872a86075502ffdc264617973ad844b505fd83504026d9772018b1a67c0"
+      },
+      "fields": {
+        "source_preconditions": "Tool-result messages grouped into interactions and a defined configurable keep_iterations value.",
+        "actual_consumer": "The AHE compaction path; proposed target ModelView projection for subsequent solver input. Generated-target consumption was not reached.",
+        "dependencies": "NexAU message types/Pydantic, AHE ToolResultCompaction, retention configuration, observation ownership and origin_query mapping.",
+        "host_mapping": "The original card selected only package-owned observations; the actual entry initially supplied host-owned observations. Projection preserves ownership and cannot create the required population.",
+        "observed_boundary": "Four donor cases supported O1/O2, but the initial target eligibility was unreachable. A later card selected host observations yet omitted the configuration source/initialization. Both stopped before code generation.",
+        "counterexample_or_repair": "The real host can project host-owned observations; ownership is not a general host limitation. The continuation repaired that restriction only. A complete accepted mapping/package remains UNKNOWN."
+      },
+      "references": [
+        "results_cache/discovery_source_set_v2/REPORT.md",
+        "results_cache/discovery_source_set_v2/generation/public_references/nexahe_direct/calibration_outcome.json",
+        "results_cache/discovery_source_set_v2/generation/public_references/nexahe_direct/mapping_witness.json",
+        "results_cache/discovery_mapping_repair_v1/REPORT.md"
+      ]
+    }
+  ],
+  "discovery_inventory": [
+    {
+      "epoch": "discovery_successor_v1",
+      "cell": "moatless_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "ABSTAINED",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_successor_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_successor_v1",
+      "cell": "moatless_direct",
+      "proposal": "targeted_context_cleanup_with_failure_accounting",
+      "lineage": "moatless_cleanup_development",
+      "terminal": "REFERENCE_CALIBRATION_FAILED",
+      "candidate_frozen": true,
+      "first_stopping_boundary": "Effects-only evaluation could not distinguish required private-state accounting",
+      "semantic_fields": "See linked boundary/catalog case",
+      "reference": "results_cache/discovery_successor_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_successor_v1",
+      "cell": "trae_a2s",
+      "proposal": "lakeview_dual_stage_step_summarizer",
+      "lineage": "lakeview_source_and_discovery",
+      "terminal": "BEHAVIOR_CARD_REJECTED",
+      "candidate_frozen": true,
+      "first_stopping_boundary": "Promised malformed-tag retry contradicted donor IndexError",
+      "semantic_fields": "See linked boundary/catalog case",
+      "reference": "results_cache/discovery_successor_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_successor_v1",
+      "cell": "trae_direct",
+      "proposal": "lakeview_tagged_step_summarizer",
+      "lineage": "lakeview_source_and_discovery",
+      "terminal": "BEHAVIOR_CARD_REJECTED",
+      "candidate_frozen": true,
+      "first_stopping_boundary": "Promised malformed-tag retry contradicted donor IndexError",
+      "semantic_fields": "See linked boundary/catalog case",
+      "reference": "results_cache/discovery_successor_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_observable_v1",
+      "cell": "moatless_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "ABSTAINED",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_observable_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_observable_v1",
+      "cell": "moatless_direct",
+      "proposal": "cleanup_context_result_reporting",
+      "lineage": "moatless_cleanup_development",
+      "terminal": "INVALID_PROPOSAL",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "Implementation citation lacked entry/callsite witness",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_observable_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_observable_v1",
+      "cell": "trae_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "ABSTAINED",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_observable_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_observable_v1",
+      "cell": "trae_direct",
+      "proposal": "tool_failure_reflection_feedback",
+      "lineage": "catalog_F",
+      "terminal": "ACCEPTED_PACKAGE",
+      "candidate_frozen": true,
+      "first_stopping_boundary": "Reached source, independent behavior and unchanged-package host entry",
+      "semantic_fields": "See linked boundary/catalog case",
+      "reference": "results_cache/discovery_observable_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v1",
+      "cell": "nexahe_a2s",
+      "proposal": "sliding_window_context_compaction",
+      "lineage": "nexahe_sliding_window",
+      "terminal": "INVALID_PROPOSAL",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "Submitted source set omitted the NexAU component",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v1",
+      "cell": "nexahe_direct",
+      "proposal": "old_tool_result_placeholder_compaction",
+      "lineage": "nexahe_tool_result_compaction",
+      "terminal": "INVALID_PROPOSAL",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "Submitted source set omitted the NexAU component",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v1",
+      "cell": "refact_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "ABSTAINED",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v1",
+      "cell": "refact_direct",
+      "proposal": "subchat_trajectory_compression",
+      "lineage": "refact_trajectory",
+      "terminal": "INVALID_PROPOSAL",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "Public nested effect path conflicted with validator regex",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v1/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v2",
+      "cell": "nexahe_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "OUTPUT_LIMIT",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No frozen candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v2/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v2",
+      "cell": "nexahe_direct",
+      "proposal": "tool_result_observation_compaction",
+      "lineage": "nexahe_tool_result_compaction",
+      "terminal": "BEHAVIOR_CARD_REJECTED",
+      "candidate_frozen": true,
+      "first_stopping_boundary": "Donor cases passed; target ownership restriction was unreachable",
+      "semantic_fields": "See linked boundary/catalog case",
+      "reference": "results_cache/discovery_source_set_v2/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v2",
+      "cell": "refact_a2s",
+      "proposal": null,
+      "lineage": null,
+      "terminal": "ABSTAINED",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "No candidate",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v2/REPORT.md"
+    },
+    {
+      "epoch": "discovery_source_set_v2",
+      "cell": "refact_direct",
+      "proposal": "mode_transition_fractional_context_budget",
+      "lineage": "refact_fractional_budget",
+      "terminal": "INVALID_PROPOSAL",
+      "candidate_frozen": false,
+      "first_stopping_boundary": "Implementation citation lacked entry/callsite witness",
+      "semantic_fields": "UNKNOWN beyond the documented proposal/interface boundary",
+      "reference": "results_cache/discovery_source_set_v2/REPORT.md"
+    }
+  ],
+  "composition_inventory": [
+    {
+      "id": "gr_generated_effect_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + old R",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/G/R/GR paths",
+      "solves": {
+        "N": 4,
+        "G": 4,
+        "R": 4,
+        "GR": 4
+      },
+      "interpretation_boundary": "R admitted no reproducer in its eight relevant paths; no post-patch R checks.",
+      "reference": "results_cache/gr_generated_effect_v2/REPORT.md",
+      "reconciliation": "results_cache/gr_generated_effect_v2/reconciliation.json"
+    },
+    {
+      "id": "mini_swe_capped_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + old R vs complete mini-SWE-agent 2.4.6",
+      "task_denominator": 4,
+      "execution_units": "8 fresh GR/H paths; same tasks as preceding block",
+      "solves": {
+        "GR": 4,
+        "H": 4
+      },
+      "interpretation_boundary": "All four GR paths lacked an admitted reproducer. Equal request ceiling is not native-budget or leaderboard reproduction.",
+      "reference": "results_cache/mini_swe_capped_v1/REPORT.md",
+      "reconciliation": "results_cache/mini_swe_capped_v1/reconciliation.json"
+    },
+    {
+      "id": "gr_strategy_effect_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + prepared R, naive controls, complete mini",
+      "task_denominator": 2,
+      "execution_units": "16 separately executed paths across eight arms",
+      "solves": {
+        "N": 1,
+        "G": 1,
+        "R": 1,
+        "Gn": 1,
+        "Rn": 1,
+        "GR": 0,
+        "GnRn": 0,
+        "H": 1
+      },
+      "interpretation_boundary": "Preparation and predicate strategies differ between source and naive variants; not a source-access-only intervention.",
+      "reference": "results_cache/gr_strategy_effect_v2/REPORT.md",
+      "reconciliation": "results_cache/gr_strategy_effect_v2/reconciliation.json"
+    },
+    {
+      "id": "gc_generated_effect_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + C",
+      "task_denominator": 2,
+      "execution_units": "8 separately executed N/G/C/GC paths",
+      "solves": {
+        "N": 1,
+        "G": 0,
+        "C": 0,
+        "GC": 0
+      },
+      "interpretation_boundary": "30 replacements were delivered; participation does not identify a causal reason for score loss.",
+      "reference": "results_cache/gc_generated_effect_v2/REPORT.md",
+      "reconciliation": "results_cache/gc_generated_effect_v2/reconciliation.json"
+    },
+    {
+      "id": "gp_generated_effect_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + historical checkpoint selector P",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/G/P/GP paths",
+      "solves": {
+        "N": 2,
+        "G": 3,
+        "P": 3,
+        "GP": 1
+      },
+      "interpretation_boundary": "Three GP pools contain only one candidate. The unselected current snapshot on the other path was not independently graded.",
+      "reference": "results_cache/gp_generated_effect_v1/REPORT.md",
+      "reconciliation": "results_cache/gp_generated_effect_v1/reconciliation.json"
+    },
+    {
+      "id": "localization_persistent_comparison_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "G + older localization-and-first-repair L",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/G/L/GL paths",
+      "solves": {
+        "N": 3,
+        "G": 3,
+        "L": 2,
+        "GL": 3
+      },
+      "interpretation_boundary": "N/G/GL have the same success set; a positive additive interaction would reflect L decline, not gain over the best component.",
+      "reference": "results_cache/localization_persistent_comparison_v1/REPORT.md",
+      "reconciliation": "results_cache/localization_persistent_comparison_v1/comparison/reconciliation.json"
+    },
+    {
+      "id": "rl_block_comparison_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Prepared R + older L",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/R/L/RL paths",
+      "solves": {
+        "N": 2,
+        "R": 3,
+        "L": 3,
+        "RL": 2
+      },
+      "interpretation_boundary": "R and RL each admit one reproducer. Two RL preparations exhausted output before L/ordinary solving.",
+      "reference": "results_cache/rl_block_comparison_v2/REPORT.md",
+      "reconciliation": "results_cache/rl_block_comparison_v2/comparison/reconciliation.json"
+    },
+    {
+      "id": "r_fallback_comparison_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Prepared R + older L, preparation fallback host",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/R/L/RL paths",
+      "solves": {
+        "N": 3,
+        "R": 3,
+        "L": 3,
+        "RL": 3
+      },
+      "interpretation_boundary": "Same success set. The new fallback did not trigger. R/RL each admit two reproducers.",
+      "reference": "results_cache/r_fallback_comparison_v2/REPORT.md",
+      "reconciliation": "results_cache/r_fallback_comparison_v2/comparison/reconciliation.json"
+    },
+    {
+      "id": "rp_retention_comparison_v2",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Prepared R + checkpoint selector P",
+      "task_denominator": 4,
+      "execution_units": "8 independent execution prefixes: ordinary and R per task; five policies share those trajectories",
+      "solves": {
+        "N": 2,
+        "R": 2,
+        "P": 2,
+        "R_POFF": 2,
+        "RP": 2
+      },
+      "interpretation_boundary": "N/P share the ordinary trajectory; R/R_POFF/RP share R. RP and R_POFF select the same tree on all tasks.",
+      "reference": "results_cache/rp_retention_comparison_v2/REPORT.md",
+      "reconciliation": "results_cache/rp_retention_comparison_v2/scores/reconciliation.json"
+    },
+    {
+      "id": "rp_independent_comparison_v3",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Paired R + same-base coordinate P2",
+      "task_denominator": 4,
+      "execution_units": "12 prefixes: N, R and K4 per task; P2/RP2 share the candidate pool",
+      "solves": {
+        "N": 2,
+        "R": 1,
+        "P2": 1,
+        "RP2": 1
+      },
+      "interpretation_boundary": "P2/RP2 share R preparation and select the same tree. Qualification is conditional on the producer domain.",
+      "reference": "results_cache/rp_independent_comparison_v3/REPORT.md",
+      "reconciliation": "results_cache/rp_independent_comparison_v3/scores/reconciliation.json"
+    },
+    {
+      "id": "search_replace_composition_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Paired R + SEARCH/REPLACE P",
+      "task_denominator": 4,
+      "execution_units": "16 N/R/P/RP paths; RP_OFF/ON share each RP pool",
+      "solves": {
+        "N": 1,
+        "R": 0,
+        "P": 2,
+        "RP_OFF": 2,
+        "RP_ON": 2
+      },
+      "interpretation_boundary": "Candidate checking reaches two tasks and adds no solves; assisted requirement/location input.",
+      "reference": "results_cache/search_replace_composition_v1/REPORT.md",
+      "reconciliation": "results_cache/search_replace_composition_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "r_behavior_composition_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "API R + SEARCH/REPLACE P",
+      "task_denominator": 4,
+      "execution_units": "16 N/R/P/RP paths; OFF/ON share each RP pool",
+      "solves": {
+        "N": 1,
+        "R": 1,
+        "P": 2,
+        "RP_OFF": 1,
+        "RP_ON": 1
+      },
+      "interpretation_boundary": "All eight R/RP paths lack an admitted reproducer; OFF/ON equality follows the declared fallback.",
+      "reference": "results_cache/r_behavior_composition_v1/REPORT.md",
+      "reconciliation": "results_cache/r_behavior_composition_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "search_replace_chooser_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "SEARCH/REPLACE P + SWE-agent chooser Q",
+      "task_denominator": 4,
+      "execution_units": "12 executions: N, Q trajectory and PQ pool per task",
+      "solves": {
+        "N": 2,
+        "Q_OFF": 1,
+        "Q_ON": 1,
+        "P": 2,
+        "PQ": 2
+      },
+      "interpretation_boundary": "Q_OFF/ON share a trajectory; P/PQ share a pool. PQ changes selected trees on three tasks but adds no solves.",
+      "reference": "results_cache/search_replace_chooser_v1/REPORT.md",
+      "reconciliation": "results_cache/search_replace_chooser_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "aider_architect_comparison_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Aider architect A + SEARCH/REPLACE P",
+      "task_denominator": 4,
+      "execution_units": "16 separately executed N/A/P/AP paths",
+      "solves": {
+        "N": 2,
+        "A": 3,
+        "P": 3,
+        "AP": 3
+      },
+      "interpretation_boundary": "A/P/AP share the same success set; assisted inputs and an adapted editor, not full Aider.",
+      "reference": "results_cache/aider_architect_comparison_v1/REPORT.md",
+      "reconciliation": "results_cache/aider_architect_comparison_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "raw_repo_localization_scored_v3",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Current localization L + SEARCH/REPLACE P",
+      "task_denominator": 4,
+      "execution_units": "16 fresh N/L/P/LP paths after invalid predecessors",
+      "solves": {
+        "N": 2,
+        "L": 1,
+        "P": 0,
+        "LP": 3
+      },
+      "interpretation_boundary": "P never reaches editing; discovery parameter ambiguity and previous task exposure remain disclosed.",
+      "reference": "results_cache/raw_repo_localization_scored_v3/REPORT.md",
+      "reconciliation": "results_cache/raw_repo_localization_scored_v3/scores/reconciliation.json"
+    },
+    {
+      "id": "raw_repo_localization_prospective_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Current L/P with explicit discovery parameters",
+      "task_denominator": 4,
+      "execution_units": "16 separate N/L/P/LP paths on new tasks",
+      "solves": {
+        "N": 1,
+        "L": 2,
+        "P": 2,
+        "LP": 3
+      },
+      "interpretation_boundary": "P reaches editing on two tasks; P is inactive on the LP-only success. Additive interaction is zero.",
+      "reference": "results_cache/raw_repo_localization_prospective_v1/REPORT.md",
+      "reconciliation": "results_cache/raw_repo_localization_prospective_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "raw_repo_comparator_scored_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Current L/P, source-blind Ln/Pn and mini 2.4.6",
+      "task_denominator": 4,
+      "execution_units": "32 separately executed paths across eight arms",
+      "solves": {
+        "N": 1,
+        "L": 1,
+        "P": 0,
+        "LP": 3,
+        "Ln": 2,
+        "Pn": 0,
+        "LnPn": 2,
+        "H": 1
+      },
+      "interpretation_boundary": "All P/Pn paths fail to reach editing. L is below Ln; LP does not exceed the union of the seven controls.",
+      "reference": "results_cache/raw_repo_comparator_scored_v1/REPORT.md",
+      "reconciliation": "results_cache/raw_repo_comparator_scored_v1/scores/reconciliation.json"
+    },
+    {
+      "id": "raw_repo_handoff_score_recovery_v1",
+      "status": "RELEASED_COMPLETE",
+      "versions": "Handoff-adjusted L/P, naive and mini; uniform grading recovery",
+      "task_denominator": 4,
+      "execution_units": "The original 32 solver paths; zero additional solvers in grading recovery",
+      "solves": {
+        "N": 0,
+        "L": 0,
+        "P": 0,
+        "LP": 0,
+        "Ln": 0,
+        "Pn": 0,
+        "LnPn": 0,
+        "H": 0
+      },
+      "interpretation_boundary": "P/Pn each reach editing on all tasks. 22 unique original submissions are uniformly graded; old partial grades are not reused.",
+      "reference": "results_cache/raw_repo_handoff_score_recovery_v1/REPORT.md",
+      "reconciliation": "results_cache/raw_repo_handoff_score_recovery_v1/scores/reconciliation.json"
+    }
+  ],
+  "released_missing_blocks": [
+    {
+      "id": "raw_issue_feedback_effect_v1",
+      "status": "RELEASED_WITH_MISSING",
+      "fixed_tasks": 8,
+      "scorable_tasks": 6,
+      "missing_tasks": 2,
+      "solves": {
+        "B": 3,
+        "U": 3,
+        "G_U": 3,
+        "G_V": 3
+      },
+      "paired_net_difference": 0,
+      "fixed_population_net_bounds": [
+        -2,
+        2
+      ],
+      "execution_units": "Shared B prefixes and candidate branches; not 32 independent solvers",
+      "interpretation_boundary": "Gate active on 1/8 tasks. Missing outcomes remain missing.",
+      "reference": "results_cache/raw_issue_feedback_effect_v1/REPORT.md"
+    },
+    {
+      "id": "raw_issue_feedback_effect_v2",
+      "status": "RELEASED_WITH_MISSING",
+      "fixed_tasks": 8,
+      "scorable_tasks": 7,
+      "missing_tasks": 1,
+      "solves": {
+        "B": 4,
+        "U": 4,
+        "G_U": 4,
+        "G_V": 4
+      },
+      "paired_net_difference": 0,
+      "fixed_population_net_bounds": [
+        -1,
+        1
+      ],
+      "execution_units": "Shared capacity-gated LP prefixes and branches; not 32 independent solvers",
+      "interpretation_boundary": "Gate active on 2/8. Verifier timeout is a missing outcome with unproven root cause. G labels here are policies, not the historical G package.",
+      "reference": "results_cache/raw_issue_feedback_effect_v2/REPORT.md"
+    }
+  ],
+  "posthoc_selection": [
+    {
+      "id": "archived_selection_score_v1",
+      "tasks": 1,
+      "new_solver_calls": 0,
+      "scored_archived_trees": 2,
+      "result": {
+        "EARLY": 1,
+        "FINAL": 0
+      },
+      "selected": {
+        "P_OFF": "EARLY",
+        "P_ON": "EARLY"
+      },
+      "interpretation_boundary": "Exposed archival diagnosis; OFF already selects EARLY by first-occurrence tie-break. Not a prospective composition arm.",
+      "reference": "results_cache/archived_selection_score_v1/REPORT.md"
+    }
+  ],
+  "excluded_incomplete_blocks": [
+    {
+      "id": "gr_generated_effect_v1",
+      "reason": "Receipt-field interruption; no reuse of its N arm",
+      "reference": "results_cache/gr_generated_effect_v2/REPORT.md"
+    },
+    {
+      "id": "gr_strategy_effect_v1",
+      "reason": "Six starts, five valid scores on one task, one missing and ten unstarted; not a complete two-task matrix",
+      "reference": "results_cache/gr_strategy_effect_v1/reconciliation.json"
+    },
+    {
+      "id": "gc_generated_effect_v1",
+      "reason": "One invalid, seven unstarted; no accepted scoring block",
+      "reference": "docs/MECHANISM_EVIDENCE_INDEX.md"
+    },
+    {
+      "id": "gs_generated_effect_v1",
+      "reason": "Interrupted at the fifth cell; delivered summary is not a complete task-effect result",
+      "reference": "docs/MECHANISM_EVIDENCE_INDEX.md"
+    },
+    {
+      "id": "localization_resource_comparison_v2",
+      "reason": "Eight starts, seven valid, one missing original supervision terminal, eight unstarted; outcomes sealed",
+      "reference": "results_cache/localization_persistent_comparison_v1/REPORT.md"
+    },
+    {
+      "id": "rl_block_comparison_v1",
+      "reason": "Closed after HTTP503; outcomes sealed, no filling or arm reuse",
+      "reference": "results_cache/rl_block_comparison_v2/REPORT.md"
+    },
+    {
+      "id": "r_fallback_comparison_v1",
+      "reason": "One invalid start with EMPTY_STATUS_MAP",
+      "reference": "results_cache/r_fallback_comparison_v2/REPORT.md"
+    },
+    {
+      "id": "rp_retention_comparison_v1",
+      "reason": "One start, zero model/scoring calls; interface failure",
+      "reference": "results_cache/rp_retention_comparison_v2/REPORT.md"
+    },
+    {
+      "id": "rp_independent_comparison_v1/v2",
+      "reason": "Incomplete predecessor runs, retained separately from v3",
+      "reference": "results_cache/rp_independent_comparison_v3/REPORT.md"
+    },
+    {
+      "id": "raw_repo_localization_scored_v1/v2",
+      "reason": "Integration failures; v3 reran all paths",
+      "reference": "results_cache/raw_repo_localization_scored_v3/REPORT.md"
+    },
+    {
+      "id": "raw_repo_handoff_scored_v1 score prefix",
+      "reason": "Original partial grading is superseded by uniform grading of the same submissions; not another solver sample",
+      "reference": "results_cache/raw_repo_handoff_score_recovery_v1/REPORT.md"
+    },
+    {
+      "id": "raw_repo_confirmation_v1",
+      "reason": "Old 24-task study remains INCOMPLETE_UNSCORED; no restart or subset grading",
+      "reference": "docs/MECHANISM_EVIDENCE_INDEX.md"
+    }
+  ],
+  "pending_capacity_block": {
+    "id": "raw_repo_capacity_comparison_v1",
+    "solver_dispositions": 192,
+    "primary_tasks": 16,
+    "extra_repeats": "Two additional repeats on four preselected tasks",
+    "benchmark_scores": "NOT_RELEASED_AT_CASE_MATRIX_CREATION",
+    "reference": "experiments/raw_repo_capacity_comparison_v1/DESIGN.md"
+  },
+  "discovery_continuations": [
+    {
+      "epoch": "discovery_mapping_repair_v1",
+      "cell": "nexahe_direct",
+      "lineage": "nexahe_tool_result_compaction",
+      "terminal": "NOT_ELIGIBLE_NO_PACKAGE",
+      "new_independent_case": false,
+      "boundary": "Ownership revised, retention configuration source still unspecified",
+      "reference": "results_cache/discovery_mapping_repair_v1/REPORT.md"
+    }
+  ],
+  "earlier_discovery_history": [
+    {
+      "episode": "automatic_extraction_v1",
+      "units": "SWE-agent/Goose x A2S/Direct, four cells",
+      "proposals": {
+        "swe_a2s": [
+          "apply_patch_reactive_hook"
+        ],
+        "swe_direct": [
+          "looping_action_harness",
+          "filemap_effect_adapter"
+        ],
+        "goose_a2s": [],
+        "goose_direct": [
+          "cli_harness_extractor",
+          "recipe_scanner_observer"
+        ]
+      },
+      "source_body_deliveries": 0,
+      "semantic_fields": "UNKNOWN",
+      "first_stopping_boundary": "Source-tool parameter and proposal/interface boundaries; no oracle/code/host qualification",
+      "reference": "results_cache/automatic_extraction_v1/REPORT_v4.md"
+    },
+    {
+      "episode": "automatic_extraction_development_v2",
+      "units": "One SWE-agent development cell",
+      "proposals": [],
+      "source_body_deliveries": 0,
+      "semantic_fields": "UNKNOWN",
+      "first_stopping_boundary": "Mixed call/result text, invalid formats and discovery request limit",
+      "reference": "results_cache/automatic_extraction_development_v2/REPORT.md"
+    },
+    {
+      "episode": "native_source_tools_v1",
+      "units": "Engineering transport control, not an extraction sample",
+      "proposals": [],
+      "source_body_deliveries": 3,
+      "semantic_fields": "UNKNOWN",
+      "first_stopping_boundary": "Source bytes delivered through native tools; no completed source-review submission before limit",
+      "reference": "results_cache/native_source_tools_v1/REPORT.md"
+    },
+    {
+      "episode": "native_transfer_v1/v2/v3",
+      "units": "One longitudinal SWE-agent grounding development history, three episodes",
+      "proposals": [
+        "Uncommitted file-window drafts"
+      ],
+      "semantic_fields": "Post-hoc grounding review only; no behavior acceptance",
+      "first_stopping_boundary": "v1 empty navigation/candidate list; v2 proposal schema and input admission; v3 reserved tool name and discovery limit",
+      "secondary_finding": "The cited hooks and patch-application code did not implement the proposed file-window read behavior; this was a later source review, not the original stopping reason",
+      "references": [
+        "results_cache/native_transfer_v1/REPORT.md",
+        "results_cache/native_transfer_v2/REPORT.md",
+        "results_cache/native_transfer_v3/REPORT.md"
+      ]
+    }
+  ],
+  "historical_positive_cohorts": [
+    {
+      "episode": "paired_migration_v2",
+      "behavior": "SWE-agent file window",
+      "status": "Both generated implementations passed the common bounded code endpoint",
+      "boundary": "A2S source-metadata serialization failed separately; same-source developed target, not unseen-source discovery",
+      "catalog_membership": "Separate historical host cohort; not added to the current nine-class count",
+      "reference": "results_cache/paired_migration_v2/REPORT.md"
+    },
+    {
+      "episode": "reactive_pair_v1",
+      "behavior": "mini-SWE-agent format-error recovery",
+      "status": "Both generated implementations passed bounded public and independent behavior checks",
+      "boundary": "Source judgments checked structure/links, not all semantic explanations. Non-error retry signals are ignored by this host; arbitrary combiners may differ",
+      "catalog_membership": "Separate historical host cohort; not added to the current nine-class count",
+      "reference": "results_cache/reactive_pair_v1/REPORT.md"
+    }
+  ]
+}

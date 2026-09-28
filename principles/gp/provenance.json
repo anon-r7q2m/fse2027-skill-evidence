@@ -1,0 +1,62 @@
+{
+  "build_kind": "EXTRACTION_ONLY_NO_FIXTURE_EXECUTION",
+  "bundle_files": {
+    "AGENTLESS_LICENSE.txt": "01be13f66160d7e6227a3cedc1e993b63e497b5d3623ab7fa5798c1fba769cb1",
+    "inputs.json": "15b0dd20a046d90bfae84fcf2e018fa1d4752fcb6ba641b81c7bdb2e862a006e",
+    "original_selection_slice.py": "2011a3cfc4b62664b2252435fc04930127c3f88aa661761e3e733a3603c04130",
+    "protocol.json": "bd55989b6044d59ee19135850d88f1b628bb8fadd3ad5cfae6e618f4c8b0a4c7",
+    "replay.py": "c95b31042cde47ecac44d2cfbe495992b351931c0ac62e5591f02b5c30b35b72"
+  },
+  "exact_source_functions": [
+    {
+      "function": "_choose_submission_effect",
+      "line_end": 579,
+      "line_start": 485,
+      "segment_sha256": "075eec815a853e8b413742a1fa0e436a7a458d1e421140736329233a5395dffd"
+    },
+    {
+      "function": "_majority_vote",
+      "line_end": 605,
+      "line_start": 582,
+      "segment_sha256": "6e3375a3fdf8d68e65e44e9ddd0fef55129d5be83308b1ab30aa3c963db3479f"
+    },
+    {
+      "function": "_candidate_has_nonempty_key",
+      "line_end": 1014,
+      "line_start": 1013,
+      "segment_sha256": "f2512be9944c605dbf6a5f93003d6207f8af9d6250941e328da3286a91e4d494"
+    },
+    {
+      "function": "_select_effect",
+      "line_end": 1030,
+      "line_start": 1017,
+      "segment_sha256": "70175caa1fd4f7dc01953c009ecf874967776bf2f842c6811be011fd2641c0ab"
+    }
+  ],
+  "implementation_fix_passes": 0,
+  "new_prospective_validation": false,
+  "observed_outcomes_known_before_design": true,
+  "original_source": {
+    "base_snapshot": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+    "diagnosis": "results_cache/gp_generated_effect_v1/DIAGNOSIS.md",
+    "donor": "OpenAutoCoder/Agentless",
+    "donor_license": "experiments/reproduction_regression_v1/sources/agentless/LICENSE",
+    "donor_revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71",
+    "early_snapshot": "508c251e5b694a2d7328145f19dd44f31ab16857",
+    "later_snapshot": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+    "mechanism": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package/mechanism.py",
+    "mechanism_sha256": "256792508d842905cf950d894e18c572d6fc94d8507f6d3c7ef11a556066c756",
+    "modified_path": "tests/check_framework/test_model_checks.py",
+    "package_sha256": "5f70bae4b1b6732fd16a06e8802fdb6628fdcb6d68e240ba434477e202da6e93",
+    "source_functions": [
+      "_choose_submission_effect",
+      "_majority_vote",
+      "_candidate_has_nonempty_key",
+      "_select_effect"
+    ],
+    "syntax_error_query": 14,
+    "trajectory": "results_cache/gp_generated_effect_v1/live/02_GP/jobs/a2s-gp-effect-v1-2-gp/django__django-13925__hry4f6f/agent/trajectory.json",
+    "trajectory_sha256": "a82446490f37c5a7634ca71f4b07126259a8bc35c44856a52c9a330254250214"
+  },
+  "schema_version": "agent2skill.principles.gp_provenance.v1"
+}

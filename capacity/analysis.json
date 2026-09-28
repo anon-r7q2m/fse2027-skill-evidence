@@ -1,0 +1,957 @@
+{
+  "best_repeat_selection": false,
+  "bootstrap_resamples": 100000,
+  "bootstrap_seed": 20260922,
+  "denominator_tasks": 16,
+  "direction_resource_gate": "PASS_DESCRIPTIVE",
+  "full_goal_complete": false,
+  "inference_status": "COMPLETE_PRIMARY_PANEL",
+  "intervals_simultaneous": false,
+  "old_blocks_pooled": false,
+  "planned_task_repeat_blocks": 24,
+  "primary_contrasts": {
+    "Hmini": {
+      "complete_pair_rate_difference": 0.5,
+      "complete_pairs": 16,
+      "control_only": 0,
+      "fixed_panel_net_bounds": [
+        8,
+        8
+      ],
+      "holm_adjusted_p": 0.02734375,
+      "mcnemar_one_sided_exact_p": 0.00390625,
+      "observed_net_solves": 8,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.25,
+        0.75
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 8
+    },
+    "L": {
+      "complete_pair_rate_difference": 0.5,
+      "complete_pairs": 16,
+      "control_only": 0,
+      "fixed_panel_net_bounds": [
+        8,
+        8
+      ],
+      "holm_adjusted_p": 0.02734375,
+      "mcnemar_one_sided_exact_p": 0.00390625,
+      "observed_net_solves": 8,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.25,
+        0.75
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 8
+    },
+    "Ln": {
+      "complete_pair_rate_difference": 0.375,
+      "complete_pairs": 16,
+      "control_only": 1,
+      "fixed_panel_net_bounds": [
+        6,
+        6
+      ],
+      "holm_adjusted_p": 0.09375,
+      "mcnemar_one_sided_exact_p": 0.03515625,
+      "observed_net_solves": 6,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.0625,
+        0.6875
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 7
+    },
+    "LnPn": {
+      "complete_pair_rate_difference": 0.5625,
+      "complete_pairs": 16,
+      "control_only": 1,
+      "fixed_panel_net_bounds": [
+        9,
+        9
+      ],
+      "holm_adjusted_p": 0.029296875,
+      "mcnemar_one_sided_exact_p": 0.005859375,
+      "observed_net_solves": 9,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.25,
+        0.8125
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 10
+    },
+    "N": {
+      "complete_pair_rate_difference": 0.5,
+      "complete_pairs": 16,
+      "control_only": 1,
+      "fixed_panel_net_bounds": [
+        8,
+        8
+      ],
+      "holm_adjusted_p": 0.04296875,
+      "mcnemar_one_sided_exact_p": 0.0107421875,
+      "observed_net_solves": 8,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.1875,
+        0.8125
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 9
+    },
+    "P": {
+      "complete_pair_rate_difference": 0.3125,
+      "complete_pairs": 16,
+      "control_only": 0,
+      "fixed_panel_net_bounds": [
+        5,
+        5
+      ],
+      "holm_adjusted_p": 0.09375,
+      "mcnemar_one_sided_exact_p": 0.03125,
+      "observed_net_solves": 5,
+      "paired_task_bootstrap_95_percentile_interval": [
+        0.125,
+        0.5625
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 5
+    },
+    "Pn": {
+      "complete_pair_rate_difference": 0.1875,
+      "complete_pairs": 16,
+      "control_only": 2,
+      "fixed_panel_net_bounds": [
+        3,
+        3
+      ],
+      "holm_adjusted_p": 0.2265625,
+      "mcnemar_one_sided_exact_p": 0.2265625,
+      "observed_net_solves": 3,
+      "paired_task_bootstrap_95_percentile_interval": [
+        -0.125,
+        0.5
+      ],
+      "planned_pairs": 16,
+      "treatment_only": 5
+    }
+  },
+  "primary_counts": {
+    "Hmini": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 5
+    },
+    "L": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 5
+    },
+    "LP": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 13
+    },
+    "Ln": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 7
+    },
+    "LnPn": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 4
+    },
+    "N": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 5
+    },
+    "P": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 8
+    },
+    "Pn": {
+      "missing": 0,
+      "observed": 16,
+      "planned": 16,
+      "solved": 10
+    }
+  },
+  "primary_repeat": 1,
+  "repeat_panel": {
+    "django__django-11299": {
+      "1": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 0,
+        "Ln": 1,
+        "LnPn": 0,
+        "N": 1,
+        "P": 0,
+        "Pn": 1
+      },
+      "2": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 0,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 0
+      },
+      "3": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 0,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 1
+      }
+    },
+    "django__django-16877": {
+      "1": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 1,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 1
+      },
+      "2": {
+        "Hmini": 1,
+        "L": 0,
+        "LP": 1,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 0
+      },
+      "3": {
+        "Hmini": 1,
+        "L": 0,
+        "LP": 0,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 1,
+        "Pn": 0
+      }
+    },
+    "scikit-learn__scikit-learn-14894": {
+      "1": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 1,
+        "Ln": 1,
+        "LnPn": 0,
+        "N": 1,
+        "P": 1,
+        "Pn": 1
+      },
+      "2": {
+        "Hmini": 1,
+        "L": 1,
+        "LP": 1,
+        "Ln": 1,
+        "LnPn": 1,
+        "N": 1,
+        "P": 1,
+        "Pn": 1
+      },
+      "3": {
+        "Hmini": 0,
+        "L": 1,
+        "LP": 1,
+        "Ln": 1,
+        "LnPn": 0,
+        "N": 1,
+        "P": 1,
+        "Pn": 1
+      }
+    },
+    "sphinx-doc__sphinx-9258": {
+      "1": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 1,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 0
+      },
+      "2": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 1,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 1,
+        "Pn": 0
+      },
+      "3": {
+        "Hmini": 0,
+        "L": 0,
+        "LP": 0,
+        "Ln": 0,
+        "LnPn": 0,
+        "N": 0,
+        "P": 0,
+        "Pn": 0
+      }
+    }
+  },
+  "repeat_panel_contrasts": {
+    "1": {
+      "Hmini": {
+        "complete_pair_rate_difference": 0.75,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          3,
+          3
+        ],
+        "observed_net_solves": 3,
+        "planned_pairs": 4,
+        "treatment_only": 3
+      },
+      "L": {
+        "complete_pair_rate_difference": 0.75,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          3,
+          3
+        ],
+        "observed_net_solves": 3,
+        "planned_pairs": 4,
+        "treatment_only": 3
+      },
+      "Ln": {
+        "complete_pair_rate_difference": 0.25,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          1,
+          1
+        ],
+        "observed_net_solves": 1,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "LnPn": {
+        "complete_pair_rate_difference": 0.75,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          3,
+          3
+        ],
+        "observed_net_solves": 3,
+        "planned_pairs": 4,
+        "treatment_only": 3
+      },
+      "N": {
+        "complete_pair_rate_difference": 0.25,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          1,
+          1
+        ],
+        "observed_net_solves": 1,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "P": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "Pn": {
+        "complete_pair_rate_difference": 0.0,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          0,
+          0
+        ],
+        "observed_net_solves": 0,
+        "planned_pairs": 4,
+        "treatment_only": 1
+      }
+    },
+    "2": {
+      "Hmini": {
+        "complete_pair_rate_difference": 0.25,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          1,
+          1
+        ],
+        "observed_net_solves": 1,
+        "planned_pairs": 4,
+        "treatment_only": 1
+      },
+      "L": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "Ln": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "LnPn": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "N": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      },
+      "P": {
+        "complete_pair_rate_difference": 0.25,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          1,
+          1
+        ],
+        "observed_net_solves": 1,
+        "planned_pairs": 4,
+        "treatment_only": 1
+      },
+      "Pn": {
+        "complete_pair_rate_difference": 0.5,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          2,
+          2
+        ],
+        "observed_net_solves": 2,
+        "planned_pairs": 4,
+        "treatment_only": 2
+      }
+    },
+    "3": {
+      "Hmini": {
+        "complete_pair_rate_difference": 0.0,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          0,
+          0
+        ],
+        "observed_net_solves": 0,
+        "planned_pairs": 4,
+        "treatment_only": 1
+      },
+      "L": {
+        "complete_pair_rate_difference": 0.0,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          0,
+          0
+        ],
+        "observed_net_solves": 0,
+        "planned_pairs": 4,
+        "treatment_only": 0
+      },
+      "Ln": {
+        "complete_pair_rate_difference": 0.0,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          0,
+          0
+        ],
+        "observed_net_solves": 0,
+        "planned_pairs": 4,
+        "treatment_only": 0
+      },
+      "LnPn": {
+        "complete_pair_rate_difference": 0.25,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          1,
+          1
+        ],
+        "observed_net_solves": 1,
+        "planned_pairs": 4,
+        "treatment_only": 1
+      },
+      "N": {
+        "complete_pair_rate_difference": 0.0,
+        "complete_pairs": 4,
+        "control_only": 0,
+        "fixed_panel_net_bounds": [
+          0,
+          0
+        ],
+        "observed_net_solves": 0,
+        "planned_pairs": 4,
+        "treatment_only": 0
+      },
+      "P": {
+        "complete_pair_rate_difference": -0.25,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          -1,
+          -1
+        ],
+        "observed_net_solves": -1,
+        "planned_pairs": 4,
+        "treatment_only": 0
+      },
+      "Pn": {
+        "complete_pair_rate_difference": -0.25,
+        "complete_pairs": 4,
+        "control_only": 1,
+        "fixed_panel_net_bounds": [
+          -1,
+          -1
+        ],
+        "observed_net_solves": -1,
+        "planned_pairs": 4,
+        "treatment_only": 0
+      }
+    }
+  },
+  "repeat_variation": {
+    "Hmini": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          1,
+          1
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 2
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          1,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    },
+    "L": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          1,
+          1
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 2
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    },
+    "LP": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 2
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          1
+        ],
+        "sample_variance": 0.0,
+        "solved": 3
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 2
+      }
+    },
+    "Ln": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          0,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          1
+        ],
+        "sample_variance": 0.0,
+        "solved": 3
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    },
+    "LnPn": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          1,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    },
+    "N": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          0,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          1
+        ],
+        "sample_variance": 0.0,
+        "solved": 3
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    },
+    "P": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          1
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          1
+        ],
+        "sample_variance": 0.0,
+        "solved": 3
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          1,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      }
+    },
+    "Pn": {
+      "django__django-11299": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          0,
+          1
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 2
+      },
+      "django__django-16877": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          0,
+          0
+        ],
+        "sample_variance": 0.33333333333333337,
+        "solved": 1
+      },
+      "scikit-learn__scikit-learn-14894": {
+        "observed": 3,
+        "outcomes": [
+          1,
+          1,
+          1
+        ],
+        "sample_variance": 0.0,
+        "solved": 3
+      },
+      "sphinx-doc__sphinx-9258": {
+        "observed": 3,
+        "outcomes": [
+          0,
+          0,
+          0
+        ],
+        "sample_variance": 0.0,
+        "solved": 0
+      }
+    }
+  },
+  "source_naive_primary": {
+    "L-Ln": {
+      "complete_pair_rate_difference": -0.125,
+      "complete_pairs": 16,
+      "control_only": 4,
+      "fixed_panel_net_bounds": [
+        -2,
+        -2
+      ],
+      "observed_net_solves": -2,
+      "planned_pairs": 16,
+      "treatment_only": 2
+    },
+    "P-Pn": {
+      "complete_pair_rate_difference": -0.125,
+      "complete_pairs": 16,
+      "control_only": 4,
+      "fixed_panel_net_bounds": [
+        -2,
+        -2
+      ],
+      "observed_net_solves": -2,
+      "planned_pairs": 16,
+      "treatment_only": 2
+    }
+  },
+  "stability_established": false,
+  "supplementary_status": "COMPLETE",
+  "supplementary_task_equal_weight_rates": {
+    "Hmini": 0.375,
+    "L": 0.3541666666666667,
+    "LP": 0.7708333333333334,
+    "Ln": 0.3958333333333333,
+    "LnPn": 0.2708333333333333,
+    "N": 0.2708333333333333,
+    "P": 0.5416666666666666,
+    "Pn": 0.5625
+  }
+}

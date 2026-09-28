@@ -1,0 +1,92 @@
+{
+  "schema_version": "agent2skill.consumer_relative.pro.v1",
+  "status": "FROZEN_BEFORE_REPLAY",
+  "source_revision": "ca10a60a5fcae51e6948ffe1485d4153d421e6c5",
+  "source_sha256": "bb5d4c5486be296e464e695df3747064aaa3bb197394bc6d39980634afec2034",
+  "fixture_limit": 6,
+  "ordinary_implementation_fix_limit": 1,
+  "unit": "one synthetic input fixture with one execution of the original orchestration and one explicitly proposed report-consumer decision",
+  "original_code": {
+    "functions": ["main", "prepare_run"],
+    "prefix": "eval_with_docker through its existing_output return, before container preparation",
+    "mock_boundaries": ["pandas input-frame representation", "ThreadPoolExecutor submission and as_completed order", "uncached container worker result", "tqdm display"],
+    "unmodified_semantics": ["prediction filtering", "worker arguments", "result parsing", "result dictionary assignment", "original score reduction and print", "cache path and reuse branch"]
+  },
+  "proposed_consumer": {
+    "role": "hard admission for publishing a specifically declared score report",
+    "requirements": ["unique submitted IDs", "exact membership in the declared full or subset population", "if cached output is used, externally known fixture provenance matches its requested task, prefix, and patch"],
+    "cache_identity_boundary": "Cache identity is additional fixture-provided observer information. The legacy cache contains no such binding; unknown real cache provenance cannot be inferred from its output.",
+    "actions": ["publish_original_mean", "abstain_from_claimed_population_mean", "request_recompute_without_publishing_cached_mean"],
+    "no_new_reducer": true,
+    "no_recompute_execution": true
+  },
+  "fixtures": [
+    {
+      "id": "missing_full_claim",
+      "family": "population",
+      "control": false,
+      "raw_ids": ["case_a", "case_b"],
+      "claim": {"scope": "full", "ids": ["case_a", "case_b"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_pass_a", "prefix": "first", "mock_pass": true}],
+      "completion_order": [0],
+      "cache": null,
+      "expected": {"results": {"case_a": true}, "overall_accuracy": 1.0, "scheduled": 1, "fresh_worker_calls": 1, "cache_hits": 0, "progress": ["Accuracy: 100.00%"], "consumer_action": "abstain_from_claimed_population_mean", "published_accuracy": null, "reason": "declared_population_not_covered"}
+    },
+    {
+      "id": "declared_subset_control",
+      "family": "population",
+      "control": true,
+      "raw_ids": ["case_a", "case_b"],
+      "claim": {"scope": "subset", "ids": ["case_a"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_pass_a", "prefix": "first", "mock_pass": true}],
+      "completion_order": [0],
+      "cache": null,
+      "expected": {"results": {"case_a": true}, "overall_accuracy": 1.0, "scheduled": 1, "fresh_worker_calls": 1, "cache_hits": 0, "progress": ["Accuracy: 100.00%"], "consumer_action": "publish_original_mean", "published_accuracy": 1.0, "reason": "declared_subset_population_supported"}
+    },
+    {
+      "id": "duplicate_controlled_completion",
+      "family": "identity",
+      "control": false,
+      "raw_ids": ["case_a"],
+      "claim": {"scope": "full", "ids": ["case_a"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_pass_a", "prefix": "first", "mock_pass": true}, {"instance_id": "case_a", "patch": "synthetic_fail_a", "prefix": "second", "mock_pass": false}],
+      "completion_order": [0, 1],
+      "cache": null,
+      "expected": {"results": {"case_a": false}, "overall_accuracy": 0.0, "scheduled": 2, "fresh_worker_calls": 2, "cache_hits": 0, "progress": ["Accuracy: 100.00%", "Accuracy: 0.00%"], "consumer_action": "abstain_from_claimed_population_mean", "published_accuracy": null, "reason": "duplicate_submission_identity"}
+    },
+    {
+      "id": "unique_complete_control",
+      "family": "identity",
+      "control": true,
+      "raw_ids": ["case_a", "case_b"],
+      "claim": {"scope": "full", "ids": ["case_a", "case_b"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_pass_a", "prefix": "first", "mock_pass": true}, {"instance_id": "case_b", "patch": "synthetic_fail_b", "prefix": "second", "mock_pass": false}],
+      "completion_order": [0, 1],
+      "cache": null,
+      "expected": {"results": {"case_a": true, "case_b": false}, "overall_accuracy": 0.5, "scheduled": 2, "fresh_worker_calls": 2, "cache_hits": 0, "progress": ["Accuracy: 100.00%", "Accuracy: 50.00%"], "consumer_action": "publish_original_mean", "published_accuracy": 0.5, "reason": "declared_full_population_supported"}
+    },
+    {
+      "id": "cache_patch_mismatch",
+      "family": "cache",
+      "control": false,
+      "raw_ids": ["case_a"],
+      "claim": {"scope": "full", "ids": ["case_a"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_new_fail_a", "prefix": "same", "mock_pass": false}],
+      "completion_order": [0],
+      "cache": {"instance_id": "case_a", "prefix": "same", "owner_patch": "synthetic_old_pass_a", "mock_pass": true},
+      "expected": {"results": {"case_a": true}, "overall_accuracy": 1.0, "scheduled": 1, "fresh_worker_calls": 0, "cache_hits": 1, "progress": ["Accuracy: 100.00%"], "consumer_action": "request_recompute_without_publishing_cached_mean", "published_accuracy": null, "reason": "externally_known_cache_patch_mismatch"}
+    },
+    {
+      "id": "cache_identity_match_control",
+      "family": "cache",
+      "control": true,
+      "raw_ids": ["case_a"],
+      "claim": {"scope": "full", "ids": ["case_a"]},
+      "predictions": [{"instance_id": "case_a", "patch": "synthetic_old_pass_a", "prefix": "same", "mock_pass": true}],
+      "completion_order": [0],
+      "cache": {"instance_id": "case_a", "prefix": "same", "owner_patch": "synthetic_old_pass_a", "mock_pass": true},
+      "expected": {"results": {"case_a": true}, "overall_accuracy": 1.0, "scheduled": 1, "fresh_worker_calls": 0, "cache_hits": 1, "progress": ["Accuracy: 100.00%"], "consumer_action": "publish_original_mean", "published_accuracy": 1.0, "reason": "declared_full_population_supported"}
+    }
+  ],
+  "limitations": ["No real task, patch grading, Docker, model, network or leaderboard execution occurs during replay.", "Worker results are constructed, not observed task outcomes.", "Duplicate completion order is deterministic; no true thread or workspace race is measured.", "The input-frame adapter supports only the unique synthetic rows used here, not general pandas semantics.", "Proposed report admission is new harness code, not an official evaluator repair.", "Only patch identity changes in the cache contrast; other environment bindings are outside this fixture.", "Cases are exposed diagnostic examples, not independent validation or error-rate estimates."]
+}

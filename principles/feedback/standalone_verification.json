@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-I",
+    "<isolated artifact copy>/replay.py"
+  ],
+  "cwd": "/tmp",
+  "exit_code": 0,
+  "input_scope": "Copied self-contained artifact only; Python isolated mode; no repository imports or network during replay."
+}

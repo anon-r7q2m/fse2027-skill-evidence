@@ -1,0 +1,4 @@
+has_key, has_keys, and has_any_keys JSONField() lookups don't handle numeric keys on SQLite, MySQL, and Oracle.
+
+The public example requires has_key='1111' to find an object key.
+This replay does not certify all has_key/has_keys/has_any_keys repairs.

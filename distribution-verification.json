@@ -1,0 +1,59 @@
+{
+  "kind": "detached_distribution_check",
+  "executed_at_utc": "2026-09-28T10:04:38.402782+00:00",
+  "python": "3.13.11",
+  "new_experimental_conditions": 0,
+  "packaging_observer_note": "An initial packaging assertion treated GP expectations_met (the integer 6) as a boolean. Only this packaging assertion was corrected; replay code, inputs and historical records were unchanged.",
+  "checks": [
+    {
+      "entry": "parser",
+      "return_code": 0,
+      "observation": {
+        "scope": "PUBLIC_PARSER_DEMO_ONLY",
+        "python_version": "3.13.11",
+        "public_case_groups": 4,
+        "public_samples_passed": 14,
+        "source_semantics_cases_passed": [
+          "repeated_matches",
+          "reverse_commands",
+          "partial_miss",
+          "boundary_newlines"
+        ],
+        "benchmark_scores_reproduced": false,
+        "independent_evaluation_reproduced": false,
+        "host_execution_reproduced": false
+      },
+      "stderr_warning_present": true
+    },
+    {
+      "entry": "gp",
+      "return_code": 0,
+      "observation": {
+        "fixture_conditions": 6,
+        "expectations_met": 6
+      },
+      "stderr_warning_present": false
+    },
+    {
+      "entry": "feedback",
+      "return_code": 0,
+      "observation": {
+        "fixture_conditions": 8,
+        "all_frozen_observations_match": true,
+        "unknown_assertions": 0
+      },
+      "stderr_warning_present": false
+    },
+    {
+      "entry": "pro",
+      "return_code": 0,
+      "observation": {
+        "fixture_conditions": 6,
+        "matched_expectations": 6,
+        "normal_controls_rejected": 0
+      },
+      "stderr_warning_present": false
+    }
+  ],
+  "status": "PASSED"
+}

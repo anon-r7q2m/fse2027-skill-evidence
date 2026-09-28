@@ -1,0 +1,37 @@
+{
+  "authored_files_license": "Not inferred from the donor MIT license; project-owner release licensing remains separate.",
+  "license": "MIT, Copyright (c) 2026 Scale AI, Inc",
+  "license_sha256": "03a44b2f703779d3f34c18e056da5b893537ca61588e6b15b615a4a612e77fb9",
+  "license_url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/ca10a60a5fcae51e6948ffe1485d4153d421e6c5/LICENSE",
+  "original_imports_executed": false,
+  "original_worker_prefix": "Ends after cached-output return. An uncached call falls through to the explicitly mocked worker.",
+  "protocol_sha256": "4d763379c0a08f2787a504db8a3181c5ea2dc89d04cd3ed24641587fb1a23cc5",
+  "revision": "ca10a60a5fcae51e6948ffe1485d4153d421e6c5",
+  "source_acquisition": "Known public pinned URL; no matching source file found in scoped local evidence directories",
+  "source_locations": [
+    {
+      "ast_equivalence": true,
+      "end_line": 175,
+      "function": "prepare_run",
+      "selection": "complete_function",
+      "start_line": 165
+    },
+    {
+      "ast_equivalence": true,
+      "end_line": 364,
+      "function": "eval_with_docker",
+      "selection": "first_four_statements",
+      "start_line": 358
+    },
+    {
+      "ast_equivalence": true,
+      "end_line": 571,
+      "function": "main",
+      "selection": "complete_function",
+      "start_line": 469
+    }
+  ],
+  "source_sha256": "bb5d4c5486be296e464e695df3747064aaa3bb197394bc6d39980634afec2034",
+  "source_slice_sha256": "77dd64a8d2f20dc820e306cde9f214b609e099bae699c0b5d54dd8d031d903a2",
+  "source_url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/ca10a60a5fcae51e6948ffe1485d4153d421e6c5/swe_bench_pro_eval.py"
+}

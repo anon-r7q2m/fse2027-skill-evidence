@@ -1,0 +1,168 @@
+{
+  "caveats": [
+    "Pool-editor entry is not comparable to native hosts; null means not applicable, not failure.",
+    "Output and reasoning tokens are reported as original fields, not summed; no fee or equal-cost claim.",
+    "Elapsed time is original per-path process duration, not a runtime benefit estimate.",
+    "Preserve pipeline stops in whole-policy denominators."
+  ],
+  "rows": [
+    {
+      "cached_input_tokens_total": 501760,
+      "capacity_routes": {
+        "not_applicable": 16
+      },
+      "input_tokens_total": 730578,
+      "median_process_elapsed_seconds": 298.9216467505321,
+      "output_tokens_total": 24304,
+      "paths_with_pool_editor_requests": null,
+      "policy": "N",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 11136,
+      "requests_total": 142,
+      "solved": 5,
+      "terminal_statuses": {
+        "Completed": 3,
+        "LimitsExceeded": 13
+      }
+    },
+    {
+      "cached_input_tokens_total": 426624,
+      "capacity_routes": {
+        "not_applicable": 16
+      },
+      "input_tokens_total": 985228,
+      "median_process_elapsed_seconds": 354.84289514343254,
+      "output_tokens_total": 78613,
+      "paths_with_pool_editor_requests": null,
+      "policy": "L",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 60736,
+      "requests_total": 144,
+      "solved": 5,
+      "terminal_statuses": {
+        "Completed": 1,
+        "LimitsExceeded": 15
+      }
+    },
+    {
+      "cached_input_tokens_total": 340096,
+      "capacity_routes": {
+        "original_P": 16
+      },
+      "input_tokens_total": 668345,
+      "median_process_elapsed_seconds": 279.73121265904047,
+      "output_tokens_total": 65938,
+      "paths_with_pool_editor_requests": 11,
+      "policy": "P",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 48320,
+      "requests_total": 124,
+      "solved": 8,
+      "terminal_statuses": {
+        "KNOWN_PIPELINE_STOP": 5,
+        "SELECTION_COMPLETE": 11
+      }
+    },
+    {
+      "cached_input_tokens_total": 454912,
+      "capacity_routes": {
+        "original_P": 16
+      },
+      "input_tokens_total": 967880,
+      "median_process_elapsed_seconds": 339.9039851324633,
+      "output_tokens_total": 155160,
+      "paths_with_pool_editor_requests": 15,
+      "policy": "LP",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 130112,
+      "requests_total": 106,
+      "solved": 13,
+      "terminal_statuses": {
+        "KNOWN_PIPELINE_STOP": 1,
+        "SELECTION_COMPLETE": 15
+      }
+    },
+    {
+      "cached_input_tokens_total": 456448,
+      "capacity_routes": {
+        "not_applicable": 16
+      },
+      "input_tokens_total": 816661,
+      "median_process_elapsed_seconds": 329.7813751872163,
+      "output_tokens_total": 29604,
+      "paths_with_pool_editor_requests": null,
+      "policy": "Ln",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 16640,
+      "requests_total": 143,
+      "solved": 7,
+      "terminal_statuses": {
+        "Completed": 1,
+        "LimitsExceeded": 15
+      }
+    },
+    {
+      "cached_input_tokens_total": 438400,
+      "capacity_routes": {
+        "native_capacity_fallback": 2,
+        "original_P": 14
+      },
+      "input_tokens_total": 895311,
+      "median_process_elapsed_seconds": 197.4654894741252,
+      "output_tokens_total": 76907,
+      "paths_with_pool_editor_requests": 10,
+      "policy": "Pn",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 57472,
+      "requests_total": 128,
+      "solved": 10,
+      "terminal_statuses": {
+        "KNOWN_PIPELINE_STOP": 4,
+        "LimitsExceeded": 2,
+        "SELECTION_COMPLETE": 10
+      }
+    },
+    {
+      "cached_input_tokens_total": 227456,
+      "capacity_routes": {
+        "original_P": 16
+      },
+      "input_tokens_total": 628802,
+      "median_process_elapsed_seconds": 22.55364922201261,
+      "output_tokens_total": 49124,
+      "paths_with_pool_editor_requests": 5,
+      "policy": "LnPn",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 40896,
+      "requests_total": 32,
+      "solved": 4,
+      "terminal_statuses": {
+        "KNOWN_PIPELINE_STOP": 11,
+        "SELECTION_COMPLETE": 5
+      }
+    },
+    {
+      "cached_input_tokens_total": 567424,
+      "capacity_routes": {
+        "not_applicable": 16
+      },
+      "input_tokens_total": 829585,
+      "median_process_elapsed_seconds": 278.1661602722015,
+      "output_tokens_total": 19363,
+      "paths_with_pool_editor_requests": null,
+      "policy": "Hmini",
+      "primary_tasks": 16,
+      "reasoning_tokens_total": 6784,
+      "requests_total": 144,
+      "solved": 5,
+      "terminal_statuses": {
+        "LimitsExceeded": 16
+      }
+    }
+  ],
+  "scope": "Original released primary repeat1 only;16 tasks per policy. Descriptive reaggregation, not a new experiment or scorer call.",
+  "sources": [
+    "results_cache/raw_repo_capacity_comparison_v1/execution_summary.json",
+    "results_cache/raw_repo_capacity_comparison_v1/scores/reconciliation.json"
+  ]
+}

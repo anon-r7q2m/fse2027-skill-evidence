@@ -1,0 +1,22 @@
+{
+  "study": "skill_reuse_principles_v1",
+  "status": "COMPLETED_BOUNDED_OFFLINE_DIAGNOSTICS",
+  "fixture_conditions": {
+    "gp": 6,
+    "feedback": 8,
+    "pro": 6
+  },
+  "total_fixture_conditions": 20,
+  "not_independent_tasks": true,
+  "new_model_calls": 0,
+  "new_benchmark_runs": 0,
+  "new_official_scores": 0,
+  "implementation_fix_passes": {
+    "gp": 0,
+    "feedback": 1,
+    "pro": 0
+  },
+  "h1_factorial": "CANCELLED_NOT_OPERATIONALLY_DISTINCT",
+  "h2": "Production-path and equivalent direct-helper controls detect the same known V regression.",
+  "claim": "Retrospective framework and locally tested checks; general superiority and predictive theory unestablished."
+}

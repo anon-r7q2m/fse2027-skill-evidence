@@ -1,0 +1,21 @@
+{
+  "additional_benchmark_model_container_or_live_scoring_runs": 0,
+  "detached_copy_verification": "NOT_PERFORMED_BY_THIS_SLICE; reserved for integrating agent",
+  "first_execution": {
+    "command": "python3 -B <study-root>/results_cache/skill_reuse_principles_v1/pro/replay.py --output <study-root>/results_cache/skill_reuse_principles_v1/pro/result.json",
+    "exit_code": 0,
+    "fixtures": 6,
+    "matched_frozen_expectations": 6,
+    "normal_controls_rejected": 0,
+    "working_directory": "/tmp"
+  },
+  "lint": {
+    "command": ".venv/bin/ruff check analysis/skill_reuse_principles_v1/pro_replay.py",
+    "format_command": ".venv/bin/ruff format analysis/skill_reuse_principles_v1/pro_replay.py",
+    "outcome": "All checks passed!",
+    "standalone_program_equals_repository_program": true
+  },
+  "ordinary_implementation_fix_passes_used": 0,
+  "python": "3.12.3",
+  "recorded_at": "2026-09-28T09:50:42.391096+00:00"
+}
