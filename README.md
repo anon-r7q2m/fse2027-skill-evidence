@@ -97,7 +97,8 @@ September 28, 2026. Project-authored code and documents in this package are
 provided under [MIT](LICENSE). Third-party material retains its own included
 licenses and copyright notices; see [THIRD_PARTY.md](THIRD_PARTY.md). This grant
 does not license the full research repository, benchmark datasets or restricted
-records. The anonymous reviewer URL is recorded here after access verification.
+records. The public review repository is
+[anon-r7q2m/fse2027-skill-evidence](https://github.com/anon-r7q2m/fse2027-skill-evidence).
 
 Public audit summaries describe scoped static triage across six benchmarks;
 they neither release restricted individual annotations nor establish formal
