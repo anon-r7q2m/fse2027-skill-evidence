@@ -1,0 +1,18 @@
+{
+  "slot": "a21",
+  "sealed_at": "2026-09-29T03:53:25.887986+00:00",
+  "reported_target_executions": 0,
+  "files": {
+    "prediction.json": "3d00aa490533f529c87fbbd80a977554ec2b8b32f118d121d8c8fc28660a5d7d",
+    "diagnostic.md": "c1deab7193026cb4d17602371d2dc81d5dc8b03b6382a0a4e0fe94945bfb897b",
+    "fixture.py": "9144507372f7055df94899ea8c904d1dd0eb82cbf3234f734397aa85cdb16aac",
+    "intervention.patch": "d2a2251069be3a83141e8d2fdaad814642e68a8abfc58f2cfde2d2644b69f269"
+  },
+  "original_files": {
+    "prediction.json": "b28d7110f4c3c6e89026286e071623e7748d8665a659db5554c2f75870622411",
+    "diagnostic.md": "c1deab7193026cb4d17602371d2dc81d5dc8b03b6382a0a4e0fe94945bfb897b",
+    "fixture.py": "9144507372f7055df94899ea8c904d1dd0eb82cbf3234f734397aa85cdb16aac",
+    "intervention.patch": "d2a2251069be3a83141e8d2fdaad814642e68a8abfc58f2cfde2d2644b69f269"
+  },
+  "publication_hash_scope": "files binds the path-anonymized public serialization; original_files retains the original pre-execution seal. Predictions, scripts and oracles are unchanged. The original seal timestamp is not a timestamp of these derived bytes."
+}

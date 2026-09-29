@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-09-29T04:06:58.972878+00:00",
+  "stage": "G2_ALL_FOUR_PREDICTIONS_SEALED",
+  "slots": [
+    "s11",
+    "s12",
+    "a21",
+    "a22"
+  ],
+  "frozen_inputs": {
+    "s11": [
+      {
+        "id": "t_literal_assignment_text",
+        "kind": "trigger"
+      },
+      {
+        "id": "t_literal_inside_real_assignment",
+        "kind": "trigger"
+      },
+      {
+        "id": "c_successful_assignment_repair",
+        "kind": "control"
+      },
+      {
+        "id": "c_execution_and_check_failure_recovery",
+        "kind": "control"
+      }
+    ],
+    "s12": [
+      {
+        "id": "trigger_optimized_rejection",
+        "kind": "trigger"
+      },
+      {
+        "id": "control_valid_acceptance",
+        "kind": "control"
+      },
+      {
+        "id": "control_failure_recovery",
+        "kind": "control"
+      }
+    ],
+    "a21": [
+      {
+        "id": "trigger_source_lost",
+        "kind": "trigger"
+      },
+      {
+        "id": "control_success",
+        "kind": "control"
+      },
+      {
+        "id": "control_execution_failure",
+        "kind": "control"
+      }
+    ],
+    "a22": [
+      {
+        "id": "trigger_success",
+        "kind": "trigger"
+      },
+      {
+        "id": "trigger_nonzero_exit",
+        "kind": "trigger"
+      },
+      {
+        "id": "control_success_chat_only",
+        "kind": "control"
+      },
+      {
+        "id": "control_nonzero_exit_chat_only",
+        "kind": "control"
+      }
+    ]
+  },
+  "target_behavior_executions_before_this_record": 0,
+  "pending": "Independent static qualification before native execution",
+  "explicit_runtime_environment": {
+    "PYTHON_DOTENV_DISABLED": "1",
+    "PYTHONNOUSERSITE": "1",
+    "HF_HUB_OFFLINE": "1"
+  },
+  "dotenv_safety_basis": "Installed python-dotenv 1.2.3 main.py lines 418-424 returns before find_dotenv when PYTHON_DOTENV_DISABLED=1; every fixture receives this explicit environment."
+}

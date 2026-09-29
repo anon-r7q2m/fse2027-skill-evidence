@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-29T03:44:00.075399+00:00",
+  "kind": "Import-only environment feasibility; no target object construction or execution",
+  "return_code": 0,
+  "stdout": "{\"smolagents\": \"1.27.0.dev0\", \"autogen-core\": \"0.7.5\", \"autogen-agentchat\": \"0.7.5\", \"autogen-ext\": \"0.7.5\"}\n",
+  "stderr": ""
+}

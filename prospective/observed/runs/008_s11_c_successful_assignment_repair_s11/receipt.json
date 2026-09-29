@@ -1,0 +1,15 @@
+{
+  "family": "smolagents",
+  "input_origin": "s11",
+  "case_id": "c_successful_assignment_repair",
+  "variant": "s11",
+  "run_name": "008_s11_c_successful_assignment_repair_s11",
+  "started_at": "2026-09-29T04:13:19.788575+00:00",
+  "process_id": 1072131,
+  "return_code": 0,
+  "elapsed_seconds": 1.318179196678102,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "OBSERVED",
+  "observation_sha256": "955d149582426c721cb50425cfb9271fad4d59a993b8955b89fefdc9df2d015c",
+  "finished_at": "2026-09-29T04:13:21.108214+00:00"
+}

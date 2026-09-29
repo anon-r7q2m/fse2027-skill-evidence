@@ -55,3 +55,16 @@ generated L/P/Ln/Pn packages. Agentless-derived L/P code retains the existing
 Agentless MIT notice linked above; full package/source identities are in
 `capacity/implementation/PROVENANCE.json`. Mini is a pinned dependency represented
 by project wrappers and configuration, not a newly vendored upstream distribution.
+
+
+## Prospective native-workflow archives
+
+`prospective/upstream/smolagents.tar.gz` is the unchanged public repository
+archive at 227ef5e49ddd82339295939072f0223249aa8d38, with its Apache-2.0
+license, copyright notices and upstream third-party material preserved.
+`prospective/upstream/autogen.tar.gz` is the unchanged public repository
+archive at 027ecf0a379bcc1d09956d46d12d44a3ad9cee14, with the MIT code
+license and all accompanying upstream notices/licenses preserved. AutoGen
+`LICENSE-CODE` (MIT) and `LICENSE` (CC BY 4.0 for documentation) are both copied
+adjacent to the archives, with distinct filenames. These materials are not
+relicensed under the project-authored artifact MIT grant.

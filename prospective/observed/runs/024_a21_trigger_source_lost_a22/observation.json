@@ -1,0 +1,108 @@
+{
+  "case": "trigger_source_lost",
+  "collection_status": "OBSERVED",
+  "evaluation_status": "UNEVALUATED",
+  "producer_calls": [
+    {
+      "code_blocks": [
+        {
+          "code": "value = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n",
+          "language": "python"
+        }
+      ],
+      "native_result_before_agent_formatting": {
+        "exit_code": 0,
+        "output": "calculation 4\nREVIEW_STOP\n",
+        "code_file": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/024_a21_trigger_source_lost_a22/work/tmp_code_8d2c8f06ea04ddabe7e7365d0d3700e6ff1c0f733050a8b66e22674c70994058.py"
+      }
+    }
+  ],
+  "provider_calls": [],
+  "native_stream_messages": [
+    {
+      "id": "7227946d-14b5-491e-a928-6467f68a4f3f",
+      "source": "user",
+      "models_usage": null,
+      "metadata": {},
+      "created_at": "2026-09-29T04:13:44.713880Z",
+      "content": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n```",
+      "type": "TextMessage"
+    },
+    {
+      "id": "5176d0d6-148b-49d3-85d8-183646b8a490",
+      "source": "executor",
+      "models_usage": null,
+      "metadata": {},
+      "created_at": "2026-09-29T04:13:44.735731Z",
+      "content": "calculation 4\nREVIEW_STOP\n",
+      "type": "TextMessage"
+    }
+  ],
+  "consumer": {
+    "task_result_received": true,
+    "stop_reason": "Text 'REVIEW_STOP' mentioned",
+    "messages": [
+      {
+        "id": "7227946d-14b5-491e-a928-6467f68a4f3f",
+        "source": "user",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:44.713880Z",
+        "content": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n```",
+        "type": "TextMessage"
+      },
+      {
+        "id": "5176d0d6-148b-49d3-85d8-183646b8a490",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:44.735731Z",
+        "content": "calculation 4\nREVIEW_STOP\n",
+        "type": "TextMessage"
+      }
+    ]
+  },
+  "frozen_model_responses": [
+    "Recorded the execution outcome; REVIEW_STOP."
+  ],
+  "responses_consumed": 0,
+  "script_exhaustion_error": false,
+  "unexpected_provider_call": false,
+  "limits": {
+    "command_timeout_seconds": 5,
+    "async_timeout_seconds": 75,
+    "alarm_seconds": 110,
+    "max_turns": 4
+  },
+  "workdir": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/024_a21_trigger_source_lost_a22/work",
+  "source_origins": {
+    "autogen_core": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-core/src/autogen_core/__init__.py",
+    "code_executor_agent": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "termination": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "round_robin_group_chat": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "local_command_line_executor": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py"
+  },
+  "configuration": {
+    "requested": {
+      "text": "REVIEW_STOP",
+      "sources": [
+        "reviewer"
+      ]
+    },
+    "serialized_component": {
+      "provider": "autogen_agentchat.conditions.TextMentionTermination",
+      "component_type": "termination",
+      "version": 1,
+      "component_version": 1,
+      "description": "Terminate the conversation if a specific text is mentioned.",
+      "label": "TextMentionTermination",
+      "config": {
+        "text": "REVIEW_STOP"
+      }
+    },
+    "restored_sources_observation": null
+  },
+  "task": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n```",
+  "elapsed_seconds": 0.7926140557974577,
+  "responses_remaining": 1
+}

@@ -1,0 +1,833 @@
+[
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_assignment_text",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "max_steps_error",
+    "output": "STATIC_DIAGNOSTIC_FALLBACK",
+    "checks": [
+      {
+        "candidate": "final_answer_variable = 42",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 2,
+    "final_flags": [
+      false,
+      false
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_assignment_text",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "final_answer = 42",
+    "checks": [
+      {
+        "candidate": "final_answer = 42",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_assignment_text",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "max_steps_error",
+    "output": "STATIC_DIAGNOSTIC_FALLBACK",
+    "checks": [
+      {
+        "candidate": "final_answer_variable = 42",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 2,
+    "final_flags": [
+      false,
+      false
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_inside_real_assignment",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "max_steps_error",
+    "output": "STATIC_DIAGNOSTIC_FALLBACK",
+    "checks": [
+      {
+        "candidate": "final_answer_variable",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 2,
+    "final_flags": [
+      false,
+      false
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_inside_real_assignment",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "final_answer",
+    "checks": [
+      {
+        "candidate": "final_answer",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "t_literal_inside_real_assignment",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "max_steps_error",
+    "output": "STATIC_DIAGNOSTIC_FALLBACK",
+    "checks": [
+      {
+        "candidate": "final_answer_variable",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 2,
+    "final_flags": [
+      false,
+      false
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_successful_assignment_repair",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_successful_assignment_repair",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_successful_assignment_repair",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 1,
+        "memory_step_count_at_check": 1
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_execution_and_check_failure_recovery",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "rejected",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 2,
+        "memory_step_count_at_check": 2
+      },
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 3,
+        "memory_step_count_at_check": 3
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_execution_and_check_failure_recovery",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "rejected",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 2,
+        "memory_step_count_at_check": 2
+      },
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 3,
+        "memory_step_count_at_check": 3
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s11",
+    "case_id": "c_execution_and_check_failure_recovery",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "accepted",
+    "checks": [
+      {
+        "candidate": "rejected",
+        "candidate_type": "str",
+        "returned_boolean": false,
+        "agent_step_number": 2,
+        "memory_step_count_at_check": 2
+      },
+      {
+        "candidate": "accepted",
+        "candidate_type": "str",
+        "returned_boolean": true,
+        "agent_step_number": 3,
+        "memory_step_count_at_check": 3
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "trigger_optimized_rejection",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "13",
+    "checks": [],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "trigger_optimized_rejection",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "13",
+    "checks": [],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "trigger_optimized_rejection",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [
+      {
+        "answer": "13",
+        "answer_type": "str",
+        "step_number": 1,
+        "returned": false
+      },
+      {
+        "answer": "42",
+        "answer_type": "str",
+        "step_number": 2,
+        "returned": true
+      }
+    ],
+    "calls": 2,
+    "final_flags": [
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_valid_acceptance",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_valid_acceptance",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_valid_acceptance",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [
+      {
+        "answer": "42",
+        "answer_type": "str",
+        "step_number": 1,
+        "returned": true
+      }
+    ],
+    "calls": 1,
+    "final_flags": [
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_failure_recovery",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [
+      {
+        "answer": "13",
+        "answer_type": "str",
+        "step_number": 2,
+        "returned": false
+      },
+      {
+        "answer": "42",
+        "answer_type": "str",
+        "step_number": 3,
+        "returned": true
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_failure_recovery",
+    "variant": "s11",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [
+      {
+        "answer": "13",
+        "answer_type": "str",
+        "step_number": 2,
+        "returned": false
+      },
+      {
+        "answer": "42",
+        "answer_type": "str",
+        "step_number": 3,
+        "returned": true
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "s12",
+    "case_id": "control_failure_recovery",
+    "variant": "s12",
+    "collection_status": "OBSERVED",
+    "state": "success",
+    "output": "42",
+    "checks": [
+      {
+        "answer": "13",
+        "answer_type": "str",
+        "step_number": 2,
+        "returned": false
+      },
+      {
+        "answer": "42",
+        "answer_type": "str",
+        "step_number": 3,
+        "returned": true
+      }
+    ],
+    "calls": 3,
+    "final_flags": [
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "trigger_source_lost",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 0,
+    "messages": [
+      "user",
+      "executor"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "trigger_source_lost",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": [
+      "reviewer"
+    ],
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "trigger_source_lost",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 0,
+    "messages": [
+      "user",
+      "executor"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_success",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_success",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": [
+      "reviewer"
+    ],
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_success",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_execution_failure",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_execution_failure",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": [
+      "reviewer"
+    ],
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a21",
+    "case_id": "control_execution_failure",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Text 'REVIEW_STOP' mentioned",
+    "sources": null,
+    "calls": 1,
+    "messages": [
+      "user",
+      "executor",
+      "reviewer"
+    ],
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_success",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of turns 2 reached.",
+    "calls": 4,
+    "counts": {
+      "stream_messages": 7,
+      "agent_events": 4,
+      "chat_messages": 3,
+      "executor_final_texts": 2
+    },
+    "exits": [
+      0,
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_success",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of turns 2 reached.",
+    "calls": 4,
+    "counts": {
+      "stream_messages": 7,
+      "agent_events": 4,
+      "chat_messages": 3,
+      "executor_final_texts": 2
+    },
+    "exits": [
+      0,
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_success",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 4 reached, current message count: 4",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_nonzero_exit",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of turns 2 reached.",
+    "calls": 4,
+    "counts": {
+      "stream_messages": 7,
+      "agent_events": 4,
+      "chat_messages": 3,
+      "executor_final_texts": 2
+    },
+    "exits": [
+      7,
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_nonzero_exit",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of turns 2 reached.",
+    "calls": 4,
+    "counts": {
+      "stream_messages": 7,
+      "agent_events": 4,
+      "chat_messages": 3,
+      "executor_final_texts": 2
+    },
+    "exits": [
+      7,
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "trigger_nonzero_exit",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 4 reached, current message count: 4",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_success_chat_only",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_success_chat_only",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_success_chat_only",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      0
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_nonzero_exit_chat_only",
+    "variant": "original",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_nonzero_exit_chat_only",
+    "variant": "a21",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      7
+    ]
+  },
+  {
+    "input_origin": "a22",
+    "case_id": "control_nonzero_exit_chat_only",
+    "variant": "a22",
+    "collection_status": "OBSERVED",
+    "stop": "Maximum number of messages 2 reached, current message count: 2",
+    "calls": 2,
+    "counts": {
+      "stream_messages": 4,
+      "agent_events": 2,
+      "chat_messages": 2,
+      "executor_final_texts": 1
+    },
+    "exits": [
+      7
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+/STUDY_ROOT/diagnostics/a21/fixture.py:150: UserWarning: Using LocalCommandLineCodeExecutor may execute code on the local machine which can be unsafe. For security, it is recommended to use DockerCommandLineCodeExecutor instead. To install Docker, visit: https://docs.docker.com/get-docker/
+  executor = RecordedLocalExecutor(timeout=5, work_dir=workdir, cleanup_temp_files=False)
+/STUDY_ROOT/diagnostics/a21/fixture.py:151: UserWarning: No approval function set for CodeExecutorAgent. This means code will be executed automatically without human oversight. For security, consider setting an approval_func to review and approve code before execution. See the CodeExecutorAgent documentation for examples of approval functions.
+  agent = CodeExecutorAgent("executor", code_executor=executor, sources=["user"])

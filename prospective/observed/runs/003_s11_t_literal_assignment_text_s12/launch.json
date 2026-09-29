@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/STUDY_ROOT/venv/bin/python",
+    "-B",
+    "/STUDY_ROOT/diagnostics/s11/fixture.py",
+    "--case",
+    "t_literal_assignment_text",
+    "--workdir",
+    "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/003_s11_t_literal_assignment_text_s12/work",
+    "--output",
+    "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/003_s11_t_literal_assignment_text_s12/observation.json"
+  ],
+  "environment": {
+    "PATH": "/STUDY_ROOT/venv/bin:/usr/bin:/bin",
+    "LANG": "C.UTF-8",
+    "PYTHONPATH": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/s12/src",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHON_DOTENV_DISABLED": "1",
+    "HF_HUB_OFFLINE": "1",
+    "HF_HUB_DISABLE_TELEMETRY": "1",
+    "OTEL_SDK_DISABLED": "true",
+    "DO_NOT_TRACK": "1",
+    "XDG_CACHE_HOME": "/STUDY_ROOT/cache",
+    "TMPDIR": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/003_s11_t_literal_assignment_text_s12/tmp"
+  },
+  "selected_source": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/s12",
+  "started_at": "2026-09-29T04:13:13.137423+00:00"
+}

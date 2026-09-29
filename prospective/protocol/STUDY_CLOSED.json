@@ -1,0 +1,23 @@
+{
+  "closed_at": "2026-09-29T04:29:43.165250+00:00",
+  "status": "BOUNDED_PROSPECTIVE_STUDY_CLOSED",
+  "families": 2,
+  "diagnostic_opportunities": 4,
+  "frozen_inputs": 14,
+  "trigger_inputs": 6,
+  "control_inputs": 8,
+  "native_experimental_calls": 42,
+  "fixture_wiring_repairs": 0,
+  "adjudication": "Two SUPPORTED_WITH_SCOPE and two SUPPORTED, retaining distinct classification boundaries",
+  "normal_control_calls": 24,
+  "ordinary_and_guided_findings": "Each context yields a distinct supported mechanism in each framework; no observed finding-count advantage from guidance",
+  "not_established": [
+    "general diagnostic superiority",
+    "method equivalence",
+    "failure prevalence",
+    "human developer benefit",
+    "live-model or benchmark utility",
+    "novel general theory"
+  ],
+  "next": "Manuscript and anonymized distribution verification; no new diagnostic opportunities."
+}

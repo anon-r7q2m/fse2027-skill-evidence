@@ -1,0 +1,15 @@
+{
+  "family": "smolagents",
+  "input_origin": "s12",
+  "case_id": "control_failure_recovery",
+  "variant": "s11",
+  "run_name": "020_s12_control_failure_recovery_s11",
+  "started_at": "2026-09-29T04:13:39.236841+00:00",
+  "process_id": 1074590,
+  "return_code": 0,
+  "elapsed_seconds": 1.367282603867352,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "OBSERVED",
+  "observation_sha256": "445eb6baca7a9b8e1d75ca3447faa83a89c5b405a0687aa66824ca1bf3fa12fd",
+  "finished_at": "2026-09-29T04:13:40.605504+00:00"
+}

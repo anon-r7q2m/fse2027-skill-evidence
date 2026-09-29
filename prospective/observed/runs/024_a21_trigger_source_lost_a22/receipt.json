@@ -1,0 +1,15 @@
+{
+  "family": "autogen",
+  "input_origin": "a21",
+  "case_id": "trigger_source_lost",
+  "variant": "a22",
+  "run_name": "024_a21_trigger_source_lost_a22",
+  "started_at": "2026-09-29T04:13:43.861084+00:00",
+  "process_id": 1075363,
+  "return_code": 0,
+  "elapsed_seconds": 0.9669173019938171,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "OBSERVED",
+  "observation_sha256": "ae53ec386a825f24acb532a7d5753947c003ce7f880792cf0938fecff7bfc1cc",
+  "finished_at": "2026-09-29T04:13:44.829237+00:00"
+}

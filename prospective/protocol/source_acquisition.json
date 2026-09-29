@@ -1,0 +1,31 @@
+{
+  "selected_at": "2026-09-29T03:39:09.515526+00:00",
+  "selection": "Public Python framework, native consumer, local execution; before implementation inspection",
+  "targets": [
+    {
+      "family": "smolagents",
+      "repository": "https://github.com/huggingface/smolagents",
+      "commit": "227ef5e49ddd82339295939072f0223249aa8d38",
+      "commit_date": "2026-09-23T13:12:58Z",
+      "selected_interface": "CodeAgent final-answer checking/acceptance",
+      "archive_sha256": "df90888e54a4bc1346f74459f9fdd720554f5ef8ae7956acb92f8617834261ea",
+      "archive_bytes": 1195346,
+      "source_files": 185,
+      "source_dir": "/STUDY_ROOT/sources/smolagents"
+    },
+    {
+      "family": "autogen",
+      "repository": "https://github.com/microsoft/autogen",
+      "commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+      "commit_date": "2026-04-06T22:35:32Z",
+      "selected_interface": "CodeExecutorAgent local execution and native team termination",
+      "archive_sha256": "8cddbcfcade34b5dbaa71f6f2ef1539b583321370ded6ebf09b7adaf08cb0192",
+      "archive_bytes": 23027919,
+      "source_files": 1837,
+      "source_dir": "/STUDY_ROOT/sources/autogen"
+    }
+  ],
+  "implementation_inspected": false,
+  "behavior_executed": false,
+  "acquired_at": "2026-09-29T03:39:45.919132+00:00"
+}

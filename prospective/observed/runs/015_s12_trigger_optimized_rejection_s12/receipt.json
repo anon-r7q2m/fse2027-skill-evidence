@@ -1,0 +1,15 @@
+{
+  "family": "smolagents",
+  "input_origin": "s12",
+  "case_id": "trigger_optimized_rejection",
+  "variant": "s12",
+  "run_name": "015_s12_trigger_optimized_rejection_s12",
+  "started_at": "2026-09-29T04:13:30.329648+00:00",
+  "process_id": 1073437,
+  "return_code": 0,
+  "elapsed_seconds": 1.8690149900503457,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "OBSERVED",
+  "observation_sha256": "75b2ee38022a4b188870995514f80ed663fc3d6cbeca5f7bf3f449ea7071dbde",
+  "finished_at": "2026-09-29T04:13:32.200512+00:00"
+}

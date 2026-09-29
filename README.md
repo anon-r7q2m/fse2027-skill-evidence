@@ -58,6 +58,19 @@ The output directory must have no existing per-host result files. See
 [complete eight-condition report](source_paths/REPORT.md). Native methods are
 executed with explicit runtime/model/state mocks, not a running agent service.
 
+## Prospective native workflows
+
+[The prospective study](prospective/README.md) adds four frozen diagnostic
+predictions on pinned smolagents and AutoGen versions. Its fourteen inputs run
+through complete native imports, local executors and receiving decisions using
+finite scripted providers; original and separate interventions give 42 calls.
+Both ordinary and principle-guided contexts find different supported mechanisms.
+No general diagnostic advantage or live-model task gain is established.
+Full source archives, runtime requirements, scripts, patches, native records,
+qualification and adjudication are provided. Dependency setup needs PyPI access;
+the bounded target replay then needs neither network nor credentials. This is
+separate from the standard-library source-slice entries above.
+
 ## Reading guide
 
 Start with [claim-level evidence and coverage](CLAIM_EVIDENCE.md). New dated

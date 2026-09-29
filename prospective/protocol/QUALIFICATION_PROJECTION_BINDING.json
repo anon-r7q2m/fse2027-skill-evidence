@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-09-29T04:23:36.401581+00:00",
+  "scope": "Post-execution verification of the existing pre-execution label-concealment projection; not a new pre-execution seal. Only top-level metadata fields were deleted. All retained predictions, inputs, obligations, oracles and dependencies are equal to sealed originals.",
+  "deleted_field_allowlist": [
+    "slot",
+    "familiarity_disclosure",
+    "prediction_id",
+    "guidance",
+    "timing",
+    "tool_accounting",
+    "static_validation"
+  ],
+  "rows": [
+    {
+      "slot": "s11",
+      "qualification_case": "case_x",
+      "original_sha256": "889db0ea4faf0e7c9d9dbc14efa7599eb45ff9d4d69867abede4e501696fbf55",
+      "sealed_sha256": "889db0ea4faf0e7c9d9dbc14efa7599eb45ff9d4d69867abede4e501696fbf55",
+      "original_matches_preexecution_seal": true,
+      "removed_metadata_field_names": [
+        "slot",
+        "familiarity_disclosure"
+      ],
+      "qualified_projection_sha256": "c78c2d6259fdb68ba49afaa641ccf0097d8e0ec7afde58fa0982ea7f5dfc2fab",
+      "all_retained_fields_identical": true
+    },
+    {
+      "slot": "s12",
+      "qualification_case": "case_y",
+      "original_sha256": "21ade9a5b745a212fde22e31d62349eaac57009a65405a3ee55bcae73066c9bf",
+      "sealed_sha256": "21ade9a5b745a212fde22e31d62349eaac57009a65405a3ee55bcae73066c9bf",
+      "original_matches_preexecution_seal": true,
+      "removed_metadata_field_names": [
+        "familiarity_disclosure",
+        "prediction_id"
+      ],
+      "qualified_projection_sha256": "1e7cfd810a95b528eeadd4fd5a3e7b6f8fa078fafff3ab65c2aa0222dec23db7",
+      "all_retained_fields_identical": true
+    },
+    {
+      "slot": "a21",
+      "qualification_case": "case_u",
+      "original_sha256": "b28d7110f4c3c6e89026286e071623e7748d8665a659db5554c2f75870622411",
+      "sealed_sha256": "b28d7110f4c3c6e89026286e071623e7748d8665a659db5554c2f75870622411",
+      "original_matches_preexecution_seal": true,
+      "removed_metadata_field_names": [
+        "slot",
+        "familiarity_disclosure",
+        "timing",
+        "tool_accounting",
+        "static_validation"
+      ],
+      "qualified_projection_sha256": "d6abafc28aa1e62aabee9b77f2c11c0922f27d17e56719fa459c8bab20028ecc",
+      "all_retained_fields_identical": true
+    },
+    {
+      "slot": "a22",
+      "qualification_case": "case_v",
+      "original_sha256": "e2d6c80e8c2b394994cd701fe6b4ecedee82dfef7d8971874ebe376edb402751",
+      "sealed_sha256": "e2d6c80e8c2b394994cd701fe6b4ecedee82dfef7d8971874ebe376edb402751",
+      "original_matches_preexecution_seal": true,
+      "removed_metadata_field_names": [
+        "slot",
+        "familiarity_disclosure"
+      ],
+      "qualified_projection_sha256": "b9ce89a4ec81201636dbc26131715b6930654b02c1efbfd55ccb49c020365b16",
+      "all_retained_fields_identical": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "family": "autogen",
+  "input_origin": "a22",
+  "case_id": "trigger_nonzero_exit",
+  "variant": "a21",
+  "run_name": "035_a22_trigger_nonzero_exit_a21",
+  "started_at": "2026-09-29T04:13:54.417719+00:00",
+  "process_id": 1076589,
+  "return_code": 0,
+  "elapsed_seconds": 0.9668626198545098,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "COMPLETED",
+  "observation_sha256": "ddc19849cd6d757cedccdba23e11ff5b56224f9f1b4a7419d4bf5d572d6253d7",
+  "finished_at": "2026-09-29T04:13:55.385756+00:00"
+}

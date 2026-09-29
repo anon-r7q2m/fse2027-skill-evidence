@@ -1,0 +1,21 @@
+{
+  "frozen_at": "2026-09-29T03:41:19.375234+00:00",
+  "stage": "G1_DIAGNOSTIC_INPUTS",
+  "files": {
+    "PROTOCOL.md": "68d1ae46d537be15c12be449ab45420e54cb038b55b83707c83de0ac318d4059",
+    "source_selection.json": "8dc2881408f0f7ad62a7b0e7084adcb4de62621d2b0143cc461f2e02ffaf5785",
+    "source_acquisition.json": "9e7f04ae81c1e90ba1f1fca4859f0e68030e36b7383cbe16d8f71f3fb46739f1",
+    "allocation.json": "e812a0ea9bc3b625518079424e90ca18adc857d9f74b44978e7afcbbcd7dde20",
+    "DESIGN_REVIEW.md": "4a4f2d71cfb9b2225da75f20ae1a31bc3da4239fbb6bc365662b032b1aecccf5"
+  },
+  "target_runtime_executed": false,
+  "common_input_and_output_schema_may_reduce_guidance_contrast": true,
+  "original_files": {
+    "PROTOCOL.md": "68d1ae46d537be15c12be449ab45420e54cb038b55b83707c83de0ac318d4059",
+    "source_selection.json": "8dc2881408f0f7ad62a7b0e7084adcb4de62621d2b0143cc461f2e02ffaf5785",
+    "source_acquisition.json": "266801d1b14e21d7fd953432361cafbb2591a68b3f645303571d822992a2a564",
+    "allocation.json": "ec91763737ea7c835a54a258b5db65c4928830635f453d849b06c5527a5c017e",
+    "DESIGN_REVIEW.md": "4a4f2d71cfb9b2225da75f20ae1a31bc3da4239fbb6bc365662b032b1aecccf5"
+  },
+  "publication_hash_scope": "files binds the path-anonymized public serialization; original_files retains the original pre-execution seal. Predictions, scripts and oracles are unchanged. The original seal timestamp is not a timestamp of these derived bytes."
+}

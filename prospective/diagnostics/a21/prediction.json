@@ -1,0 +1,362 @@
+{
+  "status": "PREDICTION",
+  "family": "autogen",
+  "slot": "a21",
+  "title": "Source-restricted TextMentionTermination loses its restriction through native component configuration",
+  "familiarity_disclosure": {
+    "prior": "General conceptual familiarity with AutoGen agents, teams and replay clients; no recalled prior encounter with this exact missing-sources serialization defect.",
+    "current_exposure": "Assigned packet and pinned public source only. Directly read test_mention_termination including its source-filter example; source searches also exposed replay/local-executor/serialization test locations.",
+    "excluded_exposure": "No manuscript/studies, memory files, sibling diagnostic files, remote issues, web search, model API, or target execution.",
+    "upstream_tests_read": [
+      {
+        "path": "python/packages/autogen-agentchat/tests/test_termination_condition.py",
+        "lines": "138-157",
+        "role": "Existing direct-constructor source-filter contract; no round trip in these exposed lines."
+      }
+    ],
+    "upstream_test_search_only": [
+      "python/packages/autogen-agentchat/tests/test_code_executor_agent.py"
+    ]
+  },
+  "source_paths": [
+    "python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "python/packages/autogen-core/src/autogen_core/_component_config.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/agents/_assistant_agent.py",
+    "python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py",
+    "python/packages/autogen-ext/src/autogen_ext/code_executors/_common.py",
+    "python/packages/autogen-core/src/autogen_core/code_executor/_base.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_chat_agent_container.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/messages.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/base/_task.py",
+    "python/packages/autogen-ext/src/autogen_ext/models/replay/_replay_chat_completion_client.py",
+    "python/packages/autogen-agentchat/tests/test_termination_condition.py"
+  ],
+  "source_identity": {
+    "root": "/STUDY_ROOT/sources/autogen",
+    "package_manifest_version": "0.7.5",
+    "git_commit": null,
+    "git_note": "The pinned exported checkout has no usable Git metadata; git rev-parse HEAD failed.",
+    "intervention_target_sha256": "cd9c0da75906da1728432fc96ae0566591dfb180524d3fb585bfdb8ff0260f5d"
+  },
+  "native_entry": {
+    "configuration": "TextMentionTermination(\"REVIEW_STOP\", sources=[\"reviewer\"]).dump_component() -> TerminationCondition.load_component",
+    "producer": "CodeExecutorAgent(\"executor\", code_executor=LocalCommandLineCodeExecutor(timeout=5), sources=[\"user\"])",
+    "team": "RoundRobinGroupChat([executor, reviewer], termination_condition=restored, max_turns=4).run_stream(task=case_task)",
+    "consumer": "BaseGroupChatManager._apply_termination_condition -> native TextMentionTermination.__call__ -> GroupChatTermination -> TaskResult.stop_reason",
+    "observation": "Native TaskResult and native stream messages, plus observation-only subclass calling native local execution unchanged."
+  },
+  "public_obligation": [
+    {
+      "quote": "sources: Check only messages of the specified agents for the text to look for.",
+      "path": "python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+      "line": 117
+    },
+    {
+      "quote": "matching the configuration of this instance.",
+      "path": "python/packages/autogen-core/src/autogen_core/_component_config.py",
+      "line": 136,
+      "context": "The public _to_config contract requires a configuration that creates a matching component."
+    },
+    {
+      "quote": "Dump the component to a model that can be loaded back in.",
+      "path": "python/packages/autogen-core/src/autogen_core/_component_config.py",
+      "line": 146
+    }
+  ],
+  "failure_class": {
+    "classification": "framework_defect",
+    "mechanism": "Configuration round trip drops a documented message-source restriction and broadens native termination eligibility.",
+    "not_claimed": "Termination after nonzero execution is not a bug by itself. The marker is not a success label. No claim about model answer quality."
+  },
+  "expected_original": {
+    "configuration": "Exported config contains text but no sources; restored _sources is None.",
+    "trigger": "After one real exit-0 local execution, executor output contains the marker; the native team terminates before reviewer is called.",
+    "controls": "Both controls reach reviewer and terminate on its marker, with raw exits 0 and 7 respectively."
+  },
+  "expected_intervention": {
+    "configuration": "Exported config contains sources=[reviewer]; restored condition preserves that restriction.",
+    "trigger": "Executor output alone cannot terminate; reviewer is called once and its native final text causes termination.",
+    "controls": "Both controls retain the original legitimate reviewer termination and raw execution facts."
+  },
+  "primary_oracle": {
+    "eligibility": [
+      "collection_status must be OBSERVED, not INCONCLUSIVE; evaluation_status remains UNEVALUATED inside the fixture.",
+      "Verify source_origins resolve to the root-selected complete original or patched checkout.",
+      "Exactly one producer_calls entry must contain exactly the frozen case code and a native result; missing execution is inconclusive.",
+      "No unexpected_provider_call or script_exhaustion_error; native TaskResult must be present."
+    ],
+    "trigger": [
+      "The task does not contain contiguous REVIEW_STOP.",
+      "The raw native process exits 0 and output includes calculation 4 and REVIEW_STOP.",
+      "The executor native text message includes REVIEW_STOP, although the requested eligible source is reviewer only."
+    ],
+    "wrong_decision": [
+      "Original trigger has TaskResult.stop_reason == Text 'REVIEW_STOP' mentioned.",
+      "Original trigger native TaskResult message sources are exactly [user, executor]; there is no reviewer message.",
+      "Original trigger has zero provider calls and zero consumed responses; restored_sources_observation is null.",
+      "Wrongness derives from lost configured source eligibility, not from the stop reason string or process exit status alone."
+    ],
+    "intervention": [
+      "Patched trigger preserves [reviewer] in exported and restored configuration.",
+      "Its producer code, exit 0 and output agree with the original.",
+      "Its native TaskResult message sources are [user, executor, reviewer] and stop reason is Text 'REVIEW_STOP' mentioned.",
+      "Exactly one allowed provider create call consumes the same fixed reviewer response."
+    ],
+    "controls": [
+      "control_success: both variants execute once with raw exit 0 and calculation 4 output, then stop only after the reviewer message and one allowed provider call.",
+      "control_execution_failure: both variants execute once with raw exit 7 and check failed intentionally output; the executor message reports POSIX exit code 7, then reviewer legitimately terminates with one provider call.",
+      "No successful-task inference is attached to the failure control or any marker."
+    ],
+    "falsification": [
+      "A fully observed original trigger reaches reviewer before termination, or preserves the filter.",
+      "A fully observed patched trigger still stops on executor without reviewer, or changes producer facts.",
+      "A fully observed legitimate control changes its required exit status or authorized reviewer termination."
+    ],
+    "inconclusive": "Import/fixture failure, unexpected call shape, extra-call exhaustion, timeout, wrong selected sources, or missing native execution/TaskResult must not count as confirmed defect or patch success."
+  },
+  "cases": [
+    {
+      "id": "trigger_source_lost",
+      "kind": "trigger",
+      "frozen_input": {
+        "task": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n```",
+        "local_python_code": "value = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n",
+        "reviewer_system_message": "Record the execution outcome, then end this review.",
+        "provider_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "termination_constructor": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "configuration_path": "dump_component().model_dump(mode=\"json\") then TerminationCondition.load_component",
+        "team_participant_order": [
+          "executor",
+          "reviewer"
+        ],
+        "code_executor_agent_sources": [
+          "user"
+        ],
+        "max_turns": 4,
+        "per_command_timeout_seconds": 5
+      },
+      "expectation": {
+        "native_process_exit_code": 0,
+        "original_message_sources": [
+          "user",
+          "executor"
+        ],
+        "patched_message_sources": [
+          "user",
+          "executor",
+          "reviewer"
+        ],
+        "original_provider_calls": 0,
+        "patched_provider_calls": 1,
+        "native_stop_reason_both_variants": "Text 'REVIEW_STOP' mentioned",
+        "task_success_inferred_from_termination": false
+      }
+    },
+    {
+      "id": "control_success",
+      "kind": "control",
+      "frozen_input": {
+        "task": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n```",
+        "local_python_code": "value = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n",
+        "reviewer_system_message": "Record the execution outcome, then end this review.",
+        "provider_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "termination_constructor": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "configuration_path": "dump_component().model_dump(mode=\"json\") then TerminationCondition.load_component",
+        "team_participant_order": [
+          "executor",
+          "reviewer"
+        ],
+        "code_executor_agent_sources": [
+          "user"
+        ],
+        "max_turns": 4,
+        "per_command_timeout_seconds": 5
+      },
+      "expectation": {
+        "native_process_exit_code": 0,
+        "original_message_sources": [
+          "user",
+          "executor",
+          "reviewer"
+        ],
+        "patched_message_sources": [
+          "user",
+          "executor",
+          "reviewer"
+        ],
+        "original_provider_calls": 1,
+        "patched_provider_calls": 1,
+        "native_stop_reason_both_variants": "Text 'REVIEW_STOP' mentioned",
+        "task_success_inferred_from_termination": false
+      }
+    },
+    {
+      "id": "control_execution_failure",
+      "kind": "control",
+      "frozen_input": {
+        "task": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nimport sys\nprint(\"check failed intentionally\", file=sys.stderr)\nraise SystemExit(7)\n```",
+        "local_python_code": "import sys\nprint(\"check failed intentionally\", file=sys.stderr)\nraise SystemExit(7)\n",
+        "reviewer_system_message": "Record the execution outcome, then end this review.",
+        "provider_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "termination_constructor": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "configuration_path": "dump_component().model_dump(mode=\"json\") then TerminationCondition.load_component",
+        "team_participant_order": [
+          "executor",
+          "reviewer"
+        ],
+        "code_executor_agent_sources": [
+          "user"
+        ],
+        "max_turns": 4,
+        "per_command_timeout_seconds": 5
+      },
+      "expectation": {
+        "native_process_exit_code": 7,
+        "original_message_sources": [
+          "user",
+          "executor",
+          "reviewer"
+        ],
+        "patched_message_sources": [
+          "user",
+          "executor",
+          "reviewer"
+        ],
+        "original_provider_calls": 1,
+        "patched_provider_calls": 1,
+        "native_stop_reason_both_variants": "Text 'REVIEW_STOP' mentioned",
+        "task_success_inferred_from_termination": false
+      }
+    }
+  ],
+  "provider_contract": {
+    "responses": [
+      "Recorded the execution outcome; REVIEW_STOP."
+    ],
+    "maximum_responses": 1,
+    "allowed_call_count": [
+      0,
+      1
+    ],
+    "allowed_call_shape": {
+      "method": "create",
+      "stream": false,
+      "message_types_in_order": [
+        "SystemMessage",
+        "UserMessage",
+        "UserMessage"
+      ],
+      "user_message_sources_in_order": [
+        "user",
+        "executor"
+      ],
+      "message_content_types": [
+        "str",
+        "str",
+        "str"
+      ],
+      "tools": [],
+      "tool_choice": "auto",
+      "json_output": null,
+      "extra_create_args": {}
+    },
+    "response_selection": "Next fixed list entry only; no branching on runtime content, variant or arm.",
+    "exhaustion_policy": "An attempted additional call beyond the list is an explicit script_exhaustion_error and INCONCLUSIVE. Ordinary consumption of the last response is recorded by responses_remaining=0."
+  },
+  "local_intervention_description": {
+    "file": "intervention.patch",
+    "target": "python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "change": "Add optional sources to TextMentionTerminationConfig, preserve a list copy in _to_config, and pass sources from _from_config.",
+    "contract_preserved": "Substring marker matching, source restriction, unrestricted default None, and termination after legitimate execution failure remain allowed.",
+    "not_claimed": "No global minimality proof; cannot recover a filter already omitted from a historical exported config."
+  },
+  "dependencies": {
+    "python": "/STUDY_ROOT/venv/bin/python",
+    "packages": [
+      "autogen-core 0.7.5 metadata plus root-selected source",
+      "autogen-agentchat 0.7.5 metadata plus root-selected source",
+      "autogen-ext 0.7.5 metadata plus root-selected source",
+      "Declared core dependencies including pydantic >=2.10,<3, pillow, typing-extensions, protobuf, opentelemetry-api and jsonref"
+    ],
+    "platform": "Linux/Unix signal.SIGALRM and local Python subprocess execution",
+    "no_services": true,
+    "root_launch_requirements": [
+      "Root selects matching core/agentchat/ext src roots via PYTHONPATH.",
+      "One fresh or empty owned workdir per case and variant.",
+      "External total-process timeout <=120 seconds."
+    ],
+    "limits": {
+      "command_timeout_seconds": 5,
+      "max_turns": 4,
+      "async_timeout_seconds": 75,
+      "wall_alarm_seconds": 110
+    }
+  },
+  "limitations": [
+    "Static prediction only. Framework, fixture, tests and trusted commands have not been imported or run during diagnosis.",
+    "The reviewer is a fixed provider response, not an independently measured semantic checker.",
+    "The framework marker means termination, not successful task completion.",
+    "Scope is the native serialized condition path within CodeExecutorAgent + LocalCommandLineCodeExecutor + RoundRobinGroupChat.",
+    "Module origins must be checked during root execution; no online dependencies or services are used.",
+    "No benchmark score, production frequency or live-model conclusion is supported."
+  ],
+  "static_validation": {
+    "fixture_ast_parsed": true,
+    "three_case_code_asts_parsed": true,
+    "all_initial_tasks_lack_contiguous_marker": true,
+    "patch_hunks_match_pinned_source": 2,
+    "patched_source_ast_parsed_in_memory_only": true,
+    "target_imports_runs_tests_or_probes": 0,
+    "fixture_or_case_execution": 0,
+    "ordinary_validation_correction": "Static type reading showed CodeBlock and CodeResult are dataclasses; fixture observation uses dataclasses.asdict."
+  },
+  "timing": {
+    "first_child_clock_utc": "2026-09-29 03:42:10 UTC",
+    "seal_write_anchor_utc": "2026-09-29 03:51:48 UTC",
+    "observed_interval_seconds": 578.0,
+    "dispatch_to_anchor_lower_bound_seconds": 578.0,
+    "dispatch_to_anchor_upper_bound_seconds": null,
+    "dispatch_timing_note": "Child dispatch timestamp was not supplied. This is a measured lower bound from first clock to the immediate seal write; root can bound the preceding dispatch interval from its own record.",
+    "common_budget_seconds": 5400
+  },
+  "tool_accounting": {
+    "scope": "This child diagnostic from first read through this seal-writing tool call, inclusive.",
+    "functions_exec_wrapper_calls": 11,
+    "nested_exec_command_calls": 16,
+    "nested_apply_patch_calls": 2,
+    "nested_clock_curr_time_calls": 3,
+    "nested_tools_total": 21,
+    "collaboration_send_message_calls_to_parent": 1,
+    "target_execution_calls": 0,
+    "notes": [
+      "Counts are tool invocations, not shell subcommands or tokens.",
+      "One ordinary python command was unavailable; the allowed text-only parser was retried using the packet interpreter.",
+      "One git rev-parse command found no Git repository; no commit or remote command was used."
+    ]
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "status": "PREDICTION",
+  "family": "smolagents",
+  "slot": "s11",
+  "title": "Literal corruption by final_answer variable repair causes avoidable validation rejection",
+  "familiarity_disclosure": {
+    "prior": "General conceptual familiarity with smolagents and code agents; no recollection of this exact literal-rewriting defect, source version, or proposed patch. This is a self-report, not a claim about exclusion from model training data.",
+    "task_exposure": "Read only the assigned packet/output directory and its public source checkout. No remote issues, sibling outputs, manuscript, study results, or memory files were opened. Automatically supplied workspace instructions and a general memory summary were present before assignment but were not consulted as diagnostic evidence.",
+    "upstream_test_exposure": [
+      "tests/test_agents.py:501-521",
+      "tests/test_agents.py:664-738",
+      "tests/test_local_python_executor.py:2139-2175"
+    ],
+    "upstream_examples_exposure": [
+      "docs/source/en/guided_tour.md:367-401",
+      "README.md:205-232",
+      "docs/source/en/tutorials/secure_code_execution.md:49-60"
+    ],
+    "additional_reads": "Public source interfaces, imports, run result/memory serialization, and nearby upstream tests were read or searched to construct the native fixture. Detailed exposure is listed in diagnostic.md."
+  },
+  "source_paths": [
+    {
+      "path": "src/smolagents/agents.py",
+      "lines": "278-291, 436-639, 810-855, 1505-1802",
+      "role": "Public check contract; native run, final validation, max-step state, model calls, CodeAgent preprocessing and execution"
+    },
+    {
+      "path": "src/smolagents/local_python_executor.py",
+      "lines": "332-357, 770-822, 825-921, 941-958, 1449-1463, 1572-1765",
+      "role": "Regex adaptation; literal, assignment, call and native final-answer execution"
+    },
+    {
+      "path": "src/smolagents/default_tools.py",
+      "lines": "83-91",
+      "role": "Native FinalAnswerTool returns its argument"
+    },
+    {
+      "path": "src/smolagents/agent_types.py",
+      "lines": "62-72, 263-280",
+      "role": "Final output string wrapping"
+    },
+    {
+      "path": "src/smolagents/models.py",
+      "lines": "111-164, 452-501, 553-581",
+      "role": "Native model/message interface"
+    },
+    {
+      "path": "src/smolagents/memory.py",
+      "lines": "42-128, 210-285",
+      "role": "Actual decision and message observation"
+    },
+    {
+      "path": "src/smolagents/remote_executors.py",
+      "lines": "43-50",
+      "role": "Import-time dotenv guard requirement"
+    },
+    {
+      "path": "README.md",
+      "lines": "205-232",
+      "role": "Public Python tool-call semantics"
+    }
+  ],
+  "source_pin": {
+    "root": "/STUDY_ROOT/sources/smolagents",
+    "version_from_text": "1.27.0.dev0",
+    "git_commit": null,
+    "note": "The assigned checkout has no accessible .git metadata; one git rev-parse HEAD read failed. Root-owned pin identity is not inferred."
+  },
+  "native_entry": {
+    "api": "CodeAgent(tools=[], model=FrozenModel, executor_type=\"local\", final_answer_checks=[exact_answer], max_steps=case.max_steps).run(task, stream=False, return_full_result=True)",
+    "executor": "Complete native LocalPythonExecutor with timeout_seconds=10; no executor/mock replacement and no direct helper-only acceptance oracle.",
+    "actual_consumer": "MultiStepAgent._run_stream validates ActionOutput, sets ActionStep.is_final_answer/returned_final_answer, and CodeAgent.run returns native RunResult.state/output.",
+    "model_replacement_only": "FrozenModel subclasses the native Model; each fixed response is selected only by call index. Native messages are recorded but never select a response."
+  },
+  "public_obligation": [
+    {
+      "quote": "List of validation functions to run before accepting a final answer.",
+      "source": "src/smolagents/agents.py",
+      "line": 287,
+      "interpretation": "The fixture observes the actual check and final decision, rather than treating a model utterance as acceptance."
+    },
+    {
+      "quote": "This function fixes this behaviour by replacing variable assignments to final_answer with final_answer_variable,\n    while preserving function calls to final_answer().",
+      "source": "src/smolagents/local_python_executor.py",
+      "lines": [
+        335,
+        336
+      ],
+      "interpretation": "The declared adaptation concerns variable identifiers. Trigger 2 and the acceptance control retain that necessary adaptation."
+    },
+    {
+      "quote": "Actions are now Python code snippets. Hence, tool calls will be performed as Python function calls.",
+      "source": "README.md",
+      "line": 232,
+      "interpretation": "A harmless literal string is input data to those calls; it is not an identifier rename target."
+    },
+    {
+      "quote": "# Constant -> just return the value\n        return expression.value",
+      "source": "src/smolagents/local_python_executor.py",
+      "lines": [
+        1462,
+        1463
+      ],
+      "independently_decidable_fact": "The unmodified trigger literal has the expected value. Source-level identifier repair can preserve that value without weakening the validator."
+    }
+  ],
+  "failure_class": {
+    "classification": "FRAMEWORK_DEFECT_PREDICTION",
+    "mechanism": "Raw-text regex identifier adaptation rewrites string literals before native evaluation, so final_answer_checks rejects a correct intended result that preprocessing has corrupted.",
+    "not_claimed": [
+      "The final-answer checker itself is not wrong to reject the corrupted candidate.",
+      "Max-step termination and its explicit max_steps_error state are legitimate behavior.",
+      "No unchecked fallback false-success claim is made.",
+      "No live-model or benchmark improvement is predicted."
+    ]
+  },
+  "expected_original": "Both triggers: changed literal appears in code_action, native producer logs/state and check argument; check returns false; native max_steps=1 produces max_steps_error with the frozen fallback. Both controls retain their specified native behavior.",
+  "expected_intervention": "Both triggers: only true variable Name spans can be renamed; intended literal reaches the same validator, passes, and native RunResult reports success on the first action. Both controls retain their specified native behavior.",
+  "primary_oracle": {
+    "trigger_criteria": "For each trigger, require the exact frozen response script and allowed call shape, native CodeAgent and LocalPythonExecutor, max_steps=1, normal Python optimization level 0, and one checker invocation. Unexpected calls, exhaustion, import failures or unexpected exceptions are INCONCLUSIVE.",
+    "wrong_decision_criteria": "On original source, require the predicted altered literal in the actual action code plus native producer observations/state and check argument; require false check, is_final_answer=false on that action, and actual native RunResult.state=max_steps_error. This is avoidable loss of a valid source-level result caused by framework preprocessing, not success inferred from fallback text.",
+    "intervention_criteria": "On patched source with the identical script, require the intended unchanged literal as native producer/check value, true check, actual action is_final_answer=true, native state=success and exact output, with one model call. Merely stopping with an exception is not a repair.",
+    "control_criteria": "c_successful_assignment_repair must execute the repaired assignment and succeed on both variants. c_execution_and_check_failure_recovery must retain actual execution-error then check-rejection then valid acceptance on both variants, exactly as specified in its expectation.",
+    "joint_decision": "The primary prediction is supported only if both trigger chains and both controls meet their criteria. OBSERVED in fixture JSON means evidence was collected, not that the prediction passed."
+  },
+  "cases": [
+    {
+      "id": "t_literal_assignment_text",
+      "kind": "trigger",
+      "max_steps": 1,
+      "task": "Return exactly the string final_answer = 42, with no extra text.",
+      "validator_expected": "final_answer = 42",
+      "responses": [
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nanswer = \"final_answer = 42\"\nprint(answer)\nfinal_answer(answer)\n</code>"
+        },
+        {
+          "call_kind": "max_steps_fallback",
+          "allowed_kwargs": {},
+          "content": "STATIC_DIAGNOSTIC_FALLBACK"
+        }
+      ],
+      "independently_decidable_input_fact": "The only assignment target is answer. Its assigned ast.Constant.value is the exact string final_answer = 42. There is no variable assignment to final_answer requiring repair.",
+      "expectation": {
+        "original": {
+          "producer_string": "final_answer_variable = 42",
+          "check_booleans": [
+            false
+          ],
+          "native_state": "max_steps_error",
+          "native_output": "STATIC_DIAGNOSTIC_FALLBACK",
+          "model_calls": 2
+        },
+        "intervention": {
+          "producer_string": "final_answer = 42",
+          "check_booleans": [
+            true
+          ],
+          "native_state": "success",
+          "native_output": "final_answer = 42",
+          "model_calls": 1
+        }
+      }
+    },
+    {
+      "id": "t_literal_inside_real_assignment",
+      "kind": "trigger",
+      "max_steps": 1,
+      "task": "Return exactly the string final_answer, with no extra text.",
+      "validator_expected": "final_answer",
+      "responses": [
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nfinal_answer = \"final_answer\"\nprint(final_answer)\nfinal_answer(final_answer)\n</code>"
+        },
+        {
+          "call_kind": "max_steps_fallback",
+          "allowed_kwargs": {},
+          "content": "STATIC_DIAGNOSTIC_FALLBACK"
+        }
+      ],
+      "independently_decidable_input_fact": "The public helper intentionally repairs the variable assignment and reference. Renaming those identifiers does not require changing the assigned ast.Constant.value final_answer.",
+      "expectation": {
+        "original": {
+          "producer_string": "final_answer_variable",
+          "check_booleans": [
+            false
+          ],
+          "native_state": "max_steps_error",
+          "native_output": "STATIC_DIAGNOSTIC_FALLBACK",
+          "model_calls": 2
+        },
+        "intervention": {
+          "producer_string": "final_answer",
+          "check_booleans": [
+            true
+          ],
+          "native_state": "success",
+          "native_output": "final_answer",
+          "model_calls": 1
+        }
+      }
+    },
+    {
+      "id": "c_successful_assignment_repair",
+      "kind": "control",
+      "max_steps": 1,
+      "task": "Return exactly the string accepted, with no extra text.",
+      "validator_expected": "accepted",
+      "responses": [
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nfinal_answer = \"accepted\"\nprint(final_answer)\nfinal_answer(final_answer)\n</code>"
+        },
+        {
+          "call_kind": "max_steps_fallback",
+          "allowed_kwargs": {},
+          "content": "STATIC_DIAGNOSTIC_FALLBACK"
+        }
+      ],
+      "control_purpose": "Ordinary successful acceptance through the actual intended variable-repair path; disabling the helper entirely must fail this control.",
+      "expectation": {
+        "both_variants": {
+          "producer_string": "accepted",
+          "check_booleans": [
+            true
+          ],
+          "native_state": "success",
+          "native_output": "accepted",
+          "model_calls": 1,
+          "required_code_fragment": "final_answer_variable = \"accepted\""
+        }
+      }
+    },
+    {
+      "id": "c_execution_and_check_failure_recovery",
+      "kind": "control",
+      "max_steps": 3,
+      "task": "Return exactly the string accepted, with no extra text.",
+      "validator_expected": "accepted",
+      "responses": [
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nraise ValueError(\"intentional executor failure\")\n</code>"
+        },
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nfinal_answer(\"rejected\")\n</code>"
+        },
+        {
+          "call_kind": "code_action",
+          "allowed_kwargs": {
+            "stop_sequences": [
+              "Observation:",
+              "Calling tools:",
+              "</code>"
+            ]
+          },
+          "content": "<code>\nfinal_answer(\"accepted\")\n</code>"
+        },
+        {
+          "call_kind": "max_steps_fallback",
+          "allowed_kwargs": {},
+          "content": "STATIC_DIAGNOSTIC_FALLBACK"
+        }
+      ],
+      "control_purpose": "A real native execution error must remain an execution failure; a subsequent wrong candidate must remain a rejected check; a valid third candidate must be accepted within the existing step budget.",
+      "expectation": {
+        "both_variants": {
+          "first_step_error_type": "AgentExecutionError",
+          "second_step_error_type": "AgentError",
+          "check_candidates": [
+            "rejected",
+            "accepted"
+          ],
+          "check_booleans": [
+            false,
+            true
+          ],
+          "action_final_flags": [
+            false,
+            false,
+            true
+          ],
+          "native_state": "success",
+          "native_output": "accepted",
+          "model_calls": 3
+        }
+      }
+    }
+  ],
+  "local_intervention_description": {
+    "artifact": "intervention.patch",
+    "kind": "Implementation patch to fix_final_answer_code only",
+    "change": "Parse source to identify actual final_answer Name stores and direct calls. When repair is needed, replace only non-call-target Name spans using UTF-8 byte offsets, back to front. Retain literal data, comments, attributes and original formatting.",
+    "unchanged_consumers": "Native local executor, final-answer tool, final_answer_checks, run loop, configured budgets and result state calculation remain the same.",
+    "scope_limit": "One local candidate intervention; no claim of global minimality, universal Python renaming correctness or namespace-collision resolution.",
+    "original_checkout_modified": false
+  },
+  "dependencies": {
+    "python": "/STUDY_ROOT/venv/bin/python",
+    "version_contract": "Python >=3.10, optimization level 0, POSIX SIGALRM for the fixture deadline",
+    "native_packages": [
+      "smolagents from the root-selected src path",
+      "huggingface-hub>=0.31.2",
+      "requests>=2.32.3",
+      "rich>=13.9.4",
+      "jinja2>=3.1.4",
+      "pillow>=10.0.1",
+      "python-dotenv",
+      "PyYAML"
+    ],
+    "selection": "Set PYTHONPATH to the selected original or patched checkout src. Keep fixture.py and prediction.json together. No fixture flag or environment variable chooses behavior by arm.",
+    "provider_contract": "At most four responses in a case; code_action requires one positional list of native ChatMessage objects plus the exact stop_sequences keyword list; max_steps_fallback requires one such positional list and no keywords. Unused suffixes are allowed. Exhaustion or any shape mismatch is INCONCLUSIVE.",
+    "resource_contract": "Only fixed trusted code with assignments, print, final_answer and one ValueError. No tool subprocesses. Native code timeout 10 seconds; fixture alarm 110 seconds; root total timeout must be <=120 seconds.",
+    "environment": "Offline model stub; suppress telemetry and dotenv loading. An audit hook blocks dotenv reads, socket connections/name resolution and external commands; any resulting import failure is INCONCLUSIVE. No credentials are requested or inspected."
+  },
+  "limitations": [
+    "Prediction and intervention are static and unexecuted; there is no claimed observed effect.",
+    "Both target cases are constructed inputs, not samples of real model behavior or prevalence estimates.",
+    "The upstream maximum-step tests explicitly expect fallback output after failed checks; that behavior is not scored as a defect.",
+    "The fixture observes native result state plus producer/check facts and does not infer acceptance from raw text, exit code alone or its own expected-answer field.",
+    "No claim about all Python syntax, separate scopes, dynamically rebound functions, preexisting final_answer_variable collisions, f-string transformations, or remote executors.",
+    "The root must freeze all records before executing this file. No target imports, examples, tests or fixture execution occurred during diagnosis."
+  ],
+  "provenance": {
+    "first_recorded_clock_utc": "2026-09-29 03:41:52 UTC",
+    "preseal_clock_utc": "2026-09-29 03:55:16 UTC",
+    "dispatch_timestamp_known": false,
+    "timing_note": "Exact dispatch timestamp was not supplied. The final handoff brackets the sealing write with two clock reads. Do not treat the first recorded clock as exact dispatch.",
+    "static_checks": [
+      "Required JSON fields and 2-trigger/2-control limits",
+      "Frozen code text AST parsing",
+      "Fixture text AST parsing",
+      "Public quote and source-line matching",
+      "Unified diff applicability in memory and patched-source text AST parsing"
+    ],
+    "target_import_or_execution_count": 0,
+    "test_or_fixture_execution_count": 0,
+    "tool_call_counts_through_sealing_command": {
+      "exec_command": 20,
+      "apply_patch": 2,
+      "clock_curr_time": 3,
+      "collaboration_send_message": 1
+    },
+    "tool_count_note": "Counts are tool invocations, not individual shell utility calls; functions.exec wrappers are excluded. One final bracketing clock call follows this write.",
+    "original_checkout_writes": 0,
+    "remote_lookup_count": 0
+  }
+}

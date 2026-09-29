@@ -1,0 +1,305 @@
+{
+  "checked_at": "2026-09-29T04:32:00.297857+00:00",
+  "scope": "Distribution verification after research closure; same 42 frozen calls through the public serialized bundle in a separate workspace. Not new diagnostic opportunities or independent replication samples.",
+  "passed": true,
+  "calls": 42,
+  "dependency_environment_reused": true,
+  "fresh_pip_install_validated": false,
+  "comparison": "Native outcome, checker events, final flags, source filters, termination, execution exit codes, message/count and provider consumption fields; excludes expected path, process, timing and incidental identity differences.",
+  "checks": [
+    {
+      "run": "001_s11_t_literal_assignment_text_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "002_s11_t_literal_assignment_text_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "003_s11_t_literal_assignment_text_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "004_s11_t_literal_inside_real_assignment_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "005_s11_t_literal_inside_real_assignment_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "006_s11_t_literal_inside_real_assignment_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "007_s11_c_successful_assignment_repair_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "008_s11_c_successful_assignment_repair_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "009_s11_c_successful_assignment_repair_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "010_s11_c_execution_and_check_failure_recovery_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "011_s11_c_execution_and_check_failure_recovery_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "012_s11_c_execution_and_check_failure_recovery_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "013_s12_trigger_optimized_rejection_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "014_s12_trigger_optimized_rejection_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "015_s12_trigger_optimized_rejection_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "016_s12_control_valid_acceptance_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "017_s12_control_valid_acceptance_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "018_s12_control_valid_acceptance_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "019_s12_control_failure_recovery_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "020_s12_control_failure_recovery_s11",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "021_s12_control_failure_recovery_s12",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "022_a21_trigger_source_lost_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "023_a21_trigger_source_lost_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "024_a21_trigger_source_lost_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "025_a21_control_success_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "026_a21_control_success_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "027_a21_control_success_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "028_a21_control_execution_failure_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "029_a21_control_execution_failure_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "030_a21_control_execution_failure_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "031_a22_trigger_success_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "032_a22_trigger_success_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "033_a22_trigger_success_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "034_a22_trigger_nonzero_exit_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "035_a22_trigger_nonzero_exit_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "036_a22_trigger_nonzero_exit_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "037_a22_control_success_chat_only_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "038_a22_control_success_chat_only_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "039_a22_control_success_chat_only_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "040_a22_control_nonzero_exit_chat_only_original",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "041_a22_control_nonzero_exit_chat_only_a21",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    },
+    {
+      "run": "042_a22_control_nonzero_exit_chat_only_a22",
+      "selected_native_observations_match": true,
+      "script_protocol_preserved": true,
+      "all_recorded_imports_from_selected_source": true,
+      "process_exit_zero": true
+    }
+  ]
+}

@@ -35,3 +35,16 @@ requirements do not retroactively change old contracts.
 The dependency matrix was assembled before capacity score release. Its pending
 entry is preserved as history; `capacity/` holds the subsequent released result.
 All study populations and denominators remain separate.
+
+
+## Prospective native-workflow predictions
+
+The four opportunities are reported in [prospective/README.md](prospective/README.md).
+The exact target selection, common and guidance packets, frozen inputs, original
+and independently patched source provenance, all 42 native observations and
+independent obligation/outcome judgments are linked there. smolagents literal
+corruption is upstream preprocessing damage, not a wrong verdict on the received
+value; assertion bypass is conditional on Python optimization. AutoGen cases
+concern eligible sources and event-inclusive stopping, not task success.
+Both diagnostic contexts yield distinct supported findings; this does not
+establish general guidance superiority, prevalence or benchmark utility.

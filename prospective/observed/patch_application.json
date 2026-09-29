@@ -1,0 +1,94 @@
+[
+  {
+    "slot": "s11",
+    "applicable": true,
+    "commands": [
+      {
+        "operation": [
+          "apply",
+          "--check"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "operation": [
+          "apply"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "slot": "s12",
+    "applicable": true,
+    "commands": [
+      {
+        "operation": [
+          "apply",
+          "--check"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "operation": [
+          "apply"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "slot": "a21",
+    "applicable": true,
+    "commands": [
+      {
+        "operation": [
+          "apply",
+          "--check"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "operation": [
+          "apply"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "slot": "a22",
+    "applicable": true,
+    "commands": [
+      {
+        "operation": [
+          "apply",
+          "--check"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "operation": [
+          "apply"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  }
+]

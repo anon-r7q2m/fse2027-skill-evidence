@@ -1,0 +1,15 @@
+{
+  "family": "autogen",
+  "input_origin": "a22",
+  "case_id": "control_nonzero_exit_chat_only",
+  "variant": "a21",
+  "run_name": "041_a22_control_nonzero_exit_chat_only_a21",
+  "started_at": "2026-09-29T04:14:00.278950+00:00",
+  "process_id": 1077320,
+  "return_code": 0,
+  "elapsed_seconds": 0.916840089019388,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "COMPLETED",
+  "observation_sha256": "412c946a0d5808f565b8f5009b8c5acebf9215bace37c13007787fd46220a62a",
+  "finished_at": "2026-09-29T04:14:01.197193+00:00"
+}

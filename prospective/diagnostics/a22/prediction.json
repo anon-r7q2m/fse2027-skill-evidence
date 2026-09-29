@@ -1,0 +1,497 @@
+{
+  "status": "PREDICTION",
+  "family": "autogen",
+  "slot": "a22",
+  "title": "CodeExecutorAgent omits emitted execution events from the response used by native event-inclusive message termination",
+  "familiarity_disclosure": {
+    "prior_general_familiarity": "General familiarity with AutoGen agent/team APIs from model knowledge; no recalled prior report of this exact omission was used.",
+    "prior_exact_issue_exposure": "None deliberately consulted or recalled. Training-data non-exposure cannot be guaranteed.",
+    "session_exposure": "Only this packet, COMMON.md, GUIDANCE.md, and pinned public source/docs/tests. No framework import, target execution, fixture execution, remote lookup, sibling output, Agent2Skill manuscript/history/memory, or model API.",
+    "upstream_tests_and_examples_seen": [
+      "python/packages/autogen-agentchat/tests/test_code_executor_agent.py:1-145 (basic execution, model-backed generation/execution/reflection, no-code behavior; plus search hits elsewhere in this file)",
+      "python/packages/autogen-agentchat/tests/test_termination_condition.py:100-145 (including event-inclusive max-message unit test; plus search hits elsewhere in this file)",
+      "CodeExecutorAgent public examples/docstrings, RoundRobinGroupChat examples/docstrings, LocalCommandLineCodeExecutor examples/docstrings, ReplayChatCompletionClient examples/docstrings",
+      "python/docs/src/user-guide/agentchat-user-guide/tutorial/termination.ipynb:10-39 and termination-related search matches"
+    ]
+  },
+  "source_paths": [
+    "python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_chat_agent_container.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/base/_chat_agent.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/messages.py",
+    "python/packages/autogen-ext/src/autogen_ext/models/replay/_replay_chat_completion_client.py",
+    "python/packages/autogen-core/src/autogen_core/models/_model_client.py",
+    "python/docs/src/user-guide/agentchat-user-guide/tutorial/termination.ipynb",
+    "python/packages/autogen-agentchat/tests/test_code_executor_agent.py",
+    "python/packages/autogen-agentchat/tests/test_termination_condition.py",
+    "python/packages/autogen-agentchat/src/autogen_agentchat/agents/__init__.py",
+    "python/packages/autogen-core/pyproject.toml",
+    "python/packages/autogen-agentchat/pyproject.toml",
+    "python/packages/autogen-ext/pyproject.toml"
+  ],
+  "native_entry": "RoundRobinGroupChat([CodeExecutorAgent(\"executor\", code_executor=LocalCommandLineCodeExecutor(timeout=5, work_dir=owned_workdir), model_client=StrictScriptedClient(frozen_responses), max_retries_on_error=0)], termination_condition=MaxMessageTermination(max_messages=4, include_agent_event=True), max_turns=2).run_stream(task=frozen_task). Controls change only the declared termination configuration to max_messages=2, include_agent_event=False for the matching success/failure input.",
+  "public_obligation": {
+    "quote": "include_agent_event: If True, include :class:`~autogen_agentchat.messages.BaseAgentEvent` in the message count.",
+    "relative_source": "python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "line": 67,
+    "timing_quote": "the termination condition is called after each agent responds.",
+    "timing_relative_source": "python/docs/src/user-guide/agentchat-user-guide/tutorial/termination.ipynb",
+    "timing_line": 23,
+    "producer_type_evidence": "CodeGenerationEvent and CodeExecutionEvent inherit BaseAgentEvent at messages.py:457 and :475.",
+    "interpretation": "At the first completed agent response the user task plus generation event plus execution event plus final TextMessage gives a count of four. A max_messages=4 event-inclusive condition must stop there. This is an after-response bound, not an interrupt in the middle of a response or a successful-task assertion."
+  },
+  "failure_class": {
+    "category": "framework_defect_prediction",
+    "mechanism": "Producer emits native BaseAgentEvent objects to the output stream but fails to retain them in Response.inner_messages; the native team manager derives its termination delta from that response, so a valid event-inclusive message budget undercounts.",
+    "not_claimed": "No claim that nonzero exit must prevent termination, that reflection must be correct, or that the model output establishes task success. include_agent_event=False is a legitimate projection and is retained."
+  },
+  "expected_original": "Both triggers emit seven native messages, execute the two frozen local commands, consume four responses, and stop at the max_turns=2 fallback instead of the event-inclusive message limit after the first response. The success trigger has exit codes [0,0]; the nonzero trigger has [7,0]. Both controls stop after one execution with the native max-message count of two.",
+  "expected_intervention": "Both triggers stop at the first completed agent response with native stop reason \"Maximum number of messages 4 reached, current message count: 4\", four native messages, one generation event, one execution event, and two consumed responses. Execution exit codes remain [0] or [7]. Both chat-only controls preserve their count-two stop and execution facts.",
+  "primary_oracle": {
+    "trigger_criteria": [
+      "Run exactly one frozen case using the complete native CodeExecutorAgent, LocalCommandLineCodeExecutor, RoundRobinGroupChat and MaxMessageTermination with root-selected imports.",
+      "Require COMPLETED, a native TaskResult, no provider unexpected_call, no script exhaustion, and observed first CodeExecutionEvent exit/output matching the frozen case.",
+      "The initial native stream prefix must be user TextMessage, CodeGenerationEvent, CodeExecutionEvent, executor TextMessage; the configured event-inclusive message limit is four."
+    ],
+    "wrong_decision_criteria": [
+      "Original native team starts a second generator/execution cycle after that four-message prefix and returns native stop_reason \"Maximum number of turns 2 reached.\".",
+      "Original observations match seven stream messages, two execution events, two executor final texts, and four provider responses. The later cycle is the predicted wrong continuation, regardless of first execution success or failure."
+    ],
+    "intervention_criteria": [
+      "With only intervention.patch applied and exactly the same fixture/inputs, native TaskResult.stop_reason is \"Maximum number of messages 4 reached, current message count: 4\" after the four-message prefix.",
+      "Exactly one execution event and two provider responses; native code block, first output, exit code and reflection content match the original first cycle. No second command executes."
+    ],
+    "control_criteria": [
+      "On both source variants control_success_chat_only stops with count two, one code execution with exit code 0 and output A22_OK followed by newline, two consumed responses and no script violations.",
+      "On both source variants control_nonzero_exit_chat_only legitimately stops with count two while preserving actual exit code 7 and the formatted error output. No successful-task claim is inferred."
+    ],
+    "falsification": "If the original already stops at the event-inclusive limit after the first completed response, this defect prediction is false. If event delivery or consumer behavior differs from the traced path, reclassify based on native evidence; do not replace the oracle after seeing results. A broken patch or changed controls fails the intervention prediction.",
+    "inconclusive": "Unexpected provider shape, response exhaustion, dependency/import failure, command/team/process timeout, missing native TaskResult, or missing required native producer evidence is INCONCLUSIVE, never a pass."
+  },
+  "cases": [
+    {
+      "id": "trigger_success",
+      "kind": "trigger",
+      "input": {
+        "task": "Run the supplied local print command once. The team message budget only controls stopping.",
+        "model_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "max_turns": 2,
+        "executor_timeout_seconds": 5,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "agent_name": "executor",
+        "participants": [
+          "executor"
+        ],
+        "allowed_call_shape": [
+          {
+            "ordinal": 0,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 1,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          },
+          {
+            "ordinal": 2,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 3,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          }
+        ],
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+      },
+      "expectation": {
+        "first_execution_exit_code": 0,
+        "first_execution_output": "A22_OK\n",
+        "original": {
+          "stop_reason": "Maximum number of turns 2 reached.",
+          "model_calls": 4,
+          "native_stream_messages": 7,
+          "native_agent_events": 4,
+          "executor_final_texts": 2,
+          "execution_exit_codes": [
+            0,
+            0
+          ]
+        },
+        "intervention": {
+          "stop_reason": "Maximum number of messages 4 reached, current message count: 4",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "trigger_nonzero_exit",
+      "kind": "trigger",
+      "input": {
+        "task": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+        "model_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "max_turns": 2,
+        "executor_timeout_seconds": 5,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "agent_name": "executor",
+        "participants": [
+          "executor"
+        ],
+        "allowed_call_shape": [
+          {
+            "ordinal": 0,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 1,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          },
+          {
+            "ordinal": 2,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 3,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          }
+        ],
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+      },
+      "expectation": {
+        "first_execution_exit_code": 7,
+        "first_execution_output": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n",
+        "original": {
+          "stop_reason": "Maximum number of turns 2 reached.",
+          "model_calls": 4,
+          "native_stream_messages": 7,
+          "native_agent_events": 4,
+          "executor_final_texts": 2,
+          "execution_exit_codes": [
+            7,
+            0
+          ]
+        },
+        "intervention": {
+          "stop_reason": "Maximum number of messages 4 reached, current message count: 4",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "id": "control_success_chat_only",
+      "kind": "control",
+      "input": {
+        "task": "Run the supplied local print command once. The team message budget only controls stopping.",
+        "model_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "max_turns": 2,
+        "executor_timeout_seconds": 5,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "agent_name": "executor",
+        "participants": [
+          "executor"
+        ],
+        "allowed_call_shape": [
+          {
+            "ordinal": 0,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 1,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          },
+          {
+            "ordinal": 2,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 3,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          }
+        ],
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+      },
+      "expectation": {
+        "first_execution_exit_code": 0,
+        "first_execution_output": "A22_OK\n",
+        "original": {
+          "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            0
+          ]
+        },
+        "intervention": {
+          "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "control_nonzero_exit_chat_only",
+      "kind": "control",
+      "input": {
+        "task": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+        "model_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "max_turns": 2,
+        "executor_timeout_seconds": 5,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "agent_name": "executor",
+        "participants": [
+          "executor"
+        ],
+        "allowed_call_shape": [
+          {
+            "ordinal": 0,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 1,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          },
+          {
+            "ordinal": 2,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": [
+              "cancellation_token",
+              "tools"
+            ],
+            "tools": [],
+            "cancellation_token": "non-null native token"
+          },
+          {
+            "ordinal": 3,
+            "method": "create",
+            "positional_arguments": [
+              "messages"
+            ],
+            "keyword_names": []
+          }
+        ],
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+      },
+      "expectation": {
+        "first_execution_exit_code": 7,
+        "first_execution_output": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n",
+        "original": {
+          "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            7
+          ]
+        },
+        "intervention": {
+          "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+          "model_calls": 2,
+          "native_stream_messages": 4,
+          "native_agent_events": 2,
+          "executor_final_texts": 1,
+          "execution_exit_codes": [
+            7
+          ]
+        }
+      }
+    }
+  ],
+  "local_intervention_description": {
+    "file": "intervention.patch",
+    "relative_target": "python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "change": "Append the existing generated-code event to inner_messages before yielding it; create one execution_event object, append that same object, and yield it. The already-native final reflection Response forwards that list to the unchanged group manager and termination condition.",
+    "scope": "One local source intervention, two event-production sites. Original source checkout is untouched. No functions are copied or replaced in the fixture. This is scoped to the frozen non-streaming max_retries_on_error=0 path; no claim of global minimality or a complete fix for other retry/no-code/streaming paths."
+  },
+  "dependencies": {
+    "python": "/STUDY_ROOT/venv/bin/python (packet selection; not invoked to import target during diagnosis)",
+    "native_packages": "Pinned source packages autogen-core, autogen-agentchat, autogen-ext advertise 0.7.5 and Python >=3.10. Use root-selected original or patched source on PYTHONPATH with their declared runtime dependencies installed.",
+    "runtime_dependencies_seen": [
+      "pillow>=11.0.0",
+      "typing-extensions>=4.0.0",
+      "pydantic>=2.10.0,<3.0.0",
+      "protobuf~=5.29.3",
+      "opentelemetry-api>=1.34.1",
+      "jsonref~=1.1.0"
+    ],
+    "local_artifact_dependency": "fixture.py reads the unchanged adjacent prediction.json for its selected case input only, not expectation fields.",
+    "execution_contract": "Run CLI --case CASE_ID --workdir a new/empty owned directory --output JSON_PATH; outer process timeout <=120 seconds, internal POSIX hard alarm 115 seconds, team timeout 90 seconds, native code timeout 5 seconds, max_turns 2, four finite provider responses. Commands only print and optionally raise SystemExit(7). No network, services, external model, Docker or package installation."
+  },
+  "limitations": [
+    "STATIC PREDICTION ONLY. No target imports, framework runs, tests, fixture runs, or behavioral probes were performed.",
+    "A valid termination decision is not a task-success decision; these checks cannot establish benchmark or live-model performance.",
+    "The original producer omission may be intentional only under an undocumented contract restriction; public event-inclusive counting and after-response documentation are the cited obligation.",
+    "The native output queue and termination delta are different delivery paths. The fixture records actual native messages and TaskResult rather than substituting a copied consumer.",
+    "Only one participant, nonstreaming responses, one code block per generation and zero retries are covered. The intervention does not claim to repair every emitted event in all CodeExecutorAgent branches.",
+    "Availability of runtime dependencies is not confirmed through imports. Dependency and protocol failures remain INCONCLUSIVE."
+  ],
+  "diagnosis_process": {
+    "first_tool_time_utc": "2026-09-29 03:52:48 UTC",
+    "last_prewrite_clock_utc": "2026-09-29 03:58:33 UTC",
+    "elapsed_prewrite_seconds": 345,
+    "dispatch_time_exact": "Unavailable; first observed tool time is a lower-bound start marker, not a fabricated dispatch timestamp.",
+    "tool_usage_lower_bound_before_this_artifact_write": {
+      "exec_command_invocations": 25,
+      "clock_curr_time_invocations": 3,
+      "apply_patch_invocations": 1,
+      "collaboration_send_message_invocations": 1
+    },
+    "count_scope": "Underlying callable invocations visible in this child transcript; excludes functions.exec wrappers and later artifact writes/text validation. Some exec_command invocations contain more than one read/search command."
+  }
+}

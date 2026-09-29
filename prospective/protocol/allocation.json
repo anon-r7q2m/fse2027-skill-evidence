@@ -1,0 +1,34 @@
+{
+  "seed": 202609290339,
+  "allocation_rule": "Shuffle the two arm labels independently within each family before any diagnostic agent reads source",
+  "assignments": [
+    {
+      "slot": "s11",
+      "family": "smolagents",
+      "arm": "principle",
+      "packet_dir": "/STUDY_ROOT/diagnostics/s11"
+    },
+    {
+      "slot": "s12",
+      "family": "smolagents",
+      "arm": "ordinary",
+      "packet_dir": "/STUDY_ROOT/diagnostics/s12"
+    },
+    {
+      "slot": "a21",
+      "family": "autogen",
+      "arm": "ordinary",
+      "packet_dir": "/STUDY_ROOT/diagnostics/a21"
+    },
+    {
+      "slot": "a22",
+      "family": "autogen",
+      "arm": "principle",
+      "packet_dir": "/STUDY_ROOT/diagnostics/a22"
+    }
+  ],
+  "common_packet_sha256": "dcf731781601ececf238682b8d34f6e5d6bcd0e72cfeda790930bdb24eafc5ed",
+  "principle_guide_sha256": "534b6a6598c394bf1f21a779a6df4b9f19d54432f60911c99cb7dc0f1153478b",
+  "single_context_per_family_arm": true,
+  "no_general_method_advantage_estimand": true
+}

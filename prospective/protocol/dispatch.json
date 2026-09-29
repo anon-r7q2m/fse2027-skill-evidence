@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-29T03:42:18.097006+00:00",
+  "dispatched": [
+    "s11",
+    "s12",
+    "a21",
+    "a22"
+  ],
+  "pending": [],
+  "reason": "Four active slots including root; next context dispatches after any completion",
+  "target_behavior_executed": false,
+  "fourth_dispatched_at": "2026-09-29T03:53:25.887759+00:00",
+  "fourth_agent": "/root/prospective_a22"
+}

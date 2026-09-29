@@ -1,0 +1,9 @@
+{
+  "slot": "a22",
+  "family": "autogen",
+  "source_root": "/STUDY_ROOT/sources/autogen",
+  "output_dir": "/STUDY_ROOT/diagnostics/a22",
+  "scope": "CodeExecutorAgent with LocalCommandLineCodeExecutor through a native RoundRobinGroupChat termination decision. Select a documented termination configuration and retain its declared contract; termination is not synonymous with successful task completion.",
+  "python": "/STUDY_ROOT/venv/bin/python",
+  "execution_not_allowed_during_diagnosis": true
+}

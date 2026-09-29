@@ -1,0 +1,27 @@
+--- a/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py
++++ b/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py
+@@ -106,6 +106,7 @@
+ 
+ class TextMentionTerminationConfig(BaseModel):
+     text: str
++    sources: List[str] | None = None
+ 
+ 
+ class TextMentionTermination(TerminationCondition, Component[TextMentionTerminationConfig]):
+@@ -148,11 +149,14 @@
+         self._terminated = False
+ 
+     def _to_config(self) -> TextMentionTerminationConfig:
+-        return TextMentionTerminationConfig(text=self._termination_text)
++        return TextMentionTerminationConfig(
++            text=self._termination_text,
++            sources=list(self._sources) if self._sources is not None else None,
++        )
+ 
+     @classmethod
+     def _from_config(cls, config: TextMentionTerminationConfig) -> Self:
+-        return cls(text=config.text)
++        return cls(text=config.text, sources=config.sources)
+ 
+ 
+ class FunctionalTermination(TerminationCondition):

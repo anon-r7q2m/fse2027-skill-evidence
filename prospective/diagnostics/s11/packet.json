@@ -1,0 +1,9 @@
+{
+  "slot": "s11",
+  "family": "smolagents",
+  "source_root": "/STUDY_ROOT/sources/smolagents",
+  "output_dir": "/STUDY_ROOT/diagnostics/s11",
+  "scope": "CodeAgent.run to final-answer checking/acceptance with the native local Python executor; public final_answer_checks contract and configured step limit.",
+  "python": "/STUDY_ROOT/venv/bin/python",
+  "execution_not_allowed_during_diagnosis": true
+}

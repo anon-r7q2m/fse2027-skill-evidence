@@ -1,0 +1,258 @@
+{
+  "created_at": "2026-09-29T04:13:10.397158+00:00",
+  "jobs": [
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_assignment_text",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_assignment_text",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_assignment_text",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_inside_real_assignment",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_inside_real_assignment",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "t_literal_inside_real_assignment",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_successful_assignment_repair",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_successful_assignment_repair",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_successful_assignment_repair",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_execution_and_check_failure_recovery",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_execution_and_check_failure_recovery",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s11",
+      "case_id": "c_execution_and_check_failure_recovery",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "trigger_optimized_rejection",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "trigger_optimized_rejection",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "trigger_optimized_rejection",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_valid_acceptance",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_valid_acceptance",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_valid_acceptance",
+      "variant": "s12"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_failure_recovery",
+      "variant": "original"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_failure_recovery",
+      "variant": "s11"
+    },
+    {
+      "family": "smolagents",
+      "input_origin": "s12",
+      "case_id": "control_failure_recovery",
+      "variant": "s12"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "trigger_source_lost",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "trigger_source_lost",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "trigger_source_lost",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_success",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_success",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_success",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_execution_failure",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_execution_failure",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a21",
+      "case_id": "control_execution_failure",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_success",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_success",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_success",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_nonzero_exit",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_nonzero_exit",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "trigger_nonzero_exit",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_success_chat_only",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_success_chat_only",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_success_chat_only",
+      "variant": "a22"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_nonzero_exit_chat_only",
+      "variant": "original"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_nonzero_exit_chat_only",
+      "variant": "a21"
+    },
+    {
+      "family": "autogen",
+      "input_origin": "a22",
+      "case_id": "control_nonzero_exit_chat_only",
+      "variant": "a22"
+    }
+  ],
+  "timeout_seconds": 120
+}

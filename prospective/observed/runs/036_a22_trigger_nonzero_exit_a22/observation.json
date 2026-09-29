@@ -1,0 +1,338 @@
+{
+  "case": "trigger_nonzero_exit",
+  "run_status": "COMPLETED",
+  "python_executable": "/STUDY_ROOT/venv/bin/python",
+  "workdir": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/036_a22_trigger_nonzero_exit_a22/work",
+  "diagnostic_execution_was_deferred": true,
+  "frozen_input": {
+    "task": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+    "model_responses": [
+      "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+      "The local command reported exit code 7. Message-budget termination does not certify success.",
+      "```python\nprint(\"A22_SECOND_TURN\")\n```",
+      "The second local command completed."
+    ],
+    "termination": {
+      "max_messages": 4,
+      "include_agent_event": true
+    },
+    "max_turns": 2,
+    "executor_timeout_seconds": 5,
+    "max_retries_on_error": 0,
+    "model_client_stream": false,
+    "agent_name": "executor",
+    "participants": [
+      "executor"
+    ],
+    "allowed_call_shape": [
+      {
+        "ordinal": 0,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "tools": [],
+        "cancellation_token": "non-null native token"
+      },
+      {
+        "ordinal": 1,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": []
+      },
+      {
+        "ordinal": 2,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "tools": [],
+        "cancellation_token": "non-null native token"
+      },
+      {
+        "ordinal": 3,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": []
+      }
+    ],
+    "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+  },
+  "native_import_paths": {
+    "CodeExecutorAgent": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "LocalCommandLineCodeExecutor": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py",
+    "RoundRobinGroupChat": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "MaxMessageTermination": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "ReplayChatCompletionClient": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/variants/a22/python/packages/autogen-ext/src/autogen_ext/models/replay/_replay_chat_completion_client.py"
+  },
+  "provider": {
+    "responses_provided": 4,
+    "responses_returned": 2,
+    "responses_remaining": 2,
+    "script_exhausted": false,
+    "unexpected_call": null,
+    "attempts": [
+      {
+        "ordinal": 0,
+        "method": "create",
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          }
+        ],
+        "returned_response_index": 0
+      },
+      {
+        "ordinal": 1,
+        "method": "create",
+        "keyword_names": [],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n",
+              "source": "executor",
+              "type": "UserMessage"
+            }
+          }
+        ],
+        "returned_response_index": 1
+      }
+    ]
+  },
+  "native_stream": [
+    {
+      "python_type": "TextMessage",
+      "data": {
+        "id": "cf2854d4-f95f-494a-a3d8-21495849659c",
+        "source": "user",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:56.254352Z",
+        "content": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+        "type": "TextMessage"
+      }
+    },
+    {
+      "python_type": "CodeGenerationEvent",
+      "data": {
+        "id": "954e986e-60cc-4df5-8b91-394c94159d0b",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:56.256951Z",
+        "retry_attempt": 0,
+        "content": "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+        "code_blocks": [
+          {
+            "code": "print(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n",
+            "language": "python"
+          }
+        ],
+        "type": "CodeGenerationEvent"
+      }
+    },
+    {
+      "python_type": "CodeExecutionEvent",
+      "data": {
+        "id": "3f74e936-d244-44ca-a8d6-37bf0f986bbe",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:56.276131Z",
+        "retry_attempt": 0,
+        "result": {
+          "exit_code": 7,
+          "output": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n"
+        },
+        "type": "CodeExecutionEvent"
+      }
+    },
+    {
+      "python_type": "TextMessage",
+      "data": {
+        "id": "e0100767-b8eb-4154-b374-ec0ef3514423",
+        "source": "executor",
+        "models_usage": {
+          "prompt_tokens": 93,
+          "completion_tokens": 13
+        },
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:56.276374Z",
+        "content": "The local command reported exit code 7. Message-budget termination does not certify success.",
+        "type": "TextMessage"
+      }
+    }
+  ],
+  "producer_facts": {
+    "code_generation_events": [
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "954e986e-60cc-4df5-8b91-394c94159d0b",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.256951Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      }
+    ],
+    "code_execution_events": [
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "3f74e936-d244-44ca-a8d6-37bf0f986bbe",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.276131Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 7,
+            "output": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      }
+    ],
+    "exit_codes": [
+      7
+    ]
+  },
+  "native_consumer": {
+    "task_result_received": true,
+    "stop_reason": "Maximum number of messages 4 reached, current message count: 4",
+    "messages": [
+      {
+        "python_type": "TextMessage",
+        "data": {
+          "id": "cf2854d4-f95f-494a-a3d8-21495849659c",
+          "source": "user",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.254352Z",
+          "content": "Run the supplied local check once and report its exit status. The team message budget only controls stopping.",
+          "type": "TextMessage"
+        }
+      },
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "954e986e-60cc-4df5-8b91-394c94159d0b",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.256951Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      },
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "3f74e936-d244-44ca-a8d6-37bf0f986bbe",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.276131Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 7,
+            "output": "The script ran, then exited with an error (POSIX exit code: 7)\nIts output was:\nA22_CHECK_FAILED\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      },
+      {
+        "python_type": "TextMessage",
+        "data": {
+          "id": "e0100767-b8eb-4154-b374-ec0ef3514423",
+          "source": "executor",
+          "models_usage": {
+            "prompt_tokens": 93,
+            "completion_tokens": 13
+          },
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:56.276374Z",
+          "content": "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "type": "TextMessage"
+        }
+      }
+    ]
+  },
+  "observed_counts": {
+    "stream_messages": 4,
+    "agent_events": 2,
+    "chat_messages": 2,
+    "executor_final_texts": 1
+  },
+  "elapsed_seconds": 0.8105752840638161
+}

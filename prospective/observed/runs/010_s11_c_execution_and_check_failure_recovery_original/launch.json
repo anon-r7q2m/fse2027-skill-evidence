@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/STUDY_ROOT/venv/bin/python",
+    "-B",
+    "/STUDY_ROOT/diagnostics/s11/fixture.py",
+    "--case",
+    "c_execution_and_check_failure_recovery",
+    "--workdir",
+    "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/010_s11_c_execution_and_check_failure_recovery_original/work",
+    "--output",
+    "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/010_s11_c_execution_and_check_failure_recovery_original/observation.json"
+  ],
+  "environment": {
+    "PATH": "/STUDY_ROOT/venv/bin:/usr/bin:/bin",
+    "LANG": "C.UTF-8",
+    "PYTHONPATH": "/STUDY_ROOT/sources/smolagents/src",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHON_DOTENV_DISABLED": "1",
+    "HF_HUB_OFFLINE": "1",
+    "HF_HUB_DISABLE_TELEMETRY": "1",
+    "OTEL_SDK_DISABLED": "true",
+    "DO_NOT_TRACK": "1",
+    "XDG_CACHE_HOME": "/STUDY_ROOT/cache",
+    "TMPDIR": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/010_s11_c_execution_and_check_failure_recovery_original/tmp"
+  },
+  "selected_source": "/STUDY_ROOT/sources/smolagents",
+  "started_at": "2026-09-29T04:13:22.478730+00:00"
+}

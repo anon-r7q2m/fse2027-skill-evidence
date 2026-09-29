@@ -1,0 +1,15 @@
+{
+  "family": "autogen",
+  "input_origin": "a21",
+  "case_id": "control_execution_failure",
+  "variant": "a22",
+  "run_name": "030_a21_control_execution_failure_a22",
+  "started_at": "2026-09-29T04:13:49.572539+00:00",
+  "process_id": 1076089,
+  "return_code": 0,
+  "elapsed_seconds": 0.967028439976275,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "OBSERVED",
+  "observation_sha256": "f9ec4311285789af96e86fd2b51534d55b7d44260cca4e21fc0e8f21de57e604",
+  "finished_at": "2026-09-29T04:13:50.540770+00:00"
+}

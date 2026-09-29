@@ -1,0 +1,592 @@
+{
+  "case": "trigger_success",
+  "run_status": "COMPLETED",
+  "python_executable": "/STUDY_ROOT/venv/bin/python",
+  "workdir": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/031_a22_trigger_success_original/work",
+  "diagnostic_execution_was_deferred": true,
+  "frozen_input": {
+    "task": "Run the supplied local print command once. The team message budget only controls stopping.",
+    "model_responses": [
+      "```python\nprint(\"A22_OK\")\n```",
+      "The local command completed. This message is not a task-success certificate.",
+      "```python\nprint(\"A22_SECOND_TURN\")\n```",
+      "The second local command completed."
+    ],
+    "termination": {
+      "max_messages": 4,
+      "include_agent_event": true
+    },
+    "max_turns": 2,
+    "executor_timeout_seconds": 5,
+    "max_retries_on_error": 0,
+    "model_client_stream": false,
+    "agent_name": "executor",
+    "participants": [
+      "executor"
+    ],
+    "allowed_call_shape": [
+      {
+        "ordinal": 0,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "tools": [],
+        "cancellation_token": "non-null native token"
+      },
+      {
+        "ordinal": 1,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": []
+      },
+      {
+        "ordinal": 2,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "tools": [],
+        "cancellation_token": "non-null native token"
+      },
+      {
+        "ordinal": 3,
+        "method": "create",
+        "positional_arguments": [
+          "messages"
+        ],
+        "keyword_names": []
+      }
+    ],
+    "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed."
+  },
+  "native_import_paths": {
+    "CodeExecutorAgent": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "LocalCommandLineCodeExecutor": "/STUDY_ROOT/sources/autogen/python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py",
+    "RoundRobinGroupChat": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "MaxMessageTermination": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "ReplayChatCompletionClient": "/STUDY_ROOT/sources/autogen/python/packages/autogen-ext/src/autogen_ext/models/replay/_replay_chat_completion_client.py"
+  },
+  "provider": {
+    "responses_provided": 4,
+    "responses_returned": 4,
+    "responses_remaining": 0,
+    "script_exhausted": false,
+    "unexpected_call": null,
+    "attempts": [
+      {
+        "ordinal": 0,
+        "method": "create",
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          }
+        ],
+        "returned_response_index": 0
+      },
+      {
+        "ordinal": 1,
+        "method": "create",
+        "keyword_names": [],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "```python\nprint(\"A22_OK\")\n```",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "A22_OK\n",
+              "source": "executor",
+              "type": "UserMessage"
+            }
+          }
+        ],
+        "returned_response_index": 1
+      },
+      {
+        "ordinal": 2,
+        "method": "create",
+        "keyword_names": [
+          "cancellation_token",
+          "tools"
+        ],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "```python\nprint(\"A22_OK\")\n```",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "A22_OK\n",
+              "source": "executor",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "The local command completed. This message is not a task-success certificate.",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          }
+        ],
+        "returned_response_index": 2
+      },
+      {
+        "ordinal": 3,
+        "method": "create",
+        "keyword_names": [],
+        "messages": [
+          {
+            "python_type": "SystemMessage",
+            "data": {
+              "content": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.",
+              "type": "SystemMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+              "source": "user",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "```python\nprint(\"A22_OK\")\n```",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "A22_OK\n",
+              "source": "executor",
+              "type": "UserMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "The local command completed. This message is not a task-success certificate.",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "AssistantMessage",
+            "data": {
+              "content": "```python\nprint(\"A22_SECOND_TURN\")\n```",
+              "thought": null,
+              "source": "executor",
+              "type": "AssistantMessage"
+            }
+          },
+          {
+            "python_type": "UserMessage",
+            "data": {
+              "content": "A22_SECOND_TURN\n",
+              "source": "executor",
+              "type": "UserMessage"
+            }
+          }
+        ],
+        "returned_response_index": 3
+      }
+    ]
+  },
+  "native_stream": [
+    {
+      "python_type": "TextMessage",
+      "data": {
+        "id": "9ac0db10-09a4-4642-af47-0550e4e57817",
+        "source": "user",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.385173Z",
+        "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+        "type": "TextMessage"
+      }
+    },
+    {
+      "python_type": "CodeGenerationEvent",
+      "data": {
+        "id": "9c3eec73-a0cd-47d9-b6f1-8f8bfdc6e8c4",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.387802Z",
+        "retry_attempt": 0,
+        "content": "```python\nprint(\"A22_OK\")\n```",
+        "code_blocks": [
+          {
+            "code": "print(\"A22_OK\")\n",
+            "language": "python"
+          }
+        ],
+        "type": "CodeGenerationEvent"
+      }
+    },
+    {
+      "python_type": "CodeExecutionEvent",
+      "data": {
+        "id": "79b70828-fc06-4d8b-8986-f05e8ce65c37",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.406610Z",
+        "retry_attempt": 0,
+        "result": {
+          "exit_code": 0,
+          "output": "A22_OK\n"
+        },
+        "type": "CodeExecutionEvent"
+      }
+    },
+    {
+      "python_type": "TextMessage",
+      "data": {
+        "id": "e4db30ad-177f-4221-b47d-764f6e7bfaf4",
+        "source": "executor",
+        "models_usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 11
+        },
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.406829Z",
+        "content": "The local command completed. This message is not a task-success certificate.",
+        "type": "TextMessage"
+      }
+    },
+    {
+      "python_type": "CodeGenerationEvent",
+      "data": {
+        "id": "07413084-8da9-4211-95f2-211db8533023",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.408183Z",
+        "retry_attempt": 0,
+        "content": "```python\nprint(\"A22_SECOND_TURN\")\n```",
+        "code_blocks": [
+          {
+            "code": "print(\"A22_SECOND_TURN\")\n",
+            "language": "python"
+          }
+        ],
+        "type": "CodeGenerationEvent"
+      }
+    },
+    {
+      "python_type": "CodeExecutionEvent",
+      "data": {
+        "id": "7fd72e77-597a-48ea-a3d5-6167c06578c5",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.423641Z",
+        "retry_attempt": 0,
+        "result": {
+          "exit_code": 0,
+          "output": "A22_SECOND_TURN\n"
+        },
+        "type": "CodeExecutionEvent"
+      }
+    },
+    {
+      "python_type": "TextMessage",
+      "data": {
+        "id": "fa318d3e-02d2-4572-94f9-242e32cdfe5e",
+        "source": "executor",
+        "models_usage": {
+          "prompt_tokens": 87,
+          "completion_tokens": 5
+        },
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:51.423837Z",
+        "content": "The second local command completed.",
+        "type": "TextMessage"
+      }
+    }
+  ],
+  "producer_facts": {
+    "code_generation_events": [
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "9c3eec73-a0cd-47d9-b6f1-8f8bfdc6e8c4",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.387802Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_OK\")\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_OK\")\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      },
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "07413084-8da9-4211-95f2-211db8533023",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.408183Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_SECOND_TURN\")\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      }
+    ],
+    "code_execution_events": [
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "79b70828-fc06-4d8b-8986-f05e8ce65c37",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.406610Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 0,
+            "output": "A22_OK\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      },
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "7fd72e77-597a-48ea-a3d5-6167c06578c5",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.423641Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 0,
+            "output": "A22_SECOND_TURN\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      }
+    ],
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "native_consumer": {
+    "task_result_received": true,
+    "stop_reason": "Maximum number of turns 2 reached.",
+    "messages": [
+      {
+        "python_type": "TextMessage",
+        "data": {
+          "id": "9ac0db10-09a4-4642-af47-0550e4e57817",
+          "source": "user",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.385173Z",
+          "content": "Run the supplied local print command once. The team message budget only controls stopping.",
+          "type": "TextMessage"
+        }
+      },
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "9c3eec73-a0cd-47d9-b6f1-8f8bfdc6e8c4",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.387802Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_OK\")\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_OK\")\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      },
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "79b70828-fc06-4d8b-8986-f05e8ce65c37",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.406610Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 0,
+            "output": "A22_OK\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      },
+      {
+        "python_type": "TextMessage",
+        "data": {
+          "id": "e4db30ad-177f-4221-b47d-764f6e7bfaf4",
+          "source": "executor",
+          "models_usage": {
+            "prompt_tokens": 72,
+            "completion_tokens": 11
+          },
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.406829Z",
+          "content": "The local command completed. This message is not a task-success certificate.",
+          "type": "TextMessage"
+        }
+      },
+      {
+        "python_type": "CodeGenerationEvent",
+        "data": {
+          "id": "07413084-8da9-4211-95f2-211db8533023",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.408183Z",
+          "retry_attempt": 0,
+          "content": "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "code_blocks": [
+            {
+              "code": "print(\"A22_SECOND_TURN\")\n",
+              "language": "python"
+            }
+          ],
+          "type": "CodeGenerationEvent"
+        }
+      },
+      {
+        "python_type": "CodeExecutionEvent",
+        "data": {
+          "id": "7fd72e77-597a-48ea-a3d5-6167c06578c5",
+          "source": "executor",
+          "models_usage": null,
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.423641Z",
+          "retry_attempt": 0,
+          "result": {
+            "exit_code": 0,
+            "output": "A22_SECOND_TURN\n"
+          },
+          "type": "CodeExecutionEvent"
+        }
+      },
+      {
+        "python_type": "TextMessage",
+        "data": {
+          "id": "fa318d3e-02d2-4572-94f9-242e32cdfe5e",
+          "source": "executor",
+          "models_usage": {
+            "prompt_tokens": 87,
+            "completion_tokens": 5
+          },
+          "metadata": {},
+          "created_at": "2026-09-29T04:13:51.423837Z",
+          "content": "The second local command completed.",
+          "type": "TextMessage"
+        }
+      }
+    ]
+  },
+  "observed_counts": {
+    "stream_messages": 7,
+    "agent_events": 4,
+    "chat_messages": 3,
+    "executor_final_texts": 2
+  },
+  "elapsed_seconds": 0.8059301460161805
+}

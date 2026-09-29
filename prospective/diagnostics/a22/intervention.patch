@@ -1,0 +1,21 @@
+--- a/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py
++++ b/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py
+@@ -607,6 +607,7 @@
+                 source=agent_name,
+             )
+ 
++            inner_messages.append(inferred_text_message)
+             yield inferred_text_message
+ 
+             # Step 8: Execute the extracted code blocks
+@@ -621,7 +622,9 @@
+             )
+ 
+             # Step 10: Yield a CodeExecutionEvent
+-            yield CodeExecutionEvent(retry_attempt=nth_try, result=execution_result, source=self.name)
++            execution_event = CodeExecutionEvent(retry_attempt=nth_try, result=execution_result, source=self.name)
++            inner_messages.append(execution_event)
++            yield execution_event
+ 
+             # If execution was successful or last retry, then exit
+             if execution_result.exit_code == 0 or nth_try == max_retries_on_error:

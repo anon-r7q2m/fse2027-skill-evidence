@@ -1,0 +1,167 @@
+{
+  "case": "control_success",
+  "collection_status": "OBSERVED",
+  "evaluation_status": "UNEVALUATED",
+  "producer_calls": [
+    {
+      "code_blocks": [
+        {
+          "code": "value = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n",
+          "language": "python"
+        }
+      ],
+      "native_result_before_agent_formatting": {
+        "exit_code": 0,
+        "output": "calculation 4\n",
+        "code_file": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/025_a21_control_success_original/work/tmp_code_86b323c17e32f2c6bad2c16f61402c0c7d35edeb97ca1f8bd2980ab889f00ea5.py"
+      }
+    }
+  ],
+  "provider_calls": [
+    {
+      "method": "create",
+      "messages": [
+        {
+          "content": "Record the execution outcome, then end this review.",
+          "type": "SystemMessage"
+        },
+        {
+          "content": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n```",
+          "source": "user",
+          "type": "UserMessage"
+        },
+        {
+          "content": "calculation 4\n",
+          "source": "executor",
+          "type": "UserMessage"
+        }
+      ],
+      "tools_count": 0,
+      "tool_choice": "auto",
+      "json_output": null,
+      "extra_create_args": {},
+      "response": {
+        "finish_reason": "stop",
+        "content": "Recorded the execution outcome; REVIEW_STOP.",
+        "usage": {
+          "prompt_tokens": 36,
+          "completion_tokens": 5
+        },
+        "cached": true,
+        "logprobs": null,
+        "thought": null
+      }
+    }
+  ],
+  "native_stream_messages": [
+    {
+      "id": "a4cefd0f-5004-447f-9510-42e49a48bd1c",
+      "source": "user",
+      "models_usage": null,
+      "metadata": {},
+      "created_at": "2026-09-29T04:13:45.664827Z",
+      "content": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n```",
+      "type": "TextMessage"
+    },
+    {
+      "id": "6baf0c6d-a042-4c57-8eb1-e64fb4275e27",
+      "source": "executor",
+      "models_usage": null,
+      "metadata": {},
+      "created_at": "2026-09-29T04:13:45.685713Z",
+      "content": "calculation 4\n",
+      "type": "TextMessage"
+    },
+    {
+      "id": "11f3f2b0-4284-4bef-8eea-d86e443c811d",
+      "source": "reviewer",
+      "models_usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 5
+      },
+      "metadata": {},
+      "created_at": "2026-09-29T04:13:45.687419Z",
+      "content": "Recorded the execution outcome; REVIEW_STOP.",
+      "type": "TextMessage"
+    }
+  ],
+  "consumer": {
+    "task_result_received": true,
+    "stop_reason": "Text 'REVIEW_STOP' mentioned",
+    "messages": [
+      {
+        "id": "a4cefd0f-5004-447f-9510-42e49a48bd1c",
+        "source": "user",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:45.664827Z",
+        "content": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n```",
+        "type": "TextMessage"
+      },
+      {
+        "id": "6baf0c6d-a042-4c57-8eb1-e64fb4275e27",
+        "source": "executor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:45.685713Z",
+        "content": "calculation 4\n",
+        "type": "TextMessage"
+      },
+      {
+        "id": "11f3f2b0-4284-4bef-8eea-d86e443c811d",
+        "source": "reviewer",
+        "models_usage": {
+          "prompt_tokens": 36,
+          "completion_tokens": 5
+        },
+        "metadata": {},
+        "created_at": "2026-09-29T04:13:45.687419Z",
+        "content": "Recorded the execution outcome; REVIEW_STOP.",
+        "type": "TextMessage"
+      }
+    ]
+  },
+  "frozen_model_responses": [
+    "Recorded the execution outcome; REVIEW_STOP."
+  ],
+  "responses_consumed": 1,
+  "script_exhaustion_error": false,
+  "unexpected_provider_call": false,
+  "limits": {
+    "command_timeout_seconds": 5,
+    "async_timeout_seconds": 75,
+    "alarm_seconds": 110,
+    "max_turns": 4
+  },
+  "workdir": "/RESEARCH_ROOT/results_cache/prospective_decision_v1/execution_v1/runs/025_a21_control_success_original/work",
+  "source_origins": {
+    "autogen_core": "/STUDY_ROOT/sources/autogen/python/packages/autogen-core/src/autogen_core/__init__.py",
+    "code_executor_agent": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+    "termination": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+    "round_robin_group_chat": "/STUDY_ROOT/sources/autogen/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+    "local_command_line_executor": "/STUDY_ROOT/sources/autogen/python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py"
+  },
+  "configuration": {
+    "requested": {
+      "text": "REVIEW_STOP",
+      "sources": [
+        "reviewer"
+      ]
+    },
+    "serialized_component": {
+      "provider": "autogen_agentchat.conditions.TextMentionTermination",
+      "component_type": "termination",
+      "version": 1,
+      "component_version": 1,
+      "description": "Terminate the conversation if a specific text is mentioned.",
+      "label": "TextMentionTermination",
+      "config": {
+        "text": "REVIEW_STOP"
+      }
+    },
+    "restored_sources_observation": null
+  },
+  "task": "Execute the supplied local Python block once, then let reviewer record the result.\n```python\nvalue = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n```",
+  "elapsed_seconds": 0.7792039588093758,
+  "responses_remaining": 0
+}

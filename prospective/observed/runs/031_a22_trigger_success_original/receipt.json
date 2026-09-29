@@ -1,0 +1,15 @@
+{
+  "family": "autogen",
+  "input_origin": "a22",
+  "case_id": "trigger_success",
+  "variant": "original",
+  "run_name": "031_a22_trigger_success_original",
+  "started_at": "2026-09-29T04:13:50.541321+00:00",
+  "process_id": 1076095,
+  "return_code": 0,
+  "elapsed_seconds": 0.9670152580365539,
+  "collection_status": "OBSERVED",
+  "fixture_collection_status": "COMPLETED",
+  "observation_sha256": "043f3def3837b3eac1779cc44b624e94536285ca79c64d485851f9af811bb660",
+  "finished_at": "2026-09-29T04:13:51.509848+00:00"
+}
