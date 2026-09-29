@@ -28,3 +28,7 @@ originals remain unchanged. These copies are labelled exports, not original
 byte-identical receipts:
 
 - `principles/pro/validation.json`
+
+## September 29 consumer-boundary revision
+
+The revised narrative adds a cross-case analysis and documented-use links. New capacity witnesses are allowlisted projections of existing original grading and first-stop records; their assembly source and exact source/output hashes are in capacity/score_witnesses. Original outcomes, study observations, predictions and patches are unchanged. No new target, model, grader or scientific replay was run for this revision. All added code/documents are project-authored and use the package MIT license; no submitted patch text, test names/content, provider records or private audit annotations are added.

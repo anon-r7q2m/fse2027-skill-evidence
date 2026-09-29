@@ -1,7 +1,6 @@
 # What Does PASS Mean? Anonymous review artifact
 
-This artifact accompanies **What Does PASS Mean? Evidence and Decisions in
-Coding Agent Workflows**. It contains an unchanged generated SEARCH/REPLACE package,
+This artifact accompanies **What Does PASS Mean? Tracing Evidence into Coding-Agent Decisions**. It contains an unchanged generated SEARCH/REPLACE package,
 its public parser replay, three bounded source-slice replay bundles, and
 public audit reports. It also includes the fully released sixteen-task
 comparison matrix and analysis. Finite executable cases support the stated observations;
@@ -63,13 +62,26 @@ executed with explicit runtime/model/state mocks, not a running agent service.
 [The prospective study](prospective/README.md) adds four frozen diagnostic
 predictions on pinned smolagents and AutoGen versions. Its fourteen inputs run
 through complete native imports, local executors and receiving decisions using
-finite scripted providers; original and separate interventions give 42 calls.
+finite scripted providers; original and separate interventions give 42 input--variant runs.
 Both ordinary and principle-guided contexts find different supported mechanisms.
 No general diagnostic advantage or live-model task gain is established.
 Full source archives, runtime requirements, scripts, patches, native records,
 qualification and adjudication are provided. Dependency setup needs PyPI access;
 the bounded target replay then needs neither network nor credentials. This is
 separate from the standard-library source-slice entries above.
+
+## Cross-case synthesis and grading witnesses
+
+The revised [consumer-decision analysis](study/consumer_decisions.md) connects
+the recorded and prospective cases through requirements, objects, invocation,
+configuration and delivery. It is a post-study synthesis, not a new prediction
+set or another experiment.
+
+[Existing score witnesses](capacity/score_witnesses/README.md) expose the
+classification basis and anonymous test-category counts for all 108 unique
+grading inputs, plus first-stop evidence for all sixteen primary LnPn paths.
+No syntax exception was used. Submitted patch text and raw test logs remain
+withheld; the projection does not make the 108 grades independently replayable.
 
 ## Reading guide
 

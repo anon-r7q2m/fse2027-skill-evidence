@@ -19,4 +19,4 @@ The primary stop table keeps distinct stage observations. Capacity reasons descr
 
 The original consumed records explicitly limit replay/restoration guarantees; those fields are retained. This release verifies record identity and joins, not complete repository restoration or independent score execution.
 
-The frozen grader variant has a verified candidate-syntax exception, described in [METHODS.md](../METHODS.md). Its per-score application count is not present in these allowed identity records and is not reconstructed from private grading reports. All zero rewards must not be classified as uses of that exception.
+The frozen grader variant permits a verified candidate-syntax exception, described in [METHODS.md](../METHODS.md). The later [grading witnesses](../score_witnesses/README.md) add a privacy-scoped projection of all 108 original reports: the exception was applied zero times. The original identity records here remain unchanged. Do not infer classification from zero reward. The new projection also retains all sixteen primary LnPn first-stop records; submitted patch text and raw test logs remain withheld.

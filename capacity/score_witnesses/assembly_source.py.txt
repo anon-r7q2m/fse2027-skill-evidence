@@ -1,0 +1,879 @@
+"""Project existing capacity records without executing a solver, grader, or patch."""
+
+from __future__ import annotations
+
+from collections import Counter
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import re
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "results_cache/raw_repo_capacity_comparison_v1"
+EXPERIMENT = ROOT / "experiments/raw_repo_capacity_comparison_v1"
+OUTPUT = ROOT / "results_cache/capacity_score_witness_release_v1"
+GRADER = "agent2skill_swebench_verified_candidate_syntax_v1"
+CATEGORIES = ("FAIL_TO_FAIL", "FAIL_TO_PASS", "PASS_TO_FAIL", "PASS_TO_PASS")
+STAGES = (
+    "patch_guard",
+    "setup",
+    "install",
+    "test_patch",
+    "test_command",
+    "cleanup",
+    "grader",
+    "publish",
+)
+CAPTURE_FIELDS = "base_commit final_tree manifest_sha256 patch_bytes patch_sha256"
+LOGICAL_FIELDS = "block_id cell_id final_tree instance_id policy repeat_index reward score_cell shared_score solver_status"
+PREVIEW_FIELDS = "request_id purpose stop estimated_input_tokens body_bytes serialized_visible_tokens framing_margin opaque_bytes retained_reasoning_token_bound scope"
+REPORT_FIELDS = "schema_version grader_id instance_id repo report_scope classification classification_basis valid_for_scoring resolved reward error adaptations"
+UPSTREAM_FIELDS = "project version commit grading_py_sha256 python_log_parsers_sha256"
+METRIC_FIELDS = "fail_to_pass pass_to_pass resolution_status"
+OFFICIAL_FIELDS = "patch_exists patch_is_None patch_successfully_applied resolved"
+PATCH_FIELDS = "status valid_execution submission_disposition reason_code scoring_policy"
+REPLAY_FIELDS = "status valid_for_scoring base_commit base_tree final_tree file_count patch_bytes patch_sha256 post_apply_diff_sha256"
+RECEIPT_FIELDS = "schema_version artifact_type submission_disposition submission_reason_code execution_diagnostic"
+STAGE_FIELDS = "name status return_code skip_reason"
+CALLBACK_FIELDS = "kind purpose request_id status query_id input_tokens"
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def canonical(value):
+    return (
+        json.dumps(
+            value, sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False
+        )
+        + "\n"
+    ).encode()
+
+
+def fields(value, names):
+    return {name: value[name] for name in names.split()}
+
+
+def exact(value, names):
+    require(
+        isinstance(value, dict) and set(value) == set(names.split()), "public field allowlist drift"
+    )
+
+
+class Sources:
+    def __init__(self):
+        self.records = {}
+
+    def raw(self, path):
+        path = Path(path)
+        require(path.is_file() and not path.is_symlink(), "missing or symbolic source")
+        resolved = path.resolve()
+        require(resolved.is_relative_to(ROOT), "source outside project")
+        name = str(resolved.relative_to(ROOT))
+        raw = path.read_bytes()
+        record = {"path": name, "bytes": len(raw), "sha256": sha(raw)}
+        require(
+            name not in self.records or self.records[name] == record, "source changed during export"
+        )
+        self.records[name] = record
+        return raw
+
+    def read(self, path):
+        return json.loads(self.raw(path))
+
+    def pointer(self, path, pointer=""):
+        return {"path": str(Path(path).resolve().relative_to(ROOT)), "json_pointer": pointer}
+
+    def unchanged(self):
+        for name, record in self.records.items():
+            require(
+                sha((ROOT / name).read_bytes()) == record["sha256"],
+                "source changed during verification",
+            )
+
+
+def metrics_from_counts(counts):
+    values = []
+    for category in ("FAIL_TO_PASS", "PASS_TO_PASS"):
+        row = counts[category]
+        total = row["success"] + row["failure"]
+        values.append(row["success"] / total if total else 1)
+    f2p, p2p = values
+    status = (
+        "RESOLVED_FULL"
+        if f2p == p2p == 1
+        else "RESOLVED_PARTIAL"
+        if 0 < f2p < 1 and p2p == 1
+        else "RESOLVED_NO"
+    )
+    return {"fail_to_pass": f2p, "pass_to_pass": p2p, "resolution_status": status}
+
+
+def score_witnesses(src, timestamp):
+    seal = src.read(SOURCE / "scores/frozen_endpoints.json")
+    reconciliation = src.read(SOURCE / "scores/reconciliation.json")
+    plan = src.read(EXPERIMENT / "scoring_plan.json")
+    slots = seal["unique_slots"]
+    require(
+        len(slots) == len({row["cell_id"] for row in slots}) == 108, "108 sealed inputs required"
+    )
+    require(
+        len(reconciliation["rows"]) == len(seal["policies"]) == 192, "192 logical rows required"
+    )
+    sealed = {row["cell_id"]: row for row in seal["policies"]}
+    logical = [fields(row, LOGICAL_FIELDS) for row in reconciliation["rows"]]
+    require(len({row["cell_id"] for row in logical}) == 192, "duplicate logical identity")
+    for row in logical:
+        require(
+            {k: v for k, v in row.items() if k != "reward"} == sealed[row["cell_id"]],
+            "reconciliation identity changed",
+        )
+    rows, scopes = [], {}
+    for slot in slots:
+        cell = slot["cell_id"]
+        folder = SOURCE / "scores" / cell
+        scope = src.read(folder / "scope.json")
+        consumed = src.read(folder / "consumed.json")
+        require(
+            sha(src.raw(folder / "scope.json")) == slot["scope_sha256"] == consumed["scope_sha256"],
+            "scope binding differs",
+        )
+        require(
+            scope["cell_id"] == cell and scope["grader_id"] == GRADER == plan["grader_id"],
+            "score identity differs",
+        )
+        require(scope["sources"] == plan["sources"], "grader source identity differs")
+        task = plan["tasks"][scope["instance_id"]]
+        require(scope["task_files"] == task["task_files"], "task file identities differ")
+        capture = fields(scope["selected_capture"], CAPTURE_FIELDS)
+        require(
+            capture == scope["selected_capture"] == consumed["score"]["selected_capture"],
+            "capture binding differs",
+        )
+        require(
+            scope["base_commit"] == capture["base_commit"] == task["base_commit"],
+            "base identity differs",
+        )
+        verifier = Path(scope["trial_path"]) / "verifier"
+        require(
+            verifier.resolve().is_relative_to((SOURCE / "scores").resolve()),
+            "trial escapes experiment",
+        )
+        report = src.read(verifier / "grading_report.json")
+        receipt = src.read(verifier / "eval_stages.json")
+        patch_validation = src.read(verifier / "patch_validation.json")
+        commit = src.read(verifier / "reward_commit.json")
+        reward = src.read(verifier / "reward.json")
+        nonce = reward["commitment_nonce"]
+        require(
+            isinstance(nonce, str) and re.fullmatch(r"[0-9a-f]{64}", nonce),
+            "bad stored commitment nonce",
+        )
+        unsigned = {k: v for k, v in commit.items() if k != "artifact_sha256"}
+        require(
+            sha(canonical(unsigned))
+            == commit["artifact_sha256"]
+            == consumed["score"]["reward_commit_artifact_sha256"],
+            "reward commit binding differs",
+        )
+        for name in ("grading_report.json", "eval_stages.json", "reward.json", "reward.txt"):
+            raw = src.raw(verifier / name)
+            expected = {
+                "name": name,
+                "bytes": len(raw),
+                "commitment_sha256": sha(
+                    nonce.encode("ascii") + b"\0" + name.encode() + b"\0" + raw
+                ),
+            }
+            require(commit["files"][name] == expected, "stored file commitment differs")
+        require(
+            src.raw(verifier / "reward.txt").decode("ascii").strip().split()
+            == [str(reward["reward"]), nonce],
+            "committed rewards disagree",
+        )
+        require(
+            report["instance_id"] == scope["instance_id"]
+            and report["grader_id"] == GRADER
+            and report["repo"] == scope["repo"],
+            "report identity differs",
+        )
+        require(
+            report["classification_basis"] == "ORIGINAL_PORTABLE_RULES"
+            and "syntax_evidence" not in report,
+            "classification basis changed",
+        )
+        require(
+            report["valid_for_scoring"] is True and report["error"] is None,
+            "nonvalid classification",
+        )
+        require(
+            report["schema_version"] == 1 and report["report_scope"] == "single_instance_only",
+            "report scope changed",
+        )
+        require(
+            report["adaptations"] == ["verified_candidate_syntax_empty_status_map_v1"],
+            "grader adaptation changed",
+        )
+        require(
+            report["reward"] == reward["reward"] and type(report["reward"]) is int, "reward differs"
+        )
+        official = report["official_report"][scope["instance_id"]]
+        require(
+            official["patch_exists"] is True
+            and official["patch_is_None"] is False
+            and official["patch_successfully_applied"] is True,
+            "unexpected patch application",
+        )
+        require(set(official["tests_status"]) == set(CATEGORIES), "test count categories changed")
+        counts = {}
+        for category in CATEGORIES:
+            statuses = official["tests_status"][category]
+            require(
+                set(statuses) == {"success", "failure"}
+                and all(isinstance(v, list) for v in statuses.values()),
+                "test count schema changed",
+            )
+            counts[category] = {key: len(statuses[key]) for key in ("success", "failure")}
+        require(
+            metrics_from_counts(counts) == report["metrics"],
+            "counts do not reproduce saved metrics",
+        )
+        require(
+            report["resolved"] == official["resolved"] == (report["reward"] == 1),
+            "resolution differs",
+        )
+        require(
+            report["classification"] == ("resolved" if report["resolved"] else "unresolved"),
+            "classification differs",
+        )
+        require(
+            report["resolved"] == (report["metrics"]["resolution_status"] == "RESOLVED_FULL"),
+            "metrics do not reproduce resolution",
+        )
+        bundle = Path(scope["bundle_path"])
+        require(
+            bundle.resolve().is_relative_to((SOURCE / "live").resolve()),
+            "capture escapes solver root",
+        )
+        patch = src.raw(bundle / "agent.patch")
+        require(
+            sha(patch) == capture["patch_sha256"] and len(patch) == capture["patch_bytes"],
+            "actual captured patch differs",
+        )
+        replay = patch_validation["v2_result"]
+        require(
+            all(
+                replay[key] == capture[key]
+                for key in ("base_commit", "final_tree", "patch_bytes", "patch_sha256")
+            ),
+            "patch replay differs",
+        )
+        require(
+            fields(patch_validation, PATCH_FIELDS)
+            == {
+                "status": "PASS_PATCH_REPLAY",
+                "valid_execution": True,
+                "submission_disposition": "scoreable",
+                "reason_code": None,
+                "scoring_policy": "OFFICIAL_TEST_RESTORE",
+            },
+            "patch policy changed",
+        )
+        require(
+            receipt["submission_reason_code"] is None
+            and receipt["execution_diagnostic"] is None
+            and receipt["submission_disposition"] == "scoreable",
+            "stage diagnostic not allowlisted",
+        )
+        require(tuple(row["name"] for row in receipt["stages"]) == STAGES, "stage order differs")
+        stage_rows = [fields(row, STAGE_FIELDS) for row in receipt["stages"]]
+        for row in stage_rows:
+            require(
+                row["status"] == "executed"
+                and row["skip_reason"] is None
+                and type(row["return_code"]) is int,
+                "stage receipt differs",
+            )
+            require(
+                row["return_code"]
+                in ({0, 1} if row["name"] in {"install", "test_command"} else {0}),
+                "unreviewed stage return",
+            )
+        install_rc = next(row["return_code"] for row in stage_rows if row["name"] == "install")
+        require(
+            receipt["install_policy"]
+            == {
+                "mode": "recorded_nonfatal_official_evaluator",
+                "continued_after_nonzero": install_rc != 0,
+            },
+            "install policy differs",
+        )
+        witness = {
+            "score_cell": cell,
+            **fields(scope, "instance_id repo base_commit grader_id"),
+            "scope_sha256": slot["scope_sha256"],
+            "task_contract_id": scope["instance_id"],
+            "selected_capture": capture,
+            "classification": {
+                **fields(report, REPORT_FIELDS),
+                "syntax_evidence_present": False,
+                "upstream": fields(report["upstream"], UPSTREAM_FIELDS),
+                "metrics": fields(report["metrics"], METRIC_FIELDS),
+            },
+            "official_summary": {**fields(official, OFFICIAL_FIELDS), "test_counts": counts},
+            "patch_replay": {
+                **fields(patch_validation, PATCH_FIELDS),
+                "v2_result": fields(replay, REPLAY_FIELDS),
+            },
+            "stages": {
+                **fields(receipt, RECEIPT_FIELDS),
+                "install_policy": fields(receipt["install_policy"], "mode continued_after_nonzero"),
+                "stages": stage_rows,
+            },
+            "reward_commit_artifact_sha256": commit["artifact_sha256"],
+            "source_records": {
+                "scope": src.pointer(folder / "scope.json"),
+                "classification": src.pointer(verifier / "grading_report.json"),
+                "patch_replay": src.pointer(verifier / "patch_validation.json"),
+                "stages": src.pointer(verifier / "eval_stages.json"),
+            },
+        }
+        rows.append(witness)
+        scopes[cell] = scope
+    by_cell = {row["score_cell"]: row for row in rows}
+    for row in logical:
+        scope, witness = scopes[row["score_cell"]], by_cell[row["score_cell"]]
+        require(
+            row["instance_id"] == scope["instance_id"]
+            and row["final_tree"] == scope["selected_capture"]["final_tree"],
+            "logical input identity differs",
+        )
+        require(row["reward"] == witness["classification"]["reward"], "logical reward differs")
+        row.update(
+            base_commit=scope["base_commit"],
+            grader_id=GRADER,
+            score_scope_sha256=witness["scope_sha256"],
+            scored_patch_sha256=scope["selected_capture"]["patch_sha256"],
+        )
+    summary = {
+        "unique_scoring_inputs": 108,
+        "logical_rows": 192,
+        "distinct_tasks": len({r["instance_id"] for r in logical}),
+        "classification_basis_counts": dict(
+            Counter(r["classification"]["classification_basis"] for r in rows)
+        ),
+        "syntax_exception_applied": sum(
+            r["classification"]["syntax_evidence_present"] for r in rows
+        ),
+        "classification_counts": dict(Counter(r["classification"]["classification"] for r in rows)),
+        "logical_reward_counts": dict(Counter(str(r["reward"]) for r in logical)),
+        "install_nonzero_count": sum(
+            r["stages"]["install_policy"]["continued_after_nonzero"] for r in rows
+        ),
+        "test_command_nonzero_count": sum(
+            next(s["return_code"] for s in r["stages"]["stages"] if s["name"] == "test_command")
+            != 0
+            for r in rows
+        ),
+    }
+    require(
+        summary
+        == {
+            "unique_scoring_inputs": 108,
+            "logical_rows": 192,
+            "distinct_tasks": 16,
+            "classification_basis_counts": {"ORIGINAL_PORTABLE_RULES": 108},
+            "syntax_exception_applied": 0,
+            "classification_counts": {"resolved": 67, "unresolved": 41},
+            "logical_reward_counts": {"0": 114, "1": 78},
+            "install_nonzero_count": 40,
+            "test_command_nonzero_count": 42,
+        },
+        "audited score roster changed",
+    )
+    return {
+        "schema_version": 1,
+        "assembled_at": timestamp,
+        "scope": "Projection of existing saved grading evidence; no scorer or tests executed",
+        "summary": summary,
+        "rows": rows,
+        "policy_outcomes": logical,
+    }
+
+
+def first_stop_witnesses(src, timestamp, grading):
+    executed = src.read(SOURCE / "execution_summary.json")
+    policy = src.read(EXPERIMENT / "policy.json")
+    limit = policy["input_token_limit"]
+    require(limit == 65536, "input ceiling changed")
+    primary = [r for r in executed["rows"] if r["prefix"] == "LnPn" and r["repeat_index"] == 1]
+    require(
+        len(primary) == len({r["cell_id"] for r in primary}) == 16, "16 primary LnPn rows required"
+    )
+    outcomes = {r["cell_id"]: r for r in grading["policy_outcomes"]}
+    rows = []
+    for row in primary:
+        cell = row["cell_id"]
+        folder = SOURCE / "live" / cell / "entry/prefixes/LnPn"
+        adapter_path = folder / "localization/adapter.json"
+        adapter = src.read(adapter_path)
+        view = src.read(folder / "capacity_source_view.json")
+        discovery = src.read(folder / "discovery.json")
+        admission = src.read(folder / "capacity_admission.json")
+        endpoint = src.read(folder / "endpoints.json")
+        callback_path = folder / "localization/session/02_model_result/input.json"
+        callback = src.read(callback_path)["event"]
+        first = fields(adapter["previews"][0], PREVIEW_FIELDS)
+        require(
+            first["purpose"] == "paths" and first["request_id"] == "req-1",
+            "first preview identity differs",
+        )
+        require(
+            first["scope"]
+            == "LOCAL_ESTIMATE_NOT_SERVER_EXACT; opaque bytes are not plaintext tokens",
+            "estimator scope changed",
+        )
+        require(
+            callback["kind"] == "model_result"
+            and callback["purpose"] == "paths"
+            and callback["request_id"] == "req-1",
+            "first callback identity differs",
+        )
+        require(
+            discovery["status"] == row["discovery_status"]
+            and discovery["requests"] == adapter["client"]["requests"],
+            "localization counts differ",
+        )
+        require(
+            endpoint["terminal_status"] == row["terminal_status"]
+            and endpoint["requests"] == row["requests"],
+            "terminal counts differ",
+        )
+        require(view["selected_files"] == discovery["localized_files"], "selected source differs")
+        require(
+            outcomes[cell]["instance_id"] == row["instance_id"]
+            and outcomes[cell]["policy"] == "LnPn"
+            and outcomes[cell]["repeat_index"] == 1,
+            "primary score identity differs",
+        )
+        disposition = endpoint["policies"]["LnPn"]
+        stop, handoff, domain = None, None, None
+        source_records = {
+            "first_preview": src.pointer(adapter_path, "/previews/0"),
+            "localization_requests": src.pointer(adapter_path, "/client/requests"),
+            "first_callback": src.pointer(callback_path, "/event"),
+            "discovery": src.pointer(folder / "discovery.json"),
+            "source_view": src.pointer(folder / "capacity_source_view.json"),
+            "capacity_admission": src.pointer(folder / "capacity_admission.json"),
+            "endpoint": src.pointer(folder / "endpoints.json"),
+        }
+        if first["stop"] == "LOCAL_CONTEXT_LIMIT":
+            require(
+                len(adapter["previews"]) == 1
+                and row["requests"] == adapter["client"]["requests"] == 0,
+                "local stop has sent requests",
+            )
+            require(
+                first["estimated_input_tokens"] > limit
+                and callback["status"] == "context_limit"
+                and callback["query_id"] is None
+                and callback["text"] is None
+                and callback["input_tokens"] == first["estimated_input_tokens"],
+                "local stop callback differs",
+            )
+            output_path = folder / "localization/session/02_model_result/output.json"
+            effects = src.read(output_path)["effects"]
+            require(len(effects) == 1, "local stop handoff multiplicity")
+            effect = effects[0]
+            require(
+                effect["kind"] == "localization_handoff"
+                and effect["status"] == "NO_LOCALIZATION"
+                and effect["reason"] == "path selection did not complete",
+                "local stop handoff differs",
+            )
+            require(
+                effect["selected_files"] == effect["localized_files"] == effect["locations"] == [],
+                "local stop selected content",
+            )
+            require(
+                discovery["status"] == "NO_LOCALIZATION"
+                and view["status"] == "NO_SELECTION"
+                and disposition["status"] == "DECLARED_PIPELINE_EMPTY_BASE"
+                and disposition["fallback_reason"] == "NO_SELECTION"
+                and endpoint["terminal_status"] == "KNOWN_PIPELINE_STOP",
+                "local stop chain differs",
+            )
+            handoff = fields(effect, "kind status reason request_id") | {
+                "selected_file_count": 0,
+                "localized_file_count": 0,
+                "location_count": 0,
+            }
+            source_records["first_handoff"] = src.pointer(output_path, "/effects/0")
+            stop = "LOCAL_INPUT_ESTIMATE_LIMIT_BEFORE_FIRST_MODEL_REQUEST"
+        elif view["status"] == "OUTSIDE_P_FILE_DOMAIN":
+            require(
+                cell == "085-204-r1-LnPn"
+                and row["requests"] == discovery["requests"] == 2
+                and discovery["status"] == "LOCALIZED",
+                "domain stop identity differs",
+            )
+            require(
+                first["stop"] is None and callback["status"] == "completed",
+                "domain stop first request differs",
+            )
+            domain_path = folder / "repository/003_files/execution.json"
+            record = src.read(domain_path)
+            require(record["return_code"] == 0, "source inspection failed")
+            files = json.loads(record["stdout"])
+            require(
+                [r["path"] for r in files] == view["selected_files"],
+                "domain witness selection differs",
+            )
+            domain = [
+                {
+                    **fields(r, "path status mode"),
+                    "line_count": len(r["content"].splitlines()),
+                    "python_extension": r["path"].endswith(".py"),
+                }
+                for r in files
+            ]
+            require(
+                all(r["status"] == "available" and r["line_count"] > 0 for r in domain)
+                and any(not r["python_extension"] for r in domain),
+                "non-Python domain witness missing",
+            )
+            require(
+                disposition["fallback_reason"] == "OUTSIDE_P_FILE_DOMAIN"
+                and disposition["status"] == "DECLARED_PIPELINE_EMPTY_BASE",
+                "domain stop endpoint differs",
+            )
+            source_records["source_file_metadata"] = src.pointer(
+                domain_path, "/stdout (JSON list; content reduced to line count)"
+            )
+            stop = "SELECTED_NON_PYTHON_FILE_OUTSIDE_POOL_DOMAIN"
+        else:
+            require(
+                first["stop"] is None
+                and callback["status"] == "completed"
+                and view["status"] == "SOURCE_VIEW_READY"
+                and row["requests"] == 6,
+                "unreviewed primary path",
+            )
+        require(
+            admission["path"] == "original_P" and admission["reason"] is None,
+            "primary capacity route changed",
+        )
+        rows.append(
+            {
+                **fields(
+                    row,
+                    "cell_id block_id instance_id repeat_index prefix requests discovery_status terminal_status",
+                ),
+                "localization_requests": discovery["requests"],
+                "input_token_limit": limit,
+                "first_preview": first,
+                "first_callback": fields(callback, CALLBACK_FIELDS),
+                "first_handoff": handoff,
+                "source_view": {
+                    "status": view["status"],
+                    "selected_file_count": len(view["selected_files"]),
+                },
+                "domain_file_metadata": domain,
+                "capacity_route": fields(admission, "path reason source_status"),
+                "pipeline": {
+                    "status": disposition["status"],
+                    "stop_reason": disposition.get("fallback_reason"),
+                },
+                "first_evidenced_stop": stop,
+                "score_cell": outcomes[cell]["score_cell"],
+                "reward": outcomes[cell]["reward"],
+                "source_records": source_records,
+            }
+        )
+    counts = Counter(r["first_evidenced_stop"] or "NO_STOP_IN_INSPECTED_FIELDS" for r in rows)
+    require(
+        counts
+        == {
+            "LOCAL_INPUT_ESTIMATE_LIMIT_BEFORE_FIRST_MODEL_REQUEST": 10,
+            "SELECTED_NON_PYTHON_FILE_OUTSIDE_POOL_DOMAIN": 1,
+            "NO_STOP_IN_INSPECTED_FIELDS": 5,
+        },
+        "first-stop roster differs",
+    )
+    estimates = [r["first_preview"]["estimated_input_tokens"] for r in rows if r["requests"] == 0]
+    require(min(estimates) == 74440 and max(estimates) == 91059, "local estimate range differs")
+    return {
+        "schema_version": 1,
+        "assembled_at": timestamp,
+        "scope": "First recorded admission/domain stops in 16 fixed primary LnPn paths; null is not task success",
+        "summary": {
+            "primary_paths": 16,
+            "stop_counts": dict(counts),
+            "local_stop_estimated_tokens_min": min(estimates),
+            "local_stop_estimated_tokens_max": max(estimates),
+            "input_token_limit": limit,
+        },
+        "rows": rows,
+    }
+
+
+def verify_public(grading, stops):
+    """Check the written projection, including the public-only classification math."""
+    exact(grading, "schema_version assembled_at scope summary rows policy_outcomes")
+    exact(stops, "schema_version assembled_at scope summary rows")
+    require(
+        len(grading["rows"]) == 108
+        and len(grading["policy_outcomes"]) == 192
+        and len(stops["rows"]) == 16,
+        "public roster lengths differ",
+    )
+    by_cell = {row["score_cell"]: row for row in grading["rows"]}
+    for row in grading["rows"]:
+        exact(
+            row,
+            "score_cell instance_id repo base_commit grader_id scope_sha256 task_contract_id selected_capture classification official_summary patch_replay stages reward_commit_artifact_sha256 source_records",
+        )
+        exact(row["selected_capture"], CAPTURE_FIELDS)
+        exact(row["classification"], REPORT_FIELDS + " syntax_evidence_present upstream metrics")
+        exact(row["classification"]["upstream"], UPSTREAM_FIELDS)
+        exact(row["classification"]["metrics"], METRIC_FIELDS)
+        exact(row["official_summary"], OFFICIAL_FIELDS + " test_counts")
+        counts = row["official_summary"]["test_counts"]
+        require(set(counts) == set(CATEGORIES), "public test categories differ")
+        for count in counts.values():
+            exact(count, "success failure")
+            require(
+                all(type(v) is int and v >= 0 for v in count.values()),
+                "public test counts not scalar integers",
+            )
+        require(
+            metrics_from_counts(counts) == row["classification"]["metrics"],
+            "public metric reduction differs",
+        )
+        require(
+            row["classification"]["reward"]
+            == int(metrics_from_counts(counts)["resolution_status"] == "RESOLVED_FULL"),
+            "public resolution reduction differs",
+        )
+        exact(row["patch_replay"], PATCH_FIELDS + " v2_result")
+        exact(row["patch_replay"]["v2_result"], REPLAY_FIELDS)
+        exact(row["stages"], RECEIPT_FIELDS + " install_policy stages")
+        exact(row["stages"]["install_policy"], "mode continued_after_nonzero")
+        for stage in row["stages"]["stages"]:
+            exact(stage, STAGE_FIELDS)
+    for row in grading["policy_outcomes"]:
+        exact(row, LOGICAL_FIELDS + " base_commit grader_id score_scope_sha256 scored_patch_sha256")
+        witness = by_cell[row["score_cell"]]
+        require(
+            row["instance_id"] == witness["instance_id"]
+            and row["final_tree"] == witness["selected_capture"]["final_tree"]
+            and row["reward"] == witness["classification"]["reward"],
+            "public logical join differs",
+        )
+    for row in stops["rows"]:
+        exact(
+            row,
+            "cell_id block_id instance_id repeat_index prefix requests discovery_status terminal_status localization_requests input_token_limit first_preview first_callback first_handoff source_view domain_file_metadata capacity_route pipeline first_evidenced_stop score_cell reward source_records",
+        )
+        exact(row["first_preview"], PREVIEW_FIELDS)
+        exact(row["first_callback"], CALLBACK_FIELDS)
+        exact(row["source_view"], "status selected_file_count")
+        exact(row["capacity_route"], "path reason source_status")
+        exact(row["pipeline"], "status stop_reason")
+        if row["first_handoff"] is not None:
+            exact(
+                row["first_handoff"],
+                "kind status reason request_id selected_file_count localized_file_count location_count",
+            )
+        for item in row["domain_file_metadata"] or []:
+            exact(item, "path status mode line_count python_extension")
+        witness = by_cell[row["score_cell"]]
+        require(
+            row["instance_id"] == witness["instance_id"]
+            and row["reward"] == witness["classification"]["reward"],
+            "public stop score join differs",
+        )
+    for payload in (grading, stops):
+        for row in payload["rows"]:
+            for pointer in row["source_records"].values():
+                exact(pointer, "path json_pointer")
+                require(
+                    not Path(pointer["path"]).is_absolute()
+                    and ".." not in Path(pointer["path"]).parts,
+                    "unsafe public source path",
+                )
+        text = json.dumps(payload, ensure_ascii=False)
+        require(
+            all(
+                term not in text
+                for term in (
+                    "/Data/",
+                    "/home/",
+                    "commitment_nonce",
+                    '"status_map"',
+                    '"text":',
+                    '"prompt":',
+                    '"content":',
+                    '"records":',
+                )
+            ),
+            "nonallowlisted public material",
+        )
+
+
+README = """# Existing capacity grading and first-stop witnesses
+
+This release was assembled from existing frozen records. No solver, model,
+scorer, tests, patch replay, or target experiment was executed during export.
+
+`grading_witnesses.json` contains 108 representative scoring inputs and their
+192 logical policy/repeat rows. All 108 reports used ORIGINAL_PORTABLE_RULES;
+the candidate-syntax exception was applied zero times. The representative
+classifications are 67 resolved and 41 unresolved. These are not 108 independent
+tasks. The frozen primary task denominator remains 16. Report classification,
+anonymous test-status counts, saved replay identities and stage outcomes are
+separate fields. Install returned nonzero in 40 records under the recorded
+nonfatal policy; test-command returned nonzero in 42. Return codes are not
+benchmark rewards, and this export does not diagnose those install returns.
+
+`lnpn_first_stop_witnesses.json` retains all 16 primary LnPn paths. Ten stopped
+at the first local input estimate before a model request: 74,440–91,059 versus
+65,536. One localized a nonempty available .pyx file and stopped at the pool
+input-domain boundary. Five have no stop in the inspected fields; null does
+not imply task success. Local estimates are not exact server-side token counts.
+These are observations of installed policies, not isolated editor efficacy or
+the measured benefit of an unexecuted repair.
+
+Test names/source/expected outputs, candidate patch contents, logs, private
+annotations, model prompts/responses/reasoning, account/transport fields, and
+the stored commitment nonce are excluded. Only the non-Python domain witness
+exports two selected production-file paths; other source selections are counts.
+The public counts reproduce saved grading metrics, but do not independently
+reexecute tests. Submitted patches and raw test logs are not included, so this
+is not a complete 108-input scoring replay package.
+
+`provenance.json` records original source byte hashes, transformation rules,
+and new output hashes. New projections are not historical preregistrations or
+independent proof of unaltered history. Original commitment digests retain their
+own semantics; they are not relabeled file-byte digests. The verifier checked
+four committed files per input using the original nonce in memory, read actual
+selected patch bytes only to verify their identities, and checked the written
+allowlisted output once. `verification_receipt.json` states these narrow checks.
+
+The public score-cell links preserve the existing task/base/final-tree/grader
+identity grouping. Shared rewards are not grouped merely because values match.
+The release changes no frozen outcome, score, or experimental denominator.
+"""
+
+
+def main():
+    require(not OUTPUT.exists(), "release output already exists; do not overwrite")
+    timestamp = datetime.now(timezone.utc).isoformat()
+    src = Sources()
+    grading = score_witnesses(src, timestamp)
+    stops = first_stop_witnesses(src, timestamp, grading)
+    for path in (
+        Path(__file__),
+        ROOT / "analysis/raw_repo_handoff_score_recovery_v1/scorer.py",
+        ROOT / "experiments/agent2skill_effect_v027/calibration_reward_publisher_v6.py",
+        ROOT / "analysis/raw_repo_comparators_v1/locator.py",
+        ROOT / "analysis/raw_repo_capacity_comparison_v1/source.py",
+        ROOT / "analysis/raw_repo_capacity_comparison_v1/host.py",
+        ROOT / "analysis/raw_issue_feedback_entry_v2/capacity.py",
+        ROOT / "results_cache/raw_repo_comparators_v1/generation/a2s/final_package/mechanism.py",
+        EXPERIMENT / "prebuilt/tasks/django__django-10880/tests/portable_original.py",
+    ):
+        src.raw(path)
+    verify_public(grading, stops)
+    OUTPUT.mkdir()
+    for name, value in (
+        ("grading_witnesses.json", grading),
+        ("lnpn_first_stop_witnesses.json", stops),
+    ):
+        (OUTPUT / name).write_bytes(canonical(value))
+    (OUTPUT / "README.md").write_text(README)
+    provenance = {
+        "schema_version": 1,
+        "assembled_at": timestamp,
+        "source_root": "Agent2Skill project; all paths below are project-relative",
+        "source_files": sorted(src.records.values(), key=lambda r: r["path"]),
+        "outputs": [
+            {"path": name, "sha256": sha((OUTPUT / name).read_bytes())}
+            for name in ("grading_witnesses.json", "lnpn_first_stop_witnesses.json", "README.md")
+        ],
+        "transformations": [
+            "Grader fields selected by explicit allowlists; test arrays reduced to success/failure counts without names",
+            "108 recorded scope and reward identities joined to the original 192 logical rows",
+            "First preview/callback/handoff and source-domain metadata selected for all 16 primary LnPn paths",
+            "Only .pyx domain source content reduced to nonempty line counts; no source or patch text exported",
+            "Stored reward nonce used only in memory to verify four existing commitments per input",
+            "Original relative source paths and file-byte SHA-256 values retained; no original nonce or account records exported",
+        ],
+        "historical_pre_execution_commitment": False,
+        "independent_replication": False,
+    }
+    (OUTPUT / "provenance.json").write_bytes(canonical(provenance))
+    written_grading = json.loads((OUTPUT / "grading_witnesses.json").read_bytes())
+    written_stops = json.loads((OUTPUT / "lnpn_first_stop_witnesses.json").read_bytes())
+    verify_public(written_grading, written_stops)
+    require(written_grading == grading and written_stops == stops, "written projection changed")
+    src.unchanged()
+    receipt = {
+        "schema_version": 1,
+        "verified_at": datetime.now(timezone.utc).isoformat(),
+        "status": "EXISTING_RECORD_PROJECTION_VERIFIED",
+        "checks": {
+            "sealed_unique_inputs": 108,
+            "logical_rows_joined_without_reward_changes": 192,
+            "fixed_primary_lnpn_rows": 16,
+            "actual_selected_patch_hashes_matched": 108,
+            "existing_file_commitments_matched": 432,
+            "report_metrics_reduced_from_counts": 108,
+            "syntax_exception_applied": 0,
+            "first_local_input_stops_with_callback_and_handoff": 10,
+            "non_python_domain_stop_with_available_nonempty_metadata": 1,
+            "public_allowlists_and_written_roundtrip": True,
+            "read_sources_unchanged_during_export": True,
+        },
+        "not_performed": [
+            "solver",
+            "model",
+            "scorer",
+            "test execution",
+            "patch execution or replay",
+            "private annotation access",
+            "public repository modification",
+        ],
+        "limits": "Saved-record consistency and a new privacy-scoped projection; not independent grading replication or historical attestation",
+        "outputs": [
+            {"path": p.name, "sha256": sha(p.read_bytes())}
+            for p in sorted(OUTPUT.iterdir())
+            if p.is_file()
+        ],
+    }
+    (OUTPUT / "verification_receipt.json").write_bytes(canonical(receipt))
+    print(
+        json.dumps(
+            {
+                "status": receipt["status"],
+                "output": str(OUTPUT.relative_to(ROOT)),
+                "unique_inputs": 108,
+                "logical_rows": 192,
+                "primary_lnpn_rows": 16,
+                "syntax_exception_applied": 0,
+            },
+            sort_keys=True,
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()
