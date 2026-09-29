@@ -1,0 +1,162 @@
+{
+  "component_type": "team",
+  "component_version": 1,
+  "config": {
+    "description": "A team of agents.",
+    "emit_team_events": false,
+    "max_turns": 4,
+    "name": "RoundRobinGroupChat",
+    "participants": [
+      {
+        "component_type": "agent",
+        "component_version": 1,
+        "config": {
+          "code_executor": {
+            "component_type": "code_executor",
+            "component_version": 1,
+            "config": {
+              "cleanup_temp_files": false,
+              "functions_module": "functions",
+              "timeout": 5,
+              "work_dir": "/INTEGRATION_ROOT/work/02_T_reloaded_original"
+            },
+            "description": "A code executor class that executes code through a local command line\n    environment.",
+            "label": "LocalCommandLineCodeExecutor",
+            "provider": "autogen_ext.code_executors.local.LocalCommandLineCodeExecutor",
+            "version": 1
+          },
+          "description": "A computer terminal that performs no other action than running Python scripts (provided to it quoted in ```python code blocks), or sh shell scripts (provided to it quoted in ```sh code blocks).",
+          "model_client_stream": false,
+          "model_context": {
+            "component_type": "chat_completion_context",
+            "component_version": 1,
+            "config": {},
+            "description": "An unbounded chat completion context that keeps a view of the all the messages.",
+            "label": "UnboundedChatCompletionContext",
+            "provider": "autogen_core.model_context.UnboundedChatCompletionContext",
+            "version": 1
+          },
+          "name": "executor",
+          "sources": [
+            "user"
+          ],
+          "supported_languages": [
+            "python",
+            "sh"
+          ],
+          "system_message": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution."
+        },
+        "description": "(Experimental) An agent that generates and executes code snippets based on user instructions.",
+        "label": "CodeExecutorAgent",
+        "provider": "autogen_agentchat.agents.CodeExecutorAgent",
+        "version": 1
+      },
+      {
+        "component_type": "agent",
+        "component_version": 2,
+        "config": {
+          "description": "An agent that provides assistance with ability to use tools.",
+          "max_tool_iterations": 1,
+          "metadata": {},
+          "model_client": {
+            "component_type": "replay_chat_completion_client",
+            "component_version": 1,
+            "config": {
+              "chat_completions": [
+                {
+                  "cached": false,
+                  "content": [
+                    {
+                      "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+                      "id": "review-call-1",
+                      "name": "review_csv_report"
+                    }
+                  ],
+                  "finish_reason": "function_calls",
+                  "usage": {
+                    "completion_tokens": 0,
+                    "prompt_tokens": 0
+                  }
+                }
+              ],
+              "model_info": {
+                "family": "unknown",
+                "function_calling": true,
+                "json_output": false,
+                "structured_output": false,
+                "vision": false
+              }
+            },
+            "description": "A mock chat completion client that replays predefined responses using an index-based approach.",
+            "label": "ReplayChatCompletionClient",
+            "provider": "autogen_ext.models.replay.ReplayChatCompletionClient",
+            "version": 1
+          },
+          "model_client_stream": false,
+          "model_context": {
+            "component_type": "chat_completion_context",
+            "component_version": 1,
+            "config": {},
+            "description": "An unbounded chat completion context that keeps a view of the all the messages.",
+            "label": "UnboundedChatCompletionContext",
+            "provider": "autogen_core.model_context.UnboundedChatCompletionContext",
+            "version": 1
+          },
+          "name": "reviewer",
+          "reflect_on_tool_use": false,
+          "system_message": "Use review_csv_report to independently inspect the actual CSV and generated report.",
+          "tool_call_summary_format": "{result}",
+          "workbench": [
+            {
+              "component_type": "workbench",
+              "component_version": 1,
+              "config": {
+                "tool_overrides": {},
+                "tools": [
+                  {
+                    "component_type": "tool",
+                    "component_version": 1,
+                    "config": {
+                      "description": "Read input.csv and report.json; write their consistency finding.",
+                      "global_imports": [],
+                      "has_cancellation_support": false,
+                      "name": "review_csv_report",
+                      "source_code": "async def review_csv_report(input_file: str, report_file: str, finding_file: str) -> str:\n    \"\"\"Read actual application artifacts and record signed-transaction consistency.\"\"\"\n    import csv\n    import json\n    from pathlib import Path\n\n    if (input_file, report_file, finding_file) != (\"input.csv\", \"report.json\", \"review.json\"):\n        raise ValueError(\"Review filenames differ from the frozen application\")\n    with Path(input_file).open(newline=\"\", encoding=\"utf-8\") as handle:\n        rows = list(csv.DictReader(handle))\n    report = json.loads(Path(report_file).read_text(encoding=\"utf-8\"))\n    expected_rows = len(rows)\n    expected_total = sum(int(row[\"amount_cents\"]) for row in rows)\n    finding = {\n        \"input_rows\": expected_rows,\n        \"input_total_cents\": expected_total,\n        \"report_rows\": report[\"row_count\"],\n        \"report_total_cents\": report[\"total_cents\"],\n        \"row_count_matches\": report[\"row_count\"] == expected_rows,\n        \"total_matches\": report[\"total_cents\"] == expected_total,\n    }\n    finding[\"consistent\"] = finding[\"row_count_matches\"] and finding[\"total_matches\"]\n    finding[\"verdict\"] = \"consistent\" if finding[\"consistent\"] else \"requires_correction\"\n    finding[\"completion_marker\"] = \"REVIEW_COMPLETE\"\n    with Path(finding_file).open(\"x\", encoding=\"utf-8\") as handle:\n        json.dump(finding, handle, sort_keys=True)\n        handle.write(\"\\n\")\n    return json.dumps(finding, sort_keys=True)\n"
+                    },
+                    "description": "Create custom tools by wrapping standard Python functions.",
+                    "label": "FunctionTool",
+                    "provider": "autogen_core.tools.FunctionTool",
+                    "version": 1
+                  }
+                ]
+              },
+              "description": "A workbench that provides a static set of tools that do not change after\n    each tool execution, and supports streaming results.",
+              "label": "StaticStreamWorkbench",
+              "provider": "autogen_core.tools.StaticStreamWorkbench",
+              "version": 1
+            }
+          ]
+        },
+        "description": "An agent that provides assistance with tool use.\n    The :meth:`on_messages` returns a :class:`~autogen_agentchat.base.Response`\n    in which :attr:`~autogen_agentchat.base.Response.chat_message` is the final\n    response message.",
+        "label": "AssistantAgent",
+        "provider": "autogen_agentchat.agents.AssistantAgent",
+        "version": 2
+      }
+    ],
+    "termination_condition": {
+      "component_type": "termination",
+      "component_version": 1,
+      "config": {
+        "text": "REVIEW_COMPLETE"
+      },
+      "description": "Terminate the conversation if a specific text is mentioned.",
+      "label": "TextMentionTermination",
+      "provider": "autogen_agentchat.conditions.TextMentionTermination",
+      "version": 1
+    }
+  },
+  "description": "A team that runs a group chat with participants taking turns in a round-robin fashion\n    to publish a message to all.",
+  "label": "RoundRobinGroupChat",
+  "provider": "autogen_agentchat.teams.RoundRobinGroupChat",
+  "version": 1
+}

@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "status": "AUTHOR_ANALYSIS_OF_EXISTING_PUBLIC_EVIDENCE",
+  "scope": "Conditional case analysis, not a general theory, independent annotation, diagnostic accuracy estimate, or new experiment. Evidence IDs resolve into case_inputs.json.",
+  "decision_rule": "Choose correction by the justified obligation and first evidenced relevant boundary; retain legal adaptations and all coexisting supported contributors. Schema consistency cannot justify the normative classification.",
+  "cases": [
+    {
+      "case_id": "gp",
+      "inference_level": "Original-record projection plus exact exposed selector; recorded offline diagnostic intervention and synthetic controls.",
+      "obligations": [
+        {
+          "statement": "G checks the declared preservation inventory after restoring the specified tests.",
+          "authority": "JUSTIFIED",
+          "rationale": "This is the reported historical study domain, consistent with the explicit recorded projection. It is not an original-syntax or issue-repair contract.",
+          "evidence": [
+            "gp.reported_domain",
+            "gp.projection_receipts"
+          ]
+        },
+        {
+          "statement": "The historical selector must never select a candidate with any original syntax failure.",
+          "authority": "ASSUMED",
+          "rationale": "No such hard guarantee appears in the exposed original selector; the later diagnostic protocol explicitly adds it. This requirement cannot be imposed retroactively.",
+          "evidence": [
+            "gp.selector",
+            "gp.new_policy"
+          ]
+        },
+        {
+          "statement": "Under the new diagnostic policy, exclude a confirmed original syntax failure, retain unknown syntax, and abstain if all candidates are confirmed bad.",
+          "authority": "JUSTIFIED",
+          "rationale": "Authority is the explicit new study rule, limited to the recorded and synthetic diagnostic conditions.",
+          "evidence": [
+            "gp.new_policy",
+            "gp.size_unknown_input",
+            "gp.all_bad_input"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The recorded G domain restores specified test files; the later diagnostic protocol separately permits a new syntax exclusion.",
+          "changed_domain": "Checked trees differ from submitted originals; the new admission rule applies only in the diagnostic replay.",
+          "retained_obligations": "Preservation remains scoped to restored tests. Test-only edits and unavailable syntax evidence do not become invalid by themselves.",
+          "evidence": [
+            "gp.reported_domain",
+            "gp.projection_receipts",
+            "gp.new_policy",
+            "gp.test_only_input",
+            "gp.size_unknown_input"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "Original candidate -> declared test restoration -> G preservation receipt -> selector comparability/failure filter.",
+        "Parallel candidate path -> normalized or RAW key -> nonempty-key admission -> distinct-key votes -> first-occurrence tie-break -> original selected snapshot."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "Along the G evidence path, restoration maps two different originals to the same base tree. This is the first evidenced loss of the distinction needed to infer original syntax from that receipt, not a defect in preservation checking. No total chronological order is claimed between projection and parallel normalization/admission.",
+        "evidence": [
+          "gp.pool",
+          "gp.projection_receipts",
+          "gp.state"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "The earlier candidate remains eligible through NORMALIZATION_EXCEPTION -> RAW nonempty key.",
+          "evidence": [
+            "gp.pool",
+            "gp.selector"
+          ]
+        },
+        {
+          "statement": "Both candidates have comparable zero-failure receipts, distinct keys and one vote each; the selector chooses the first occurrence.",
+          "evidence": [
+            "gp.pool",
+            "gp.original_selection",
+            "gp.selector"
+          ]
+        },
+        {
+          "statement": "The original selection code contains no hard gate that consumes the recorded query-14 SyntaxError.",
+          "evidence": [
+            "gp.recorded_syntax_observation",
+            "gp.selector"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "G did not execute for the two candidates.",
+          "discriminating_observation": "Missing or unavailable preservation receipts.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Both originals have recorded applied projection and 4 preservation passes.",
+          "evidence": [
+            "gp.projection_receipts"
+          ]
+        },
+        {
+          "explanation": "Equal preservation evidence supplies the missing original-syntax distinction.",
+          "discriminating_observation": "The receipt must retain that distinction or explicitly check original syntax.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Both checked trees equal the base while only the first has a recorded original SyntaxError.",
+          "evidence": [
+            "gp.projection_receipts",
+            "gp.recorded_syntax_observation",
+            "gp.reported_domain"
+          ]
+        },
+        {
+          "explanation": "Projection, RAW eligibility and first-occurrence voting jointly explain the recorded selection path.",
+          "discriminating_observation": "Equal G evidence, two eligible distinct keys and selection of the first candidate.",
+          "status": "SUPPORTED",
+          "comparison_with_record": "Those relations are present, and the exposed selector uses them. This is a path explanation, not a unique-cause attribution.",
+          "evidence": [
+            "gp.pool",
+            "gp.projection_receipts",
+            "gp.selector",
+            "gp.original_selection"
+          ]
+        },
+        {
+          "explanation": "Every RAW candidate should be rejected as a syntax failure.",
+          "discriminating_observation": "RAW implies confirmed failed syntax, including the text-size control.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The size-limit control has no source to parse, remains unassessed, and is retained by the new policy.",
+          "evidence": [
+            "gp.size_unknown_input",
+            "gp.size_unknown_endpoint"
+          ]
+        },
+        {
+          "explanation": "Selecting the later current candidate would solve the task.",
+          "discriminating_observation": "An independent task outcome for that candidate.",
+          "status": "UNRESOLVED",
+          "comparison_with_record": "The diagnostic endpoint has no official outcome; its full-file and task correctness are not established.",
+          "evidence": [
+            "gp.exclusion_endpoint"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "If adopting the new explicit hard-syntax obligation, add exclusion using evidence about the original candidate before unchanged soft ranking. Preserve the existing restoration and retain unknown-syntax candidates.",
+        "status": "TESTED_IN_RECORDED_OFFLINE_DIAGNOSTIC_ONLY",
+        "why_this_action": "Changing restoration would abandon its preservation purpose; changing only the tie-break would not enforce the hard obligation; rejecting all RAW candidates would exceed the evidence.",
+        "observed_endpoint": "The recorded new policy rejects the early snapshot and selects the later one; the all-confirmed-bad condition abstains.",
+        "evidence": [
+          "gp.new_policy",
+          "gp.exclusion_endpoint",
+          "gp.all_bad_input",
+          "gp.all_bad_endpoint"
+        ],
+        "legal_counterexamples": [
+          {
+            "statement": "Valid test-only edits remain eligible even when restoration erases their delta.",
+            "evidence": [
+              "gp.test_only_input",
+              "gp.test_only_endpoint"
+            ]
+          },
+          {
+            "statement": "A declared safe projection and unknown-size syntax are retained.",
+            "evidence": [
+              "gp.safe_projection_input",
+              "gp.safe_projection_endpoint",
+              "gp.size_unknown_input",
+              "gp.size_unknown_endpoint"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "A lawful projection can lose a distinction relevant to another consumer without violating its own contract.",
+        "The original policy is not retroactively invalidated. Neither selector change nor preservation PASS establishes a benchmark improvement."
+      ]
+    },
+    {
+      "case_id": "feedback",
+      "inference_level": "Public requirement/documentation and exact method slices; recorded bounded behavior replay; historical endpoints and saved-input field projections.",
+      "obligations": [
+        {
+          "statement": "The has-key operation must support the documented numeric object-key case.",
+          "authority": "JUSTIFIED",
+          "rationale": "The public issue concerns lookup semantics; the provided requirement is a public summary, not the full raw issue.",
+          "evidence": [
+            "feedback.public_requirement"
+          ]
+        },
+        {
+          "statement": "Integer KeyTransform array-index semantics must remain valid through the public wrapper.",
+          "authority": "JUSTIFIED",
+          "rationale": "The pinned documentation states index behavior; source shows the wrapper represents that integer as a string before calling the helper.",
+          "evidence": [
+            "feedback.index_documentation",
+            "feedback.documentation_identity",
+            "feedback.source_Base",
+            "feedback.source_B"
+          ]
+        },
+        {
+          "statement": "Every numeric string passed directly to compile_json_path must always be quoted as an object key.",
+          "authority": "ASSUMED",
+          "rationale": "The checker generalizes a lookup-specific obligation to the generic helper, ignoring the representation produced by KeyTransform.",
+          "evidence": [
+            "feedback.source_original_checker",
+            "feedback.public_requirement",
+            "feedback.source_B"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The issue requires lookup-specific handling for numeric object keys.",
+          "changed_domain": "B passes allow_array_index=False in HasKeyLookup while leaving generic index construction available.",
+          "retained_obligations": "The documented KeyTransform index and nonnumeric-key controls continue to hold.",
+          "evidence": [
+            "feedback.public_requirement",
+            "feedback.index_documentation",
+            "feedback.source_B",
+            "feedback.b_lookup",
+            "feedback.b_production"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "Public lookup requirement -> generated generic-helper assertion -> saved failing observation/feedback -> selected candidate.",
+        "Public KeyTransform integer -> string conversion -> generic helper -> generated JSON path."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "The first semantic mismatch is requirement-to-predicate translation: a numeric object-key lookup requirement becomes a universal generic-helper rule. At the production call boundary, KeyTransform turns integer 3 into string \"3\"; the original checker instead probes the helper with integer 3.",
+        "evidence": [
+          "feedback.public_requirement",
+          "feedback.source_original_checker",
+          "feedback.source_B",
+          "feedback.v_direct",
+          "feedback.v_production"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "V changes the helper to distinguish actual int from str, so the direct integer control passes while the production wrapper supplies str.",
+          "evidence": [
+            "feedback.source_V",
+            "feedback.v_direct",
+            "feedback.v_production"
+          ]
+        },
+        {
+          "statement": "Saved V construction includes the deterministic feedback marker; the same checker records COVERED_PASS and the selector chooses the V tree. These facts do not establish the sole transmitted input difference.",
+          "evidence": [
+            "feedback.saved_marker",
+            "feedback.v_historical_observation",
+            "feedback.sealed_endpoints"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "A passing direct integer control certifies the public index operation.",
+          "discriminating_observation": "KeyTransform(3) must produce an index in V as well as direct helper integer 3.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Direct integer 3 produces $[3], but the wrapper passes string \"3\" and V produces $.\"3\".",
+          "evidence": [
+            "feedback.v_direct",
+            "feedback.v_production"
+          ]
+        },
+        {
+          "explanation": "The problem requires executing the entire framework for any useful check.",
+          "discriminating_observation": "An equivalent helper check preserving the production representation cannot detect the difference.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The string-3 equivalent-helper condition observes the same $.\"3\" output, preserving the relevant representation with a smaller test.",
+          "evidence": [
+            "feedback.v_equivalent_helper",
+            "feedback.v_production"
+          ]
+        },
+        {
+          "explanation": "Lookup-specific adaptation itself violates the index obligation.",
+          "discriminating_observation": "B must fail KeyTransform indexing when its numeric object-key lookup works.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "B produces the object-key path in HasKeyLookup and the array-index path in KeyTransform.",
+          "evidence": [
+            "feedback.b_lookup",
+            "feedback.b_production"
+          ]
+        },
+        {
+          "explanation": "The fallible checker is unrelated to the recorded consumer decision.",
+          "discriminating_observation": "No matching checker observation or selected endpoint is connected to the V candidate.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The original witness projection has the checker hash and V observation; sealed selection chooses V after COVERED_PASS.",
+          "evidence": [
+            "feedback.b_historical_observation",
+            "feedback.v_historical_observation",
+            "feedback.sealed_endpoints"
+          ]
+        },
+        {
+          "explanation": "Feedback alone caused a lost solved task.",
+          "discriminating_observation": "The actual transmitted inputs differ only in feedback and a previously solved endpoint becomes unsolved.",
+          "status": "UNRESOLVED",
+          "comparison_with_record": "The public packet has saved construction fields rather than complete transmitted bodies; the sealed endpoint record predates scoring. No causal task-loss estimate is established.",
+          "evidence": [
+            "feedback.saved_marker",
+            "feedback.sealed_endpoints"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "Derive the checker from both the lookup-specific issue and retained public index semantics. Check the public operation or an equivalent helper input carrying its actual string representation; retain lookup-specific adaptation.",
+        "status": "ALTERNATIVE_DIAGNOSTIC_CHECKS_TESTED; REVISED_FEEDBACK_WORKFLOW_NOT_RERUN",
+        "why_this_action": "Strengthening enforcement of the same unsupported predicate would reward the wrong behavior. The smaller equivalent-helper observation shows which representation matters.",
+        "observed_endpoint": "The recorded diagnostic detects V at the production and equivalent-helper paths; B retains both the index and numeric object-key controls.",
+        "evidence": [
+          "feedback.index_documentation",
+          "feedback.v_production",
+          "feedback.v_equivalent_helper",
+          "feedback.b_lookup",
+          "feedback.b_production"
+        ],
+        "legal_counterexamples": [
+          {
+            "statement": "The explicit HasKeyLookup allow_array_index=False adaptation is legal for numeric object keys.",
+            "evidence": [
+              "feedback.source_B",
+              "feedback.b_lookup",
+              "feedback.b_production"
+            ]
+          },
+          {
+            "statement": "Direct helper testing is legal when it preserves the relevant production representation.",
+            "evidence": [
+              "feedback.v_equivalent_helper"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "Eight snapshot/check conditions are not eight independent tasks.",
+        "Historical checking/selection status is separate from official benchmark scoring.",
+        "This packet supports a requirement and representation mismatch, not a general causal effect of generated feedback."
+      ]
+    },
+    {
+      "case_id": "a21",
+      "inference_level": "Pinned native source and recorded local native executor/team runs with scripted provider responses; existing isolated serializer patch.",
+      "obligations": [
+        {
+          "statement": "A configured sources=[reviewer] text condition must restrict eligibility to reviewer messages after its component round-trip.",
+          "authority": "JUSTIFIED",
+          "rationale": "The constructor/API explicitly supports source eligibility, and the recorded requested configuration supplies that value.",
+          "evidence": [
+            "a21.termination_source",
+            "a21.trigger_original"
+          ]
+        },
+        {
+          "statement": "Every TextMentionTermination must restrict the source even when none was configured.",
+          "authority": "ASSUMED",
+          "rationale": "The API explicitly permits sources=None; unrestricted matching is a legal distinct configuration.",
+          "evidence": [
+            "a21.termination_source"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The API permits omitted sources with default None.",
+          "changed_domain": "Without a configured filter, every source may trigger the text predicate.",
+          "retained_obligations": "A caller that explicitly supplies reviewer-only eligibility has requested a different condition.",
+          "evidence": [
+            "a21.termination_source",
+            "a21.trigger_original"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "Configured text/source condition -> component dump -> component load -> native team message -> source eligibility -> text predicate -> termination."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "The serialized original component omits sources; the restored source field is null although the request specifies reviewer. The predicate then receives a broader eligible-source domain.",
+        "evidence": [
+          "a21.trigger_original",
+          "a21.termination_source"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "The executor actually produces REVIEW_STOP, so broad matching is exercised before reviewer consumes a scripted response. This output is legal; eligibility is owned by the configured condition.",
+          "evidence": [
+            "a21.trigger_original"
+          ]
+        },
+        {
+          "statement": "The termination reason text alone is insufficient to identify the eligible speaker; the original and changed runs share that reason while their source sequence and response counts differ.",
+          "evidence": [
+            "a21.trigger_original",
+            "a21.trigger_changed"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "The source-eligibility predicate itself ignores an available filter.",
+          "discriminating_observation": "The loaded filter remains reviewer-only but an executor message still triggers termination.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The loaded original filter is null; source code guards on non-null _sources. The first mismatch occurs earlier.",
+          "evidence": [
+            "a21.trigger_original",
+            "a21.termination_source"
+          ]
+        },
+        {
+          "explanation": "Serialization drops the configured source restriction.",
+          "discriminating_observation": "Requested sources are absent from serialized config and restored state; preserving them restores the configured decision.",
+          "status": "SUPPORTED",
+          "comparison_with_record": "The existing patch retains sources, the local output stays the same, and the reviewer supplies one response before the stop.",
+          "evidence": [
+            "a21.trigger_original",
+            "a21.trigger_changed",
+            "a21.intervention"
+          ]
+        },
+        {
+          "explanation": "Producer success versus failure alone explains reviewer reachability.",
+          "discriminating_observation": "A nonzero producer exit should prevent the legal reviewer continuation even without the early marker.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Both success and nonzero-exit controls reach reviewer under original and changed variants.",
+          "evidence": [
+            "a21.control_original",
+            "a21.control_changed",
+            "a21.nonzero_control_original",
+            "a21.nonzero_control_changed"
+          ]
+        },
+        {
+          "explanation": "Any same-family patch explains the changed decision.",
+          "discriminating_observation": "The a22 event-delivery patch changes the a21 trigger.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The cross patch retains the original zero-response premature stop.",
+          "evidence": [
+            "a21.cross_patch",
+            "a21.trigger_original"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "Preserve the explicitly configured sources in component serialization and restoration; keep the existing source/text predicate.",
+        "status": "TESTED_IN_RECORDED_NATIVE_LOCAL_RUNS",
+        "why_this_action": "The configured field is missing before the predicate. Changing eligible message content or the predicate would repair the wrong boundary.",
+        "observed_endpoint": "The original trigger consumes zero reviewer responses; the a21 patch consumes one with unchanged producer code/output and the same scripted response list.",
+        "evidence": [
+          "a21.trigger_original",
+          "a21.trigger_changed",
+          "a21.intervention"
+        ],
+        "legal_counterexamples": [
+          {
+            "statement": "Success and nonzero-exit controls without an executor marker still reach reviewer in both variants.",
+            "evidence": [
+              "a21.control_original",
+              "a21.control_changed",
+              "a21.nonzero_control_original",
+              "a21.nonzero_control_changed"
+            ]
+          },
+          {
+            "statement": "sources=None remains permitted by the API. This is a source-level legal case, not a separately measured unrestricted-source control.",
+            "evidence": [
+              "a21.termination_source"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "The recorded experiment uses a condition component round-trip and native team consumption; it is not evidence about every application persistence path.",
+        "Scripted provider responses and small local code blocks do not measure model ability or benchmark gain."
+      ]
+    },
+    {
+      "case_id": "a22",
+      "inference_level": "Pinned producer/manager/consumer source; recorded native streams and decisions; existing isolated event-delivery patch. Internal termination delta is inferred, not separately logged.",
+      "obligations": [
+        {
+          "statement": "With include_agent_event=True, delivered agent events count toward the configured MaxMessageTermination bound.",
+          "authority": "JUSTIFIED",
+          "rationale": "The API and its implementation count both BaseAgentEvent and BaseChatMessage when enabled; the trigger explicitly enables it.",
+          "evidence": [
+            "a22.termination_source",
+            "a22.trigger_original"
+          ]
+        },
+        {
+          "statement": "A visible outer stream event necessarily enters the termination consumer.",
+          "authority": "ASSUMED",
+          "rationale": "The manager constructs a delta from the response inner_messages and final chat message; the outer stream is a separate observable.",
+          "evidence": [
+            "a22.manager_source",
+            "a22.consumer_source",
+            "a22.producer_source",
+            "a22.response_source"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The API permits include_agent_event=False.",
+          "changed_domain": "Termination counts chat messages only.",
+          "retained_obligations": "Events may still appear in the public stream without contributing to a chat-only budget.",
+          "evidence": [
+            "a22.termination_source",
+            "a22.control_original",
+            "a22.control_changed"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "CodeExecutorAgent creates/yields generation and execution events -> response inner_messages -> manager delta -> MaxMessageTermination -> next-turn decision.",
+        "Parallel observable: yielded events -> outer native stream; this does not establish the manager delta."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "The source yields the generation/execution events but does not append them to the inner_messages forwarded in the final response. The manager consumes that inner-message path. Delivery loss is inferred from source plus the isolated patch and decision contrast, not from a raw internal-delta log.",
+        "evidence": [
+          "a22.producer_source",
+          "a22.response_source",
+          "a22.manager_source",
+          "a22.consumer_source",
+          "a22.intervention",
+          "a22.trigger_original",
+          "a22.trigger_changed"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "The trigger also has a two-turn bound; the original eventually stops there after two local executions. This backstop does not mean its event-inclusive message bound fired.",
+          "evidence": [
+            "a22.trigger_original"
+          ]
+        },
+        {
+          "statement": "Fixed scripted responses contain an available second turn; the original consumes four responses and the changed run two. No unobserved provider behavior is needed to explain those local counts.",
+          "evidence": [
+            "a22.trigger_original",
+            "a22.trigger_changed"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "The producer never emits the relevant agent events.",
+          "discriminating_observation": "The original outer stream contains no generation/execution events.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The original records four agent events across two turns.",
+          "evidence": [
+            "a22.trigger_original"
+          ]
+        },
+        {
+          "explanation": "The shown MaxMessageTermination rule excludes agent events even when include_agent_event=True.",
+          "discriminating_observation": "The consumer source filters delivered events out despite the enabled flag.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The shown consumer explicitly counts every delivered event when enabled. The patch changes event retention, not this arithmetic, and restores the configured stop. The exact runtime delta was not separately logged.",
+          "evidence": [
+            "a22.termination_source",
+            "a22.intervention",
+            "a22.trigger_changed"
+          ]
+        },
+        {
+          "explanation": "The missing response-path events explain the native decision difference.",
+          "discriminating_observation": "Retaining events in inner_messages changes event-inclusive stopping and leaves chat-only behavior intact.",
+          "status": "SUPPORTED",
+          "comparison_with_record": "The patch stops at four messages after one execution for both zero and nonzero first exits; chat-only controls remain at one execution.",
+          "evidence": [
+            "a22.trigger_original",
+            "a22.trigger_changed",
+            "a22.nonzero_trigger_original",
+            "a22.nonzero_trigger_changed",
+            "a22.control_original",
+            "a22.control_changed"
+          ]
+        },
+        {
+          "explanation": "Execution success alone causes the event-count contrast.",
+          "discriminating_observation": "A nonzero first exit removes or reverses the original/patched difference.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The nonzero trigger has original exits [7,0] and changed [7], with the same response-prefix reduction.",
+          "evidence": [
+            "a22.nonzero_trigger_original",
+            "a22.nonzero_trigger_changed"
+          ]
+        },
+        {
+          "explanation": "Any same-family patch explains the event-count contrast.",
+          "discriminating_observation": "The a21 serializer patch changes the original a22 trigger.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The cross patch retains the original two-turn stopping behavior.",
+          "evidence": [
+            "a22.cross_patch",
+            "a22.trigger_original"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "Retain the generated/execution events in the response inner_messages that the manager consumes; leave the event-count predicate and chat-only option unchanged.",
+        "status": "TESTED_IN_RECORDED_NATIVE_LOCAL_RUNS",
+        "why_this_action": "The consumer can count only delivered messages. Tightening the numeric threshold cannot restore the absent event representation.",
+        "observed_endpoint": "The trigger changes from two executions/four scripted responses and max-turn stop to one execution/two responses and four-message stop.",
+        "evidence": [
+          "a22.intervention",
+          "a22.trigger_original",
+          "a22.trigger_changed",
+          "a22.nonzero_trigger_original",
+          "a22.nonzero_trigger_changed"
+        ],
+        "legal_counterexamples": [
+          {
+            "statement": "With include_agent_event=False, success and nonzero-exit controls retain the two-chat-message stop; stream events remain visible.",
+            "evidence": [
+              "a22.control_original",
+              "a22.control_changed",
+              "a22.nonzero_control_original",
+              "a22.nonzero_control_changed"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "The internal manager delta was not separately captured; source plus isolated intervention supports the mechanism inference.",
+        "The cases establish bounded decision behavior with scripted provider responses, not general reliability or task score benefit."
+      ]
+    },
+    {
+      "case_id": "pro_full",
+      "inference_level": "Original evaluator slices and already recorded synthetic worker-output replay; separate authored report-consumer intervention.",
+      "obligations": [
+        {
+          "statement": "A score claim must name the population and be supported by one result for every declared ID.",
+          "authority": "JUSTIFIED",
+          "rationale": "This is an explicit diagnostic reporting contract, not an attributed live leaderboard intake rule.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.full_inputs"
+          ]
+        },
+        {
+          "statement": "The upstream evaluator must always schedule every ID in the raw dataset even for an explicit subset submission.",
+          "authority": "ASSUMED",
+          "rationale": "The exposed evaluator filters submitted patches against raw IDs; no supplied upstream contract forbids a declared subset report.",
+          "evidence": [
+            "pro.evaluator_source",
+            "pro.subset_inputs"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The separate report contract permits a declared full or subset population.",
+          "changed_domain": "The subset is explicitly {case_a}, while the raw ID file also contains case_b.",
+          "retained_obligations": "Results must cover the declared subset, and the original reducer remains unchanged.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "Declared external population -> submitted predictions filtered by raw IDs -> result dictionary -> original mean -> external reporting claim."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "The unsupported step is promotion of a one-ID result into the declared two-ID population mean. The evaluator arithmetic and subset scheduling are not thereby defects.",
+        "evidence": [
+          "pro.full_inputs",
+          "pro.full_result",
+          "pro.evaluator_source"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "Only case_a has a submitted prediction, so only one fresh synthetic worker is scheduled; the final mean is over that result dictionary.",
+          "evidence": [
+            "pro.full_inputs",
+            "pro.full_result",
+            "pro.evaluator_source"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "The original mean 1.0 is an arithmetic error.",
+          "discriminating_observation": "The stored result dictionary has a false result or a different observed mean.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The sole stored value is true; the original mean is correctly 1.0 for that observed set.",
+          "evidence": [
+            "pro.full_result",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "The same 1.0 supports both the full and subset population claims.",
+          "discriminating_observation": "Both declared ID sets equal the result-key set.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Only the subset {case_a} equals the recorded result keys; full additionally declares case_b.",
+          "evidence": [
+            "pro.full_inputs",
+            "pro.full_result",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "Any missing raw task requires changing the evaluator or assigning a zero.",
+          "discriminating_observation": "No valid report can omit case_b even when its declared scope excludes it.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The explicit subset satisfies the study reporting contract with the original mean.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "The standalone source proves a live leaderboard permits incomplete full-population scores.",
+          "discriminating_observation": "Evidence from the actual leaderboard intake and reporting policy.",
+          "status": "UNRESOLVED",
+          "comparison_with_record": "Only pinned standalone evaluator code and synthetic diagnostic claims are supplied.",
+          "evidence": [
+            "pro.evaluator_source",
+            "pro.report_contract"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "Withhold the unsupported full-population mean. Preserve the original 1.0 as a subset computation; do not assign missing case_b zero or manufacture a replacement score.",
+        "status": "TESTED_SEPARATE_REPORT_CONSUMER_ON_RECORDED_SYNTHETIC_FIXTURE",
+        "why_this_action": "Choose by equality of the declared population and observed result-key set; arithmetic on observed values alone cannot establish coverage.",
+        "observed_endpoint": "The separate consumer withholds a full-population publication.",
+        "evidence": [
+          "pro.report_contract",
+          "pro.full_inputs",
+          "pro.full_result",
+          "pro.subset_inputs",
+          "pro.subset_result"
+        ],
+        "recorded_reference": {
+          "path": "principles/pro/result.json",
+          "fields": {
+            "consumer_action": "/records/0/actual/consumer_action",
+            "published_accuracy": "/records/0/actual/published_accuracy",
+            "reason": "/records/0/actual/reason"
+          }
+        },
+        "recorded_value": {
+          "consumer_action": "abstain_from_claimed_population_mean",
+          "published_accuracy": null,
+          "reason": "declared_population_not_covered"
+        },
+        "legal_counterexamples": [
+          {
+            "statement": "The full/subset pair has identical predictions, original result dictionary, worker count and mean; only the declared reporting population changes.",
+            "evidence": [
+              "pro.full_inputs",
+              "pro.full_result",
+              "pro.subset_inputs",
+              "pro.subset_result"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "These are invented IDs and synthetic worker outcomes, not a benchmark score or a measured leaderboard defect.",
+        "The paired claims share one computation and are not two independent samples.",
+        "This packet does not estimate benchmark invalidity, blacklist authority, or the benefit of a general reporting framework."
+      ]
+    },
+    {
+      "case_id": "pro_subset",
+      "inference_level": "Original evaluator slices and already recorded synthetic worker-output replay; separate authored report-consumer intervention.",
+      "obligations": [
+        {
+          "statement": "A score claim must name the population and be supported by one result for every declared ID.",
+          "authority": "JUSTIFIED",
+          "rationale": "This is an explicit diagnostic reporting contract, not an attributed live leaderboard intake rule.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.subset_inputs"
+          ]
+        },
+        {
+          "statement": "The upstream evaluator must always schedule every ID in the raw dataset even for an explicit subset submission.",
+          "authority": "ASSUMED",
+          "rationale": "The exposed evaluator filters submitted patches against raw IDs; no supplied upstream contract forbids a declared subset report.",
+          "evidence": [
+            "pro.evaluator_source",
+            "pro.subset_inputs"
+          ]
+        }
+      ],
+      "allowed_adaptations": [
+        {
+          "status": "ALLOWED_ADAPTATION",
+          "permission": "The separate report contract permits a declared full or subset population.",
+          "changed_domain": "The subset is explicitly {case_a}, while the raw ID file also contains case_b.",
+          "retained_obligations": "Results must cover the declared subset, and the original reducer remains unchanged.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        }
+      ],
+      "boundary_path": [
+        "Declared external population -> submitted predictions filtered by raw IDs -> result dictionary -> original mean -> external reporting claim."
+      ],
+      "first_evidenced_boundary": {
+        "statement": "There is no relevant population mismatch: the one-ID result covers the explicit one-ID claim, although the raw dataset contains an additional ID.",
+        "evidence": [
+          "pro.subset_inputs",
+          "pro.subset_result",
+          "pro.evaluator_source"
+        ]
+      },
+      "coexisting_contributors": [
+        {
+          "statement": "Only case_a has a submitted prediction, so only one fresh synthetic worker is scheduled; the final mean is over that result dictionary.",
+          "evidence": [
+            "pro.subset_inputs",
+            "pro.subset_result",
+            "pro.evaluator_source"
+          ]
+        }
+      ],
+      "hypotheses": [
+        {
+          "explanation": "The original mean 1.0 is an arithmetic error.",
+          "discriminating_observation": "The stored result dictionary has a false result or a different observed mean.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The sole stored value is true; the original mean is correctly 1.0 for that observed set.",
+          "evidence": [
+            "pro.full_result",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "The same 1.0 supports both the full and subset population claims.",
+          "discriminating_observation": "Both declared ID sets equal the result-key set.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "Only the subset {case_a} equals the recorded result keys; full additionally declares case_b.",
+          "evidence": [
+            "pro.full_inputs",
+            "pro.full_result",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "Any missing raw task requires changing the evaluator or assigning a zero.",
+          "discriminating_observation": "No valid report can omit case_b even when its declared scope excludes it.",
+          "status": "CONTRADICTED",
+          "comparison_with_record": "The explicit subset satisfies the study reporting contract with the original mean.",
+          "evidence": [
+            "pro.report_contract",
+            "pro.subset_inputs",
+            "pro.subset_result"
+          ]
+        },
+        {
+          "explanation": "The standalone source proves a live leaderboard permits incomplete full-population scores.",
+          "discriminating_observation": "Evidence from the actual leaderboard intake and reporting policy.",
+          "status": "UNRESOLVED",
+          "comparison_with_record": "Only pinned standalone evaluator code and synthetic diagnostic claims are supplied.",
+          "evidence": [
+            "pro.evaluator_source",
+            "pro.report_contract"
+          ]
+        }
+      ],
+      "correction": {
+        "action": "Retain and explicitly label the original subset mean 1.0. No evaluator change is required for this declared population.",
+        "status": "TESTED_SEPARATE_REPORT_CONSUMER_ON_RECORDED_SYNTHETIC_FIXTURE",
+        "why_this_action": "Choose by equality of the declared population and observed result-key set; arithmetic on observed values alone cannot establish coverage.",
+        "observed_endpoint": "The separate consumer publishes the original subset mean 1.0.",
+        "evidence": [
+          "pro.report_contract",
+          "pro.full_inputs",
+          "pro.full_result",
+          "pro.subset_inputs",
+          "pro.subset_result"
+        ],
+        "recorded_reference": {
+          "path": "principles/pro/result.json",
+          "fields": {
+            "consumer_action": "/records/1/actual/consumer_action",
+            "published_accuracy": "/records/1/actual/published_accuracy",
+            "reason": "/records/1/actual/reason"
+          }
+        },
+        "recorded_value": {
+          "consumer_action": "publish_original_mean",
+          "published_accuracy": 1.0,
+          "reason": "declared_subset_population_supported"
+        },
+        "legal_counterexamples": [
+          {
+            "statement": "The full/subset pair has identical predictions, original result dictionary, worker count and mean; only the declared reporting population changes.",
+            "evidence": [
+              "pro.full_inputs",
+              "pro.full_result",
+              "pro.subset_inputs",
+              "pro.subset_result"
+            ]
+          }
+        ]
+      },
+      "limits": [
+        "These are invented IDs and synthetic worker outcomes, not a benchmark score or a measured leaderboard defect.",
+        "The paired claims share one computation and are not two independent samples.",
+        "This packet does not estimate benchmark invalidity, blacklist authority, or the benefit of a general reporting framework."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2446 @@
+{
+  "schema_version": 1,
+  "assembled_on": "2026-09-29",
+  "scope": "A retrospective view of existing public source and records; six analysis units, with Pro full/subset sharing one computation. No new experimental execution.",
+  "reference_convention": "Paths are relative to the artifact root; fields are exact RFC 6901 pointers; text lines are one-based inclusive. Archive members are read without extraction.",
+  "selection_rule": "Only declared inputs, exact exposed source and recorded outputs are copied. Fixture expected answers and authored hypothesis labels are excluded. Source comments and historical checker verdicts remain source/observation content, not endorsed requirements.",
+  "facts": [
+    {
+      "id": "gp.pool",
+      "description": "Historical pool",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/inputs.json",
+        "pointer": "/historical/pool"
+      },
+      "value": [
+        {
+          "fallback_reason": "NORMALIZATION_EXCEPTION",
+          "file_count": 1,
+          "g_first": {
+            "comparable": true,
+            "failure_count": 0,
+            "request_id": "req-2",
+            "status": "available"
+          },
+          "key": "RAW:dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+          "key_kind": "raw",
+          "manifest_sha256": "933618ddaa8c97fa38b2d7b0674c592c1e95357796822cf083b538eca87ce780",
+          "ordinal": 1,
+          "raw_patch_bytes": 1074,
+          "raw_patch_sha256": "dedc77e32452c246eb1313b9f948f290e135e4be66dcff38629ec85376a502af",
+          "reproduced": null,
+          "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+        },
+        {
+          "fallback_reason": null,
+          "file_count": 1,
+          "g_first": {
+            "comparable": true,
+            "failure_count": 0,
+            "request_id": "req-3",
+            "status": "available"
+          },
+          "key": "PY:af023ab55533c1975c197fd8a0af253cdcc5fd559badebc58c579cfbd9d7fc9e",
+          "key_kind": "python",
+          "manifest_sha256": "cf4ee0a814fc0f5809fb4cc1ead585fa887411ac884a62af5ba235e32b9c7549",
+          "ordinal": 2,
+          "raw_patch_bytes": 1057,
+          "raw_patch_sha256": "91d61d38f282d117868c73a0c2d36f298a177bcb63912326fe360a30b92945f0",
+          "reproduced": null,
+          "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2"
+        }
+      ]
+    },
+    {
+      "id": "gp.projection_receipts",
+      "description": "Historical projection receipts",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/inputs.json",
+        "pointer": "/historical/projection_receipts"
+      },
+      "value": [
+        {
+          "evidence_level": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+          "issue_fixed": null,
+          "projection": {
+            "applied": true,
+            "candidate_file_count": 1,
+            "candidate_tree": "508c251e5b694a2d7328145f19dd44f31ab16857",
+            "guard_changed": [],
+            "preserved_candidate_entries": {},
+            "projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+            "reason": "DECLARED_PROJECTION_APPLIED",
+            "replace_from_base": [
+              "tests/check_framework/test_model_checks.py",
+              "tests/check_framework/__init__.py",
+              "tests/check_framework/apps.py",
+              "tests/check_framework/models.py"
+            ],
+            "replaced_files": 4
+          },
+          "recorded_preservation_passes": 4,
+          "recorded_preservation_status": "PRESERVED",
+          "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+        },
+        {
+          "evidence_level": "RECORDED_ORIGINAL_EXECUTION_NOT_RERUN",
+          "issue_fixed": null,
+          "projection": {
+            "applied": true,
+            "candidate_file_count": 1,
+            "candidate_tree": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+            "guard_changed": [],
+            "preserved_candidate_entries": {},
+            "projected_tree": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+            "reason": "DECLARED_PROJECTION_APPLIED",
+            "replace_from_base": [
+              "tests/check_framework/test_model_checks.py",
+              "tests/check_framework/__init__.py",
+              "tests/check_framework/apps.py",
+              "tests/check_framework/models.py"
+            ],
+            "replaced_files": 4
+          },
+          "recorded_preservation_passes": 4,
+          "recorded_preservation_status": "PRESERVED",
+          "snapshot_ref": "befc36e3265f789e28c1168e8ee6468c42631bb2"
+        }
+      ]
+    },
+    {
+      "id": "gp.state",
+      "description": "Historical state",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/inputs.json",
+        "pointer": "/historical/state"
+      },
+      "value": {
+        "base_snapshot_ref": "6403efc1a2b35c548b174165fd14e16c9d99396c",
+        "flags": {
+          "regression": true,
+          "reproduction": false
+        }
+      }
+    },
+    {
+      "id": "gp.original_selection",
+      "description": "Historical original selection",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/inputs.json",
+        "pointer": "/historical/original_selection"
+      },
+      "value": {
+        "counts": {
+          "comparable": 2,
+          "eligible": 2,
+          "minimum_failures": 0,
+          "pool": 2,
+          "winning_votes": 1
+        },
+        "kind": "select_submission_snapshot",
+        "mode": "candidate",
+        "reason": "MAJORITY_VOTE",
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+      }
+    },
+    {
+      "id": "gp.recorded_syntax_observation",
+      "description": "Historical recorded syntax observation",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/inputs.json",
+        "pointer": "/historical/recorded_syntax_observation"
+      },
+      "value": {
+        "evidence_level": "RECORDED_PUBLIC_EXECUTION",
+        "line": 418,
+        "message": "SyntaxError: invalid syntax",
+        "path": "tests/check_framework/test_model_checks.py",
+        "query_id": 14,
+        "return_code": 1,
+        "snapshot_ref": "508c251e5b694a2d7328145f19dd44f31ab16857"
+      }
+    },
+    {
+      "id": "gp.selector",
+      "description": "Exact exposed original selector functions",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/gp/original_selection_slice.py"
+      },
+      "value": "def _choose_submission_effect(state, pool, current_snapshot_ref):\n    regression_enabled = state[\"flags\"][\"regression\"]\n    reproduction_enabled = state[\"flags\"][\"reproduction\"]\n\n    comparable = []\n    for candidate in pool:\n        g_first = candidate.get(\"g_first\")\n        if isinstance(g_first, dict) and g_first.get(\"comparable\") is True:\n            comparable.append(candidate)\n\n    counts = {\n        \"pool\": len(pool),\n        \"comparable\": len(comparable),\n        \"eligible\": 0,\n        \"winning_votes\": 0,\n        \"minimum_failures\": None,\n    }\n\n    if not pool:\n        return _select_effect(\n            snapshot_ref=current_snapshot_ref,\n            mode=\"abstain_current\",\n            reason=\"EMPTY_POOL\",\n            counts=counts,\n        )\n\n    if regression_enabled:\n        source = comparable\n        if not source:\n            return _select_effect(\n                snapshot_ref=current_snapshot_ref,\n                mode=\"abstain_current\",\n                reason=\"NO_COMPARABLE\",\n                counts=counts,\n            )\n    else:\n        source = pool\n\n    failure_counts = []\n    for candidate in source:\n        if regression_enabled:\n            failure_counts.append(candidate[\"g_first\"][\"failure_count\"])\n        else:\n            failure_counts.append(0)\n\n    minimum_failures = min(failure_counts)\n    counts[\"minimum_failures\"] = minimum_failures\n\n    minimum_group = []\n    for candidate, failures in zip(source, failure_counts):\n        if failures == minimum_failures:\n            minimum_group.append(candidate)\n\n    preferred_group = minimum_group\n    used_reproduced_preference = False\n    if reproduction_enabled:\n        reproduced_group = [c for c in minimum_group if c.get(\"reproduced\") is True]\n        if reproduced_group:\n            preferred_group = reproduced_group\n            used_reproduced_preference = True\n\n    eligible = [c for c in preferred_group if _candidate_has_nonempty_key(c)]\n    if not eligible and used_reproduced_preference:\n        eligible = [c for c in minimum_group if _candidate_has_nonempty_key(c)]\n    if not eligible:\n        eligible = [c for c in source if _candidate_has_nonempty_key(c)]\n\n    counts[\"eligible\"] = len(eligible)\n\n    if eligible:\n        winner = _majority_vote(eligible)\n        counts[\"winning_votes\"] = winner[\"winning_votes\"]\n        return _select_effect(\n            snapshot_ref=winner[\"snapshot_ref\"],\n            mode=\"candidate\",\n            reason=\"MAJORITY_VOTE\",\n            counts=counts,\n        )\n\n    if any(c.get(\"key\") == \"\" for c in source) and all(\n        c.get(\"key\") in (\"\", None) for c in source\n    ):\n        return _select_effect(\n            snapshot_ref=state[\"base_snapshot_ref\"],\n            mode=\"empty_base\",\n            reason=\"ALL_KEYS_EMPTY\",\n            counts=counts,\n        )\n\n    return _select_effect(\n        snapshot_ref=current_snapshot_ref,\n        mode=\"abstain_current\",\n        reason=\"NO_COMPARABLE_KEYS\",\n        counts=counts,\n    )\n\n\ndef _majority_vote(candidates):\n    vote = {}\n    first_index = {}\n    first_snapshot = {}\n    for index, candidate in enumerate(candidates):\n        key = candidate[\"key\"]\n        vote[key] = vote.get(key, 0) + 1\n        if key not in first_index:\n            first_index[key] = index\n            first_snapshot[key] = candidate[\"snapshot_ref\"]\n\n    best_key = None\n    best_tuple = None\n    for key in vote:\n        score = (vote[key], -first_index[key])\n        if best_tuple is None or score > best_tuple:\n            best_tuple = score\n            best_key = key\n\n    return {\n        \"key\": best_key,\n        \"snapshot_ref\": first_snapshot[best_key],\n        \"winning_votes\": vote[best_key],\n    }\n\n\ndef _candidate_has_nonempty_key(candidate):\n    return isinstance(candidate.get(\"key\"), str) and candidate[\"key\"] != \"\"\n\n\ndef _select_effect(snapshot_ref, mode, reason, counts):\n    return {\n        \"kind\": \"select_submission_snapshot\",\n        \"snapshot_ref\": snapshot_ref,\n        \"mode\": mode,\n        \"reason\": reason[:256],\n        \"counts\": {\n            \"pool\": counts[\"pool\"],\n            \"comparable\": counts[\"comparable\"],\n            \"eligible\": counts[\"eligible\"],\n            \"winning_votes\": counts[\"winning_votes\"],\n            \"minimum_failures\": counts[\"minimum_failures\"],\n        },\n    }\n"
+    },
+    {
+      "id": "gp.reported_domain",
+      "description": "Reported frozen G domain and issue-fixed scope",
+      "availability": "REPORTED_ONLY",
+      "reference": {
+        "path": "principles/evidence/gp_diagnosis.md",
+        "lines": [
+          51,
+          51
+        ]
+      },
+      "value": "与此同时，五个决策的 `issue_fixed` 全为 null。四个冻结 G domain 都只有 `PRESERVE` 义务，并事前明确现有 guard 不直接断言对应 issue 已修复。因此“G 检查完整”和“G 能在候选中识别正确修复”是两件事；本轮只有前者成立。\n"
+    },
+    {
+      "id": "gp.new_policy",
+      "description": "Explicitly added diagnostic policy declaration",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/protocol.json",
+        "fields": {
+          "name": "/policy/name",
+          "role": "/policy/role",
+          "max_syntax_bytes": "/policy/max_syntax_bytes",
+          "all_confirmed_bad": "/policy/all_confirmed_bad",
+          "projection_use": "/policy/projection_use"
+        }
+      },
+      "value": {
+        "name": "reject_confirmed_original_syntax_error_v1",
+        "role": "New local hard exclusion of confirmed syntax errors before unchanged soft ranking",
+        "max_syntax_bytes": 262144,
+        "all_confirmed_bad": "Abstain with null snapshot; do not delegate empty-pool fallback to a known-bad current snapshot",
+        "projection_use": "Recorded G preservation receipts remain scoped preservation evidence, not original syntax or issue-repair evidence"
+      }
+    },
+    {
+      "id": "gp.original_endpoint",
+      "description": "Recorded selector result for original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/0/fixture_id",
+          "policy": "/conditions/0/policy",
+          "selected_snapshot": "/conditions/0/selected_snapshot",
+          "rejected_candidates": "/conditions/0/rejected_candidates",
+          "abstained": "/conditions/0/abstained",
+          "official_outcome": "/conditions/0/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "historical_original",
+        "policy": "original",
+        "selected_snapshot": "508c251e5b694a2d7328145f19dd44f31ab16857",
+        "rejected_candidates": [],
+        "abstained": false,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.exclusion_endpoint",
+      "description": "Recorded selector result for exclusion",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/1/fixture_id",
+          "policy": "/conditions/1/policy",
+          "selected_snapshot": "/conditions/1/selected_snapshot",
+          "rejected_candidates": "/conditions/1/rejected_candidates",
+          "abstained": "/conditions/1/abstained",
+          "official_outcome": "/conditions/1/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "historical_syntax_exclusion",
+        "policy": "reject_confirmed_original_syntax_error_v1",
+        "selected_snapshot": "befc36e3265f789e28c1168e8ee6468c42631bb2",
+        "rejected_candidates": [
+          "508c251e5b694a2d7328145f19dd44f31ab16857"
+        ],
+        "abstained": false,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.test_only_endpoint",
+      "description": "Recorded selector result for test_only",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/2/fixture_id",
+          "policy": "/conditions/2/policy",
+          "selected_snapshot": "/conditions/2/selected_snapshot",
+          "rejected_candidates": "/conditions/2/rejected_candidates",
+          "abstained": "/conditions/2/abstained",
+          "official_outcome": "/conditions/2/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "synthetic_legitimate_test_only",
+        "policy": "reject_confirmed_original_syntax_error_v1",
+        "selected_snapshot": "test_only_first",
+        "rejected_candidates": [],
+        "abstained": false,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.test_only_input",
+      "description": "Declared synthetic test_only input",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/protocol.json",
+        "fields": {
+          "requirement": "/fixtures/2/requirement",
+          "base_files": "/fixtures/2/base_files",
+          "replace_from_base": "/fixtures/2/replace_from_base",
+          "candidates": "/fixtures/2/candidates"
+        }
+      },
+      "value": {
+        "requirement": "Add valid regression test coverage; production edits are not required",
+        "base_files": {
+          "tests/test_value.py": "def test_base():\n    assert 1 == 1\n"
+        },
+        "replace_from_base": [
+          "tests/test_value.py"
+        ],
+        "candidates": [
+          {
+            "id": "test_only_first",
+            "path": "tests/test_value.py",
+            "code": "def test_base():\n    assert 1 == 1\n\ndef test_added():\n    assert 2 == 2\n",
+            "key_kind": "python",
+            "fallback_reason": null
+          },
+          {
+            "id": "test_only_second",
+            "path": "tests/test_value.py",
+            "code": "def test_base():\n    assert 1 == 1\n\ndef test_other():\n    assert 3 == 3\n",
+            "key_kind": "python",
+            "fallback_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "gp.safe_projection_endpoint",
+      "description": "Recorded selector result for safe_projection",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/3/fixture_id",
+          "policy": "/conditions/3/policy",
+          "selected_snapshot": "/conditions/3/selected_snapshot",
+          "rejected_candidates": "/conditions/3/rejected_candidates",
+          "abstained": "/conditions/3/abstained",
+          "official_outcome": "/conditions/3/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "synthetic_safe_projection",
+        "policy": "reject_confirmed_original_syntax_error_v1",
+        "selected_snapshot": "safe_first",
+        "rejected_candidates": [],
+        "abstained": false,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.safe_projection_input",
+      "description": "Declared synthetic safe_projection input",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/protocol.json",
+        "fields": {
+          "requirement": "/fixtures/3/requirement",
+          "base_files": "/fixtures/3/base_files",
+          "replace_from_base": "/fixtures/3/replace_from_base",
+          "candidates": "/fixtures/3/candidates"
+        }
+      },
+      "value": {
+        "requirement": "Keep runtime value() returning 1; differences in comments need not affect the declared value property",
+        "base_files": {
+          "runtime.py": "def value():\n    return 1\n",
+          "tests/test_value.py": "assert True\n"
+        },
+        "replace_from_base": [
+          "tests/test_value.py"
+        ],
+        "candidates": [
+          {
+            "id": "safe_first",
+            "path": "runtime.py",
+            "code": "# first explanation\ndef value():\n    return 1\n",
+            "extra_files": {
+              "tests/test_value.py": "# first local instrumentation\nassert True\n"
+            },
+            "key_kind": "python",
+            "fallback_reason": null
+          },
+          {
+            "id": "safe_second",
+            "path": "runtime.py",
+            "code": "# second explanation\ndef value():\n    return 1\n",
+            "extra_files": {
+              "tests/test_value.py": "# second local instrumentation\nassert True\n"
+            },
+            "key_kind": "python",
+            "fallback_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "gp.size_unknown_endpoint",
+      "description": "Recorded selector result for size_unknown",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/4/fixture_id",
+          "policy": "/conditions/4/policy",
+          "selected_snapshot": "/conditions/4/selected_snapshot",
+          "rejected_candidates": "/conditions/4/rejected_candidates",
+          "abstained": "/conditions/4/abstained",
+          "official_outcome": "/conditions/4/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "synthetic_size_limit_unknown",
+        "policy": "reject_confirmed_original_syntax_error_v1",
+        "selected_snapshot": "unknown_first",
+        "rejected_candidates": [],
+        "abstained": false,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.size_unknown_input",
+      "description": "Declared synthetic size_unknown input",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/protocol.json",
+        "fields": {
+          "requirement": "/fixtures/4/requirement",
+          "base_files": "/fixtures/4/base_files",
+          "replace_from_base": "/fixtures/4/replace_from_base",
+          "candidates": "/fixtures/4/candidates"
+        }
+      },
+      "value": {
+        "requirement": "Missing syntax evidence is not evidence of a syntax error",
+        "base_files": {},
+        "replace_from_base": [],
+        "candidates": [
+          {
+            "id": "unknown_first",
+            "path": "large.py",
+            "code": null,
+            "reported_text_bytes": 262145,
+            "key_kind": "raw",
+            "fallback_reason": "TEXT_SIZE_LIMIT"
+          },
+          {
+            "id": "known_second",
+            "path": "small.py",
+            "code": "value = 1\n",
+            "key_kind": "python",
+            "fallback_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "gp.all_bad_endpoint",
+      "description": "Recorded selector result for all_bad",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/replay_result.json",
+        "fields": {
+          "fixture_id": "/conditions/5/fixture_id",
+          "policy": "/conditions/5/policy",
+          "selected_snapshot": "/conditions/5/selected_snapshot",
+          "rejected_candidates": "/conditions/5/rejected_candidates",
+          "abstained": "/conditions/5/abstained",
+          "official_outcome": "/conditions/5/official_outcome"
+        }
+      },
+      "value": {
+        "fixture_id": "synthetic_all_confirmed_bad",
+        "policy": "reject_confirmed_original_syntax_error_v1",
+        "selected_snapshot": null,
+        "rejected_candidates": [
+          "bad_first",
+          "bad_current"
+        ],
+        "abstained": true,
+        "official_outcome": null
+      }
+    },
+    {
+      "id": "gp.all_bad_input",
+      "description": "Declared synthetic all_bad input",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/gp/protocol.json",
+        "fields": {
+          "requirement": "/fixtures/5/requirement",
+          "base_files": "/fixtures/5/base_files",
+          "replace_from_base": "/fixtures/5/replace_from_base",
+          "candidates": "/fixtures/5/candidates"
+        }
+      },
+      "value": {
+        "requirement": "The new exclusion must not publish either confirmed syntax-error candidate",
+        "base_files": {},
+        "replace_from_base": [],
+        "candidates": [
+          {
+            "id": "bad_first",
+            "path": "first.py",
+            "code": "def broken(:\n    pass\n",
+            "key_kind": "raw",
+            "fallback_reason": "NORMALIZATION_EXCEPTION"
+          },
+          {
+            "id": "bad_current",
+            "path": "second.py",
+            "code": "if:\n    pass\n",
+            "key_kind": "raw",
+            "fallback_reason": "NORMALIZATION_EXCEPTION"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.public_requirement",
+      "description": "Public issue requirement summary; not a complete raw issue",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/public_requirement.txt"
+      },
+      "value": "has_key, has_keys, and has_any_keys JSONField() lookups don't handle numeric keys on SQLite, MySQL, and Oracle.\n\nThe public example requires has_key='1111' to find an object key.\nThis replay does not certify all has_key/has_keys/has_any_keys repairs.\n"
+    },
+    {
+      "id": "feedback.index_documentation",
+      "description": "Verbatim pinned public documentation excerpt",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/documented_index_obligation.txt"
+      },
+      "value": "If the key is an integer, it will be interpreted as an index transform in an\narray::\n\n    >>> Dog.objects.filter(data__owner__other_pets__0__name='Fishy')\n    <QuerySet [<Dog: Rufus>]>\n"
+    },
+    {
+      "id": "feedback.documentation_identity",
+      "description": "Source identity and lines of the documentation excerpt",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/protocol.json",
+        "fields": {
+          "url": "/documentation/url",
+          "full_file_sha256": "/documentation/full_file_sha256",
+          "excerpt_start_line": "/documentation/excerpt_start_line",
+          "excerpt_end_line": "/documentation/excerpt_end_line"
+        }
+      },
+      "value": {
+        "url": "https://raw.githubusercontent.com/django/django/859a87d873ce7152af73ab851653b4e1c3ffea4c/docs/topics/db/queries.txt",
+        "full_file_sha256": "9c148d97a7bbca327ccd465296f657dcffb672d6e363613a2b4db55c493fbe41",
+        "excerpt_start_line": 938,
+        "excerpt_end_line": 942
+      }
+    },
+    {
+      "id": "feedback.source_Base",
+      "description": "Exact exposed Base source slice",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/Base.py"
+      },
+      "value": "# Exact source-method excerpts; globals and class bases are supplied by replay.py.\n\ndef compile_json_path(key_transforms, include_root=True):\n    path = [\"$\"] if include_root else []\n    for key_transform in key_transforms:\n        try:\n            num = int(key_transform)\n        except ValueError:  # non-integer\n            path.append(\".\")\n            path.append(json.dumps(key_transform))\n        else:\n            path.append(\"[%s]\" % num)\n    return \"\".join(path)\n\n\nclass KeyTransform(Transform):\n\n    def __init__(self, key_name, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.key_name = str(key_name)\n\n\n    def preprocess_lhs(self, compiler, connection):\n        key_transforms = [self.key_name]\n        previous = self.lhs\n        while isinstance(previous, KeyTransform):\n            key_transforms.insert(0, previous.key_name)\n            previous = previous.lhs\n        lhs, params = compiler.compile(previous)\n        if connection.vendor == \"oracle\":\n            # Escape string-formatting.\n            key_transforms = [key.replace(\"%\", \"%%\") for key in key_transforms]\n        return lhs, params, key_transforms\n\n\n    def as_mysql(self, compiler, connection):\n        lhs, params, key_transforms = self.preprocess_lhs(compiler, connection)\n        json_path = compile_json_path(key_transforms)\n        return \"JSON_EXTRACT(%s, %%s)\" % lhs, tuple(params) + (json_path,)\n\n\nclass HasKeyLookup(PostgresOperatorLookup):\n\n    logical_operator = None\n\n\n    def as_sql(self, compiler, connection, template=None):\n        # Process JSON path from the left-hand side.\n        if isinstance(self.lhs, KeyTransform):\n            lhs, lhs_params, lhs_key_transforms = self.lhs.preprocess_lhs(\n                compiler, connection\n            )\n            lhs_json_path = compile_json_path(lhs_key_transforms)\n        else:\n            lhs, lhs_params = self.process_lhs(compiler, connection)\n            lhs_json_path = \"$\"\n        sql = template % lhs\n        # Process JSON path from the right-hand side.\n        rhs = self.rhs\n        rhs_params = []\n        if not isinstance(rhs, (list, tuple)):\n            rhs = [rhs]\n        for key in rhs:\n            if isinstance(key, KeyTransform):\n                *_, rhs_key_transforms = key.preprocess_lhs(compiler, connection)\n            else:\n                rhs_key_transforms = [key]\n            rhs_params.append(\n                \"%s%s\"\n                % (\n                    lhs_json_path,\n                    compile_json_path(rhs_key_transforms, include_root=False),\n                )\n            )\n        # Add condition for each key.\n        if self.logical_operator:\n            sql = \"(%s)\" % self.logical_operator.join([sql] * len(rhs_params))\n        return sql, tuple(lhs_params) + tuple(rhs_params)\n\n\n    def as_mysql(self, compiler, connection):\n        return self.as_sql(\n            compiler, connection, template=\"JSON_CONTAINS_PATH(%s, 'one', %%s)\"\n        )\n\n"
+    },
+    {
+      "id": "feedback.source_B",
+      "description": "Exact exposed B source slice",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/B.py"
+      },
+      "value": "# Exact source-method excerpts; globals and class bases are supplied by replay.py.\n\ndef compile_json_path(key_transforms, include_root=True, allow_array_index=True):\n    path = [\"$\"] if include_root else []\n    for key_transform in key_transforms:\n        try:\n            num = int(key_transform)\n        except (ValueError, TypeError):  # non-integer or non-convertible\n            path.append(\".\")\n            path.append(json.dumps(key_transform))\n        else:\n            if allow_array_index:\n                path.append(\"[%s]\" % num)\n            else:\n                # Treat numeric-looking keys as object keys (quoted) when array\n                # index interpretation is not allowed.\n                path.append(\".\")\n                path.append(json.dumps(key_transform))\n    return \"\".join(path)\n\n\nclass KeyTransform(Transform):\n\n    def __init__(self, key_name, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.key_name = str(key_name)\n\n\n    def preprocess_lhs(self, compiler, connection):\n        key_transforms = [self.key_name]\n        previous = self.lhs\n        while isinstance(previous, KeyTransform):\n            key_transforms.insert(0, previous.key_name)\n            previous = previous.lhs\n        lhs, params = compiler.compile(previous)\n        if connection.vendor == \"oracle\":\n            # Escape string-formatting.\n            key_transforms = [key.replace(\"%\", \"%%\") for key in key_transforms]\n        return lhs, params, key_transforms\n\n\n    def as_mysql(self, compiler, connection):\n        lhs, params, key_transforms = self.preprocess_lhs(compiler, connection)\n        json_path = compile_json_path(key_transforms)\n        return \"JSON_EXTRACT(%s, %%s)\" % lhs, tuple(params) + (json_path,)\n\n\nclass HasKeyLookup(PostgresOperatorLookup):\n\n    logical_operator = None\n\n\n    def as_sql(self, compiler, connection, template=None):\n        # Process JSON path from the left-hand side.\n        if isinstance(self.lhs, KeyTransform):\n            lhs, lhs_params, lhs_key_transforms = self.lhs.preprocess_lhs(\n                compiler, connection\n            )\n            lhs_json_path = compile_json_path(lhs_key_transforms)\n        else:\n            lhs, lhs_params = self.process_lhs(compiler, connection)\n            lhs_json_path = \"$\"\n        sql = template % lhs\n        # Process JSON path from the right-hand side.\n        rhs = self.rhs\n        rhs_params = []\n        if not isinstance(rhs, (list, tuple)):\n            rhs = [rhs]\n        for key in rhs:\n            if isinstance(key, KeyTransform):\n                *_, rhs_key_transforms = key.preprocess_lhs(compiler, connection)\n                rhs_path = compile_json_path(rhs_key_transforms, include_root=False)\n            else:\n                rhs_key_transforms = [key]\n                # On SQLite, MySQL and Oracle, numeric-looking object keys\n                # should be treated as quoted object keys, not array indices.\n                if connection.vendor in (\"sqlite\", \"mysql\", \"oracle\"):\n                    rhs_path = compile_json_path(\n                        rhs_key_transforms, include_root=False, allow_array_index=False\n                    )\n                else:\n                    rhs_path = compile_json_path(rhs_key_transforms, include_root=False)\n            rhs_params.append(\"%s%s\" % (lhs_json_path, rhs_path))\n        # Add condition for each key.\n        if self.logical_operator:\n            sql = \"(%s)\" % self.logical_operator.join([sql] * len(rhs_params))\n        return sql, tuple(lhs_params) + tuple(rhs_params)\n\n\n    def as_mysql(self, compiler, connection):\n        return self.as_sql(\n            compiler, connection, template=\"JSON_CONTAINS_PATH(%s, 'one', %%s)\"\n        )\n\n"
+    },
+    {
+      "id": "feedback.source_V",
+      "description": "Exact exposed V source slice",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/V.py"
+      },
+      "value": "# Exact source-method excerpts; globals and class bases are supplied by replay.py.\n\ndef compile_json_path(key_transforms, include_root=True, allow_array_index=True):\n    path = [\"$\"] if include_root else []\n    for key_transform in key_transforms:\n        # Only treat actual integers as array indexes. Numeric strings (e.g. \"1111\")\n        # are object keys and must be quoted in JSONPath.\n        if isinstance(key_transform, int):\n            if allow_array_index:\n                path.append(\"[%s]\" % key_transform)\n            else:\n                path.append(\".\")\n                path.append(json.dumps(key_transform))\n        else:\n            path.append(\".\")\n            path.append(json.dumps(key_transform))\n    return \"\".join(path)\n\n\nclass KeyTransform(Transform):\n\n    def __init__(self, key_name, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.key_name = str(key_name)\n\n\n    def preprocess_lhs(self, compiler, connection):\n        key_transforms = [self.key_name]\n        previous = self.lhs\n        while isinstance(previous, KeyTransform):\n            key_transforms.insert(0, previous.key_name)\n            previous = previous.lhs\n        lhs, params = compiler.compile(previous)\n        if connection.vendor == \"oracle\":\n            # Escape string-formatting.\n            key_transforms = [key.replace(\"%\", \"%%\") for key in key_transforms]\n        return lhs, params, key_transforms\n\n\n    def as_mysql(self, compiler, connection):\n        lhs, params, key_transforms = self.preprocess_lhs(compiler, connection)\n        json_path = compile_json_path(key_transforms)\n        return \"JSON_EXTRACT(%s, %%s)\" % lhs, tuple(params) + (json_path,)\n\n\nclass HasKeyLookup(PostgresOperatorLookup):\n\n    logical_operator = None\n\n\n    def as_sql(self, compiler, connection, template=None):\n        # Process JSON path from the left-hand side.\n        if isinstance(self.lhs, KeyTransform):\n            lhs, lhs_params, lhs_key_transforms = self.lhs.preprocess_lhs(\n                compiler, connection\n            )\n            lhs_json_path = compile_json_path(lhs_key_transforms)\n        else:\n            lhs, lhs_params = self.process_lhs(compiler, connection)\n            lhs_json_path = \"$\"\n        sql = template % lhs\n        # Process JSON path from the right-hand side.\n        rhs = self.rhs\n        rhs_params = []\n        if not isinstance(rhs, (list, tuple)):\n            rhs = [rhs]\n        for key in rhs:\n            if isinstance(key, KeyTransform):\n                *_, rhs_key_transforms = key.preprocess_lhs(compiler, connection)\n                rhs_path = compile_json_path(rhs_key_transforms, include_root=False)\n            else:\n                rhs_key_transforms = [key]\n                # On SQLite, MySQL and Oracle, numeric-looking object keys\n                # should be treated as quoted object keys, not array indices.\n                if connection.vendor in (\"sqlite\", \"mysql\", \"oracle\"):\n                    rhs_path = compile_json_path(\n                        rhs_key_transforms, include_root=False, allow_array_index=False\n                    )\n                else:\n                    rhs_path = compile_json_path(rhs_key_transforms, include_root=False)\n            rhs_params.append(\"%s%s\" % (lhs_json_path, rhs_path))\n        # Add condition for each key.\n        if self.logical_operator:\n            sql = \"(%s)\" % self.logical_operator.join([sql] * len(rhs_params))\n        return sql, tuple(lhs_params) + tuple(rhs_params)\n\n\n    def as_mysql(self, compiler, connection):\n        return self.as_sql(\n            compiler, connection, template=\"JSON_CONTAINS_PATH(%s, 'one', %%s)\"\n        )\n\n"
+    },
+    {
+      "id": "feedback.source_original_checker",
+      "description": "Exact exposed original_checker source slice",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/feedback/source/original_checker.py"
+      },
+      "value": "import unittest\nfrom django.db.models.fields.json import compile_json_path\n\nclass Behavior(unittest.TestCase):\n    def test_numeric_string_key_quoted(self):\n        # The lookup should treat numeric string keys as object keys (quoted),\n        # not as array indexes. On the buggy base this assertion will fail.\n        self.assertEqual(compile_json_path([\"1111\"]), '$.\"1111\"')\n\n    def test_non_numeric_string_key(self):\n        self.assertEqual(compile_json_path([\"foo\"]), '$.\"foo\"')\n\n    def test_integer_index(self):\n        self.assertEqual(compile_json_path([3]), '$[3]')\n"
+    },
+    {
+      "id": "feedback.base_direct",
+      "description": "Recorded base direct observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/0/snapshot",
+          "mode": "/rows/0/mode",
+          "observation_0_name": "/rows/0/observations/0/name",
+          "observation_0_status": "/rows/0/observations/0/status",
+          "observation_0_helper_calls": "/rows/0/observations/0/helper_calls",
+          "observation_1_name": "/rows/0/observations/1/name",
+          "observation_1_status": "/rows/0/observations/1/status",
+          "observation_1_helper_calls": "/rows/0/observations/1/helper_calls",
+          "observation_2_name": "/rows/0/observations/2/name",
+          "observation_2_status": "/rows/0/observations/2/status",
+          "observation_2_helper_calls": "/rows/0/observations/2/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "Base",
+        "mode": "original_checker",
+        "observation_0_name": "test_numeric_string_key_quoted",
+        "observation_0_status": "FAIL",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "1111"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[1111]"
+          }
+        ],
+        "observation_1_name": "test_non_numeric_string_key",
+        "observation_1_status": "PASS",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_2_name": "test_integer_index",
+        "observation_2_status": "PASS",
+        "observation_2_helper_calls": [
+          {
+            "keys": [
+              3
+            ],
+            "key_types": [
+              "int"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[3]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.b_direct",
+      "description": "Recorded b direct observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/2/snapshot",
+          "mode": "/rows/2/mode",
+          "observation_0_name": "/rows/2/observations/0/name",
+          "observation_0_status": "/rows/2/observations/0/status",
+          "observation_0_helper_calls": "/rows/2/observations/0/helper_calls",
+          "observation_1_name": "/rows/2/observations/1/name",
+          "observation_1_status": "/rows/2/observations/1/status",
+          "observation_1_helper_calls": "/rows/2/observations/1/helper_calls",
+          "observation_2_name": "/rows/2/observations/2/name",
+          "observation_2_status": "/rows/2/observations/2/status",
+          "observation_2_helper_calls": "/rows/2/observations/2/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "B",
+        "mode": "original_checker",
+        "observation_0_name": "test_numeric_string_key_quoted",
+        "observation_0_status": "FAIL",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "1111"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[1111]"
+          }
+        ],
+        "observation_1_name": "test_non_numeric_string_key",
+        "observation_1_status": "PASS",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_2_name": "test_integer_index",
+        "observation_2_status": "PASS",
+        "observation_2_helper_calls": [
+          {
+            "keys": [
+              3
+            ],
+            "key_types": [
+              "int"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[3]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.v_direct",
+      "description": "Recorded v direct observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/4/snapshot",
+          "mode": "/rows/4/mode",
+          "observation_0_name": "/rows/4/observations/0/name",
+          "observation_0_status": "/rows/4/observations/0/status",
+          "observation_0_helper_calls": "/rows/4/observations/0/helper_calls",
+          "observation_1_name": "/rows/4/observations/1/name",
+          "observation_1_status": "/rows/4/observations/1/status",
+          "observation_1_helper_calls": "/rows/4/observations/1/helper_calls",
+          "observation_2_name": "/rows/4/observations/2/name",
+          "observation_2_status": "/rows/4/observations/2/status",
+          "observation_2_helper_calls": "/rows/4/observations/2/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "V",
+        "mode": "original_checker",
+        "observation_0_name": "test_numeric_string_key_quoted",
+        "observation_0_status": "PASS",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "1111"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"1111\""
+          }
+        ],
+        "observation_1_name": "test_non_numeric_string_key",
+        "observation_1_status": "PASS",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_2_name": "test_integer_index",
+        "observation_2_status": "PASS",
+        "observation_2_helper_calls": [
+          {
+            "keys": [
+              3
+            ],
+            "key_types": [
+              "int"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[3]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.b_production",
+      "description": "Recorded b production observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/3/snapshot",
+          "mode": "/rows/3/mode",
+          "observation_0_name": "/rows/3/observations/0/name",
+          "observation_0_status": "/rows/3/observations/0/status",
+          "observation_0_actual": "/rows/3/observations/0/actual",
+          "observation_0_helper_calls": "/rows/3/observations/0/helper_calls",
+          "observation_1_name": "/rows/3/observations/1/name",
+          "observation_1_status": "/rows/3/observations/1/status",
+          "observation_1_actual": "/rows/3/observations/1/actual",
+          "observation_1_helper_calls": "/rows/3/observations/1/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "B",
+        "mode": "production_path",
+        "observation_0_name": "KeyTransform('foo').as_mysql",
+        "observation_0_status": "PASS",
+        "observation_0_actual": "$.\"foo\"",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_1_name": "KeyTransform(3).as_mysql",
+        "observation_1_status": "PASS",
+        "observation_1_actual": "$[3]",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "3"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$[3]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.v_production",
+      "description": "Recorded v production observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/5/snapshot",
+          "mode": "/rows/5/mode",
+          "observation_0_name": "/rows/5/observations/0/name",
+          "observation_0_status": "/rows/5/observations/0/status",
+          "observation_0_actual": "/rows/5/observations/0/actual",
+          "observation_0_helper_calls": "/rows/5/observations/0/helper_calls",
+          "observation_1_name": "/rows/5/observations/1/name",
+          "observation_1_status": "/rows/5/observations/1/status",
+          "observation_1_actual": "/rows/5/observations/1/actual",
+          "observation_1_helper_calls": "/rows/5/observations/1/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "V",
+        "mode": "production_path",
+        "observation_0_name": "KeyTransform('foo').as_mysql",
+        "observation_0_status": "PASS",
+        "observation_0_actual": "$.\"foo\"",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_1_name": "KeyTransform(3).as_mysql",
+        "observation_1_status": "FAIL",
+        "observation_1_actual": "$.\"3\"",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "3"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"3\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.v_equivalent_helper",
+      "description": "Recorded v equivalent helper observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/6/snapshot",
+          "mode": "/rows/6/mode",
+          "observation_0_name": "/rows/6/observations/0/name",
+          "observation_0_status": "/rows/6/observations/0/status",
+          "observation_0_actual": "/rows/6/observations/0/actual",
+          "observation_0_helper_calls": "/rows/6/observations/0/helper_calls",
+          "observation_1_name": "/rows/6/observations/1/name",
+          "observation_1_status": "/rows/6/observations/1/status",
+          "observation_1_actual": "/rows/6/observations/1/actual",
+          "observation_1_helper_calls": "/rows/6/observations/1/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "V",
+        "mode": "equivalent_helper",
+        "observation_0_name": "compile_json_path(['foo'])",
+        "observation_0_status": "PASS",
+        "observation_0_actual": "$.\"foo\"",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"foo\""
+          }
+        ],
+        "observation_1_name": "compile_json_path(['3'])",
+        "observation_1_status": "FAIL",
+        "observation_1_actual": "$.\"3\"",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "3"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {},
+            "output": "$.\"3\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.b_lookup",
+      "description": "Recorded b lookup observations",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/feedback/result.json",
+        "fields": {
+          "snapshot": "/rows/7/snapshot",
+          "mode": "/rows/7/mode",
+          "observation_0_name": "/rows/7/observations/0/name",
+          "observation_0_status": "/rows/7/observations/0/status",
+          "observation_0_actual": "/rows/7/observations/0/actual",
+          "observation_0_helper_calls": "/rows/7/observations/0/helper_calls",
+          "observation_1_name": "/rows/7/observations/1/name",
+          "observation_1_status": "/rows/7/observations/1/status",
+          "observation_1_actual": "/rows/7/observations/1/actual",
+          "observation_1_helper_calls": "/rows/7/observations/1/helper_calls"
+        }
+      },
+      "value": {
+        "snapshot": "B",
+        "mode": "legal_lookup",
+        "observation_0_name": "HasKeyLookup(rhs='1111').as_mysql",
+        "observation_0_status": "PASS",
+        "observation_0_actual": "$.\"1111\"",
+        "observation_0_helper_calls": [
+          {
+            "keys": [
+              "1111"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {
+              "include_root": false,
+              "allow_array_index": false
+            },
+            "output": ".\"1111\""
+          }
+        ],
+        "observation_1_name": "HasKeyLookup(rhs='foo').as_mysql",
+        "observation_1_status": "PASS",
+        "observation_1_actual": "$.\"foo\"",
+        "observation_1_helper_calls": [
+          {
+            "keys": [
+              "foo"
+            ],
+            "key_types": [
+              "str"
+            ],
+            "args": [],
+            "kwargs": {
+              "include_root": false,
+              "allow_array_index": false
+            },
+            "output": ".\"foo\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "feedback.sealed_endpoints",
+      "description": "Saved pre-scoring consumer decisions and chosen trees",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "witnesses/feedback/endpoints.json",
+        "fields": {
+          "instance_id": "/records/5/fields/~1instance_id",
+          "status": "/records/5/fields/~1status",
+          "official_scores": "/records/5/fields/~1official_scores",
+          "post_decisions_U": "/records/5/fields/~1post_decisions~1U",
+          "post_decisions_V": "/records/5/fields/~1post_decisions~1V",
+          "policies_B_snapshot_ref": "/records/5/fields/~1policies~1B~1snapshot_ref",
+          "policies_U_snapshot_ref": "/records/5/fields/~1policies~1U~1snapshot_ref",
+          "policies_G_U_snapshot_ref": "/records/5/fields/~1policies~1G_U~1snapshot_ref",
+          "policies_G_V_snapshot_ref": "/records/5/fields/~1policies~1G_V~1snapshot_ref"
+        }
+      },
+      "value": {
+        "instance_id": "django__django-15503",
+        "status": "TASK_POLICIES_SEALED_BEFORE_OFFICIAL_SCORING",
+        "official_scores": null,
+        "post_decisions_U": "REPRODUCED",
+        "post_decisions_V": "COVERED_PASS",
+        "policies_B_snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "policies_U_snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "policies_G_U_snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "policies_G_V_snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b"
+      }
+    },
+    {
+      "id": "feedback.saved_marker",
+      "description": "Marker observations in saved constructed continuation inputs",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "witnesses/feedback/prepared_feedback.json",
+        "fields": {
+          "u_prepared": "/records/0/marker_occurrences",
+          "u_effective": "/records/1/marker_occurrences",
+          "v_prepared": "/records/2/marker_occurrences",
+          "v_effective": "/records/3/marker_occurrences",
+          "v_prepared_check": "/records/2/deterministic_check"
+        }
+      },
+      "value": {
+        "u_prepared": 0,
+        "u_effective": 0,
+        "v_prepared": 1,
+        "v_effective": 1,
+        "v_prepared_check": {
+          "parsed_feedback_equals_record": "b_feedback",
+          "equal": true
+        }
+      }
+    },
+    {
+      "id": "feedback.b_historical_observation",
+      "description": "Original-record field projection for B",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "witnesses/feedback/observations.json",
+        "fields": {
+          "snapshot_ref": "/records/0/fields/~1snapshot_ref",
+          "decision": "/records/0/fields/~1decision",
+          "input_hashes_script.py": "/records/0/fields/~1input_hashes~1script.py",
+          "cases_0_status": "/records/0/fields/~1cases~10~1status",
+          "cases_1_status": "/records/0/fields/~1cases~11~1status",
+          "cases_2_status": "/records/0/fields/~1cases~12~1status"
+        }
+      },
+      "value": {
+        "snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "decision": "REPRODUCED",
+        "input_hashes_script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "cases_0_status": "PASS",
+        "cases_1_status": "PASS",
+        "cases_2_status": "FAIL"
+      }
+    },
+    {
+      "id": "feedback.u_historical_observation",
+      "description": "Original-record field projection for U",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "witnesses/feedback/observations.json",
+        "fields": {
+          "snapshot_ref": "/records/1/fields/~1snapshot_ref",
+          "decision": "/records/1/fields/~1decision",
+          "input_hashes_script.py": "/records/1/fields/~1input_hashes~1script.py",
+          "cases_0_status": "/records/1/fields/~1cases~10~1status",
+          "cases_1_status": "/records/1/fields/~1cases~11~1status",
+          "cases_2_status": "/records/1/fields/~1cases~12~1status"
+        }
+      },
+      "value": {
+        "snapshot_ref": "3a83a2436f90d7f4a60d6ed684ec44a6500a1e42",
+        "decision": "REPRODUCED",
+        "input_hashes_script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "cases_0_status": "PASS",
+        "cases_1_status": "PASS",
+        "cases_2_status": "FAIL"
+      }
+    },
+    {
+      "id": "feedback.v_historical_observation",
+      "description": "Original-record field projection for V",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "witnesses/feedback/observations.json",
+        "fields": {
+          "snapshot_ref": "/records/2/fields/~1snapshot_ref",
+          "decision": "/records/2/fields/~1decision",
+          "input_hashes_script.py": "/records/2/fields/~1input_hashes~1script.py",
+          "cases_0_status": "/records/2/fields/~1cases~10~1status",
+          "cases_1_status": "/records/2/fields/~1cases~11~1status",
+          "cases_2_status": "/records/2/fields/~1cases~12~1status"
+        }
+      },
+      "value": {
+        "snapshot_ref": "6b6e44cd1f0860992dfd07e1f5b19e769241dc9b",
+        "decision": "COVERED_PASS",
+        "input_hashes_script.py": "74dd10e523f39c51623544909b671765d237447d27e3692b7281a86cce8109fb",
+        "cases_0_status": "PASS",
+        "cases_1_status": "PASS",
+        "cases_2_status": "PASS"
+      }
+    },
+    {
+      "id": "a21.termination_source",
+      "description": "Pinned source eligibility API, predicate and serializer",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+        "lines": [
+          107,
+          155
+        ]
+      },
+      "value": "class TextMentionTerminationConfig(BaseModel):\n    text: str\n\n\nclass TextMentionTermination(TerminationCondition, Component[TextMentionTerminationConfig]):\n    \"\"\"Terminate the conversation if a specific text is mentioned.\n\n\n    Args:\n        text: The text to look for in the messages.\n        sources: Check only messages of the specified agents for the text to look for.\n    \"\"\"\n\n    component_config_schema = TextMentionTerminationConfig\n    component_provider_override = \"autogen_agentchat.conditions.TextMentionTermination\"\n\n    def __init__(self, text: str, sources: Sequence[str] | None = None) -> None:\n        self._termination_text = text\n        self._terminated = False\n        self._sources = sources\n\n    @property\n    def terminated(self) -> bool:\n        return self._terminated\n\n    async def __call__(self, messages: Sequence[BaseAgentEvent | BaseChatMessage]) -> StopMessage | None:\n        if self._terminated:\n            raise TerminatedException(\"Termination condition has already been reached\")\n        for message in messages:\n            if self._sources is not None and message.source not in self._sources:\n                continue\n\n            content = message.to_text()\n            if self._termination_text in content:\n                self._terminated = True\n                return StopMessage(\n                    content=f\"Text '{self._termination_text}' mentioned\", source=\"TextMentionTermination\"\n                )\n        return None\n\n    async def reset(self) -> None:\n        self._terminated = False\n\n    def _to_config(self) -> TextMentionTerminationConfig:\n        return TextMentionTerminationConfig(text=self._termination_text)\n\n    @classmethod\n    def _from_config(cls, config: TextMentionTerminationConfig) -> Self:\n        return cls(text=config.text)\n"
+    },
+    {
+      "id": "a22.termination_source",
+      "description": "Pinned event-counting API and consumer",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py",
+        "lines": [
+          57,
+          104
+        ]
+      },
+      "value": "class MaxMessageTerminationConfig(BaseModel):\n    max_messages: int\n    include_agent_event: bool = False\n\n\nclass MaxMessageTermination(TerminationCondition, Component[MaxMessageTerminationConfig]):\n    \"\"\"Terminate the conversation after a maximum number of messages have been exchanged.\n\n    Args:\n        max_messages: The maximum number of messages allowed in the conversation.\n        include_agent_event: If True, include :class:`~autogen_agentchat.messages.BaseAgentEvent` in the message count.\n            Otherwise, only include :class:`~autogen_agentchat.messages.BaseChatMessage`. Defaults to False.\n    \"\"\"\n\n    component_config_schema = MaxMessageTerminationConfig\n    component_provider_override = \"autogen_agentchat.conditions.MaxMessageTermination\"\n\n    def __init__(self, max_messages: int, include_agent_event: bool = False) -> None:\n        self._max_messages = max_messages\n        self._message_count = 0\n        self._include_agent_event = include_agent_event\n\n    @property\n    def terminated(self) -> bool:\n        return self._message_count >= self._max_messages\n\n    async def __call__(self, messages: Sequence[BaseAgentEvent | BaseChatMessage]) -> StopMessage | None:\n        if self.terminated:\n            raise TerminatedException(\"Termination condition has already been reached\")\n        self._message_count += len([m for m in messages if self._include_agent_event or isinstance(m, BaseChatMessage)])\n        if self._message_count >= self._max_messages:\n            return StopMessage(\n                content=f\"Maximum number of messages {self._max_messages} reached, current message count: {self._message_count}\",\n                source=\"MaxMessageTermination\",\n            )\n        return None\n\n    async def reset(self) -> None:\n        self._message_count = 0\n\n    def _to_config(self) -> MaxMessageTerminationConfig:\n        return MaxMessageTerminationConfig(\n            max_messages=self._max_messages, include_agent_event=self._include_agent_event\n        )\n\n    @classmethod\n    def _from_config(cls, config: MaxMessageTerminationConfig) -> Self:\n        return cls(max_messages=config.max_messages, include_agent_event=config.include_agent_event)\n"
+    },
+    {
+      "id": "a22.producer_source",
+      "description": "Pinned event production and response forwarding",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+        "lines": [
+          592,
+          675
+        ]
+      },
+      "value": "            # Step 6: Exit the loop if no code blocks found\n            if not code_blocks:\n                yield Response(\n                    chat_message=TextMessage(\n                        content=str(model_result.content),\n                        source=agent_name,\n                    )\n                )\n                return\n\n            # Step 7: Yield a CodeGenerationEvent\n            inferred_text_message: CodeGenerationEvent = CodeGenerationEvent(\n                retry_attempt=nth_try,\n                content=model_result.content,\n                code_blocks=code_blocks,\n                source=agent_name,\n            )\n\n            yield inferred_text_message\n\n            # Step 8: Execute the extracted code blocks\n            execution_result = await self.execute_code_block(inferred_text_message.code_blocks, cancellation_token)\n\n            # Step 9: Update model context with the code execution result\n            await model_context.add_message(\n                UserMessage(\n                    content=execution_result.output,\n                    source=agent_name,\n                )\n            )\n\n            # Step 10: Yield a CodeExecutionEvent\n            yield CodeExecutionEvent(retry_attempt=nth_try, result=execution_result, source=self.name)\n\n            # If execution was successful or last retry, then exit\n            if execution_result.exit_code == 0 or nth_try == max_retries_on_error:\n                break\n\n            # Step 11: If exit code is non-zero and retries are available then\n            #          make an inference asking if we should retry or not\n            chat_context = await model_context.get_messages()\n\n            retry_prompt = (\n                f\"The most recent code execution resulted in an error:\\n{execution_result.output}\\n\\n\"\n                \"Should we attempt to resolve it? Please respond with:\\n\"\n                \"- A boolean value for 'retry' indicating whether it should be retried.\\n\"\n                \"- A detailed explanation in 'reason' that identifies the issue, justifies your decision to retry or not, and outlines how you would resolve the error if a retry is attempted.\"\n            )\n\n            chat_context = chat_context + [\n                UserMessage(\n                    content=retry_prompt,\n                    source=agent_name,\n                )\n            ]\n\n            response = await model_client.create(messages=chat_context, json_output=RetryDecision)\n\n            assert isinstance(\n                response.content, str\n            ), \"Expected structured response for retry decision to be of type str.\"\n            should_retry_generation = RetryDecision.model_validate_json(str(response.content))\n\n            # Exit if no-retry is needed\n            if not should_retry_generation.retry:\n                break\n\n            yield CodeGenerationEvent(\n                retry_attempt=nth_try,\n                content=f\"Attempt number: {nth_try + 1}\\nProposed correction: {should_retry_generation.reason}\",\n                code_blocks=[],\n                source=agent_name,\n            )\n\n        # Always reflect on the execution result\n        async for reflection_response in CodeExecutorAgent._reflect_on_code_block_results_flow(\n            system_messages=system_messages,\n            model_client=model_client,\n            model_client_stream=model_client_stream,\n            model_context=model_context,\n            agent_name=agent_name,\n            inner_messages=inner_messages,\n        ):\n            yield reflection_response  # Last reflection_response is of type Response so it will finish the routine\n"
+    },
+    {
+      "id": "a22.manager_source",
+      "description": "Pinned manager response handling",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+        "lines": [
+          131,
+          170
+        ]
+      },
+      "value": "        # Select speakers to start/continue the conversation\n        await self._transition_to_next_speakers(ctx.cancellation_token)\n\n    @event\n    async def handle_agent_response(\n        self, message: GroupChatAgentResponse | GroupChatTeamResponse, ctx: MessageContext\n    ) -> None:\n        try:\n            # Construct the detla from the agent response.\n            delta: List[BaseAgentEvent | BaseChatMessage] = []\n            if isinstance(message, GroupChatAgentResponse):\n                if message.response.inner_messages is not None:\n                    for inner_message in message.response.inner_messages:\n                        delta.append(inner_message)\n                delta.append(message.response.chat_message)\n            else:\n                delta.extend(message.result.messages)\n\n            # Append the messages to the message thread.\n            await self.update_message_thread(delta)\n\n            # Remove the agent from the active speakers list.\n            self._active_speakers.remove(message.name)\n            if len(self._active_speakers) > 0:\n                # If there are still active speakers, return without doing anything.\n                return\n\n            # Check if the conversation should be terminated.\n            if await self._apply_termination_condition(delta, increment_turn_count=True):\n                # Stop the group chat.\n                return\n\n            # Select speakers to continue the conversation.\n            await self._transition_to_next_speakers(ctx.cancellation_token)\n        except Exception as e:\n            # Handle the exception and signal termination with an error.\n            error = SerializableException.from_exception(e)\n            await self._signal_termination_with_error(error)\n            # Raise the exception to the runtime.\n            raise\n"
+    },
+    {
+      "id": "a22.consumer_source",
+      "description": "Pinned manager termination invocation",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+        "lines": [
+          190,
+          208
+        ]
+      },
+      "value": "                topic_id=DefaultTopicId(type=speaker_topic_type),\n                cancellation_token=cancellation_token,\n            )\n            self._active_speakers.append(speaker_name)\n\n    async def _apply_termination_condition(\n        self, delta: Sequence[BaseAgentEvent | BaseChatMessage], increment_turn_count: bool = False\n    ) -> bool:\n        \"\"\"Apply the termination condition to the delta and return True if the conversation should be terminated.\n        It also resets the termination condition and turn count, and signals termination to the caller of the team.\"\"\"\n        if self._termination_condition is not None:\n            stop_message = await self._termination_condition(delta)\n            if stop_message is not None:\n                # Reset the termination conditions and turn count.\n                await self._termination_condition.reset()\n                self._current_turn = 0\n                # Signal termination to the caller of the team.\n                await self._signal_termination(stop_message)\n                # Stop the group chat.\n"
+    },
+    {
+      "id": "a21.intervention",
+      "description": "Existing diagnostic patch; not an upstream submitted repair",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/diagnostics/a21/intervention.patch"
+      },
+      "value": "--- a/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py\n+++ b/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py\n@@ -106,6 +106,7 @@\n \n class TextMentionTerminationConfig(BaseModel):\n     text: str\n+    sources: List[str] | None = None\n \n \n class TextMentionTermination(TerminationCondition, Component[TextMentionTerminationConfig]):\n@@ -148,11 +149,14 @@\n         self._terminated = False\n \n     def _to_config(self) -> TextMentionTerminationConfig:\n-        return TextMentionTerminationConfig(text=self._termination_text)\n+        return TextMentionTerminationConfig(\n+            text=self._termination_text,\n+            sources=list(self._sources) if self._sources is not None else None,\n+        )\n \n     @classmethod\n     def _from_config(cls, config: TextMentionTerminationConfig) -> Self:\n-        return cls(text=config.text)\n+        return cls(text=config.text, sources=config.sources)\n \n \n class FunctionalTermination(TerminationCondition):\n"
+    },
+    {
+      "id": "a22.intervention",
+      "description": "Existing diagnostic patch; not an upstream submitted repair",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/diagnostics/a22/intervention.patch"
+      },
+      "value": "--- a/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py\n+++ b/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py\n@@ -607,6 +607,7 @@\n                 source=agent_name,\n             )\n \n+            inner_messages.append(inferred_text_message)\n             yield inferred_text_message\n \n             # Step 8: Execute the extracted code blocks\n@@ -621,7 +622,9 @@\n             )\n \n             # Step 10: Yield a CodeExecutionEvent\n-            yield CodeExecutionEvent(retry_attempt=nth_try, result=execution_result, source=self.name)\n+            execution_event = CodeExecutionEvent(retry_attempt=nth_try, result=execution_result, source=self.name)\n+            inner_messages.append(execution_event)\n+            yield execution_event\n \n             # If execution was successful or last retry, then exit\n             if execution_result.exit_code == 0 or nth_try == max_retries_on_error:\n"
+    },
+    {
+      "id": "a21.trigger_original",
+      "description": "Recorded a21 trigger original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/022_a21_trigger_source_lost_original/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP"
+        },
+        "restored_sources": null,
+        "producer_code": [
+          {
+            "code": "value = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 0,
+        "producer_output": "calculation 4\nREVIEW_STOP\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 0,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor"
+      }
+    },
+    {
+      "id": "a21.trigger_changed",
+      "description": "Recorded a21 trigger changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/023_a21_trigger_source_lost_a21/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source",
+          "message_2_source": "/consumer/messages/2/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "restored_sources": [
+          "reviewer"
+        ],
+        "producer_code": [
+          {
+            "code": "value = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 0,
+        "producer_output": "calculation 4\nREVIEW_STOP\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 1,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor",
+        "message_2_source": "reviewer"
+      }
+    },
+    {
+      "id": "a21.cross_patch",
+      "description": "Recorded a21 cross patch",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/024_a21_trigger_source_lost_a22/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP"
+        },
+        "restored_sources": null,
+        "producer_code": [
+          {
+            "code": "value = 2 + 2\nprint(\"calculation\", value)\nprint(\"REVIEW_\" + \"STOP\")\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 0,
+        "producer_output": "calculation 4\nREVIEW_STOP\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 0,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor"
+      }
+    },
+    {
+      "id": "a21.control_original",
+      "description": "Recorded a21 control original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/025_a21_control_success_original/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source",
+          "message_2_source": "/consumer/messages/2/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP"
+        },
+        "restored_sources": null,
+        "producer_code": [
+          {
+            "code": "value = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 0,
+        "producer_output": "calculation 4\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 1,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor",
+        "message_2_source": "reviewer"
+      }
+    },
+    {
+      "id": "a21.control_changed",
+      "description": "Recorded a21 control changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/026_a21_control_success_a21/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source",
+          "message_2_source": "/consumer/messages/2/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "restored_sources": [
+          "reviewer"
+        ],
+        "producer_code": [
+          {
+            "code": "value = 2 + 2\nassert value == 4\nprint(\"calculation\", value)\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 0,
+        "producer_output": "calculation 4\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 1,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor",
+        "message_2_source": "reviewer"
+      }
+    },
+    {
+      "id": "a21.nonzero_control_original",
+      "description": "Recorded a21 nonzero control original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/028_a21_control_execution_failure_original/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source",
+          "message_2_source": "/consumer/messages/2/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP"
+        },
+        "restored_sources": null,
+        "producer_code": [
+          {
+            "code": "import sys\nprint(\"check failed intentionally\", file=sys.stderr)\nraise SystemExit(7)\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 7,
+        "producer_output": "check failed intentionally\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 1,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor",
+        "message_2_source": "reviewer"
+      }
+    },
+    {
+      "id": "a21.nonzero_control_changed",
+      "description": "Recorded a21 nonzero control changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/029_a21_control_execution_failure_a21/observation.json",
+        "fields": {
+          "termination": "/configuration/requested",
+          "serialized_config": "/configuration/serialized_component/config",
+          "restored_sources": "/configuration/restored_sources_observation",
+          "producer_code": "/producer_calls/0/code_blocks",
+          "producer_exit": "/producer_calls/0/native_result_before_agent_formatting/exit_code",
+          "producer_output": "/producer_calls/0/native_result_before_agent_formatting/output",
+          "stop_reason": "/consumer/stop_reason",
+          "responses_consumed": "/responses_consumed",
+          "frozen_responses": "/frozen_model_responses",
+          "message_0_source": "/consumer/messages/0/source",
+          "message_1_source": "/consumer/messages/1/source",
+          "message_2_source": "/consumer/messages/2/source"
+        }
+      },
+      "value": {
+        "termination": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "serialized_config": {
+          "text": "REVIEW_STOP",
+          "sources": [
+            "reviewer"
+          ]
+        },
+        "restored_sources": [
+          "reviewer"
+        ],
+        "producer_code": [
+          {
+            "code": "import sys\nprint(\"check failed intentionally\", file=sys.stderr)\nraise SystemExit(7)\n",
+            "language": "python"
+          }
+        ],
+        "producer_exit": 7,
+        "producer_output": "check failed intentionally\n",
+        "stop_reason": "Text 'REVIEW_STOP' mentioned",
+        "responses_consumed": 1,
+        "frozen_responses": [
+          "Recorded the execution outcome; REVIEW_STOP."
+        ],
+        "message_0_source": "user",
+        "message_1_source": "executor",
+        "message_2_source": "reviewer"
+      }
+    },
+    {
+      "id": "a22.trigger_original",
+      "description": "Recorded a22 trigger original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/031_a22_trigger_success_original/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type",
+          "stream_4_type": "/native_stream/4/python_type",
+          "stream_5_type": "/native_stream/5/python_type",
+          "stream_6_type": "/native_stream/6/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          0,
+          0
+        ],
+        "responses_consumed": 4,
+        "observed_counts": {
+          "stream_messages": 7,
+          "agent_events": 4,
+          "chat_messages": 3,
+          "executor_final_texts": 2
+        },
+        "stop_reason": "Maximum number of turns 2 reached.",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage",
+        "stream_4_type": "CodeGenerationEvent",
+        "stream_5_type": "CodeExecutionEvent",
+        "stream_6_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.trigger_changed",
+      "description": "Recorded a22 trigger changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/033_a22_trigger_success_a22/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          0
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 4 reached, current message count: 4",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.cross_patch",
+      "description": "Recorded a22 cross patch",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/032_a22_trigger_success_a21/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type",
+          "stream_4_type": "/native_stream/4/python_type",
+          "stream_5_type": "/native_stream/5/python_type",
+          "stream_6_type": "/native_stream/6/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          0,
+          0
+        ],
+        "responses_consumed": 4,
+        "observed_counts": {
+          "stream_messages": 7,
+          "agent_events": 4,
+          "chat_messages": 3,
+          "executor_final_texts": 2
+        },
+        "stop_reason": "Maximum number of turns 2 reached.",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage",
+        "stream_4_type": "CodeGenerationEvent",
+        "stream_5_type": "CodeExecutionEvent",
+        "stream_6_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.nonzero_trigger_original",
+      "description": "Recorded a22 nonzero trigger original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/034_a22_trigger_nonzero_exit_original/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type",
+          "stream_4_type": "/native_stream/4/python_type",
+          "stream_5_type": "/native_stream/5/python_type",
+          "stream_6_type": "/native_stream/6/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          7,
+          0
+        ],
+        "responses_consumed": 4,
+        "observed_counts": {
+          "stream_messages": 7,
+          "agent_events": 4,
+          "chat_messages": 3,
+          "executor_final_texts": 2
+        },
+        "stop_reason": "Maximum number of turns 2 reached.",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage",
+        "stream_4_type": "CodeGenerationEvent",
+        "stream_5_type": "CodeExecutionEvent",
+        "stream_6_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.nonzero_trigger_changed",
+      "description": "Recorded a22 nonzero trigger changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/036_a22_trigger_nonzero_exit_a22/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 4,
+          "include_agent_event": true
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          7
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 4 reached, current message count: 4",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.control_original",
+      "description": "Recorded a22 control original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/037_a22_control_success_chat_only_original/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          0
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.control_changed",
+      "description": "Recorded a22 control changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/039_a22_control_success_chat_only_a22/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_OK\")\n```",
+          "The local command completed. This message is not a task-success certificate.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          0
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.nonzero_control_original",
+      "description": "Recorded a22 nonzero control original",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/040_a22_control_nonzero_exit_chat_only_original/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          7
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "a22.nonzero_control_changed",
+      "description": "Recorded a22 nonzero control changed",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "prospective/observed/runs/042_a22_control_nonzero_exit_chat_only_a22/observation.json",
+        "fields": {
+          "termination": "/frozen_input/termination",
+          "frozen_responses": "/frozen_input/model_responses",
+          "max_turns": "/frozen_input/max_turns",
+          "max_retries_on_error": "/frozen_input/max_retries_on_error",
+          "model_client_stream": "/frozen_input/model_client_stream",
+          "script_rule": "/frozen_input/script_rule",
+          "producer_exit_codes": "/producer_facts/exit_codes",
+          "responses_consumed": "/provider/responses_returned",
+          "observed_counts": "/observed_counts",
+          "stop_reason": "/native_consumer/stop_reason",
+          "stream_0_type": "/native_stream/0/python_type",
+          "stream_1_type": "/native_stream/1/python_type",
+          "stream_2_type": "/native_stream/2/python_type",
+          "stream_3_type": "/native_stream/3/python_type"
+        }
+      },
+      "value": {
+        "termination": {
+          "max_messages": 2,
+          "include_agent_event": false
+        },
+        "frozen_responses": [
+          "```python\nprint(\"A22_CHECK_FAILED\")\nraise SystemExit(7)\n```",
+          "The local command reported exit code 7. Message-budget termination does not certify success.",
+          "```python\nprint(\"A22_SECOND_TURN\")\n```",
+          "The second local command completed."
+        ],
+        "max_turns": 2,
+        "max_retries_on_error": 0,
+        "model_client_stream": false,
+        "script_rule": "Consume a prefix in order; responses depend only on ordinal, never message content, source arm, or observed exit status. Streaming, retry/JSON calls, other keyword shapes, or a fifth create call are INCONCLUSIVE. Unused suffix responses are allowed.",
+        "producer_exit_codes": [
+          7
+        ],
+        "responses_consumed": 2,
+        "observed_counts": {
+          "stream_messages": 4,
+          "agent_events": 2,
+          "chat_messages": 2,
+          "executor_final_texts": 1
+        },
+        "stop_reason": "Maximum number of messages 2 reached, current message count: 2",
+        "stream_0_type": "TextMessage",
+        "stream_1_type": "CodeGenerationEvent",
+        "stream_2_type": "CodeExecutionEvent",
+        "stream_3_type": "TextMessage"
+      }
+    },
+    {
+      "id": "pro.evaluator_source",
+      "description": "Verbatim evaluator filter, result reducer and mean",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "principles/pro/source/original_slices.py"
+      },
+      "value": "# MIT; Copyright (c) 2026 Scale AI, Inc. See source/LICENSE.\n\n# Original lines 165-175; prepare_run\ndef prepare_run(uid, output_dir, prefix, redo):\n    uid_dir = os.path.join(output_dir, uid)\n    os.makedirs(uid_dir, exist_ok=True)\n    output_path = os.path.join(uid_dir, f\"{prefix}_output.json\")\n    if not redo and os.path.exists(output_path):\n        print(f\"Skipping {uid} - output already exists\")\n        with open(output_path, \"r\") as f:\n            return json.load(f), output_path, os.path.join(uid_dir, \"workspace\")\n    workspace_dir = os.path.join(uid_dir, \"workspace\")\n    os.makedirs(workspace_dir, exist_ok=True)\n    return None, output_path, workspace_dir\n\n\n# Original lines 358-364; eval_with_docker\ndef eval_with_docker(patch, sample, output_dir, dockerhub_username, scripts_dir, prefix=\"\", redo=False, block_network=False, docker_platform=None):\n    if docker is None:\n        raise RuntimeError(\"docker SDK is not installed. Install via 'pip install docker' or run without --use_local_docker\")\n    uid = sample[\"instance_id\"]\n    existing_output, output_path, workspace_dir = prepare_run(uid, output_dir, prefix, redo)\n    if existing_output is not None:\n        return existing_output\n\n\n# Original lines 469-571; main\ndef main():\n    args = parse_args()\n\n    # Support both JSONL and CSV input files\n    if args.raw_sample_path.endswith(\".jsonl\"):\n        raw_sample_df = pd.read_json(args.raw_sample_path, lines=True)\n    else:\n        raw_sample_df = pd.read_csv(args.raw_sample_path)\n    \n    # Replace nulls with empty strings\n    raw_sample_df = raw_sample_df.fillna(\"\")\n    \n    # use instance_id as index\n    raw_sample_df = raw_sample_df.set_index(\"instance_id\", drop=False)\n\n    # each patch sample is a dict with keys: instance_id, patch, prefix\n    with open(args.patch_path, \"r\") as f:\n        patches_to_run = json.load(f)\n    eval_results = {}\n\n    # Filter patches to only include those with matching instance_ids in the raw sample data\n    valid_patches = []\n    missing_instances = []\n    for patch_sample in patches_to_run:\n        instance_id = patch_sample[\"instance_id\"]\n        if instance_id in raw_sample_df.index:\n            valid_patches.append(patch_sample)\n        else:\n            missing_instances.append(instance_id)\n    \n    if missing_instances:\n        print(f\"Warning: Found {len(missing_instances)} patch instances not in raw sample data:\")\n        for missing_id in missing_instances[:5]:  # Show first 5\n            print(f\"  - {missing_id}\")\n        if len(missing_instances) > 5:\n            print(f\"  ... and {len(missing_instances) - 5} more\")\n        print(f\"Proceeding with {len(valid_patches)} valid patches out of {len(patches_to_run)} total patches\")\n\n    # Select runtime\n    # Auto-detect default platform if not provided: prefer linux/amd64 on Apple Silicon\n    detected_platform = None\n    if args.use_local_docker and args.docker_platform is None:\n        try:\n            if py_platform.machine().lower() in {\"arm64\", \"aarch64\"}:\n                detected_platform = \"linux/amd64\"\n        except Exception:\n            detected_platform = None\n\n    eval_fn = eval_with_docker if args.use_local_docker else eval_with_modal\n\n    # Use ThreadPoolExecutor to run evaluations in parallel\n    with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_workers) as executor:\n        # Create a dictionary mapping futures to their patch samples for progress tracking\n        future_to_patch = {\n            executor.submit(\n                eval_fn,\n                patch_sample.get(\"model_patch\", patch_sample.get(\"patch\", \"\")),\n                raw_sample_df.loc[patch_sample[\"instance_id\"]],\n                args.output_dir,\n                args.dockerhub_username,\n                args.scripts_dir,\n                prefix=patch_sample.get(\"prefix\", \"\"),\n                redo=args.redo,\n                block_network=args.block_network,\n                docker_platform=(args.docker_platform or detected_platform) if args.use_local_docker else None,\n            ): patch_sample\n            for patch_sample in valid_patches\n        }\n\n        # Track progress with tqdm and show running accuracy\n        pbar = tqdm(concurrent.futures.as_completed(future_to_patch), total=len(valid_patches))\n        for future in pbar:\n            patch_sample = future_to_patch[future]\n            try:\n                # Get the result (if any error occurred, it will be raised here)\n                output = future.result()\n                if output is None:\n                    print(f'Evaluation for {patch_sample[\"instance_id\"]} returned None')\n                    eval_results[patch_sample[\"instance_id\"]] = False\n                else:\n                    instance_id = patch_sample[\"instance_id\"]\n                    if instance_id not in raw_sample_df.index:\n                        print(f'Warning: Instance {instance_id} not found in raw sample data, skipping')\n                        eval_results[instance_id] = False\n                    else:\n                        raw_sample = raw_sample_df.loc[instance_id]\n                        passed_tests = {x[\"name\"] for x in output[\"tests\"] if x[\"status\"] == \"PASSED\"}\n                        f2p = set(eval(raw_sample[\"fail_to_pass\"]))\n                        p2p = set(eval(raw_sample[\"pass_to_pass\"]))\n                        result = (f2p | p2p) <= passed_tests\n                        eval_results[instance_id] = result\n\n                current_accuracy = sum(eval_results.values()) / len(eval_results)\n                pbar.set_description(f\"Accuracy: {current_accuracy:.2%}\")\n            except Exception as exc:\n                print(f'Evaluation for {patch_sample[\"instance_id\"]} generated an exception: {exc}')\n                eval_results[patch_sample[\"instance_id\"]] = False\n                # Update progress bar description with current accuracy\n                current_accuracy = sum(eval_results.values()) / len(eval_results)\n                pbar.set_description(f\"Accuracy: {current_accuracy:.2%}\")\n    with open(os.path.join(args.output_dir, \"eval_results.json\"), \"w\") as f:\n        json.dump(eval_results, f)\n    print(\"Overall accuracy: \", sum(eval_results.values()) / len(eval_results))\n\n"
+    },
+    {
+      "id": "pro.report_contract",
+      "description": "Explicit proposed report-consumer declaration, distinct from upstream evaluator",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/pro/inputs.json",
+        "pointer": "/proposed_consumer"
+      },
+      "value": {
+        "role": "hard admission for publishing a specifically declared score report",
+        "requirements": [
+          "unique submitted IDs",
+          "exact membership in the declared full or subset population",
+          "if cached output is used, externally known fixture provenance matches its requested task, prefix, and patch"
+        ],
+        "cache_identity_boundary": "Cache identity is additional fixture-provided observer information. The legacy cache contains no such binding; unknown real cache provenance cannot be inferred from its output.",
+        "actions": [
+          "publish_original_mean",
+          "abstain_from_claimed_population_mean",
+          "request_recompute_without_publishing_cached_mean"
+        ],
+        "no_new_reducer": true,
+        "no_recompute_execution": true
+      }
+    },
+    {
+      "id": "pro.full_inputs",
+      "description": "Declared full claim and evaluator fixture inputs",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/pro/inputs.json",
+        "fields": {
+          "raw_ids": "/fixtures/0/raw_ids",
+          "claim": "/fixtures/0/claim",
+          "predictions": "/fixtures/0/predictions",
+          "completion_order": "/fixtures/0/completion_order",
+          "cache": "/fixtures/0/cache"
+        }
+      },
+      "value": {
+        "raw_ids": [
+          "case_a",
+          "case_b"
+        ],
+        "claim": {
+          "scope": "full",
+          "ids": [
+            "case_a",
+            "case_b"
+          ]
+        },
+        "predictions": [
+          {
+            "instance_id": "case_a",
+            "patch": "synthetic_pass_a",
+            "prefix": "first",
+            "mock_pass": true
+          }
+        ],
+        "completion_order": [
+          0
+        ],
+        "cache": null
+      }
+    },
+    {
+      "id": "pro.full_result",
+      "description": "Original evaluator results for full fixture",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/pro/result.json",
+        "fields": {
+          "results": "/records/0/actual/results",
+          "overall_accuracy": "/records/0/actual/overall_accuracy",
+          "scheduled": "/records/0/actual/scheduled",
+          "fresh_worker_calls": "/records/0/actual/fresh_worker_calls",
+          "cache_hits": "/records/0/actual/cache_hits"
+        }
+      },
+      "value": {
+        "results": {
+          "case_a": true
+        },
+        "overall_accuracy": 1.0,
+        "scheduled": 1,
+        "fresh_worker_calls": 1,
+        "cache_hits": 0
+      }
+    },
+    {
+      "id": "pro.subset_inputs",
+      "description": "Declared subset claim and evaluator fixture inputs",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/pro/inputs.json",
+        "fields": {
+          "raw_ids": "/fixtures/1/raw_ids",
+          "claim": "/fixtures/1/claim",
+          "predictions": "/fixtures/1/predictions",
+          "completion_order": "/fixtures/1/completion_order",
+          "cache": "/fixtures/1/cache"
+        }
+      },
+      "value": {
+        "raw_ids": [
+          "case_a",
+          "case_b"
+        ],
+        "claim": {
+          "scope": "subset",
+          "ids": [
+            "case_a"
+          ]
+        },
+        "predictions": [
+          {
+            "instance_id": "case_a",
+            "patch": "synthetic_pass_a",
+            "prefix": "first",
+            "mock_pass": true
+          }
+        ],
+        "completion_order": [
+          0
+        ],
+        "cache": null
+      }
+    },
+    {
+      "id": "pro.subset_result",
+      "description": "Original evaluator results for subset fixture",
+      "availability": "PUBLIC_PROJECTION",
+      "reference": {
+        "path": "principles/pro/result.json",
+        "fields": {
+          "results": "/records/1/actual/results",
+          "overall_accuracy": "/records/1/actual/overall_accuracy",
+          "scheduled": "/records/1/actual/scheduled",
+          "fresh_worker_calls": "/records/1/actual/fresh_worker_calls",
+          "cache_hits": "/records/1/actual/cache_hits"
+        }
+      },
+      "value": {
+        "results": {
+          "case_a": true
+        },
+        "overall_accuracy": 1.0,
+        "scheduled": 1,
+        "fresh_worker_calls": 1,
+        "cache_hits": 0
+      }
+    },
+    {
+      "id": "a22.response_source",
+      "description": "Pinned final Response carrying inner_messages",
+      "availability": "PUBLIC_RAW",
+      "reference": {
+        "path": "prospective/upstream/autogen.tar.gz",
+        "member": "autogen-027ecf0a379bcc1d09956d46d12d44a3ad9cee14/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py",
+        "lines": [
+          865,
+          893
+        ]
+      },
+      "value": "        else:\n            reflection_result = await model_client.create(llm_messages)\n\n        if not reflection_result or not isinstance(reflection_result.content, str):\n            raise RuntimeError(\"Reflect on tool use produced no valid text response.\")\n\n        # --- NEW: If the reflection produced a thought, yield it ---\n        if reflection_result.thought:\n            thought_event = ThoughtEvent(content=reflection_result.thought, source=agent_name)\n            yield thought_event\n            inner_messages.append(thought_event)\n\n        # Add to context (including thought if present)\n        await model_context.add_message(\n            AssistantMessage(\n                content=reflection_result.content,\n                source=agent_name,\n                thought=getattr(reflection_result, \"thought\", None),\n            )\n        )\n\n        yield Response(\n            chat_message=TextMessage(\n                content=reflection_result.content,\n                source=agent_name,\n                models_usage=reflection_result.usage,\n            ),\n            inner_messages=inner_messages,\n        )\n"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "gp",
+      "consumer": "Candidate selection of an original snapshot",
+      "question": "What can a preservation receipt on a restored tree justify about the selected original?",
+      "fact_ids": [
+        "gp.pool",
+        "gp.projection_receipts",
+        "gp.state",
+        "gp.original_selection",
+        "gp.recorded_syntax_observation",
+        "gp.selector",
+        "gp.reported_domain",
+        "gp.new_policy",
+        "gp.original_endpoint",
+        "gp.exclusion_endpoint",
+        "gp.test_only_endpoint",
+        "gp.test_only_input",
+        "gp.safe_projection_endpoint",
+        "gp.safe_projection_input",
+        "gp.size_unknown_endpoint",
+        "gp.size_unknown_input",
+        "gp.all_bad_endpoint",
+        "gp.all_bad_input"
+      ],
+      "unavailable_inputs": [
+        {
+          "availability": "RESTRICTED",
+          "description": "Complete historical trajectory, unchanged Django file and full original trees are not supplied by this small public bundle. Independent grading of the later candidate is unmeasured, not a withheld positive result.",
+          "reference": {
+            "path": "principles/gp/README.md"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "feedback",
+      "consumer": "Generated-check feedback and subsequent snapshot selection",
+      "question": "Does the direct helper assertion express the requirement at the public operation that consumes the helper?",
+      "fact_ids": [
+        "feedback.public_requirement",
+        "feedback.index_documentation",
+        "feedback.documentation_identity",
+        "feedback.source_Base",
+        "feedback.source_B",
+        "feedback.source_V",
+        "feedback.source_original_checker",
+        "feedback.base_direct",
+        "feedback.b_direct",
+        "feedback.v_direct",
+        "feedback.b_production",
+        "feedback.v_production",
+        "feedback.v_equivalent_helper",
+        "feedback.b_lookup",
+        "feedback.sealed_endpoints",
+        "feedback.saved_marker",
+        "feedback.b_historical_observation",
+        "feedback.u_historical_observation",
+        "feedback.v_historical_observation"
+      ],
+      "unavailable_inputs": [
+        {
+          "availability": "RESTRICTED",
+          "description": "Complete transmitted first-request bodies and trajectories are not included; saved construction records do not prove the sole transmitted input difference.",
+          "reference": {
+            "path": "witnesses/feedback/README.md"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "a21",
+      "consumer": "Serialized termination condition in a native executor/reviewer team",
+      "question": "Does the restored condition enforce the requested eligible message sources?",
+      "fact_ids": [
+        "a21.termination_source",
+        "a21.intervention",
+        "a21.trigger_original",
+        "a21.trigger_changed",
+        "a21.cross_patch",
+        "a21.control_original",
+        "a21.control_changed",
+        "a21.nonzero_control_original",
+        "a21.nonzero_control_changed"
+      ],
+      "unavailable_inputs": []
+    },
+    {
+      "case_id": "a22",
+      "consumer": "Native team event-count termination",
+      "question": "Do events that appear in the stream enter the termination consumer through its required response path?",
+      "fact_ids": [
+        "a22.termination_source",
+        "a22.producer_source",
+        "a22.manager_source",
+        "a22.consumer_source",
+        "a22.intervention",
+        "a22.trigger_original",
+        "a22.trigger_changed",
+        "a22.cross_patch",
+        "a22.nonzero_trigger_original",
+        "a22.nonzero_trigger_changed",
+        "a22.control_original",
+        "a22.control_changed",
+        "a22.nonzero_control_original",
+        "a22.nonzero_control_changed",
+        "a22.response_source"
+      ],
+      "unavailable_inputs": [
+        {
+          "availability": "REPORTED_ONLY",
+          "description": "The manager-internal termination delta was not separately logged. Source and patch comparisons support the delivery inference; the stream is not mislabeled as that delta.",
+          "reference": {
+            "path": "prospective/observed/runs/031_a22_trigger_success_original/observation.json"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "pro_full",
+      "consumer": "External reporting consumer for a claimed full population",
+      "question": "Does the original evaluator mean support the declared full ID set?",
+      "fact_ids": [
+        "pro.evaluator_source",
+        "pro.report_contract",
+        "pro.full_inputs",
+        "pro.full_result",
+        "pro.subset_inputs",
+        "pro.subset_result"
+      ],
+      "unavailable_inputs": []
+    },
+    {
+      "case_id": "pro_subset",
+      "consumer": "External reporting consumer for an explicitly declared subset",
+      "question": "Can the identical evaluator computation be lawfully reported under the subset claim?",
+      "fact_ids": [
+        "pro.evaluator_source",
+        "pro.report_contract",
+        "pro.full_inputs",
+        "pro.full_result",
+        "pro.subset_inputs",
+        "pro.subset_result"
+      ],
+      "unavailable_inputs": []
+    }
+  ]
+}

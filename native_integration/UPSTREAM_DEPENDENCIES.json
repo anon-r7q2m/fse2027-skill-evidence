@@ -1,0 +1,36 @@
+{
+  "commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+  "dependencies": [
+    {
+      "path_from_bundle": "../prospective/upstream/autogen.tar.gz",
+      "sha256": "8cddbcfcade34b5dbaa71f6f2ef1539b583321370ded6ebf09b7adaf08cb0192"
+    },
+    {
+      "path_from_bundle": "../prospective/upstream/autogen_source_manifest.json",
+      "sha256": "fb17c5d045f2010a02fc2645e5c6e51c71e5356993762c05d30a9e9fc0d68008"
+    },
+    {
+      "path_from_bundle": "../prospective/requirements.txt",
+      "sha256": "4129680935854d70329ce501c14a80336756d4b4e437826eb85c597ae7f1b843"
+    },
+    {
+      "path_from_bundle": "../prospective/environment/runtime_lock.txt",
+      "sha256": "c34e1c0b6418e12fe57559f4e37124c715bb41866e9f3f49461f441a8ef635a8"
+    },
+    {
+      "path_from_bundle": "../prospective/prepare.py",
+      "sha256": "bccdd590466b4535b6f9e47bc55b1b260ec765eda29c263824f61b5551ea18b6"
+    },
+    {
+      "path_from_bundle": "../prospective/upstream/autogen-LICENSE",
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    {
+      "path_from_bundle": "../prospective/upstream/autogen-LICENSE-CODE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    }
+  ],
+  "repository": "https://github.com/microsoft/autogen",
+  "reuses_existing_public_bundle": "prospective",
+  "upstream_file_count": 1837
+}

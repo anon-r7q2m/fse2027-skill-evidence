@@ -1,0 +1,9 @@
+{
+  "repo": "/RESEARCH_ROOT",
+  "protocol": "/RESEARCH_ROOT/experiments/native_decision_integration_v1",
+  "study": "/INTEGRATION_ROOT",
+  "output": "/RESEARCH_ROOT/results_cache/native_decision_integration_v1",
+  "source": "/STUDY_ROOT/sources/autogen",
+  "python": "/STUDY_ROOT/venv/bin/python",
+  "patch": "/STUDY_ROOT/diagnostics/a21/intervention.patch"
+}

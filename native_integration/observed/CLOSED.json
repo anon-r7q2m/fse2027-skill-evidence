@@ -1,0 +1,172 @@
+{
+  "benchmark_scores": 0,
+  "comparison_prerequisites_met": false,
+  "configuration_comparisons": [
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": true,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d",
+        "patched": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": true,
+          "value": [
+            "reviewer"
+          ]
+        }
+      },
+      "scenario": "T",
+      "status": "MATCH"
+    },
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": true,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d",
+        "patched": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": true,
+          "value": [
+            "reviewer"
+          ]
+        }
+      },
+      "scenario": "C",
+      "status": "MATCH"
+    },
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": false,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "eff5c78e1cf81b06444636b28610a0f862d1fad259418bb8e47f0c68ea1cd05c",
+        "patched": "eff5c78e1cf81b06444636b28610a0f862d1fad259418bb8e47f0c68ea1cd05c"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": false,
+          "value": null
+        }
+      },
+      "scenario": "U",
+      "status": "MISMATCH"
+    }
+  ],
+  "interpretation": "Integration observations require independent adjudication; closure is not support.",
+  "live_model_calls": 0,
+  "new_defect_discoveries": 0,
+  "original_source_unchanged": true,
+  "rows": [
+    {
+      "cell": "01_T_direct_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "02_T_reloaded_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "03_T_reloaded_patched",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "04_C_direct_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "05_C_reloaded_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "06_C_reloaded_patched",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "07_U_direct_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "08_U_reloaded_original",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    },
+    {
+      "cell": "09_U_reloaded_patched",
+      "collection_status": "COMPLETE",
+      "outer_timeout": false,
+      "prediction_status": "SUPPORTED",
+      "return_code": 0
+    }
+  ],
+  "source_copies_unchanged": true,
+  "status": "FIXED_NINE_CELL_VERSION_CLOSED",
+  "study": "native_decision_integration_v1"
+}

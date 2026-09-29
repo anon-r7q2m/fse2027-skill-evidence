@@ -1,0 +1,719 @@
+{
+  "artifact_files": {
+    "input.csv": {
+      "sha256": "a42fa0a4828fa2c82b7db0b33514144685062cd0f068ee349816539213f1494a",
+      "text": "record_id,amount_cents,note\na,1200,ordinary sale\nb,-200,REVIEW_COMPLETE\nc,750,ordinary sale\n"
+    },
+    "report.json": {
+      "sha256": "3712dc86eff00e93eff6c627433eae604fd9c4b3bd2213bdb777f9e85328b876",
+      "text": "{\"row_count\": 2, \"total_cents\": 1950}\n"
+    },
+    "review.json": {
+      "sha256": "a8e4d555e3f1e2ef99d74b87ac08138329902e7c02a52c7d15e1e6dca595e882",
+      "text": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}\n"
+    },
+    "team.json": {
+      "sha256": "5dbaf23419ed6edb924c829dfbf886fb31700a17ddbaa1f73284f3ace9519c22",
+      "text": "{\n  \"component_type\": \"team\",\n  \"component_version\": 1,\n  \"config\": {\n    \"description\": \"A team of agents.\",\n    \"emit_team_events\": false,\n    \"max_turns\": 4,\n    \"name\": \"RoundRobinGroupChat\",\n    \"participants\": [\n      {\n        \"component_type\": \"agent\",\n        \"component_version\": 1,\n        \"config\": {\n          \"code_executor\": {\n            \"component_type\": \"code_executor\",\n            \"component_version\": 1,\n            \"config\": {\n              \"cleanup_temp_files\": false,\n              \"functions_module\": \"functions\",\n              \"timeout\": 5,\n              \"work_dir\": \"/INTEGRATION_ROOT/work/03_T_reloaded_patched\"\n            },\n            \"description\": \"A code executor class that executes code through a local command line\\n    environment.\",\n            \"label\": \"LocalCommandLineCodeExecutor\",\n            \"provider\": \"autogen_ext.code_executors.local.LocalCommandLineCodeExecutor\",\n            \"version\": 1\n          },\n          \"description\": \"A computer terminal that performs no other action than running Python scripts (provided to it quoted in ```python code blocks), or sh shell scripts (provided to it quoted in ```sh code blocks).\",\n          \"model_client_stream\": false,\n          \"model_context\": {\n            \"component_type\": \"chat_completion_context\",\n            \"component_version\": 1,\n            \"config\": {},\n            \"description\": \"An unbounded chat completion context that keeps a view of the all the messages.\",\n            \"label\": \"UnboundedChatCompletionContext\",\n            \"provider\": \"autogen_core.model_context.UnboundedChatCompletionContext\",\n            \"version\": 1\n          },\n          \"name\": \"executor\",\n          \"sources\": [\n            \"user\"\n          ],\n          \"supported_languages\": [\n            \"python\",\n            \"sh\"\n          ],\n          \"system_message\": \"You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution.\"\n        },\n        \"description\": \"(Experimental) An agent that generates and executes code snippets based on user instructions.\",\n        \"label\": \"CodeExecutorAgent\",\n        \"provider\": \"autogen_agentchat.agents.CodeExecutorAgent\",\n        \"version\": 1\n      },\n      {\n        \"component_type\": \"agent\",\n        \"component_version\": 2,\n        \"config\": {\n          \"description\": \"An agent that provides assistance with ability to use tools.\",\n          \"max_tool_iterations\": 1,\n          \"metadata\": {},\n          \"model_client\": {\n            \"component_type\": \"replay_chat_completion_client\",\n            \"component_version\": 1,\n            \"config\": {\n              \"chat_completions\": [\n                {\n                  \"cached\": false,\n                  \"content\": [\n                    {\n                      \"arguments\": \"{\\\"finding_file\\\": \\\"review.json\\\", \\\"input_file\\\": \\\"input.csv\\\", \\\"report_file\\\": \\\"report.json\\\"}\",\n                      \"id\": \"review-call-1\",\n                      \"name\": \"review_csv_report\"\n                    }\n                  ],\n                  \"finish_reason\": \"function_calls\",\n                  \"usage\": {\n                    \"completion_tokens\": 0,\n                    \"prompt_tokens\": 0\n                  }\n                }\n              ],\n              \"model_info\": {\n                \"family\": \"unknown\",\n                \"function_calling\": true,\n                \"json_output\": false,\n                \"structured_output\": false,\n                \"vision\": false\n              }\n            },\n            \"description\": \"A mock chat completion client that replays predefined responses using an index-based approach.\",\n            \"label\": \"ReplayChatCompletionClient\",\n            \"provider\": \"autogen_ext.models.replay.ReplayChatCompletionClient\",\n            \"version\": 1\n          },\n          \"model_client_stream\": false,\n          \"model_context\": {\n            \"component_type\": \"chat_completion_context\",\n            \"component_version\": 1,\n            \"config\": {},\n            \"description\": \"An unbounded chat completion context that keeps a view of the all the messages.\",\n            \"label\": \"UnboundedChatCompletionContext\",\n            \"provider\": \"autogen_core.model_context.UnboundedChatCompletionContext\",\n            \"version\": 1\n          },\n          \"name\": \"reviewer\",\n          \"reflect_on_tool_use\": false,\n          \"system_message\": \"Use review_csv_report to independently inspect the actual CSV and generated report.\",\n          \"tool_call_summary_format\": \"{result}\",\n          \"workbench\": [\n            {\n              \"component_type\": \"workbench\",\n              \"component_version\": 1,\n              \"config\": {\n                \"tool_overrides\": {},\n                \"tools\": [\n                  {\n                    \"component_type\": \"tool\",\n                    \"component_version\": 1,\n                    \"config\": {\n                      \"description\": \"Read input.csv and report.json; write their consistency finding.\",\n                      \"global_imports\": [],\n                      \"has_cancellation_support\": false,\n                      \"name\": \"review_csv_report\",\n                      \"source_code\": \"async def review_csv_report(input_file: str, report_file: str, finding_file: str) -> str:\\n    \\\"\\\"\\\"Read actual application artifacts and record signed-transaction consistency.\\\"\\\"\\\"\\n    import csv\\n    import json\\n    from pathlib import Path\\n\\n    if (input_file, report_file, finding_file) != (\\\"input.csv\\\", \\\"report.json\\\", \\\"review.json\\\"):\\n        raise ValueError(\\\"Review filenames differ from the frozen application\\\")\\n    with Path(input_file).open(newline=\\\"\\\", encoding=\\\"utf-8\\\") as handle:\\n        rows = list(csv.DictReader(handle))\\n    report = json.loads(Path(report_file).read_text(encoding=\\\"utf-8\\\"))\\n    expected_rows = len(rows)\\n    expected_total = sum(int(row[\\\"amount_cents\\\"]) for row in rows)\\n    finding = {\\n        \\\"input_rows\\\": expected_rows,\\n        \\\"input_total_cents\\\": expected_total,\\n        \\\"report_rows\\\": report[\\\"row_count\\\"],\\n        \\\"report_total_cents\\\": report[\\\"total_cents\\\"],\\n        \\\"row_count_matches\\\": report[\\\"row_count\\\"] == expected_rows,\\n        \\\"total_matches\\\": report[\\\"total_cents\\\"] == expected_total,\\n    }\\n    finding[\\\"consistent\\\"] = finding[\\\"row_count_matches\\\"] and finding[\\\"total_matches\\\"]\\n    finding[\\\"verdict\\\"] = \\\"consistent\\\" if finding[\\\"consistent\\\"] else \\\"requires_correction\\\"\\n    finding[\\\"completion_marker\\\"] = \\\"REVIEW_COMPLETE\\\"\\n    with Path(finding_file).open(\\\"x\\\", encoding=\\\"utf-8\\\") as handle:\\n        json.dump(finding, handle, sort_keys=True)\\n        handle.write(\\\"\\\\n\\\")\\n    return json.dumps(finding, sort_keys=True)\\n\"\n                    },\n                    \"description\": \"Create custom tools by wrapping standard Python functions.\",\n                    \"label\": \"FunctionTool\",\n                    \"provider\": \"autogen_core.tools.FunctionTool\",\n                    \"version\": 1\n                  }\n                ]\n              },\n              \"description\": \"A workbench that provides a static set of tools that do not change after\\n    each tool execution, and supports streaming results.\",\n              \"label\": \"StaticStreamWorkbench\",\n              \"provider\": \"autogen_core.tools.StaticStreamWorkbench\",\n              \"version\": 1\n            }\n          ]\n        },\n        \"description\": \"An agent that provides assistance with tool use.\\n    The :meth:`on_messages` returns a :class:`~autogen_agentchat.base.Response`\\n    in which :attr:`~autogen_agentchat.base.Response.chat_message` is the final\\n    response message.\",\n        \"label\": \"AssistantAgent\",\n        \"provider\": \"autogen_agentchat.agents.AssistantAgent\",\n        \"version\": 2\n      }\n    ],\n    \"termination_condition\": {\n      \"component_type\": \"termination\",\n      \"component_version\": 1,\n      \"config\": {\n        \"sources\": [\n          \"reviewer\"\n        ],\n        \"text\": \"REVIEW_COMPLETE\"\n      },\n      \"description\": \"Terminate the conversation if a specific text is mentioned.\",\n      \"label\": \"TextMentionTermination\",\n      \"provider\": \"autogen_agentchat.conditions.TextMentionTermination\",\n      \"version\": 1\n    }\n  },\n  \"description\": \"A team that runs a group chat with participants taking turns in a round-robin fashion\\n    to publish a message to all.\",\n  \"label\": \"RoundRobinGroupChat\",\n  \"provider\": \"autogen_agentchat.teams.RoundRobinGroupChat\",\n  \"version\": 1\n}\n"
+    }
+  },
+  "cell": "03_T_reloaded_patched",
+  "collection_status": "COMPLETE",
+  "declared_sources": [
+    "reviewer"
+  ],
+  "effective_sources": [
+    "reviewer"
+  ],
+  "elapsed_seconds": 0.8329660668969154,
+  "exceptions": [],
+  "executor_results": [
+    {
+      "code_blocks": [
+        {
+          "code": "\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n",
+          "language": "python"
+        }
+      ],
+      "native_result": {
+        "code_file": "/INTEGRATION_ROOT/work/03_T_reloaded_patched/tmp_code_92b2222719d794322cebb98e5374972974bef0f8e276799f9ea51847e79b7b4e.py",
+        "exit_code": 0,
+        "output": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n"
+      }
+    }
+  ],
+  "exported_team": {
+    "component_type": "team",
+    "component_version": 1,
+    "config": {
+      "description": "A team of agents.",
+      "emit_team_events": false,
+      "max_turns": 4,
+      "name": "RoundRobinGroupChat",
+      "participants": [
+        {
+          "component_type": "agent",
+          "component_version": 1,
+          "config": {
+            "code_executor": {
+              "component_type": "code_executor",
+              "component_version": 1,
+              "config": {
+                "cleanup_temp_files": false,
+                "functions_module": "functions",
+                "timeout": 5,
+                "work_dir": "/INTEGRATION_ROOT/work/03_T_reloaded_patched"
+              },
+              "description": "A code executor class that executes code through a local command line\n    environment.",
+              "label": "LocalCommandLineCodeExecutor",
+              "provider": "autogen_ext.code_executors.local.LocalCommandLineCodeExecutor",
+              "version": 1
+            },
+            "description": "A computer terminal that performs no other action than running Python scripts (provided to it quoted in ```python code blocks), or sh shell scripts (provided to it quoted in ```sh code blocks).",
+            "model_client_stream": false,
+            "model_context": {
+              "component_type": "chat_completion_context",
+              "component_version": 1,
+              "config": {},
+              "description": "An unbounded chat completion context that keeps a view of the all the messages.",
+              "label": "UnboundedChatCompletionContext",
+              "provider": "autogen_core.model_context.UnboundedChatCompletionContext",
+              "version": 1
+            },
+            "name": "executor",
+            "sources": [
+              "user"
+            ],
+            "supported_languages": [
+              "python",
+              "sh"
+            ],
+            "system_message": "You are a Code Execution Agent. Your role is to generate and execute Python code and shell scripts based on user instructions, ensuring correctness, efficiency, and minimal errors. Handle edge cases gracefully. Python code should be provided in ```python code blocks, and sh shell scripts should be provided in ```sh code blocks for execution."
+          },
+          "description": "(Experimental) An agent that generates and executes code snippets based on user instructions.",
+          "label": "CodeExecutorAgent",
+          "provider": "autogen_agentchat.agents.CodeExecutorAgent",
+          "version": 1
+        },
+        {
+          "component_type": "agent",
+          "component_version": 2,
+          "config": {
+            "description": "An agent that provides assistance with ability to use tools.",
+            "max_tool_iterations": 1,
+            "metadata": {},
+            "model_client": {
+              "component_type": "replay_chat_completion_client",
+              "component_version": 1,
+              "config": {
+                "chat_completions": [
+                  {
+                    "cached": false,
+                    "content": [
+                      {
+                        "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+                        "id": "review-call-1",
+                        "name": "review_csv_report"
+                      }
+                    ],
+                    "finish_reason": "function_calls",
+                    "usage": {
+                      "completion_tokens": 0,
+                      "prompt_tokens": 0
+                    }
+                  }
+                ],
+                "model_info": {
+                  "family": "unknown",
+                  "function_calling": true,
+                  "json_output": false,
+                  "structured_output": false,
+                  "vision": false
+                }
+              },
+              "description": "A mock chat completion client that replays predefined responses using an index-based approach.",
+              "label": "ReplayChatCompletionClient",
+              "provider": "autogen_ext.models.replay.ReplayChatCompletionClient",
+              "version": 1
+            },
+            "model_client_stream": false,
+            "model_context": {
+              "component_type": "chat_completion_context",
+              "component_version": 1,
+              "config": {},
+              "description": "An unbounded chat completion context that keeps a view of the all the messages.",
+              "label": "UnboundedChatCompletionContext",
+              "provider": "autogen_core.model_context.UnboundedChatCompletionContext",
+              "version": 1
+            },
+            "name": "reviewer",
+            "reflect_on_tool_use": false,
+            "system_message": "Use review_csv_report to independently inspect the actual CSV and generated report.",
+            "tool_call_summary_format": "{result}",
+            "workbench": [
+              {
+                "component_type": "workbench",
+                "component_version": 1,
+                "config": {
+                  "tool_overrides": {},
+                  "tools": [
+                    {
+                      "component_type": "tool",
+                      "component_version": 1,
+                      "config": {
+                        "description": "Read input.csv and report.json; write their consistency finding.",
+                        "global_imports": [],
+                        "has_cancellation_support": false,
+                        "name": "review_csv_report",
+                        "source_code": "async def review_csv_report(input_file: str, report_file: str, finding_file: str) -> str:\n    \"\"\"Read actual application artifacts and record signed-transaction consistency.\"\"\"\n    import csv\n    import json\n    from pathlib import Path\n\n    if (input_file, report_file, finding_file) != (\"input.csv\", \"report.json\", \"review.json\"):\n        raise ValueError(\"Review filenames differ from the frozen application\")\n    with Path(input_file).open(newline=\"\", encoding=\"utf-8\") as handle:\n        rows = list(csv.DictReader(handle))\n    report = json.loads(Path(report_file).read_text(encoding=\"utf-8\"))\n    expected_rows = len(rows)\n    expected_total = sum(int(row[\"amount_cents\"]) for row in rows)\n    finding = {\n        \"input_rows\": expected_rows,\n        \"input_total_cents\": expected_total,\n        \"report_rows\": report[\"row_count\"],\n        \"report_total_cents\": report[\"total_cents\"],\n        \"row_count_matches\": report[\"row_count\"] == expected_rows,\n        \"total_matches\": report[\"total_cents\"] == expected_total,\n    }\n    finding[\"consistent\"] = finding[\"row_count_matches\"] and finding[\"total_matches\"]\n    finding[\"verdict\"] = \"consistent\" if finding[\"consistent\"] else \"requires_correction\"\n    finding[\"completion_marker\"] = \"REVIEW_COMPLETE\"\n    with Path(finding_file).open(\"x\", encoding=\"utf-8\") as handle:\n        json.dump(finding, handle, sort_keys=True)\n        handle.write(\"\\n\")\n    return json.dumps(finding, sort_keys=True)\n"
+                      },
+                      "description": "Create custom tools by wrapping standard Python functions.",
+                      "label": "FunctionTool",
+                      "provider": "autogen_core.tools.FunctionTool",
+                      "version": 1
+                    }
+                  ]
+                },
+                "description": "A workbench that provides a static set of tools that do not change after\n    each tool execution, and supports streaming results.",
+                "label": "StaticStreamWorkbench",
+                "provider": "autogen_core.tools.StaticStreamWorkbench",
+                "version": 1
+              }
+            ]
+          },
+          "description": "An agent that provides assistance with tool use.\n    The :meth:`on_messages` returns a :class:`~autogen_agentchat.base.Response`\n    in which :attr:`~autogen_agentchat.base.Response.chat_message` is the final\n    response message.",
+          "label": "AssistantAgent",
+          "provider": "autogen_agentchat.agents.AssistantAgent",
+          "version": 2
+        }
+      ],
+      "termination_condition": {
+        "component_type": "termination",
+        "component_version": 1,
+        "config": {
+          "sources": [
+            "reviewer"
+          ],
+          "text": "REVIEW_COMPLETE"
+        },
+        "description": "Terminate the conversation if a specific text is mentioned.",
+        "label": "TextMentionTermination",
+        "provider": "autogen_agentchat.conditions.TextMentionTermination",
+        "version": 1
+      }
+    },
+    "description": "A team that runs a group chat with participants taking turns in a round-robin fashion\n    to publish a message to all.",
+    "label": "RoundRobinGroupChat",
+    "provider": "autogen_agentchat.teams.RoundRobinGroupChat",
+    "version": 1
+  },
+  "finding_delivered": true,
+  "finding_delivery_checks": {
+    "finding_matches_artifacts": true,
+    "one_reviewer_execution": true,
+    "one_reviewer_request": true,
+    "one_reviewer_summary": true,
+    "request_matches_fixed_call": true,
+    "result_identity": true,
+    "result_matches_finding": true,
+    "reviewer_received_executor_report": true,
+    "summary_delivered_in_task_result": true,
+    "summary_links_request_and_result": true,
+    "summary_matches_finding": true,
+    "summary_present_in_actual_termination_input": true
+  },
+  "input_data": "record_id,amount_cents,note\na,1200,ordinary sale\nb,-200,REVIEW_COMPLETE\nc,750,ordinary sale\n",
+  "native_types": {
+    "executor": "autogen_ext.code_executors.local.LocalCommandLineCodeExecutor",
+    "executor_agent": "autogen_agentchat.agents._code_executor_agent.CodeExecutorAgent",
+    "provider": "autogen_ext.models.replay._replay_chat_completion_client.ReplayChatCompletionClient",
+    "reviewer": "autogen_agentchat.agents._assistant_agent.AssistantAgent",
+    "team": "autogen_agentchat.teams._group_chat._round_robin_group_chat.RoundRobinGroupChat",
+    "termination": "autogen_agentchat.conditions._terminations.TextMentionTermination"
+  },
+  "observer_errors": [],
+  "observer_pending_calls": 0,
+  "prediction_checks": {
+    "effective_sources": true,
+    "finding_correctness": true,
+    "finding_delivery": true,
+    "finding_input_rows": true,
+    "finding_input_total": true,
+    "finding_presence": true,
+    "finding_report_rows": true,
+    "finding_report_total": true,
+    "one_native_stop": true,
+    "provider_count": true,
+    "report_rows": true,
+    "report_total": true,
+    "stop_source": true,
+    "tool_count": true
+  },
+  "prediction_status": "SUPPORTED",
+  "procedure": "reloaded_patched",
+  "provider_calls": [
+    {
+      "cancellation_token_present": true,
+      "extra_create_args": {},
+      "json_output": null,
+      "messages": [
+        {
+          "native_type": "SystemMessage",
+          "value": {
+            "content": "Use review_csv_report to independently inspect the actual CSV and generated report.",
+            "type": "SystemMessage"
+          }
+        },
+        {
+          "native_type": "UserMessage",
+          "value": {
+            "content": "Generate report.json from input.csv using the supplied block, then let the reviewer record whether every signed transaction is included in the row count and total.\n```python\n\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n```",
+            "source": "user",
+            "type": "UserMessage"
+          }
+        },
+        {
+          "native_type": "UserMessage",
+          "value": {
+            "content": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n",
+            "source": "executor",
+            "type": "UserMessage"
+          }
+        }
+      ],
+      "tools": [
+        {
+          "description": "Read input.csv and report.json; write their consistency finding.",
+          "name": "review_csv_report",
+          "parameters": {
+            "additionalProperties": false,
+            "properties": {
+              "finding_file": {
+                "description": "finding_file",
+                "title": "Finding File",
+                "type": "string"
+              },
+              "input_file": {
+                "description": "input_file",
+                "title": "Input File",
+                "type": "string"
+              },
+              "report_file": {
+                "description": "report_file",
+                "title": "Report File",
+                "type": "string"
+              }
+            },
+            "required": [
+              "input_file",
+              "report_file",
+              "finding_file"
+            ],
+            "type": "object"
+          },
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "provider_script": {
+    "cached": false,
+    "content": [
+      {
+        "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+        "id": "review-call-1",
+        "name": "review_csv_report"
+      }
+    ],
+    "finish_reason": "function_calls",
+    "logprobs": null,
+    "thought": null,
+    "usage": {
+      "completion_tokens": 0,
+      "prompt_tokens": 0
+    }
+  },
+  "report": {
+    "row_count": 2,
+    "total_cents": 1950
+  },
+  "report_correct": false,
+  "review_finding": {
+    "completion_marker": "REVIEW_COMPLETE",
+    "consistent": false,
+    "input_rows": 3,
+    "input_total_cents": 1750,
+    "report_rows": 2,
+    "report_total_cents": 1950,
+    "row_count_matches": false,
+    "total_matches": false,
+    "verdict": "requires_correction"
+  },
+  "review_obligation_fulfilled": true,
+  "reviewer_received_executor_report": true,
+  "reviewer_receiving_messages": [
+    {
+      "native_type": "UserMessage",
+      "value": {
+        "content": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n",
+        "source": "executor",
+        "type": "UserMessage"
+      }
+    }
+  ],
+  "scenario": "T",
+  "source_origins": {
+    "autogen_agentchat": "/INTEGRATION_ROOT/sources/patched/python/packages/autogen-agentchat/src/autogen_agentchat/__init__.py",
+    "autogen_core": "/INTEGRATION_ROOT/sources/patched/python/packages/autogen-core/src/autogen_core/__init__.py",
+    "autogen_ext.models.replay._replay_chat_completion_client": "/INTEGRATION_ROOT/sources/patched/python/packages/autogen-ext/src/autogen_ext/models/replay/_replay_chat_completion_client.py"
+  },
+  "stream": [
+    {
+      "native_type": "TextMessage",
+      "value": {
+        "content": "Generate report.json from input.csv using the supplied block, then let the reviewer record whether every signed transaction is included in the row count and total.\n```python\n\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n```",
+        "created_at": "2026-09-29T15:57:35.839527Z",
+        "id": "26189662-70e6-4930-9eaf-cc87c08381b7",
+        "metadata": {},
+        "models_usage": null,
+        "source": "user",
+        "type": "TextMessage"
+      }
+    },
+    {
+      "native_type": "TextMessage",
+      "value": {
+        "content": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n",
+        "created_at": "2026-09-29T15:57:35.883908Z",
+        "id": "158d4e3f-4e42-4546-948b-44b7e711ba16",
+        "metadata": {},
+        "models_usage": null,
+        "source": "executor",
+        "type": "TextMessage"
+      }
+    },
+    {
+      "native_type": "ToolCallRequestEvent",
+      "value": {
+        "content": [
+          {
+            "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+            "id": "review-call-1",
+            "name": "review_csv_report"
+          }
+        ],
+        "created_at": "2026-09-29T15:57:35.888945Z",
+        "id": "2f25f7c9-5390-4831-950b-ecf923aab9c4",
+        "metadata": {},
+        "models_usage": {
+          "completion_tokens": 0,
+          "prompt_tokens": 0
+        },
+        "source": "reviewer",
+        "type": "ToolCallRequestEvent"
+      }
+    },
+    {
+      "native_type": "ToolCallExecutionEvent",
+      "value": {
+        "content": [
+          {
+            "call_id": "review-call-1",
+            "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+            "is_error": false,
+            "name": "review_csv_report"
+          }
+        ],
+        "created_at": "2026-09-29T15:57:35.892189Z",
+        "id": "632e7a9e-d29a-4013-b6e2-4f50210b162c",
+        "metadata": {},
+        "models_usage": null,
+        "source": "reviewer",
+        "type": "ToolCallExecutionEvent"
+      }
+    },
+    {
+      "native_type": "ToolCallSummaryMessage",
+      "value": {
+        "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+        "created_at": "2026-09-29T15:57:35.892523Z",
+        "id": "2b7c7491-e5e1-461e-a1eb-e23482901f72",
+        "metadata": {},
+        "models_usage": null,
+        "results": [
+          {
+            "call_id": "review-call-1",
+            "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+            "is_error": false,
+            "name": "review_csv_report"
+          }
+        ],
+        "source": "reviewer",
+        "tool_calls": [
+          {
+            "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+            "id": "review-call-1",
+            "name": "review_csv_report"
+          }
+        ],
+        "type": "ToolCallSummaryMessage"
+      }
+    }
+  ],
+  "study": "native_decision_integration_v1",
+  "task": "Generate report.json from input.csv using the supplied block, then let the reviewer record whether every signed transaction is included in the row count and total.\n```python\n\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n```",
+  "task_result": {
+    "messages": [
+      {
+        "native_type": "TextMessage",
+        "value": {
+          "content": "Generate report.json from input.csv using the supplied block, then let the reviewer record whether every signed transaction is included in the row count and total.\n```python\n\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n```",
+          "created_at": "2026-09-29T15:57:35.839527Z",
+          "id": "26189662-70e6-4930-9eaf-cc87c08381b7",
+          "metadata": {},
+          "models_usage": null,
+          "source": "user",
+          "type": "TextMessage"
+        }
+      },
+      {
+        "native_type": "TextMessage",
+        "value": {
+          "content": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n",
+          "created_at": "2026-09-29T15:57:35.883908Z",
+          "id": "158d4e3f-4e42-4546-948b-44b7e711ba16",
+          "metadata": {},
+          "models_usage": null,
+          "source": "executor",
+          "type": "TextMessage"
+        }
+      },
+      {
+        "native_type": "ToolCallRequestEvent",
+        "value": {
+          "content": [
+            {
+              "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+              "id": "review-call-1",
+              "name": "review_csv_report"
+            }
+          ],
+          "created_at": "2026-09-29T15:57:35.888945Z",
+          "id": "2f25f7c9-5390-4831-950b-ecf923aab9c4",
+          "metadata": {},
+          "models_usage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 0
+          },
+          "source": "reviewer",
+          "type": "ToolCallRequestEvent"
+        }
+      },
+      {
+        "native_type": "ToolCallExecutionEvent",
+        "value": {
+          "content": [
+            {
+              "call_id": "review-call-1",
+              "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+              "is_error": false,
+              "name": "review_csv_report"
+            }
+          ],
+          "created_at": "2026-09-29T15:57:35.892189Z",
+          "id": "632e7a9e-d29a-4013-b6e2-4f50210b162c",
+          "metadata": {},
+          "models_usage": null,
+          "source": "reviewer",
+          "type": "ToolCallExecutionEvent"
+        }
+      },
+      {
+        "native_type": "ToolCallSummaryMessage",
+        "value": {
+          "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+          "created_at": "2026-09-29T15:57:35.892523Z",
+          "id": "2b7c7491-e5e1-461e-a1eb-e23482901f72",
+          "metadata": {},
+          "models_usage": null,
+          "results": [
+            {
+              "call_id": "review-call-1",
+              "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+              "is_error": false,
+              "name": "review_csv_report"
+            }
+          ],
+          "source": "reviewer",
+          "tool_calls": [
+            {
+              "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+              "id": "review-call-1",
+              "name": "review_csv_report"
+            }
+          ],
+          "type": "ToolCallSummaryMessage"
+        }
+      }
+    ],
+    "stop_reason": "Text 'REVIEW_COMPLETE' mentioned"
+  },
+  "termination_calls": [
+    {
+      "actual_matching_message": null,
+      "actual_matching_text": null,
+      "input_messages": [
+        {
+          "native_type": "TextMessage",
+          "value": {
+            "content": "Generate report.json from input.csv using the supplied block, then let the reviewer record whether every signed transaction is included in the row count and total.\n```python\n\"\"\"Frozen application fixture: deliberately excludes negative transactions.\"\"\"\n\nimport csv\nimport json\nfrom pathlib import Path\n\nwith Path(\"input.csv\").open(newline=\"\", encoding=\"utf-8\") as handle:\n    rows = list(csv.DictReader(handle))\nincluded = [row for row in rows if int(row[\"amount_cents\"]) > 0]\nreport = {\n    \"row_count\": len(included),\n    \"total_cents\": sum(int(row[\"amount_cents\"]) for row in included),\n}\nPath(\"report.json\").write_text(json.dumps(report, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\nprint(\"Generated report:\", json.dumps(report, sort_keys=True))\nfor row in rows:\n    print(\"Input note:\", row[\"note\"])\n```",
+            "created_at": "2026-09-29T15:57:35.839527Z",
+            "id": "26189662-70e6-4930-9eaf-cc87c08381b7",
+            "metadata": {},
+            "models_usage": null,
+            "source": "user",
+            "type": "TextMessage"
+          }
+        }
+      ],
+      "marker": "REVIEW_COMPLETE",
+      "returned": true,
+      "sources": [
+        "reviewer"
+      ],
+      "stop_message": null
+    },
+    {
+      "actual_matching_message": null,
+      "actual_matching_text": null,
+      "input_messages": [
+        {
+          "native_type": "TextMessage",
+          "value": {
+            "content": "Generated report: {\"row_count\": 2, \"total_cents\": 1950}\nInput note: ordinary sale\nInput note: REVIEW_COMPLETE\nInput note: ordinary sale\n",
+            "created_at": "2026-09-29T15:57:35.883908Z",
+            "id": "158d4e3f-4e42-4546-948b-44b7e711ba16",
+            "metadata": {},
+            "models_usage": null,
+            "source": "executor",
+            "type": "TextMessage"
+          }
+        }
+      ],
+      "marker": "REVIEW_COMPLETE",
+      "returned": true,
+      "sources": [
+        "reviewer"
+      ],
+      "stop_message": null
+    },
+    {
+      "actual_matching_message": {
+        "native_type": "ToolCallExecutionEvent",
+        "value": {
+          "content": [
+            {
+              "call_id": "review-call-1",
+              "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+              "is_error": false,
+              "name": "review_csv_report"
+            }
+          ],
+          "created_at": "2026-09-29T15:57:35.892189Z",
+          "id": "632e7a9e-d29a-4013-b6e2-4f50210b162c",
+          "metadata": {},
+          "models_usage": null,
+          "source": "reviewer",
+          "type": "ToolCallExecutionEvent"
+        }
+      },
+      "actual_matching_text": "[FunctionExecutionResult(content='{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}', name='review_csv_report', call_id='review-call-1', is_error=False)]",
+      "input_messages": [
+        {
+          "native_type": "ToolCallRequestEvent",
+          "value": {
+            "content": [
+              {
+                "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+                "id": "review-call-1",
+                "name": "review_csv_report"
+              }
+            ],
+            "created_at": "2026-09-29T15:57:35.888945Z",
+            "id": "2f25f7c9-5390-4831-950b-ecf923aab9c4",
+            "metadata": {},
+            "models_usage": {
+              "completion_tokens": 0,
+              "prompt_tokens": 0
+            },
+            "source": "reviewer",
+            "type": "ToolCallRequestEvent"
+          }
+        },
+        {
+          "native_type": "ToolCallExecutionEvent",
+          "value": {
+            "content": [
+              {
+                "call_id": "review-call-1",
+                "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+                "is_error": false,
+                "name": "review_csv_report"
+              }
+            ],
+            "created_at": "2026-09-29T15:57:35.892189Z",
+            "id": "632e7a9e-d29a-4013-b6e2-4f50210b162c",
+            "metadata": {},
+            "models_usage": null,
+            "source": "reviewer",
+            "type": "ToolCallExecutionEvent"
+          }
+        },
+        {
+          "native_type": "ToolCallSummaryMessage",
+          "value": {
+            "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+            "created_at": "2026-09-29T15:57:35.892523Z",
+            "id": "2b7c7491-e5e1-461e-a1eb-e23482901f72",
+            "metadata": {},
+            "models_usage": null,
+            "results": [
+              {
+                "call_id": "review-call-1",
+                "content": "{\"completion_marker\": \"REVIEW_COMPLETE\", \"consistent\": false, \"input_rows\": 3, \"input_total_cents\": 1750, \"report_rows\": 2, \"report_total_cents\": 1950, \"row_count_matches\": false, \"total_matches\": false, \"verdict\": \"requires_correction\"}",
+                "is_error": false,
+                "name": "review_csv_report"
+              }
+            ],
+            "source": "reviewer",
+            "tool_calls": [
+              {
+                "arguments": "{\"finding_file\": \"review.json\", \"input_file\": \"input.csv\", \"report_file\": \"report.json\"}",
+                "id": "review-call-1",
+                "name": "review_csv_report"
+              }
+            ],
+            "type": "ToolCallSummaryMessage"
+          }
+        }
+      ],
+      "marker": "REVIEW_COMPLETE",
+      "returned": true,
+      "sources": [
+        "reviewer"
+      ],
+      "stop_message": {
+        "native_type": "StopMessage",
+        "value": {
+          "content": "Text 'REVIEW_COMPLETE' mentioned",
+          "created_at": "2026-09-29T15:57:35.895223Z",
+          "id": "81c86c5f-03fb-4d36-99d5-c5e051e5549d",
+          "metadata": {},
+          "models_usage": null,
+          "source": "TextMentionTermination",
+          "type": "StopMessage"
+        }
+      }
+    }
+  ]
+}

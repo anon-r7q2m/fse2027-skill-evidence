@@ -22,6 +22,27 @@ of acceptance is not an independent reproduction of every acceptance test.
 | Two supplementary native source paths | `source_paths/SELECTION_PROTOCOL.md`, `QUALIFICATION_AND_FREEZE.md`, both per-path protocols, `SOURCE_CONSUMER_MAP.md`, `replay.py`, `results/attempt_0/` | Executable eight-condition check after source-informed, pre-execution freezing; SWE-agent exposure unknown and OpenHands exposed. No live command, provider or native runtime; direct tests suffice. |
 | Six-benchmark audit workload and method | `audit/PROTOCOL.md`, `audit/decision_oriented_delivery_2026-08-31.md` | Public protocol/aggregate report. Restricted individual judgments and runtime/formal validity are not reproduced; accuracy is uncalibrated. |
 
+## Focused analysis and full-team application
+
+[The case-analysis packet](study/case_analysis/WORKSHEET.md) contains six units
+and 67 source-referenced facts with availability labels. Input facts are separate
+from the authors' obligation coding, competing explanations and correction
+choices. GP keeps projection, RAW admission and tie-breaking as coexisting
+contributors; Pro keeps a lawful subset computation. These are retrospective
+analyses of existing evidence, not independent annotations or measured method
+benefits.
+
+[The full-team integration](native_integration/README.md) contributes a complete
+native configuration-file lifecycle and an actual artifact-review endpoint for
+the known a21 mechanism. In T, the original reloaded team produces the same
+incorrect report but skips the required review; direct and newly patched saved
+configurations deliver a tool-computed discrepancy. All C procedures deliver a
+consistent finding. U is observed to stop legally, but its frozen explicit-null
+presence assertion fails; `comparison_prerequisites_met=false` is preserved.
+The public adjudication gives scoped T/C support, not a full protocol pass.
+Native inputs, tool/result/file links and all original failed flags are available;
+no target was rerun or repaired to obtain this release.
+
 ## Selection, roles and chronology
 
 `principles/case_analysis.md` and `study/dependency_cases.md` retain the

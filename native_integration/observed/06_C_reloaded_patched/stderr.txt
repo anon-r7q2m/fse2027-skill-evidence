@@ -1,0 +1,15 @@
+/RESEARCH_ROOT/analysis/native_decision_integration_v1.py:311: UserWarning: Using LocalCommandLineCodeExecutor may execute code on the local machine which can be unsafe. For security, it is recommended to use DockerCommandLineCodeExecutor instead. To install Docker, visit: https://docs.docker.com/get-docker/
+  executor = LocalCommandLineCodeExecutor(timeout=5, work_dir=work, cleanup_temp_files=False)
+/RESEARCH_ROOT/analysis/native_decision_integration_v1.py:311: DeprecationWarning: Using the current directory as work_dir is deprecated.
+  executor = LocalCommandLineCodeExecutor(timeout=5, work_dir=work, cleanup_temp_files=False)
+/RESEARCH_ROOT/analysis/native_decision_integration_v1.py:312: UserWarning: No approval function set for CodeExecutorAgent. This means code will be executed automatically without human oversight. For security, consider setting an approval_func to review and approve code before execution. See the CodeExecutorAgent documentation for examples of approval functions.
+  producer = CodeExecutorAgent("executor", code_executor=executor, sources=["user"])
+/INTEGRATION_ROOT/sources/patched/python/packages/autogen-ext/src/autogen_ext/code_executors/local/__init__.py:521: UserWarning: Using LocalCommandLineCodeExecutor may execute code on the local machine which can be unsafe. For security, it is recommended to use DockerCommandLineCodeExecutor instead. To install Docker, visit: https://docs.docker.com/get-docker/
+  return cls(
+/INTEGRATION_ROOT/sources/patched/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_code_executor_agent.py:767: UserWarning: No approval function set for CodeExecutorAgent. This means code will be executed automatically without human oversight. For security, consider setting an approval_func to review and approve code before execution. See the CodeExecutorAgent documentation for examples of approval functions.
+  return cls(
+/INTEGRATION_ROOT/sources/patched/python/packages/autogen-core/src/autogen_core/_component_config.py:298: UserWarning: 
+⚠️  SECURITY WARNING ⚠️
+Loading a FunctionTool from config will execute code to import the provided global imports and and function code.
+Only load configs from TRUSTED sources to prevent arbitrary code execution.
+  instance = component_class._from_config(validated_config)  # type: ignore

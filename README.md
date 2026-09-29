@@ -1,10 +1,44 @@
 # What Does PASS Mean? Anonymous review artifact
 
-This artifact accompanies **What Does PASS Mean? Tracing Evidence into Coding-Agent Decisions**. It contains an unchanged generated SEARCH/REPLACE package,
-its public parser replay, three bounded source-slice replay bundles, and
-public audit reports. It also includes the fully released sixteen-task
-comparison matrix and analysis. Finite executable cases support the stated observations;
-they do not prove full-domain equivalence or reproduce benchmark scores.
+This artifact accompanies **What Does PASS Mean? Tracing Evidence into Coding-Agent Decisions**.
+The focused study examines two implementation relationships: one generated
+requirement used for both repair and acceptance, and configured authority or
+observed events that fail to reach the deciding component. Different cases
+require different corrections, including retaining lawful behavior.
+
+Start with these three entries:
+
+- [Case-analysis worksheet](study/case_analysis/WORKSHEET.md): six analysis units,
+  separate input facts and author inferences, competing explanations, justified
+  obligations and legal controls. The read-only checker resolves exact references
+  and selected arithmetic; it does not certify normative or causal judgments.
+- [Full native team integration](native_integration/README.md): an existing
+  source-filter mechanism exercised through a complete configuration save/load
+  lifecycle and actual CSV/report review. All nine original cells are retained.
+  T/C have scoped support; U's metadata assertion and the global prerequisite
+  remain failed, alongside its observed legal stopping behavior. This is a
+  known-mechanism extension, not another discovery or a benchmark score.
+- [Prospective native study](prospective/README.md): four frozen predictions and
+  42 input--variant runs on two pinned frameworks. This older study remains
+  closed and separate from the nine-cell integration extension.
+
+The [development companion](study/development_context.md) retains catalog and
+historical block summaries. All 192 capacity outcome rows and the primary
+sixteen-task analyses remain public; other historical studies have uneven
+record coverage. The audit material is a measurement-contract case and scoped
+aggregate triage, not a calibrated defect dataset or authoritative blacklist.
+
+## Check the case-analysis packet
+
+```sh
+python3 -B study/case_analysis/check.py
+```
+
+This command reads public files and archive members, checks referenced values
+and simple relations, and writes nothing. It runs no target or replay. See the
+separate native-integration and prospective guides for dependency-requiring
+native reproductions; those create new workspaces and never rewrite recorded
+scientific observations.
 
 ## Run
 

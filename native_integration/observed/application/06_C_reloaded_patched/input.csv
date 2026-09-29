@@ -1,0 +1,4 @@
+record_id,amount_cents,note
+a,1200,ordinary sale
+b,200,processed sale
+c,750,ordinary sale

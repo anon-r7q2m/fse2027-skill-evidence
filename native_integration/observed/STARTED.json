@@ -1,0 +1,13 @@
+{
+  "freeze_sha256": "413e91aed18375e9e55846df172331b535da208a7c5c142bf9f889dc736c262c",
+  "paths": {
+    "output": "/RESEARCH_ROOT/results_cache/native_decision_integration_v1",
+    "patch": "/STUDY_ROOT/diagnostics/a21/intervention.patch",
+    "protocol": "/RESEARCH_ROOT/experiments/native_decision_integration_v1",
+    "python": "/STUDY_ROOT/venv/bin/python",
+    "repo": "/RESEARCH_ROOT",
+    "source": "/STUDY_ROOT/sources/autogen",
+    "study": "/INTEGRATION_ROOT"
+  },
+  "unix_time": 1790697448.2435167
+}

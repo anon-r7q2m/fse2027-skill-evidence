@@ -1,0 +1,98 @@
+{
+  "comparisons": [
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": true,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d",
+        "patched": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": true,
+          "value": [
+            "reviewer"
+          ]
+        }
+      },
+      "scenario": "T",
+      "status": "MATCH"
+    },
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": true,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d",
+        "patched": "9c18f271a8c7672f693b32f83f2aee57625cb9ba2782a96a9c5ba0472f32ee8d"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": true,
+          "value": [
+            "reviewer"
+          ]
+        }
+      },
+      "scenario": "C",
+      "status": "MATCH"
+    },
+    {
+      "checks": {
+        "all_other_config_fields_equal": true,
+        "original_omits_termination_sources": true,
+        "original_work_dir": true,
+        "patched_exports_declared_sources": false,
+        "patched_work_dir": true,
+        "same_declared_task_and_provider": true
+      },
+      "normalized_full_config_sha256": {
+        "original": "eff5c78e1cf81b06444636b28610a0f862d1fad259418bb8e47f0c68ea1cd05c",
+        "patched": "eff5c78e1cf81b06444636b28610a0f862d1fad259418bb8e47f0c68ea1cd05c"
+      },
+      "normalized_paths_only": [
+        "/config/participants/0/config/code_executor/config/work_dir",
+        "/config/termination_condition/config/sources"
+      ],
+      "observed_termination_sources": {
+        "original": {
+          "present": false,
+          "value": null
+        },
+        "patched": {
+          "present": false,
+          "value": null
+        }
+      },
+      "scenario": "U",
+      "status": "MISMATCH"
+    }
+  ]
+}

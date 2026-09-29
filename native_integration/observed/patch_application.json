@@ -1,0 +1,6 @@
+{
+  "patch_sha256": "d2a2251069be3a83141e8d2fdaad814642e68a8abfc58f2cfde2d2644b69f269",
+  "return_code": 0,
+  "stderr": "",
+  "stdout": "patching file python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py\n"
+}

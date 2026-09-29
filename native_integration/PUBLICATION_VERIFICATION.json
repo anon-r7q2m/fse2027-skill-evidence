@@ -1,0 +1,24 @@
+{
+  "adjudicated_status": "SCOPED_T_C_SUPPORT_WITH_UNMET_FROZEN_GLOBAL_PREREQUISITE",
+  "all_json_parsed": true,
+  "all_nine_parent_receipts_byte_identical_to_original": true,
+  "anonymous_roots_checked": true,
+  "closure_and_configcomparison_byte_identical_to_original": true,
+  "configuration_dispositions": {
+    "C": "MATCH",
+    "T": "MATCH",
+    "U": "MISMATCH"
+  },
+  "copied_evidence_files": 89,
+  "files_checked_before_this_receipt": 93,
+  "frozen_global_prerequisite": false,
+  "new_target_executions_by_packager": 0,
+  "observed_cells": 9,
+  "portable_prepare_helper_executed": false,
+  "publication_hashes_and_embedded_artifact_hashes_verified": true,
+  "python_validation": "Static AST parsing only; no target imports or executions",
+  "readme_local_links_verified": true,
+  "runner_unchanged_sha256": "aa8d9a149723ebdfcf50e1afaa681f03d52573853e6ce74439e96bd62adca613",
+  "shared_upstream_dependency_hashes_verified": true,
+  "status": "STATIC_EXPORT_CHECKS_COMPLETE"
+}

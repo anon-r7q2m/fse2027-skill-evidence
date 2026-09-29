@@ -1,0 +1,1 @@
+{"cell": "07_U_direct_original", "collection_status": "COMPLETE", "prediction_status": "SUPPORTED"}
