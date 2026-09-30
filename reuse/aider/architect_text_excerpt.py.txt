@@ -1,0 +1,17 @@
+def architect_text(response):
+    """Concatenate provider text blocks in order without inserting characters."""
+    chunks = []
+    for item in response["output"]:
+        if item["type"] == "reasoning":
+            continue
+        if item["type"] != "message":
+            return None, "TOOL_CALL_IN_TOOL_FREE_ARCHITECT"
+        for block in item["content"]:
+            if (
+                type(block) is not dict
+                or block.get("type") != "output_text"
+                or type(block.get("text")) is not str
+            ):
+                return None, "NON_TEXT_ARCHITECT"
+            chunks.append(block["text"])
+    return "".join(chunks), None

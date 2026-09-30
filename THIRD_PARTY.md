@@ -68,3 +68,19 @@ license and all accompanying upstream notices/licenses preserved. AutoGen
 `LICENSE-CODE` (MIT) and `LICENSE` (CC BY 4.0 for documentation) are both copied
 adjacent to the archives, with distinct filenames. These materials are not
 relicensed under the project-authored artifact MIT grant.
+
+
+## September 30 source-to-skill supplement
+
+`reuse/` adds pinned Agentless reranking and regression source excerpts at
+`5ce5888b9f149beaace393957a55ea8ee46c9f71`, with the complete original MIT
+notice at `reuse/licenses/Agentless-MIT.txt`. The generated selector and G
+material is distinguished from donor excerpts in `reuse/PROVENANCE.json`.
+
+Aider source files, public prompt templates and the bounded native factory
+excerpt originate from `aider-ai/aider` at
+`5dc9490bb35f9729ef2c95d00a19ccd30c26339c`. Its Apache-2.0 notice remains at
+`reuse/licenses/Aider-Apache-2.0.txt`. These upstream materials are not
+relicensed as project-authored MIT code. Generated target code, host-adapter
+excerpts and newly authored inspection/provenance guides remain separately
+identified in that provenance map.

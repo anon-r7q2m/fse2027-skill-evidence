@@ -1,0 +1,163 @@
+{
+  "status": "FINAL_SOURCE_ADAPTATION_REVIEW_COMPLETE",
+  "source_gate": "PASS",
+  "source_gate_basis": "INDEPENDENT_REVIEWER_RECONSTRUCTED_PINNED_SOURCE_AND_INHERITANCE_ACCOUNT",
+  "static_dependency_interface_gate": "PASS",
+  "source_adaptation_verdict": "SOURCE_TRACEABLE_WITH_DECLARED_TARGET_NATIVE_LOG_ADAPTATIONS_AND_INVALID_MODEL_SOURCE_METADATA",
+  "package_sha256": "b65a3fcdfd78b605569863e58abd2e15efe4449222aa5f97816f553f89ee8ebb",
+  "parent_package_sha256": "3a2463614722f48290bcbbb58ed47942ff285662a354b2d477eb131987d2f722",
+  "selected_attempt": 2,
+  "generation_requests": 2,
+  "evaluated_syntax_valid_submissions": 1,
+  "package_files": {
+    "compatibility.py": "ccfe2d4cb66cfbd910e74d16609135ef912b929335938aad427e65c327b0ae95",
+    "mechanism.py": "f17d1d9aad32b4a410bbd79d2fbe7f456596c696ca4ecf53d709ca94a200afcd",
+    "native_logs.py": "e3762107264020b3dd5c62c8390142dd26475cec76fa79e25c7e7b62eaf36abc"
+  },
+  "changed_files": [
+    "native_logs.py"
+  ],
+  "inherited_files_byte_identical": {
+    "compatibility.py": true,
+    "mechanism.py": true
+  },
+  "label": "L2_CONDITIONAL_IMPLEMENTATION_MIGRATION",
+  "development_continuation": "EXPOSED_NATIVE_LOG_ADAPTATION_CONTINUATION",
+  "target_origin": "HUMAN_SPECIFIED_EXPOSED_DEVELOPMENT_SOURCE",
+  "classification_origin": "HUMAN_SUPPLIED",
+  "method_comparison": false,
+  "human_code_repairs": 0,
+  "model_source_account": {
+    "status": "SOURCE_METADATA_INVALID",
+    "diagnostic": "scope/sources fields",
+    "missing_required_top_level_fields": [
+      "scope",
+      "sources"
+    ],
+    "valid_model_generated_source_account": false,
+    "repaired_or_relabelled_by_reviewer": false,
+    "interpretation": "The model returned an edit report, not the required structured donor-source account. Preserve this failure independently of executable code and reviewer provenance evidence."
+  },
+  "independent_source_account": {
+    "source_repository": "https://github.com/OpenAutoCoder/Agentless",
+    "source_commit": "5ce5888b9f149beaace393957a55ea8ee46c9f71",
+    "retained_behavior": [
+      {
+        "source_path": "agentless/test/run_regression_tests.py",
+        "source_symbol": "save_passing_tests",
+        "source_lines": [
+          34,
+          68
+        ],
+        "source_distinguishing_detail": "Only TestStatus.PASSED.value enters the original-passing inventory; XFAIL is expressly excluded.",
+        "target_path": "mechanism.py",
+        "target_symbol": "_validate_base_receipt_for_freeze",
+        "target_lines": [
+          205,
+          224
+        ],
+        "relationship": "The unchanged inherited mechanism selects only parsed PASSED items and requires nonempty complete classification coverage."
+      },
+      {
+        "source_path": "agentless/test/run_regression_tests.py",
+        "source_symbol": "rewrite_report",
+        "source_lines": [
+          18,
+          31
+        ],
+        "source_distinguishing_detail": "Checks current observed outcomes against the original regression_tests PASS_TO_PASS inventory.",
+        "target_path": "mechanism.py",
+        "target_symbol": "_build_decision",
+        "target_lines": [
+          130,
+          202
+        ],
+        "relationship": "Inherited code compares candidate observations against frozen base inventory, with explicit target-side obligation and completeness adaptations."
+      }
+    ],
+    "dependency_boundary": [
+      "Historical get_logs_eval/get_eval_tests_report behavior is replaced by package-owned native parsing; the historical SWE-bench dependency stack is not reconstructed.",
+      "Datasets, jsonlines, donor filesystem reads and donor runner orchestration are replaced by declared JSON events, returned state and generic isolated execution effects.",
+      "The host does not supply inventory, parsed outcomes, obligation judgments or substantive G feedback."
+    ],
+    "target_adaptations": [
+      "Whole-base completeness and nonempty PASSED inventory validation.",
+      "Human-supplied evidence-linked three-state obligations and exact expected-assertion ownership.",
+      "Exact generic snapshot/projection/receipt transport and within-loop feedback instead of offline ranking.",
+      "Guard FileIdentity/null semantics retained from the prior target-interface repair.",
+      "New public native transcript grammar and package-owned parser implementation."
+    ],
+    "source_necessity_established": false,
+    "whole_donor_equivalence_established": false,
+    "target_parser_attributed_to_donor": false,
+    "account_authorship": "Independent reviewer; not the failed model source_judgments submission."
+  },
+  "static_code_review": {
+    "imports": {
+      "compatibility.py": [
+        "copy",
+        "re"
+      ],
+      "mechanism.py": [
+        "compatibility",
+        "native_logs"
+      ],
+      "native_logs.py": [
+        "re"
+      ]
+    },
+    "unbound_global_references": [],
+    "direct_filesystem_network_process_or_model_calls_found": false,
+    "undeclared_imports_found": [],
+    "host_or_l3_semantics_binding_found": false,
+    "unchanged_exported_signatures": [
+      "parse_native_log(parser, stdout, stderr)",
+      "matches_expected_assertion(test_id, observed_status, row, parsed)"
+    ],
+    "semantic_change_observations": [
+      {
+        "area": "pytest collection and roster parsing",
+        "lines": [
+          302,
+          395
+        ],
+        "observation": "Collection display is optional; recognized present counts remain unique and checked against actual status rows. Prefixed collecting display, unfinished collection, duplicate IDs and terminal/status mismatch handling are implemented locally."
+      },
+      {
+        "area": "unittest pending parent",
+        "lines": [
+          112,
+          172
+        ],
+        "observation": "Maintains explicit pending parent identities, resolves standalone native status only when ownership is unique, records overlap/orphan/unfinished diagnostics and does not treat uppercase OK as a parent status."
+      },
+      {
+        "area": "failure detail owner",
+        "lines": [
+          95,
+          98
+        ],
+        "observation": "New owner helper maps detail header suffixes back toward displayed parent identity; this is a semantic change beyond collection/pending parsing."
+      },
+      {
+        "area": "stdout/stderr selection",
+        "lines": [
+          434,
+          493
+        ],
+        "observation": "Chooses complete standalone or combined parses and compares observations/details for selected equivalence; this is a semantic change beyond the two reported syntax defects."
+      },
+      {
+        "area": "exact expected assertion predicate",
+        "lines": [
+          496,
+          525
+        ],
+        "observation": "Predicate AST is unchanged, but its upstream parsed details and selected stream changed, so full assertion-behavior equivalence cannot be inferred from that AST identity alone."
+      }
+    ],
+    "complete_behavioral_equivalence_certified": false,
+    "behavior_validation_owner": "Independent evaluator; not this static source review."
+  },
+  "projection_scope": "Independent source/static audit fields only; no completed generation response, private entry, hidden acceptance payload, benchmark patch or grade log."
+}

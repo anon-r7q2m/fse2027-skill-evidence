@@ -1,0 +1,32 @@
+{
+  "status": "CANDIDATE_STATIC_PRIVACY_AND_PATH_REVIEW_COMPLETE",
+  "scope": "All files in this candidate directory, including documentation and provenance; no target code executed.",
+  "checks": [
+    "no author machine absolute path or repository account handle",
+    "no credential literal or private key block",
+    "no email address or credential-bearing URL",
+    "whitelisted source/code/public development artifacts/compact terminals/report text only",
+    "no symlink or binary file",
+    "no provider generation request/response body",
+    "no hidden suite, benchmark patch, raw grade log, private annotation or private entry payload"
+  ],
+  "findings": [],
+  "permitted_public_legal_attribution": [
+    "OpenAutoCoder in the unchanged MIT license",
+    "Aider donor Apache license and public donor source identity"
+  ],
+  "parameter_identifiers_are_not_credentials": [
+    "api_key in the existing adapter signature/call"
+  ],
+  "public_synthetic_data": [
+    "CACHE_LIMIT calibration normalization diffs in P public_source_reference.json"
+  ],
+  "edits_to_candidate_copies_for_anonymity": [],
+  "original_files_modified": false,
+  "generated_code_imported_or_executed": false,
+  "new_model_requests": 0,
+  "new_target_executions": 0,
+  "new_benchmark_or_scorer_starts": 0,
+  "private_entry_opened_or_copied_for_this_packet": false,
+  "not_a_publication_approval": true
+}

@@ -1,0 +1,66 @@
+\subsection{A complete record: the caller-equivalent control}
+\label{sec:analysis-spec}
+The following record applies the seven fields to Django 15503. Its references
+resolve to separately supplied source excerpts and recorded values in the
+public fact view; the inferences are the authors' analysis. This separation
+permits disagreement with the requirement or explanation without treating
+an authored label as a runtime fact.
+
+\paragraph{Consumer/action.}
+The generated-check selector accepts a continuation when its issue and
+preservation checks pass; otherwise it retains sealed base policy $B$.
+We ask whether the preservation control protects the public array-index
+operation while allowing the requested object-key lookup repair.
+
+\paragraph{Obligation/domain.}
+Numeric object-key lookups are the issue's domain:
+\texttt{has\_key}, \texttt{has\_keys} and \texttt{has\_any\_keys}.
+Pinned documentation separately
+specifies array-index transforms. Both are \texttt{JUSTIFIED} in their domains.
+The generated assertion that every numeric string passed directly to the
+shared helper must be quoted is an \texttt{ASSUMED} extension of the lookup
+requirement. The lookup-specific option is an allowed adaptation that must
+retain indexing outside that lookup domain.
+
+\paragraph{Boundary path.}
+Two paths meet in the changed helper. The issue becomes a direct-helper
+assertion used for feedback and selection. Independently,
+\texttt{KeyTransform.\allowbreak{}\_\_init\_\_} applies \texttt{str(key\_name)},
+so the public index operation delivers \texttt{"3"} to
+\texttt{compile\_json\_path}. The original integer control bypasses that edge.
+
+\paragraph{Available facts.}
+\texttt{PUBLIC\_RAW} source slices contain the conversion, original checker
+and $B/V$ changes. The existing local observations record \texttt{\$[3]} for
+the direct integer control in both $B$ and $V$. Through
+\texttt{KeyTransform(3).as\_mysql}, $B$ produces \texttt{\$[3]} but $V$
+produces \texttt{\$."3"}; the equally small helper check on \texttt{["3"]}
+also exposes $V$. $B$'s lookup mode, with
+\texttt{allow\_array\_index=False}, produces \texttt{\$."1111"} for the
+numeric object key while retaining the index path. These are source-slice
+observations, without database execution. Historical
+\texttt{PUBLIC\_PROJECTION} fields bind $V$'s passing observation to selection;
+complete transmitted provider requests are unavailable.
+
+\paragraph{Alternatives.}
+``The integer control protects the public operation'' is contradicted by
+the observed string input and changed path. ``Lookup adaptation necessarily
+breaks indexing'' is contradicted by $B$'s two retained behaviors. ``Only a
+full-system test can expose the mismatch'' is contradicted by the equivalent
+helper check. The historical contribution of feedback alone to producing $V$
+remains unresolved; the saved input construction cannot isolate that effect.
+
+\paragraph{Correction/control.}
+Qualify the requirement at the lookup operation and use the public index
+operation, or a helper input preserving its representation, as the control.
+Keep the lookup-specific adaptation. The alternative diagnostic checks have
+existing local observations; a revised feedback workflow has not been run.
+Enforcing the original helper predicate more strongly retains its wrong scope.
+
+\paragraph{Endpoint/limits.}
+The record establishes a locally regressive accepted endpoint and a
+nonrepresentative preservation control. It establishes neither a complete
+$B$ issue repair nor lost task success: the activated tasks remain unsolved
+for $B/U/V$, and the panel's four policies share the same 4/7 result with one
+unscored task.
+

@@ -1,3 +1,23 @@
+# Current reuse-manuscript reading order (2026-09-30)
+
+The current paper studies Agent2Skill mechanism reuse. The three detailed
+chains below precede the older explanatory and measurement entries. They add
+inspectable evidence to existing development observations, not new execution
+or independent discoveries.
+
+| Reuse claim | New public connection | Inferential scope |
+| --- | --- | --- |
+| Historical `P_sel` omitted a source fallback | `reuse/p_sel/`: fixed donor and old/repaired rule excerpts, three-candidate public reference, decision witness, four-line diff, original manifest and qualification reports | Public source-guided repair; data/backend seams; old independent behavior pass with overall source failure; repeated regression; source-review aggregate exposure disclosed. Complete repaired entry is reported, not replayed. |
+| A qualified Aider package required a host correction | `reuse/aider/`: pinned source/factory excerpt, original generated package, contract, first failure summary, existing delivery check, corrected adapter and terminal | Recorded-response host entry with unchanged A/editor code. Old prepend implementation and complete wire records are not bundled. Finite source calibration substitutes factory/run and file-view inputs. |
+| G is a three-module unit with declared host effects | `reuse/g/`: original modules, inspection inventory, donor rules, source/adaptation projection and historical report | New inventory is not a generated manifest. Model `SOURCE_METADATA_INVALID` is preserved; source review is separate. The 16-event/four-delivery entry is reported-only. GP object/property limits are in the original witnesses below. |
+
+`P_sel` is the historical candidate selector, distinct from SEARCH/REPLACE
+editor `P` used by AP/LP. The nine-class catalog remains a development
+inventory, without a uniform transfer-success denominator. Source/evidence
+wording checks do not independently establish task benefit or paper acceptance.
+The full Django seven-field manuscript record is archived at
+`study/case_analysis/DJANGO_FULL_RECORD.tex` as a TeX fragment.
+
 # Claim-to-evidence guide
 
 The levels below are deliberately distinct: **executable** means this bundle

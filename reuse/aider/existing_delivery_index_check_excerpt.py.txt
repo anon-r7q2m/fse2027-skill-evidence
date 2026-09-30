@@ -1,0 +1,53 @@
+    def common(self, items, call_id):
+        index = len(items) - 1
+        message = items[index]
+        require(
+            message.get("type") == "function_call_output" and message.get("call_id") == call_id,
+            "common observation occurrence differs",
+        )
+        self.entries.append(
+            {
+                "owner": "host",
+                "call_id": call_id,
+                "input_index": index,
+                "wire_sha256": digest(message),
+                "wire_message": copy.deepcopy(message),
+                "delivered_request": None,
+                "acknowledged": False,
+            }
+        )
+
+    def record(self, query, items, receipt, *, purpose):
+        require(
+            receipt.get("number") == query
+            and receipt.get("state") == "COMMIT"
+            and receipt.get("usage") is not None
+            and receipt.get("purpose") == purpose,
+            "known matching COMMIT required for inclusion",
+        )
+        require(not any(row["query_id"] == query for row in self.terminals), "duplicate inclusion")
+        terminal = {
+            "query_id": query,
+            "purpose": purpose,
+            "status": receipt["status"],
+            "body_sha256": receipt["body_sha256"],
+        }
+        self.terminals.append(terminal)
+        if purpose == "reproducer":
+            return
+        require(purpose == "solve", "unknown input purpose")
+        for row in self.entries:
+            if row["delivered_request"] is not None:
+                continue
+            index = row["input_index"]
+            require(
+                index < len(items) and digest(items[index]) == row["wire_sha256"],
+                "committed input occurrence changed",
+            )
+            row.update(
+                delivered_request=query,
+                service_status=receipt["status"],
+                body_sha256=receipt["body_sha256"],
+            )
+        # This phase has no callbacks. Even a later first-ACK failure cannot
+        # erase the already sent inputs of the other package.

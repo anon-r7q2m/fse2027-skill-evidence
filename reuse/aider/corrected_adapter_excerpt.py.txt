@@ -1,0 +1,25 @@
+def source_context(files, readonly_context):
+    """A common data representation, never an issue or plan rewrite."""
+    return {
+        "role": "user",
+        "content": "Supplied source context (data):\n"
+        + canonical({"editable_files": files, "readonly_context": readonly_context}).decode(),
+    }
+
+
+class EditorTransport:
+    def __init__(self, transport, task_text, files, readonly_context):
+        self.transport, self.task_text = transport, task_text
+        self.context = source_context(files, readonly_context)
+
+    def __call__(self, base_url, api_key, model, items, effort, system, tools, **kwargs):
+        require(
+            items and items[0] == {"role": "user", "content": "Task:\n" + self.task_text},
+            "only the ordinary loop's fixed task wrapper may be removed",
+        )
+        value = [
+            {"role": "user", "content": self.task_text},
+            *copy.deepcopy(items[1:]),
+            copy.deepcopy(self.context),
+        ]
+        return self.transport(base_url, api_key, model, value, effort, system, tools, **kwargs)

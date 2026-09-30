@@ -1,0 +1,17 @@
+{
+  "status": "FINAL_PACKAGE_SEALED",
+  "package_sha256": "c869f922a65220b3f6182e8aab39ea63569642c6d4f2f78503573560485b8a4d",
+  "package_files": {
+    "mechanism.py": "b4f321794589cabb646851550b088eee17c9ca444e9b1a22ee24c27aa0891bd3",
+    "package.json": "b36258ae184c34413fbcfa0d08e0714fb762b004c0162d60a9a132eb03b8ee23"
+  },
+  "automation": "L2_GIVEN_TARGET_SOURCE_VISIBLE_TRANSFER",
+  "method_comparison": false,
+  "attempts": 2,
+  "selected_attempt": 2,
+  "selection": "FIRST_PUBLIC_PASS",
+  "public_status": "PUBLIC_PASS",
+  "human_candidate_code_repairs": 0,
+  "stopping_reason": "FIRST_PUBLIC_PASS",
+  "independent_evaluation_started": false
+}

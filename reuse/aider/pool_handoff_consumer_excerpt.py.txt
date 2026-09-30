@@ -1,0 +1,18 @@
+                    if effect["kind"] == "editor_handoff":
+                        self.handoff = effect
+                        require(
+                            effect["remaining_calls"] >= 4
+                            and effect["editor_format"] == "search_replace_k4",
+                            "unshortened K4 editor",
+                        )
+                        require(
+                            effect["files"]
+                            == [
+                                {"path": r["path"], "content": r["content"]} for r in begin["files"]
+                            ],
+                            "inherited full files",
+                        )
+                        edited_begin["issue"], views = (
+                            effect["task_text"],
+                            effect["readonly_context"],
+                        )

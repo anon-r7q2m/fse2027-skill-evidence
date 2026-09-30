@@ -1,0 +1,75 @@
+    @classmethod
+    def create(
+        self,
+        main_model=None,
+        edit_format=None,
+        io=None,
+        from_coder=None,
+        summarize_from_coder=True,
+        **kwargs,
+    ):
+        import aider.coders as coders
+
+        if not main_model:
+            if from_coder:
+                main_model = from_coder.main_model
+            else:
+                main_model = models.Model(models.DEFAULT_MODEL_NAME)
+
+        if edit_format == "code":
+            edit_format = None
+        if edit_format is None:
+            if from_coder:
+                edit_format = from_coder.edit_format
+            else:
+                edit_format = main_model.edit_format
+
+        if not io and from_coder:
+            io = from_coder.io
+
+        if from_coder:
+            use_kwargs = dict(from_coder.original_kwargs)  # copy orig kwargs
+
+            # If the edit format changes, we can't leave old ASSISTANT
+            # messages in the chat history. The old edit format will
+            # confused the new LLM. It may try and imitate it, disobeying
+            # the system prompt.
+            done_messages = from_coder.done_messages
+            if edit_format != from_coder.edit_format and done_messages and summarize_from_coder:
+                try:
+                    done_messages = from_coder.summarizer.summarize_all(done_messages)
+                except ValueError:
+                    # If summarization fails, keep the original messages and warn the user
+                    io.tool_warning(
+                        "Chat history summarization failed, continuing with full history"
+                    )
+
+            # Bring along context from the old Coder
+            update = dict(
+                fnames=list(from_coder.abs_fnames),
+                read_only_fnames=list(from_coder.abs_read_only_fnames),  # Copy read-only files
+                done_messages=done_messages,
+                cur_messages=from_coder.cur_messages,
+                aider_commit_hashes=from_coder.aider_commit_hashes,
+                commands=from_coder.commands.clone(),
+                total_cost=from_coder.total_cost,
+                ignore_mentions=from_coder.ignore_mentions,
+                total_tokens_sent=from_coder.total_tokens_sent,
+                total_tokens_received=from_coder.total_tokens_received,
+                file_watcher=from_coder.file_watcher,
+            )
+            use_kwargs.update(update)  # override to complete the switch
+            use_kwargs.update(kwargs)  # override passed kwargs
+
+            kwargs = use_kwargs
+            from_coder.ok_to_warm_cache = False
+
+        for coder in coders.__all__:
+            if hasattr(coder, "edit_format") and coder.edit_format == edit_format:
+                res = coder(main_model, io, **kwargs)
+                res.original_kwargs = dict(kwargs)
+                return res
+
+        valid_formats = [
+            str(c.edit_format)
+            for c in coders.__all__

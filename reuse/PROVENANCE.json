@@ -1,0 +1,1175 @@
+{
+  "schema": "source-to-reuse-candidate-provenance-v1",
+  "status": "UNPUBLISHED_CANDIDATE_FOR_SEPARATE_RELEASE_REVIEW",
+  "source_root_convention": "All source_path values are relative to the Agent2Skill repository; no author-machine root is retained.",
+  "line_convention": "Original line ranges are 1-based inclusive. Whole-file JSON projection ranges identify the original storage lines; selected_json_fields identify the retained content.",
+  "sha_convention": "source_sha256 identifies the complete original file before extraction or projection. candidate_sha256 identifies candidate bytes; metadata package identities are preserved original declarations.",
+  "raw_scope": "raw means unchanged admitted public source/code/artifact bytes, never raw provider traffic.",
+  "donor_pins": {
+    "Agentless": {
+      "repository": "https://github.com/OpenAutoCoder/Agentless",
+      "commit": "5ce5888b9f149beaace393957a55ea8ee46c9f71",
+      "license_candidate": "licenses/Agentless-MIT.txt"
+    },
+    "Aider": {
+      "repository": "https://github.com/aider-ai/aider",
+      "commit": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+      "license_candidate": "licenses/Aider-Apache-2.0.txt"
+    }
+  },
+  "execution_during_preparation": "none; static text/JSON/hash/diff operations only",
+  "files": [
+    {
+      "candidate_path": "licenses/Agentless-MIT.txt",
+      "kind": "raw",
+      "candidate_sha256": "01be13f66160d7e6227a3cedc1e993b63e497b5d3623ab7fa5798c1fba769cb1",
+      "candidate_bytes": 1070,
+      "originals": [
+        {
+          "source_path": "experiments/reproduction_regression_v1/sources/agentless/LICENSE",
+          "source_sha256": "01be13f66160d7e6227a3cedc1e993b63e497b5d3623ab7fa5798c1fba769cb1",
+          "source_bytes": 1070,
+          "source_line_count": 21,
+          "source_line_ranges": [
+            [
+              1,
+              21
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "licenses/Aider-Apache-2.0.txt",
+      "kind": "raw",
+      "candidate_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "candidate_bytes": 11358,
+      "originals": [
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/sources/aider/LICENSE.txt",
+          "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source_bytes": 11358,
+          "source_line_count": 202,
+          "source_line_ranges": [
+            [
+              1,
+              202
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "p_sel/public_source_feedback.json",
+      "kind": "raw",
+      "candidate_sha256": "cf3b45c939e482d9384b865e4fe85c4e141fc4de55351402d8668014914e5f1c",
+      "candidate_bytes": 5137,
+      "originals": [
+        {
+          "source_path": "experiments/agentless_selection_source_repair_v1/source_feedback.json",
+          "source_sha256": "cf3b45c939e482d9384b865e4fe85c4e141fc4de55351402d8668014914e5f1c",
+          "source_bytes": 5137,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Public source-review feedback supplied before repair generation; not independent acceptance data."
+    },
+    {
+      "candidate_path": "p_sel/public_source_reference.json",
+      "kind": "raw",
+      "candidate_sha256": "c3214ff28128162860a30a84df5e736aeff765279d0add1f00ac8b33f0dcbc45",
+      "candidate_bytes": 5591,
+      "originals": [
+        {
+          "source_path": "experiments/agentless_selection_source_repair_v1/public/source_reference.json",
+          "source_sha256": "c3214ff28128162860a30a84df5e736aeff765279d0add1f00ac8b33f0dcbc45",
+          "source_bytes": 5591,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Public synthetic CACHE_LIMIT examples only. Original repository-commit backend was not executed; target package was not imported by this reference."
+    },
+    {
+      "candidate_path": "p_sel/public_decision_witness.json",
+      "kind": "raw",
+      "candidate_sha256": "b329aea52cfaaca616c0dee164d97dddfeea89372e9ce9fea9e442ea253ac5ef",
+      "candidate_bytes": 1012,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/calibration/attempt_01/decision_witness.json",
+          "source_sha256": "b329aea52cfaaca616c0dee164d97dddfeea89372e9ce9fea9e442ea253ac5ef",
+          "source_bytes": 1012,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Records source-branch/L3 ordinal 3 versus old Direct ordinal 1; public worker traces remain outside this small packet."
+    },
+    {
+      "candidate_path": "p_sel/public_development_scope.md",
+      "kind": "excerpt",
+      "candidate_sha256": "71af2ca223af163454c2b1cbdc872d2b8c04a9611e1a1f4fba627a5dde659298",
+      "candidate_bytes": 1090,
+      "originals": [
+        {
+          "source_path": "experiments/agentless_selection_source_repair_v1/PLAN.md",
+          "source_sha256": "0ca2cc4dde9df39305ac17ddffe24dc6b0019db22059a4d705ba4cb3ef3a2f1a",
+          "source_bytes": 6228,
+          "source_line_count": 102,
+          "source_line_ranges": [
+            [
+              29,
+              44
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "p_sel/donor_rerank_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "1a02d6f02a07e2a1869fb3f4b6bb67db8f6f64c37cb3c92424512ea258b09073",
+      "candidate_bytes": 5460,
+      "originals": [
+        {
+          "source_path": "experiments/g_migration_trial_v1/public/source/agentless/repair/rerank.py",
+          "source_sha256": "4c43fa968a8ce7d5cf98b4c747c57e1ee504bc58686dbd328aced6d2ad10768e",
+          "source_bytes": 12839,
+          "source_line_count": 343,
+          "source_line_ranges": [
+            [
+              156,
+              289
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "One fixed source function; source data globals and original repository backend are not bundled or executed."
+    },
+    {
+      "candidate_path": "p_sel/old_selection_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "ab339459f8291013d5e6ea58b6e4b5ba677642e32daeb0fd4776a12c3737dc54",
+      "candidate_bytes": 1212,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/generation/direct/final_package/mechanism.py",
+          "source_sha256": "2d18c47228989e473cadd903d9e7d10036fcfccc2dafb1ab944ad81bcd7ae7d9",
+          "source_bytes": 35235,
+          "source_line_count": 1074,
+          "source_line_ranges": [
+            [
+              523,
+              558
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "p_sel/repaired_selection_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "b5f424cfa5eca84fa2f0ab140f34beb85645e38030d6a5ee6d181a074062ccba",
+      "candidate_bytes": 1429,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package/mechanism.py",
+          "source_sha256": "256792508d842905cf950d894e18c572d6fc94d8507f6d3c7ef11a556066c756",
+          "source_bytes": 35452,
+          "source_line_count": 1078,
+          "source_line_ranges": [
+            [
+              523,
+              562
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "p_sel/fallback_repair.diff",
+      "kind": "projection",
+      "candidate_sha256": "4d55020236a38eaad1e4c2734e61f533fbf35f9c95907c8388ba47b6ffcc564b",
+      "candidate_bytes": 747,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/generation/direct/final_package/mechanism.py",
+          "source_sha256": "2d18c47228989e473cadd903d9e7d10036fcfccc2dafb1ab944ad81bcd7ae7d9",
+          "source_bytes": 35235,
+          "source_line_count": 1074,
+          "source_line_ranges": [
+            [
+              536,
+              547
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package/mechanism.py",
+          "source_sha256": "256792508d842905cf950d894e18c572d6fc94d8507f6d3c7ef11a556066c756",
+          "source_bytes": 35452,
+          "source_line_count": 1078,
+          "source_line_ranges": [
+            [
+              536,
+              551
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Full-file static unified diff, anonymous labels, three context lines; exactly four insertions and zero deletions. No code executed."
+    },
+    {
+      "candidate_path": "p_sel/unchanged_package_manifest.json",
+      "kind": "raw",
+      "candidate_sha256": "26f0310850c3d851f00413f0c183bbe31a46fc25c08317c6b3882a343eb35f34",
+      "candidate_bytes": 220,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/generation/direct/final_package/package.json",
+          "source_sha256": "26f0310850c3d851f00413f0c183bbe31a46fc25c08317c6b3882a343eb35f34",
+          "source_bytes": 220,
+          "source_line_count": 12,
+          "source_line_ranges": [
+            [
+              1,
+              12
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/generation/direct/final_package/package.json",
+          "source_sha256": "26f0310850c3d851f00413f0c183bbe31a46fc25c08317c6b3882a343eb35f34",
+          "source_bytes": 220,
+          "source_line_count": 12,
+          "source_line_ranges": [
+            [
+              1,
+              12
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "The two original manifest files are byte-identical; copy once."
+    },
+    {
+      "candidate_path": "p_sel/package_identity.json",
+      "kind": "projection",
+      "candidate_sha256": "60dd004dd1ab8e43442fe96798e8f6e38282f5e9985afbc9269a7655f6bf63d9",
+      "candidate_bytes": 1575,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/generation/direct/final.json",
+          "source_sha256": "e0ecd42300ed1b48f933d47533a542b9b69cbb4e565a30c8dc79220d2e5e9385",
+          "source_bytes": 640,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "status",
+            "package_sha256",
+            "package_files",
+            "automation",
+            "attempts",
+            "selected_attempt",
+            "selection",
+            "public_status",
+            "human_candidate_code_repairs",
+            "stopping_reason"
+          ]
+        },
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/generation/direct/final.json",
+          "source_sha256": "0536b1942d05b4e385efbb37e2eb7347ed4409d4f1f21a4a59209f2473c4d3ed",
+          "source_bytes": 773,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "status",
+            "package_sha256",
+            "parent_package_sha256",
+            "package_files",
+            "automation",
+            "method_comparison",
+            "attempts",
+            "selected_attempt",
+            "selection",
+            "public_status",
+            "human_candidate_code_repairs",
+            "stopping_reason",
+            "independent_evaluation_started"
+          ]
+        }
+      ],
+      "transformation": "Whitelist of sealed identity/development fields from the original metadata; package hash is recorded, not recomputed by a new identity algorithm."
+    },
+    {
+      "candidate_path": "p_sel/qualification_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "ad3738a7604a68efa0a5e4134cdd8504965578d87f9b3ac68854d72f502c73ce",
+      "candidate_bytes": 1731,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/REPORT.md",
+          "source_sha256": "ba10e204d5ffa7f0f06e5f93d2465977f114ec6e8f94e8f8ce11b77500b0f43b",
+          "source_bytes": 2985,
+          "source_line_count": 54,
+          "source_line_ranges": [
+            [
+              1,
+              29
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "11/11 public, reused 13/13 independent regression and same-package entry are report claims; hidden cases, raw entry traces and generation transactions are excluded. Source-review aggregate exposure is retained."
+    },
+    {
+      "candidate_path": "p_sel/gp_production_flags_excerpt.md",
+      "kind": "excerpt",
+      "candidate_sha256": "779f5822633656bb3d12683f598279d1ee52bf3672d01d401d9f90fc018bb26b",
+      "candidate_bytes": 496,
+      "originals": [
+        {
+          "source_path": "experiments/agentless_selection_transfer_v1/HOST_PROFILE.md",
+          "source_sha256": "99718bd63d2d5504ec5e7a27d8a3199e749fc26bb77414a0c26f1abdd1f1b6f5",
+          "source_bytes": 13579,
+          "source_line_count": 204,
+          "source_line_ranges": [
+            [
+              58,
+              64
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "GP uses regression=true and reproduction=false. The repaired selector was used; the old reproduction-branch omission is not the GP root cause."
+    },
+    {
+      "candidate_path": "aider/donor_architect_coder.py",
+      "kind": "raw",
+      "candidate_sha256": "6fb2aab62be79653ddc8c7f16e711477d1b40b56456a26a9a55db9473d0390cb",
+      "candidate_bytes": 1622,
+      "originals": [
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/sources/aider/aider/coders/architect_coder.py",
+          "source_sha256": "6fb2aab62be79653ddc8c7f16e711477d1b40b56456a26a9a55db9473d0390cb",
+          "source_bytes": 1622,
+          "source_line_count": 48,
+          "source_line_ranges": [
+            [
+              1,
+              48
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Pinned source method, not the full Aider application or a native runtime reconstruction."
+    },
+    {
+      "candidate_path": "aider/donor_architect_prompts.py",
+      "kind": "raw",
+      "candidate_sha256": "4cf04aa8819a4f4d7ad46d5e2d463c13505df3af6b5a8e7eaf724b27b3993e4c",
+      "candidate_bytes": 1469,
+      "originals": [
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/sources/aider/aider/coders/architect_prompts.py",
+          "source_sha256": "4cf04aa8819a4f4d7ad46d5e2d463c13505df3af6b5a8e7eaf724b27b3993e4c",
+          "source_bytes": 1469,
+          "source_line_count": 40,
+          "source_line_ranges": [
+            [
+              1,
+              40
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Public donor request templates, not recorded provider requests or responses."
+    },
+    {
+      "candidate_path": "aider/donor_factory_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "01c246afb4eeb4d675e9ed3c442aec8542674ff418958483f620e83bfcca66a3",
+      "candidate_bytes": 2958,
+      "originals": [
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/sources/aider/aider/coders/base_coder.py",
+          "source_sha256": "04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+          "source_bytes": 86302,
+          "source_line_count": 2485,
+          "source_line_ranges": [
+            [
+              124,
+              198
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Static native factory context inheritance; actual calibration replaces factory/run. This excerpt does not establish full native construction."
+    },
+    {
+      "candidate_path": "aider/original_package/mechanism.py",
+      "kind": "raw",
+      "candidate_sha256": "b4f321794589cabb646851550b088eee17c9ca444e9b1a22ee24c27aa0891bd3",
+      "candidate_bytes": 23981,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_transfer_v1/generation/direct/final_package/mechanism.py",
+          "source_sha256": "b4f321794589cabb646851550b088eee17c9ca444e9b1a22ee24c27aa0891bd3",
+          "source_bytes": 23981,
+          "source_line_count": 684,
+          "source_line_ranges": [
+            [
+              1,
+              684
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "aider/original_package/package.json",
+      "kind": "raw",
+      "candidate_sha256": "b36258ae184c34413fbcfa0d08e0714fb762b004c0162d60a9a132eb03b8ee23",
+      "candidate_bytes": 233,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_transfer_v1/generation/direct/final_package/package.json",
+          "source_sha256": "b36258ae184c34413fbcfa0d08e0714fb762b004c0162d60a9a132eb03b8ee23",
+          "source_bytes": 233,
+          "source_line_count": 13,
+          "source_line_ranges": [
+            [
+              1,
+              13
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "aider/sealed_identity.json",
+      "kind": "projection",
+      "candidate_sha256": "4334b99b8366287b54daff68b50b39a4c2d138a5b3b4181079643cfa47a8ece1",
+      "candidate_bytes": 651,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_transfer_v1/generation/direct/final.json",
+          "source_sha256": "02052e3e09ea6464cd8414700b986c588b12ade90f73681f4032c306380a7499",
+          "source_bytes": 587,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "status",
+            "package_sha256",
+            "package_files",
+            "automation",
+            "method_comparison",
+            "attempts",
+            "selected_attempt",
+            "selection",
+            "public_status",
+            "human_candidate_code_repairs",
+            "stopping_reason",
+            "independent_evaluation_started"
+          ]
+        }
+      ],
+      "transformation": "Whitelist of original sealed identity/development fields; no generation request or response content."
+    },
+    {
+      "candidate_path": "aider/PUBLIC_CONTRACT.md",
+      "kind": "raw",
+      "candidate_sha256": "7792d4b1c51519a72158398d78473436650de08ea0ee49919bff72a4f5f3c905",
+      "candidate_bytes": 5938,
+      "originals": [
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/PUBLIC_CONTRACT.md",
+          "source_sha256": "7792d4b1c51519a72158398d78473436650de08ea0ee49919bff72a4f5f3c905",
+          "source_bytes": 5938,
+          "source_line_count": 108,
+          "source_line_ranges": [
+            [
+              1,
+              108
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "English/auto-accept/same-model/file-view/editor-replacement/shared-budget adaptations are the public admitted domain, not donor equivalence."
+    },
+    {
+      "candidate_path": "aider/first_entry_failure_summary.json",
+      "kind": "raw",
+      "candidate_sha256": "d0edacc117bc5f83d91199cb5b54ab717b377c0bb726584150d34f71c470d349",
+      "candidate_bytes": 671,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_entry_v1/public/failure_summary.json",
+          "source_sha256": "d0edacc117bc5f83d91199cb5b54ab717b377c0bb726584150d34f71c470d349",
+          "source_bytes": 671,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Compact public failure summary only; no captured request/response bodies or task trees."
+    },
+    {
+      "candidate_path": "aider/corrected_entry_terminal.json",
+      "kind": "raw",
+      "candidate_sha256": "86f890c87633c4a8e0dc62a73f4bced578992058b11fe18f67e2f810a503b309",
+      "candidate_bytes": 783,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_entry_v1/public_v2/terminal.json",
+          "source_sha256": "86f890c87633c4a8e0dc62a73f4bced578992058b11fe18f67e2f810a503b309",
+          "source_bytes": 783,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy.",
+      "seam_or_missing_evidence": "Existing recorded-response terminal; zero new live model, benchmark or scorer calls; does not measure task gain."
+    },
+    {
+      "candidate_path": "aider/architect_text_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "7ef2d0fdaedf76154bc0ea96fbe0639a6eeb3f775acb7bd0711da47d4ae8d115",
+      "candidate_bytes": 665,
+      "originals": [
+        {
+          "source_path": "analysis/aider_architect_entry_v1/bridge.py",
+          "source_sha256": "2434fc8ec371db695d7284fbfb95bf44c115e0fdbe207f483526ed64fa8d954e",
+          "source_bytes": 8447,
+          "source_line_count": 209,
+          "source_line_ranges": [
+            [
+              18,
+              34
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "aider/corrected_adapter_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "f2e5bc719b60fdfcc4a1ce87c61eb11462bcabc15a7a8e8c956d659eb73bb783",
+      "candidate_bytes": 1075,
+      "originals": [
+        {
+          "source_path": "analysis/aider_architect_entry_v1/bridge.py",
+          "source_sha256": "2434fc8ec371db695d7284fbfb95bf44c115e0fdbe207f483526ed64fa8d954e",
+          "source_bytes": 8447,
+          "source_line_count": 209,
+          "source_line_ranges": [
+            [
+              37,
+              61
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Existing corrected host bridge: preserves items[1:] positions and appends source context. api_key is a parameter name only; no credential literal is included."
+    },
+    {
+      "candidate_path": "aider/ordinary_handoff_consumer_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "ffc2b2d6f30a580d87e308f15cec6dd8891244039a9b0b8784b0052263b14015",
+      "candidate_bytes": 1083,
+      "originals": [
+        {
+          "source_path": "analysis/aider_architect_entry_v1/ordinary.py",
+          "source_sha256": "5b5eeb2c958afd9b0029e9f637899d690dafc0d54bef411de20832e70d90bf05",
+          "source_bytes": 13603,
+          "source_line_count": 298,
+          "source_line_ranges": [
+            [
+              148,
+              169
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "aider/pool_handoff_consumer_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "e65f3e1ccad1952a5ef9b5212f51d71f207da2d0c75212a684b9ed935e84c26a",
+      "candidate_bytes": 864,
+      "originals": [
+        {
+          "source_path": "analysis/aider_architect_entry_v1/pool_host.py",
+          "source_sha256": "dddfd44a35dda25c6bae61c1e6bf17a6bdcf72972f6f9a87de7b2aacb2266a49",
+          "source_bytes": 13688,
+          "source_line_count": 313,
+          "source_line_ranges": [
+            [
+              234,
+              251
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "This P is P_edit (b276b81c...), the SEARCH/REPLACE editor; it is not P_sel."
+    },
+    {
+      "candidate_path": "aider/existing_delivery_index_check_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "56e01930e1d390a6e0d49fa484373007ef378dcbe7a61bbfb21463ec705800c6",
+      "candidate_bytes": 2058,
+      "originals": [
+        {
+          "source_path": "analysis/generated_composition_v1/delivery.py",
+          "source_sha256": "555298f02274e1f85186d5a14c69abbed413296806657ed84c17a2df3110b6c8",
+          "source_bytes": 5241,
+          "source_line_count": 129,
+          "source_line_ranges": [
+            [
+              45,
+              97
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Existing absolute-index registration and exact-message COMMIT check. The host correction did not weaken this check."
+    },
+    {
+      "candidate_path": "aider/index_correction_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "4469f8989c00c385bdd46a2f98d1f10c0f7ae7f004f2adc1d1b2e6e293bceeef",
+      "candidate_bytes": 999,
+      "originals": [
+        {
+          "source_path": "docs/reviews/aider_architect_entry_index_correction_20260920.md",
+          "source_sha256": "9d5484c227fccf5c68781e1e039bb99398da5c137fc52ec2a32c6d9ca3d790db",
+          "source_bytes": 2159,
+          "source_line_count": 38,
+          "source_line_ranges": [
+            [
+              10,
+              25
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Retrospective source/report account of the prior prepend bug; an executable snapshot of the old bridge is not bundled."
+    },
+    {
+      "candidate_path": "aider/transfer_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "2a9a927e8a3b98e1fa76dd2a9be3c6ce417663123e2903d679870e8a7c004109",
+      "candidate_bytes": 1624,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_transfer_v1/REPORT.md",
+          "source_sha256": "3d32d5c995ca54cb1921116f2f6ed1e177c91a953a9fdb2985e712f53280a279",
+          "source_bytes": 2732,
+          "source_line_count": 47,
+          "source_line_ranges": [
+            [
+              1,
+              28
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Finite 5/5 public and 8/8 presealed independent checks are report claims; acceptance suites and calibration execution traces are excluded."
+    },
+    {
+      "candidate_path": "aider/entry_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "ca026b0f34e16bb7031a5cc6b715952d169ccf027c44e939b83c3a23a4395ac7",
+      "candidate_bytes": 2535,
+      "originals": [
+        {
+          "source_path": "results_cache/aider_architect_entry_v1/REPORT.md",
+          "source_sha256": "ea8749ca3db5f339ee4f29c3a06f699759c0a0fe8e331519556183a2ea84c058",
+          "source_bytes": 2868,
+          "source_line_count": 45,
+          "source_line_ranges": [
+            [
+              1,
+              39
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Recorded-response entry outcomes and artificial read-only fixture are disclosed; original wire/tree records are not included."
+    },
+    {
+      "candidate_path": "g/original_package/mechanism.py",
+      "kind": "raw",
+      "candidate_sha256": "f17d1d9aad32b4a410bbd79d2fbe7f456596c696ca4ecf53d709ca94a200afcd",
+      "candidate_bytes": 12926,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/generation/a2s/final_package/mechanism.py",
+          "source_sha256": "f17d1d9aad32b4a410bbd79d2fbe7f456596c696ca4ecf53d709ca94a200afcd",
+          "source_bytes": 12926,
+          "source_line_count": 334,
+          "source_line_ranges": [
+            [
+              1,
+              334
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "g/original_package/native_logs.py",
+      "kind": "raw",
+      "candidate_sha256": "e3762107264020b3dd5c62c8390142dd26475cec76fa79e25c7e7b62eaf36abc",
+      "candidate_bytes": 15195,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/generation/a2s/final_package/native_logs.py",
+          "source_sha256": "e3762107264020b3dd5c62c8390142dd26475cec76fa79e25c7e7b62eaf36abc",
+          "source_bytes": 15195,
+          "source_line_count": 525,
+          "source_line_ranges": [
+            [
+              1,
+              525
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "g/original_package/compatibility.py",
+      "kind": "raw",
+      "candidate_sha256": "ccfe2d4cb66cfbd910e74d16609135ef912b929335938aad427e65c327b0ae95",
+      "candidate_bytes": 10457,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/generation/a2s/final_package/compatibility.py",
+          "source_sha256": "ccfe2d4cb66cfbd910e74d16609135ef912b929335938aad427e65c327b0ae95",
+          "source_bytes": 10457,
+          "source_line_count": 329,
+          "source_line_ranges": [
+            [
+              1,
+              329
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Byte-for-byte public source/artifact copy."
+    },
+    {
+      "candidate_path": "g/module_inventory.json",
+      "kind": "projection",
+      "candidate_sha256": "07945d661b492c50ef9dae1b3fd9e941172e550e2113675fedb2488bfd3735b7",
+      "candidate_bytes": 879,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/generation/a2s/final.json",
+          "source_sha256": "d788fb4a05052b059e2dab496d0adec84a6d12054118af2446f1faa3ae6364b9",
+          "source_bytes": 1734,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "package_sha256",
+            "package_files",
+            "source_metadata.status"
+          ]
+        },
+        {
+          "source_path": "experiments/g_migration_trial_v1/CONTRACT.md",
+          "source_sha256": "29c86780e30512805f71aa11bf02a88e8e29304e577c98ed65a5a8f9953700ab",
+          "source_bytes": 32562,
+          "source_line_count": 526,
+          "source_line_ranges": [
+            [
+              19,
+              31
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Newly authored module inventory from the original seal plus original public delivery/entry contract. Not an original generated manifest."
+    },
+    {
+      "candidate_path": "g/donor_regression_excerpt.py.txt",
+      "kind": "excerpt",
+      "candidate_sha256": "0df5b0696aef16a1f73e1fa05d7f4a6811b5be31423dbc0aa53c22a4ef8fdc81",
+      "candidate_bytes": 1816,
+      "originals": [
+        {
+          "source_path": "experiments/g_migration_trial_v1/public/source/agentless/test/run_regression_tests.py",
+          "source_sha256": "66d7cabee98a22b4e0ff315317ad8cd5e8d6baab6c71e1283b57d2d47167aa92",
+          "source_bytes": 8251,
+          "source_line_count": 254,
+          "source_line_ranges": [
+            [
+              18,
+              68
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "Donor PASSED inventory excluding XFAIL and regression comparison only; donor filesystem/dataset/runner/dependency stack is not reconstructed."
+    },
+    {
+      "candidate_path": "g/public_source_boundary_excerpt.md",
+      "kind": "excerpt",
+      "candidate_sha256": "23bb99dace17aac82b78a5469c9e09b783117e171c293e2dbd241ab21e4c2b5f",
+      "candidate_bytes": 2275,
+      "originals": [
+        {
+          "source_path": "experiments/g_migration_trial_v1/CONTRACT.md",
+          "source_sha256": "29c86780e30512805f71aa11bf02a88e8e29304e577c98ed65a5a8f9953700ab",
+          "source_bytes": 32562,
+          "source_line_count": 526,
+          "source_line_ranges": [
+            [
+              17,
+              53
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits."
+    },
+    {
+      "candidate_path": "g/source_adaptation_account.json",
+      "kind": "projection",
+      "candidate_sha256": "7158f942ee4e401f1976ad36815f487f60ee9889092277c2707a7ccad6deb8da",
+      "candidate_bytes": 7273,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/final_source_adaptation_review.json",
+          "source_sha256": "0528439f9635a79109b4b18306752624e33f0cfaa37ee097e5c80e090e9714d3",
+          "source_bytes": 14075,
+          "source_line_count": 320,
+          "source_line_ranges": [
+            [
+              1,
+              320
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "status",
+            "source_gate",
+            "source_gate_basis",
+            "static_dependency_interface_gate",
+            "source_adaptation_verdict",
+            "package_sha256",
+            "parent_package_sha256",
+            "selected_attempt",
+            "generation_requests",
+            "evaluated_syntax_valid_submissions",
+            "package_files",
+            "changed_files",
+            "inherited_files_byte_identical",
+            "label",
+            "development_continuation",
+            "target_origin",
+            "classification_origin",
+            "method_comparison",
+            "human_code_repairs",
+            "model_source_account.status/diagnostic/missing_required_top_level_fields/valid_model_generated_source_account/repaired_or_relabelled_by_reviewer/interpretation",
+            "independent_source_account.selected_public_source_and_boundary_fields",
+            "static_code_review.selected_static_fields"
+          ]
+        }
+      ],
+      "transformation": "Whitelist projection; excludes model original_value, completed_response, private entry pointers, author/reviewer identity, and private behavioral inputs.",
+      "seam_or_missing_evidence": "source_gate PASS is the independent reviewer account. The model account remains SOURCE_METADATA_INVALID; no automated provenance success, source necessity, or whole-donor equivalence."
+    },
+    {
+      "candidate_path": "g/qualification_and_entry_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "aa80acb6aca2c8817e11fdfd1a3608757f52abbdaf7213ca09b5614c8f7933b1",
+      "candidate_bytes": 1124,
+      "originals": [
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/REPORT.md",
+          "source_sha256": "0a94b6923bdfe5069d44a3b7da96ad9a8d4c2edb1e431324454bf45ecba7b421",
+          "source_bytes": 2080,
+          "source_line_count": 33,
+          "source_line_ranges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        }
+      ],
+      "transformation": "Exact contiguous original lines; no inserted heading or code edits.",
+      "seam_or_missing_evidence": "16 events/four deliveries and identical replay are report-only. No private entry was opened or copied for this packet; no closed public entry trace or executable reproduction is claimed."
+    },
+    {
+      "candidate_path": "README.md",
+      "kind": "projection",
+      "candidate_sha256": "f4db328508f3b4b11112b044d4969f7f4db8c52a8a420bcad38a1e48c67d2a88",
+      "candidate_bytes": 10694,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_source_repair_v1/REPORT.md",
+          "source_sha256": "ba10e204d5ffa7f0f06e5f93d2465977f114ec6e8f94e8f8ce11b77500b0f43b",
+          "source_bytes": 2985,
+          "source_line_count": 54,
+          "source_line_ranges": [
+            [
+              1,
+              29
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "experiments/agentless_selection_source_repair_v1/public/source_reference.json",
+          "source_sha256": "c3214ff28128162860a30a84df5e736aeff765279d0add1f00ac8b33f0dcbc45",
+          "source_bytes": 5591,
+          "source_line_count": 1,
+          "source_line_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "results_cache/aider_architect_entry_v1/REPORT.md",
+          "source_sha256": "ea8749ca3db5f339ee4f29c3a06f699759c0a0fe8e331519556183a2ea84c058",
+          "source_bytes": 2868,
+          "source_line_count": 45,
+          "source_line_ranges": [
+            [
+              1,
+              39
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "experiments/aider_architect_transfer_v1/PUBLIC_CONTRACT.md",
+          "source_sha256": "7792d4b1c51519a72158398d78473436650de08ea0ee49919bff72a4f5f3c905",
+          "source_bytes": 5938,
+          "source_line_count": 108,
+          "source_line_ranges": [
+            [
+              1,
+              108
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/final_source_adaptation_review.json",
+          "source_sha256": "0528439f9635a79109b4b18306752624e33f0cfaa37ee097e5c80e090e9714d3",
+          "source_bytes": 14075,
+          "source_line_count": 320,
+          "source_line_ranges": [
+            [
+              1,
+              320
+            ]
+          ],
+          "source_role": "public_source_or_artifact",
+          "selected_json_fields": [
+            "source_gate",
+            "model_source_account.status",
+            "independent_source_account"
+          ]
+        },
+        {
+          "source_path": "results_cache/g_native_log_repair_v1/REPORT.md",
+          "source_sha256": "0a94b6923bdfe5069d44a3b7da96ad9a8d4c2edb1e431324454bf45ecba7b421",
+          "source_bytes": 2080,
+          "source_line_count": 33,
+          "source_line_ranges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "source_role": "public_source_or_artifact"
+        },
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/REPORT.md",
+          "source_sha256": "d671b7364b084aafc3dac73f88924e3177b9fec83eae64942b37439f26ff21c3",
+          "source_bytes": 3318,
+          "source_line_count": 47,
+          "source_line_ranges": [
+            [
+              3,
+              3
+            ],
+            [
+              13,
+              18
+            ]
+          ],
+          "source_role": "public_report"
+        }
+      ],
+      "transformation": "Newly authored reading guide and boundary account. It does not replace any original result; no original README exists for this candidate packet."
+    },
+    {
+      "candidate_path": "PRIVACY_REVIEW.json",
+      "kind": "projection",
+      "candidate_sha256": "263971049a3e077485a196876de8ce903d25248d9c3b3739a80ad94523619ed0",
+      "candidate_bytes": 1384,
+      "originals": [],
+      "transformation": "Newly authored static inspection record; no pre-existing original file and no empirical execution result."
+    },
+    {
+      "candidate_path": "p_sel/pre_repair_disposition_report_excerpt.md",
+      "kind": "reported-only",
+      "candidate_sha256": "a78d1f22ec2dbba24c971eae551a0529c969fb86cf4e25c318d560ed26ec6ece",
+      "candidate_bytes": 572,
+      "originals": [
+        {
+          "source_path": "results_cache/agentless_selection_transfer_v2/REPORT.md",
+          "source_sha256": "d671b7364b084aafc3dac73f88924e3177b9fec83eae64942b37439f26ff21c3",
+          "source_bytes": 3318,
+          "source_line_count": 47,
+          "source_line_ranges": [
+            [
+              3,
+              3
+            ],
+            [
+              13,
+              18
+            ]
+          ],
+          "source_role": "public_report"
+        }
+      ],
+      "transformation": "Two exact report ranges joined by one blank line; only the historical Direct disposition and fallback finding are retained.",
+      "seam_or_missing_evidence": "Old Direct 13/13 was finite behavior acceptance, not complete source fidelity; source review failed and no actual entry or benchmark followed."
+    }
+  ],
+  "self_manifest": {
+    "candidate_path": "PROVENANCE.json",
+    "kind": "projection",
+    "originals": [],
+    "candidate_sha256": null,
+    "reason": "Newly authored index with no pre-existing original file; self-hash omitted to avoid recursive hash definition."
+  }
+}

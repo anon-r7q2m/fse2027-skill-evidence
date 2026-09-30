@@ -1,0 +1,14 @@
+{
+  "kind": "NEW_INSPECTION_INVENTORY_NOT_ORIGINAL_GENERATED_MANIFEST",
+  "original_delivery_format": "exactly three UTF-8 Python files; no package.json was required or present",
+  "interface": "agent2skill.json-effects.g.trial-v1",
+  "entrypoint": "mechanism.handle(event, state) -> {state, effects}",
+  "package_sha256_from_original_seal": "b65a3fcdfd78b605569863e58abd2e15efe4449222aa5f97816f553f89ee8ebb",
+  "module_sha256": {
+    "compatibility.py": "ccfe2d4cb66cfbd910e74d16609135ef912b929335938aad427e65c327b0ae95",
+    "mechanism.py": "f17d1d9aad32b4a410bbd79d2fbe7f456596c696ca4ecf53d709ca94a200afcd",
+    "native_logs.py": "e3762107264020b3dd5c62c8390142dd26475cec76fa79e25c7e7b62eaf36abc"
+  },
+  "model_source_metadata_status": "SOURCE_METADATA_INVALID",
+  "created_for": "static evidence inspection only; not a runtime or independently recomputed package identity"
+}

@@ -1,0 +1,19 @@
+--- old/mechanism.py
++++ repaired/mechanism.py
+@@ -536,12 +536,16 @@
+             minimum_group.append(candidate)
+ 
+     preferred_group = minimum_group
++    used_reproduced_preference = False
+     if reproduction_enabled:
+         reproduced_group = [c for c in minimum_group if c.get("reproduced") is True]
+         if reproduced_group:
+             preferred_group = reproduced_group
++            used_reproduced_preference = True
+ 
+     eligible = [c for c in preferred_group if _candidate_has_nonempty_key(c)]
++    if not eligible and used_reproduced_preference:
++        eligible = [c for c in minimum_group if _candidate_has_nonempty_key(c)]
+     if not eligible:
+         eligible = [c for c in source if _candidate_has_nonempty_key(c)]
+ 

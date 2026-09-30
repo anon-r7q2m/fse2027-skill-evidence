@@ -1,0 +1,37 @@
+{
+  "old": {
+    "status": "FINAL_PACKAGE_SEALED",
+    "package_sha256": "31a8da650fc30b1079f260664738b9e53b11f21921a15e4f5fccee105a6fec4d",
+    "package_files": {
+      "mechanism.py": "2d18c47228989e473cadd903d9e7d10036fcfccc2dafb1ab944ad81bcd7ae7d9",
+      "package.json": "26f0310850c3d851f00413f0c183bbe31a46fc25c08317c6b3882a343eb35f34"
+    },
+    "automation": "L2_GIVEN_TARGET_SAME_SOURCE_DEVELOPMENT",
+    "attempts": 2,
+    "selected_attempt": 2,
+    "selection": "FIRST_PUBLIC_PASS",
+    "public_status": "PUBLIC_PASS",
+    "human_candidate_code_repairs": 0,
+    "stopping_reason": "FIRST_PUBLIC_PASS"
+  },
+  "repaired": {
+    "status": "FINAL_PACKAGE_SEALED",
+    "package_sha256": "5f70bae4b1b6732fd16a06e8802fdb6628fdcb6d68e240ba434477e202da6e93",
+    "parent_package_sha256": "31a8da650fc30b1079f260664738b9e53b11f21921a15e4f5fccee105a6fec4d",
+    "package_files": {
+      "mechanism.py": "256792508d842905cf950d894e18c572d6fc94d8507f6d3c7ef11a556066c756",
+      "package.json": "26f0310850c3d851f00413f0c183bbe31a46fc25c08317c6b3882a343eb35f34"
+    },
+    "automation": "L2_GIVEN_TARGET_SOURCE_REVIEW_GUIDED_DEVELOPMENT",
+    "method_comparison": false,
+    "attempts": 1,
+    "selected_attempt": 1,
+    "selection": "FIRST_PUBLIC_PASS",
+    "public_status": "PUBLIC_PASS",
+    "human_candidate_code_repairs": 0,
+    "stopping_reason": "FIRST_PUBLIC_PASS",
+    "independent_evaluation_started": false
+  },
+  "object_name": "P_sel: historical GP candidate-selection rule, not current P_edit SEARCH/REPLACE editor",
+  "profile": "candidate_selection_hook_v1"
+}

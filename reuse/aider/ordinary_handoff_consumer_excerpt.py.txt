@@ -1,0 +1,22 @@
+                    if effect["kind"] == "editor_handoff":
+                        handoff = effect
+                        require(
+                            effect["remaining_calls"] == calls
+                            and effect["editor_format"] == "ordinary",
+                            "fixed editor allocation",
+                        )
+                        common, files, readonly = (
+                            effect["task_text"],
+                            effect["files"],
+                            effect["readonly_context"],
+                        )
+                    else:
+                        require(
+                            effect["kind"] == "architect_terminal", "generated handoff or terminal"
+                        )
+                        terminal = effect
+                        control.status, control.stop_reason = (
+                            "LimitsExceeded",
+                            "ARCHITECT_" + effect["status"],
+                        )
+            transport = EditorTransport(broker.transport, common, files, readonly)

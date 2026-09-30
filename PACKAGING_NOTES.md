@@ -72,3 +72,24 @@ Upstream modules and notices are retained. Public report code/output excerpts
 are attributed without claiming issue authors explicitly granted MIT. No
 credentials, hidden reasoning, private annotations or original grading patches
 are added.
+
+
+## September 30 Agent2Skill reuse revision
+
+The active manuscript returns to the source/package/host/consumer/utility
+chain. `reuse/` publishes the unchanged 43-file prepared supplement plus a
+separate publication guide/map. P's public source counterexample, Aider's
+first host failure and correction, and G's dependency/invalid-source-account
+boundary are inspectable under their stated limits. Reused hidden suites,
+report-only entry outcomes and native probes are not new transfer samples.
+No donor, generated package, provider, target, replay or grader was executed
+for this packaging revision.
+
+The previous root reading guide is retained verbatim at
+`study/README-focused-20260929.md`. The full seven-field Django manuscript
+record is archived at `study/case_analysis/DJANGO_FULL_RECORD.tex`; it is an
+analysis fragment, not a new experiment or standalone compilation entry.
+Current root navigation, claim-level evidence and upstream notices identify
+these additions. All prior scientific files and outcomes remain preserved;
+no private assessment inputs, complete provider traffic, submitted grading
+patches, raw test logs or individual audit annotations were added.
