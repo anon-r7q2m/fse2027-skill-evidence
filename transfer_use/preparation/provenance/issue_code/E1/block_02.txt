@@ -1,0 +1,115 @@
+
+import asyncio
+from pydantic import BaseModel
+from pydantic_ai import Agent
+from pydantic_ai.output import NativeOutput
+from pydantic_ai.models.function import FunctionModel, AgentInfo
+from pydantic_ai.messages import (
+    ModelMessage,
+    ModelResponse,
+    TextPart,
+    ToolCallPart,
+)
+
+
+class Response(BaseModel):
+    topic: str
+    response: str
+
+
+class Clarification(BaseModel):
+    question: str
+
+
+# Track if tool was called
+tool_was_called = False
+request_count = 0
+
+
+def search_documents(query_paraphrases: list[str]) -> str:
+    """Search for documents."""
+    global tool_was_called
+    tool_was_called = True
+    print(f"  TOOL CALLED with: {query_paraphrases}")
+    print("  ^^^ This should NOT happen with end_strategy='early' when output is already available")
+    return "some documents"
+
+
+def model_function(messages: list[ModelMessage], info: AgentInfo) -> ModelResponse:
+    """
+    Simulates a model that returns BOTH structured output AND a tool call on first request.
+    On subsequent requests (after tool result), returns only structured output.
+    """
+    global request_count
+    request_count += 1
+
+    # First request: return both output AND tool call (this is where the bug manifests)
+    if request_count == 1:
+        return ModelResponse(
+            parts=[
+                # Native structured output - this IS the final result
+                TextPart(
+                    content='{"result": {"kind": "Response", "data": {"topic": "contact info", "response": "You can contact us at support@example.com"}}}'
+                ),
+                # Tool call - should be SKIPPED with end_strategy="early" since we already have output
+                ToolCallPart(
+                    tool_name="search_documents",
+                    args={"query_paraphrases": ["contact information", "how to reach support"]},
+                    tool_call_id="tooluse_abc123",
+                ),
+            ]
+        )
+    
+    # Subsequent requests: return only structured output (no tool call)
+    return ModelResponse(
+        parts=[
+            TextPart(
+                content='{"result": {"kind": "Response", "data": {"topic": "contact info", "response": "You can contact us at support@example.com"}}}'
+            ),
+        ]
+    )
+
+
+agent = Agent(
+    model=FunctionModel(model_function),
+    output_type=NativeOutput(Response | Clarification),
+    end_strategy="early",  # Should stop as soon as output is available
+    tools=[search_documents],
+)
+
+
+async def main():
+    global tool_was_called, request_count
+    tool_was_called = False
+    request_count = 0
+
+    print("=" * 70)
+    print("Testing: NativeOutput + end_strategy='early' + tool calls in response")
+    print("=" * 70)
+    print()
+    print("Model will return BOTH:")
+    print("  1. Valid structured output (Response) in TextPart")
+    print("  2. A tool call (search_documents)")
+    print()
+    print("Expected: Tool should NOT be called (end_strategy='early' + output available)")
+    print("Actual:   Tool IS called (bug)")
+    print()
+    print("-" * 70)
+
+    result = await agent.run("How can I contact support?")
+
+    print("-" * 70)
+    print()
+    print(f"Result: {result.output}")
+    print(f"Tool was called: {tool_was_called}")
+    print()
+
+    if tool_was_called:
+        print("BUG CONFIRMED: Tool was called despite end_strategy='early'")
+        print("               and valid native output being available.")
+    else:
+        print("OK: Tool was correctly skipped.")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

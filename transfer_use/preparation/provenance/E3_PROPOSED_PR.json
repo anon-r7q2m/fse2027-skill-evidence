@@ -1,0 +1,15 @@
+{
+  "html_url": "https://github.com/langchain-ai/langgraph/pull/6793",
+  "created_at": "2026-02-13T00:45:11Z",
+  "updated_at": "2026-07-23T13:51:45Z",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "merged_at": null,
+  "merge_commit_sha": "b4277c6110ba96f38cb2d60f3148cf79ceb61c16",
+  "base_sha": "54c92757f2ef0e1c8aabfca90a8ea235685c1e40",
+  "head_sha": "5fab53ee6263824552f5b497c9632e9f6e8344b6",
+  "body_sha256": "9fe466a4fc29aace177242661332b44e4c1180d7b0ee2842dba33859c52fa4e5",
+  "api_url": "https://api.github.com/repos/langchain-ai/langgraph/pulls/6793",
+  "retrieved_utc": "2026-09-29T16:47:19.909910+00:00"
+}

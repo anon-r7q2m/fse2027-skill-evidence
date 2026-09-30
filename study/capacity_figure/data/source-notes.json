@@ -1,0 +1,23 @@
+{
+  "primary_source": "results_cache/raw_repo_capacity_comparison_v1/scores/reconciliation.json",
+  "primary_n": 16,
+  "primary_repeat": 1,
+  "primary_lp_solved": 13,
+  "paired_data": "Counts recalculated from the 128 primary rows and checked against released analysis.",
+  "p_values": "Original prespecified one-sided exact McNemar tests, Holm correction over seven contrasts.",
+  "repeat_tasks": [
+    "django__django-11299",
+    "django__django-16877",
+    "scikit-learn__scikit-learn-14894",
+    "sphinx-doc__sphinx-9258"
+  ],
+  "repeats": [
+    1,
+    2,
+    3
+  ],
+  "repeat_note": "R1 is part of the primary panel; repeats are not new independent tasks.",
+  "pro_source": "results_cache/skill_reuse_principles_v1/pro/result.json",
+  "pro_scope": "SYNTHETIC_STANDALONE_ORCHESTRATION_REDUCTION_AND_CACHE_REPLAY",
+  "pro_note": "Existing synthetic replay outputs; no actual benchmark score or error-rate estimate."
+}

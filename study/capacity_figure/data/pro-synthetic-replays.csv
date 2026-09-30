@@ -1,0 +1,7 @@
+fixture_id,control,reported_mean,scheduled,fresh_worker_calls,cache_hits,retained_results,consumer_action
+missing_full_claim,False,1.0,1,1,0,1,abstain_from_claimed_population_mean
+declared_subset_control,True,1.0,1,1,0,1,publish_original_mean
+duplicate_controlled_completion,False,0.0,2,2,0,1,abstain_from_claimed_population_mean
+unique_complete_control,True,0.5,2,2,0,2,publish_original_mean
+cache_patch_mismatch,False,1.0,1,0,1,1,request_recompute_without_publishing_cached_mean
+cache_identity_match_control,True,1.0,1,0,1,1,publish_original_mean

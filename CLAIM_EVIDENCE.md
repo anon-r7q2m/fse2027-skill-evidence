@@ -75,3 +75,26 @@ establish general guidance superiority, prevalence or benchmark utility.
 [Consumer decisions](study/consumer_decisions.md) place GP, feedback, SWE-agent rendering, four prospective native mechanisms and the Pro reporting cases in one analytical table. These eight rows are explanatory families with different designs, not eight homogeneous independent discoveries. Its conditional findings are post-study synthesis and were not the P1–P3 guidance supplied prospectively.
 
 [Capacity score witnesses](capacity/score_witnesses/README.md) add original report classifications, anonymous test-category counts, patch-identity and stage facts for 108 scoring inputs mapped to 192 logical rows. All use ordinary rules; syntax exception count is zero. The full primary LnPn roster identifies ten first local-input admission stops and one non-Python-domain stop. This is saved-record consistency and disclosure of existing evidence, without new scoring or full-score reproducibility.
+
+
+## September 29 prior-art and focus correction
+
+[Prior-art disclosure](study/prior_art_20260929.md) credits public a21 and s12
+reports predating our native study. These are controlled reproductions, not
+first-discovery claims. The source-local s11/a22 evidence carries no global
+priority assertion. [The complete capacity figure](study/capacity_figure/README.md)
+keeps all seven paired comparisons and fixed repeats after the main text was
+shortened. No historical result, patch or failure flag changed.
+
+
+## Fixed external-case use
+
+[transfer_use/](transfer_use/README.md) includes the unchanged method view,
+neutral source packets, separately prepared pre-execution references, both
+original AI answers, complete outward tool-access evidence, all eight action
+judgments and a read-only crosscheck. Eight recommendations meet the frozen
+admissible-action reference; A/E1's secondary omission and unresolved historical
+facts remain explicit. This tests bounded use within researcher-selected source
+packets, not whole-repository discovery, method superiority or human adoption.
+There are zero newly executed target programs, demonstrated fixes or benchmark
+scores in this study. It is closed with no replacement or expansion.

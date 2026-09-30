@@ -1,0 +1,270 @@
+{
+  "status": "PACKET_READY_FOR_REFERENCE_RECONCILIATION_NOT_DISPATCH_FREEZE",
+  "created_utc": "2026-09-29T16:53:50.811769+00:00",
+  "source_files": 38,
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "1b8baaee665655c0e59644eb880652cfb57ff4231d4a8ea0c889c05928c86249",
+      "bytes": 958
+    },
+    {
+      "path": "E1/CASE.md",
+      "sha256": "3fa536c1131dfc52ef8547e4b63dcfa68d05f06cbe449b3a6724122db7660afe",
+      "bytes": 1971
+    },
+    {
+      "path": "E1/PROVIDED_PROGRAM.txt",
+      "sha256": "fbc4479ce3ff996bea50e04bbf2ecf77a905bf50b11ae469a4115938d3518fcf",
+      "bytes": 2577
+    },
+    {
+      "path": "E2/CASE.md",
+      "sha256": "62efe9a28dd6e10b26401d9907572a28f20eedab94dcf6ac638cf0e0725f3838",
+      "bytes": 1581
+    },
+    {
+      "path": "E2/PROVIDED_PROGRAM.txt",
+      "sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "bytes": 525
+    },
+    {
+      "path": "E2/REPORTED_VALUES.txt",
+      "sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "bytes": 66
+    },
+    {
+      "path": "E3/CASE.md",
+      "sha256": "621be0f3eaaa07075e6f3d7784c53baea541d5c04b10a63a9f235762644cfac2",
+      "bytes": 1580
+    },
+    {
+      "path": "E3/PROVIDED_PROGRAM.txt",
+      "sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "bytes": 1136
+    },
+    {
+      "path": "E3/REPORTED_BASE_OUTPUT.txt",
+      "sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "bytes": 188
+    },
+    {
+      "path": "E3/REPORTED_WRAPPED_OUTPUT.txt",
+      "sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "bytes": 295
+    },
+    {
+      "path": "E4/CASE.md",
+      "sha256": "658d0693c1514e469b9cfe024012caec9cc08eff2a0bacf45d9a18f1bfa7951a",
+      "bytes": 1201
+    },
+    {
+      "path": "E4/PUBLISHED_EXAMPLE.txt",
+      "sha256": "5d5c1f916d72afa27bb525b7e4a0203a5e10fe73cdd56f888426298329dd0fec",
+      "bytes": 1460
+    },
+    {
+      "path": "README.md",
+      "sha256": "474935fc995a9e2a36faa79a1fb8c76e3e23b017f4de032b000195242ee43d7b",
+      "bytes": 2065
+    },
+    {
+      "path": "sources/langgraph_1_0_8/LICENSE",
+      "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "bytes": 1072
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/base/__init__.py",
+      "sha256": "bab5942c330581f1ff78e6cfe6add41c261e05abe50b1b48eb7eef53e271e8d4",
+      "bytes": 16351
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/memory/__init__.py",
+      "sha256": "c60fc51d18bb18f091d71655f54e29ed643854ddd8eb9f06fd3acc3149ce216b",
+      "bytes": 22290
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/config.py",
+      "sha256": "dd52c5ef1e9af7d2de534305c8a934abd00d736971b19f65f56e6114cc7ffba7",
+      "bytes": 5603
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py",
+      "sha256": "eef1ddfe8f867c58b5a8c29853663c51cf2f6e2709fa208d8118a730ccfc180b",
+      "bytes": 20987
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/graph/state.py",
+      "sha256": "f26b944b3f4b8a2244ca89820ea2bc6b5050f177da155774b8258ae1198effb4",
+      "bytes": 63418
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_algo.py",
+      "sha256": "742dd0072205861e9808f809ecaf46267268ef2ef6f98b67315fa5dc7c4fad38",
+      "bytes": 44380
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_call.py",
+      "sha256": "703c17758a29cb10f86651496bd66e74df8a5ccf9d86786e25b29c3ecd097b8b",
+      "bytes": 8893
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_checkpoint.py",
+      "sha256": "e3560ef07238dc8884b65165ab30732e04d2af153d3d325270e76bd67f5a9386",
+      "bytes": 2742
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py",
+      "sha256": "da1c20e8b213712ab11c2477b8bc74b3abaec6c07a634583b02b877d7efe2c07",
+      "bytes": 49628
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py",
+      "sha256": "c3bc98f99ce33ea4223283d7ca813820a3fa53b2e0e4e2c4c0b6d89fd927500b",
+      "bytes": 8158
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_runner.py",
+      "sha256": "2cdc55d166f1d4faf78f677d1403c90bc0472e70dd3ae5b2c3c6d80976f78982",
+      "bytes": 28001
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py",
+      "sha256": "59631b63285cef6d201960e246f333883395f2537406719f70d1e2e5deb47c17",
+      "bytes": 131300
+    },
+    {
+      "path": "sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py",
+      "sha256": "4b23ace6dc0fa64f1d3c13f085d5ad0bb5a641f45518e0a87e8b2c6e42bdffeb",
+      "bytes": 19654
+    },
+    {
+      "path": "sources/pydantic_e1/LICENSE",
+      "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "bytes": 1100
+    },
+    {
+      "path": "sources/pydantic_e1/docs/agent.md",
+      "sha256": "32880e45d700daa27c0bd4daec22e3f26f62abf20ab7c5d86ad8eec280518cc7",
+      "bytes": 63103
+    },
+    {
+      "path": "sources/pydantic_e1/docs/output.md",
+      "sha256": "7011aa3964408a697fce46af1b7c327c91a4e0dc1b3b5c38ba96cc2391aac071",
+      "bytes": 58703
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "sha256": "be62c54ad6637968e30629230b312a9ec51870ceb6c419d310654fb228ebe5a6",
+      "bytes": 86254
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py",
+      "sha256": "49b0db4d51bd3df4b67ac40d88f2efcdf215d6afc7107d0f9dfd78478d94df38",
+      "bytes": 64851
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "sha256": "06376d9ad156d318da6a43bea05cd7a2558f04f940aeff55f265d7134af10d85",
+      "bytes": 58582
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py",
+      "sha256": "93ada83260330216eba252503520318e3202e449208758ad2a9d48f32e617387",
+      "bytes": 140284
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/messages.py",
+      "sha256": "68312e8c40e3c53ca8b11dbf093d45a22d977d0adfcdce3acc5fdaf47c37eeee",
+      "bytes": 147980
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/models/function.py",
+      "sha256": "9c67b35563c7ccdaba7fe2384af7ae51c83b68c2bd047a5f7fa9a913aaa31dbd",
+      "bytes": 17398
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/output.py",
+      "sha256": "9f38788a6d8f389d8dfb3db171e9410165f4dd0ad33fe553108610314df19437",
+      "bytes": 16181
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "sha256": "7aa587f0675e20c45185186c9f052dbda01551ed09b3652c0c4a96a1412bf650",
+      "bytes": 43056
+    },
+    {
+      "path": "sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tools.py",
+      "sha256": "7bd25c3e77fc473777144c9c9f05109ebc503d15e2c7945c39a479c274394a48",
+      "bytes": 39574
+    },
+    {
+      "path": "sources/pydantic_e2/LICENSE",
+      "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "bytes": 1100
+    },
+    {
+      "path": "sources/pydantic_e2/docs/capabilities/custom.md",
+      "sha256": "b2d7160128eaa16a93739184147c07a4ccf0a846424731f017a0a6ac9a0d3167",
+      "bytes": 70459
+    },
+    {
+      "path": "sources/pydantic_e2/docs/deferred-tools.md",
+      "sha256": "7561b31238a6b86e400ac525b4c468c99f7a2277fdcb9234a5c8de486036db56",
+      "bytes": 29043
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "sha256": "2b6aaf1eb1aecb23472a06926f30af7ae10285d7f2e5bb9d8e3281a0ae909d6a",
+      "bytes": 138162
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py",
+      "sha256": "a01d33078fa25274566a8ff692d28ae10d627a6431cfb54fb8e194dfe32d8b8c",
+      "bytes": 8739
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "sha256": "a06571b7a28182f63a1e12cbae28dde42b40231188151d0de2f56bdb26c61885",
+      "bytes": 60987
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py",
+      "sha256": "c84e39b23c083717b98db05cea827fa5a52c220adcc9579eaeaea5d1972d02ae",
+      "bytes": 44941
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/capability.py",
+      "sha256": "6e51d54f797d88ed3611f57c960cfe99d689ae8c78f46816fe783d9e3d1d6ef4",
+      "bytes": 14141
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/combined.py",
+      "sha256": "efc6fbfd52f69fbbe035e9de093352363ab9cfc3db09b25a018999c3bebd60b1",
+      "bytes": 33270
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/messages.py",
+      "sha256": "e21bf0b7826a0a5fab17ddd3a0bfdea943e759f21c773cafbc1eb75c2c64d753",
+      "bytes": 157214
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "sha256": "fd2e45803c3202872995e3e50455d2ff5f0c71b9f15b60bb469f6948d9464da7",
+      "bytes": 51622
+    },
+    {
+      "path": "sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tools.py",
+      "sha256": "39746cb1a1d2c2b4e7b1dd8d5ea78637a73f3664eeae2bdf7524dd93c889122c",
+      "bytes": 32822
+    }
+  ],
+  "checks": {
+    "all_source_record_bytes_match": true,
+    "exact_E2_E3_blocks": true,
+    "E1_operational_AST_equal_after_disclosed_display_removal": true,
+    "target_import_or_execution": false,
+    "model_dispatch": false
+  },
+  "note": "Root must freeze final prompt, method view, packet, both first references and combined reference before dispatch."
+}

@@ -1,0 +1,3 @@
+Wrote [CONTEXT.json](output/CONTEXT.json) and [ANALYSIS.md](output/ANALYSIS.md), covering E1–E4 in order.
+
+Used 30 read/search commands. No interventions or tests were run; no access or budget violations identified.

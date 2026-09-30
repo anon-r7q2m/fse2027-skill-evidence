@@ -1,0 +1,15 @@
+{
+  "html_url": "https://github.com/pydantic/pydantic-ai/pull/6427",
+  "created_at": "2026-07-10T22:20:46Z",
+  "updated_at": "2026-07-11T02:23:56Z",
+  "state": "closed",
+  "draft": false,
+  "merged": true,
+  "merged_at": "2026-07-11T02:23:55Z",
+  "merge_commit_sha": "3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1",
+  "base_sha": "b5f43e4cc4c7d6ae2d7f76007dede1d8ca00c204",
+  "head_sha": "6b70fa97497c5efeb19a276fa4bfea70b4affae6",
+  "body_sha256": "832d26545cc91aa3116f0971b7614eab2dea56185bcb94f9b5162ea0c1d0a38e",
+  "api_url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/6427",
+  "retrieved_utc": "2026-09-29T16:47:19.805937+00:00"
+}

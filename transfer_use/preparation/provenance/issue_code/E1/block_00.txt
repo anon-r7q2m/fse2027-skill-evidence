@@ -1,0 +1,8 @@
+# Lines ~1277-1286
+if tool_calls:
+    async for event in self._handle_tool_calls(ctx, tool_calls):
+        yield event
+    return
+elif output_schema.toolset:
+    alternatives.append('include your response in a tool call')
+# ... later, text is processed

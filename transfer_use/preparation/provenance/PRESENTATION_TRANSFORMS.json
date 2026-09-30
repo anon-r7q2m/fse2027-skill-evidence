@@ -1,0 +1,163 @@
+{
+  "created_utc": "2026-09-29T16:45:18.029085+00:00",
+  "transforms": [
+    {
+      "unit": "E1",
+      "source": "issue_code/E1/block_02.txt",
+      "original_sha256": "f052baccea3b50315dcfa9f41c17fee6e84529ca6a7fd315c595ecb5a1adf637",
+      "presented_path": "E1/PROVIDED_PROGRAM.txt",
+      "presented_sha256": "fbc4479ce3ff996bea50e04bbf2ecf77a905bf50b11ae469a4115938d3518fcf",
+      "operation": "Remove all comments and display-only print expressions; remove conditional with only verdict print expressions. Preserve all other source characters and blank line positions. No target execution.",
+      "removed_display_lines": [
+        {
+          "line": 33,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 34,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 86,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 87,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 88,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 89,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 90,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 91,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 92,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 93,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 94,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 95,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 96,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 97,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 101,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 102,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 103,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 104,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 105,
+          "reason": "display-only print statement"
+        },
+        {
+          "line": 107,
+          "reason": "display-only conditional verdict"
+        },
+        {
+          "line": 108,
+          "reason": "display-only conditional verdict"
+        },
+        {
+          "line": 109,
+          "reason": "display-only conditional verdict"
+        },
+        {
+          "line": 110,
+          "reason": "display-only conditional verdict"
+        },
+        {
+          "line": 111,
+          "reason": "display-only conditional verdict"
+        }
+      ],
+      "comment_lines": [
+        24,
+        46,
+        50,
+        54,
+        63,
+        76
+      ],
+      "python_ast_parse_only": true
+    },
+    {
+      "unit": "E2",
+      "source": "issue_code/E2/block_00.txt",
+      "presented_path": "E2/PROVIDED_PROGRAM.txt",
+      "sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "operation": "none; exact public code/output block"
+    },
+    {
+      "unit": "E2",
+      "source": "issue_code/E2/block_01.txt",
+      "presented_path": "E2/REPORTED_VALUES.txt",
+      "sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "operation": "none; exact public code/output block"
+    },
+    {
+      "unit": "E3",
+      "source": "issue_code/E3/block_00.txt",
+      "presented_path": "E3/PROVIDED_PROGRAM.txt",
+      "sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "operation": "none; exact public code/output block"
+    },
+    {
+      "unit": "E3",
+      "source": "issue_code/E3/block_02.txt",
+      "presented_path": "E3/REPORTED_BASE_OUTPUT.txt",
+      "sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "operation": "none; exact public code/output block"
+    },
+    {
+      "unit": "E3",
+      "source": "issue_code/E3/block_03.txt",
+      "presented_path": "E3/REPORTED_WRAPPED_OUTPUT.txt",
+      "sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "operation": "none; exact public code/output block"
+    },
+    {
+      "unit": "E4",
+      "source": "sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py",
+      "source_sha256": "4b23ace6dc0fa64f1d3c13f085d5ad0bb5a641f45518e0a87e8b2c6e42bdffeb",
+      "presented_path": "E4/PUBLISHED_EXAMPLE.txt",
+      "presented_sha256": "5d5c1f916d72afa27bb525b7e4a0203a5e10fe73cdd56f888426298329dd0fec",
+      "operation": "Extract existing Python code fence from interrupt docstring with ast.get_docstring and dedent; Python string escaping is decoded for display. No program execution or added behavior."
+    }
+  ]
+}

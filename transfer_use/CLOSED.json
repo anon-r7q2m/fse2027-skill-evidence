@@ -1,0 +1,45 @@
+{
+  "study": "decision_transfer_use_v1",
+  "closed_at": "2026-09-30T05:12:18.572706+00:00",
+  "status": "CLOSED_ALL_EIGHT_STATIC_ACTION_RECORDS_ADJUDICATED",
+  "summary": {
+    "planned_records": 8,
+    "complete_records": 8,
+    "partial_records": 0,
+    "missing_records": 0,
+    "action_recommendations_assessable_under_frozen_admissible_sets": 8,
+    "action_judgment_counts": {
+      "SUPPORTED": 8,
+      "CONTRADICTED": 0,
+      "INSUFFICIENTLY_JUSTIFIED": 0,
+      "REFERENCE_UNRESOLVED": 0
+    },
+    "records_with_nondecisive_secondary_omissions": 1,
+    "identified_action_error_records": 0,
+    "unsupported_tested_success_claims": 0,
+    "unresolved_historical_dimensions_counted_as_known_correct": 0,
+    "accuracy_estimate": null,
+    "statistical_test": null,
+    "benchmark_scores_added": 0,
+    "new_target_runs_by_adjudicator": 0,
+    "actor_reruns_or_replacements": 0
+  },
+  "frozen_inputs_unchanged": 192,
+  "post_adjudication_input_change": false,
+  "crosscheck": "No action-level disagreement; A/E1 secondary omission and all historical unknowns retained.",
+  "benchmark_scores_added": 0,
+  "target_executions": 0,
+  "demonstrated_fixes": 0,
+  "actor_retries_or_replacements": 0,
+  "further_cases_or_actors_allowed": false,
+  "no_untreated_comparison": true,
+  "official_backend_model_version": "UNKNOWN",
+  "evidence_sha256": {
+    "ADJUDICATION_A_REVIEW.md": "a4203374c99789ba146d5df62c4a4d40862a22281b2c9328bb2f83fbaae5ad68",
+    "ADJUDICATION_B.json": "3a086b0796e8e017733aed2eaa06aec9e8a88c423c219697b9f797ff105577b8",
+    "ADJUDICATION_B.md": "cc9678d0677accd66097cbaef97effb072d1a50b413b30e63d9adab89d9a2de6",
+    "FREEZE.json": "2a7ea086227f70ecf4e551294840b787034ac944a6c65d71af2840e17483bcd2",
+    "RUN_AUDIT.json": "0fa65b877b8f92613df36cef4ae1aab1b4add33161bfd2f915e7f47b6a423a53"
+  },
+  "claim": "Two author-operated AI contexts applied the unchanged record to four supplied external source packets. Eight concrete recommendations meet the prewritten admissible-action reference; historical unknowns are not known-correct defect labels, and this is not an accuracy estimate or causal utility comparison."
+}

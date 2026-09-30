@@ -1,0 +1,17 @@
+if tool_calls:
+    # Check if we have valid native output that should be treated as final result
+    # before executing any tool calls (respects end_strategy='early')
+    if (
+        text
+        and output_schema.mode == 'native'
+        and ctx.deps.end_strategy == 'early'
+        and (text_processor := output_schema.text_processor)
+    ):
+        try:
+            self._next_node = await self._handle_text_response(ctx, text, text_processor)
+            return  # Skip tool calls - native output is the final result
+        except ToolRetryError:
+            pass  # Native output validation failed, fall through to tool calls
+    async for event in self._handle_tool_calls(ctx, tool_calls):
+        yield event
+    return

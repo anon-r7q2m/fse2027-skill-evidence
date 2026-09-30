@@ -1,0 +1,623 @@
+{
+  "status": "PREPARATION_EXPORT_ACTOR_RESULTS_PENDING",
+  "exports": [
+    {
+      "source_relative": "preparation/input/ATTRIBUTION.md",
+      "public_path": "preparation/input/ATTRIBUTION.md",
+      "original_sha256": "1b8baaee665655c0e59644eb880652cfb57ff4231d4a8ea0c889c05928c86249",
+      "public_sha256": "1b8baaee665655c0e59644eb880652cfb57ff4231d4a8ea0c889c05928c86249",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E1/CASE.md",
+      "public_path": "preparation/input/E1/CASE.md",
+      "original_sha256": "3fa536c1131dfc52ef8547e4b63dcfa68d05f06cbe449b3a6724122db7660afe",
+      "public_sha256": "3fa536c1131dfc52ef8547e4b63dcfa68d05f06cbe449b3a6724122db7660afe",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E1/PROVIDED_PROGRAM.txt",
+      "public_path": "preparation/input/E1/PROVIDED_PROGRAM.txt",
+      "original_sha256": "fbc4479ce3ff996bea50e04bbf2ecf77a905bf50b11ae469a4115938d3518fcf",
+      "public_sha256": "fbc4479ce3ff996bea50e04bbf2ecf77a905bf50b11ae469a4115938d3518fcf",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E2/CASE.md",
+      "public_path": "preparation/input/E2/CASE.md",
+      "original_sha256": "62efe9a28dd6e10b26401d9907572a28f20eedab94dcf6ac638cf0e0725f3838",
+      "public_sha256": "62efe9a28dd6e10b26401d9907572a28f20eedab94dcf6ac638cf0e0725f3838",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E2/PROVIDED_PROGRAM.txt",
+      "public_path": "preparation/input/E2/PROVIDED_PROGRAM.txt",
+      "original_sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "public_sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E2/REPORTED_VALUES.txt",
+      "public_path": "preparation/input/E2/REPORTED_VALUES.txt",
+      "original_sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "public_sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E3/CASE.md",
+      "public_path": "preparation/input/E3/CASE.md",
+      "original_sha256": "621be0f3eaaa07075e6f3d7784c53baea541d5c04b10a63a9f235762644cfac2",
+      "public_sha256": "621be0f3eaaa07075e6f3d7784c53baea541d5c04b10a63a9f235762644cfac2",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E3/PROVIDED_PROGRAM.txt",
+      "public_path": "preparation/input/E3/PROVIDED_PROGRAM.txt",
+      "original_sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "public_sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E3/REPORTED_BASE_OUTPUT.txt",
+      "public_path": "preparation/input/E3/REPORTED_BASE_OUTPUT.txt",
+      "original_sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "public_sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E3/REPORTED_WRAPPED_OUTPUT.txt",
+      "public_path": "preparation/input/E3/REPORTED_WRAPPED_OUTPUT.txt",
+      "original_sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "public_sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E4/CASE.md",
+      "public_path": "preparation/input/E4/CASE.md",
+      "original_sha256": "658d0693c1514e469b9cfe024012caec9cc08eff2a0bacf45d9a18f1bfa7951a",
+      "public_sha256": "658d0693c1514e469b9cfe024012caec9cc08eff2a0bacf45d9a18f1bfa7951a",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/E4/PUBLISHED_EXAMPLE.txt",
+      "public_path": "preparation/input/E4/PUBLISHED_EXAMPLE.txt",
+      "original_sha256": "5d5c1f916d72afa27bb525b7e4a0203a5e10fe73cdd56f888426298329dd0fec",
+      "public_sha256": "5d5c1f916d72afa27bb525b7e4a0203a5e10fe73cdd56f888426298329dd0fec",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/README.md",
+      "public_path": "preparation/input/README.md",
+      "original_sha256": "474935fc995a9e2a36faa79a1fb8c76e3e23b017f4de032b000195242ee43d7b",
+      "public_sha256": "474935fc995a9e2a36faa79a1fb8c76e3e23b017f4de032b000195242ee43d7b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/LICENSE",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/LICENSE",
+      "original_sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "public_sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/base/__init__.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/base/__init__.py",
+      "original_sha256": "bab5942c330581f1ff78e6cfe6add41c261e05abe50b1b48eb7eef53e271e8d4",
+      "public_sha256": "bab5942c330581f1ff78e6cfe6add41c261e05abe50b1b48eb7eef53e271e8d4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/memory/__init__.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/checkpoint/langgraph/checkpoint/memory/__init__.py",
+      "original_sha256": "c60fc51d18bb18f091d71655f54e29ed643854ddd8eb9f06fd3acc3149ce216b",
+      "public_sha256": "c60fc51d18bb18f091d71655f54e29ed643854ddd8eb9f06fd3acc3149ce216b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/config.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/config.py",
+      "original_sha256": "dd52c5ef1e9af7d2de534305c8a934abd00d736971b19f65f56e6114cc7ffba7",
+      "public_sha256": "dd52c5ef1e9af7d2de534305c8a934abd00d736971b19f65f56e6114cc7ffba7",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py",
+      "original_sha256": "eef1ddfe8f867c58b5a8c29853663c51cf2f6e2709fa208d8118a730ccfc180b",
+      "public_sha256": "eef1ddfe8f867c58b5a8c29853663c51cf2f6e2709fa208d8118a730ccfc180b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/graph/state.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/graph/state.py",
+      "original_sha256": "f26b944b3f4b8a2244ca89820ea2bc6b5050f177da155774b8258ae1198effb4",
+      "public_sha256": "f26b944b3f4b8a2244ca89820ea2bc6b5050f177da155774b8258ae1198effb4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_algo.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_algo.py",
+      "original_sha256": "742dd0072205861e9808f809ecaf46267268ef2ef6f98b67315fa5dc7c4fad38",
+      "public_sha256": "742dd0072205861e9808f809ecaf46267268ef2ef6f98b67315fa5dc7c4fad38",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_call.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_call.py",
+      "original_sha256": "703c17758a29cb10f86651496bd66e74df8a5ccf9d86786e25b29c3ecd097b8b",
+      "public_sha256": "703c17758a29cb10f86651496bd66e74df8a5ccf9d86786e25b29c3ecd097b8b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_checkpoint.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_checkpoint.py",
+      "original_sha256": "e3560ef07238dc8884b65165ab30732e04d2af153d3d325270e76bd67f5a9386",
+      "public_sha256": "e3560ef07238dc8884b65165ab30732e04d2af153d3d325270e76bd67f5a9386",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py",
+      "original_sha256": "da1c20e8b213712ab11c2477b8bc74b3abaec6c07a634583b02b877d7efe2c07",
+      "public_sha256": "da1c20e8b213712ab11c2477b8bc74b3abaec6c07a634583b02b877d7efe2c07",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py",
+      "original_sha256": "c3bc98f99ce33ea4223283d7ca813820a3fa53b2e0e4e2c4c0b6d89fd927500b",
+      "public_sha256": "c3bc98f99ce33ea4223283d7ca813820a3fa53b2e0e4e2c4c0b6d89fd927500b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_runner.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_runner.py",
+      "original_sha256": "2cdc55d166f1d4faf78f677d1403c90bc0472e70dd3ae5b2c3c6d80976f78982",
+      "public_sha256": "2cdc55d166f1d4faf78f677d1403c90bc0472e70dd3ae5b2c3c6d80976f78982",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py",
+      "original_sha256": "59631b63285cef6d201960e246f333883395f2537406719f70d1e2e5deb47c17",
+      "public_sha256": "59631b63285cef6d201960e246f333883395f2537406719f70d1e2e5deb47c17",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py",
+      "public_path": "preparation/input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py",
+      "original_sha256": "4b23ace6dc0fa64f1d3c13f085d5ad0bb5a641f45518e0a87e8b2c6e42bdffeb",
+      "public_sha256": "4b23ace6dc0fa64f1d3c13f085d5ad0bb5a641f45518e0a87e8b2c6e42bdffeb",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/LICENSE",
+      "public_path": "preparation/input/sources/pydantic_e1/LICENSE",
+      "original_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "public_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/docs/agent.md",
+      "public_path": "preparation/input/sources/pydantic_e1/docs/agent.md",
+      "original_sha256": "32880e45d700daa27c0bd4daec22e3f26f62abf20ab7c5d86ad8eec280518cc7",
+      "public_sha256": "32880e45d700daa27c0bd4daec22e3f26f62abf20ab7c5d86ad8eec280518cc7",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/docs/output.md",
+      "public_path": "preparation/input/sources/pydantic_e1/docs/output.md",
+      "original_sha256": "7011aa3964408a697fce46af1b7c327c91a4e0dc1b3b5c38ba96cc2391aac071",
+      "public_sha256": "7011aa3964408a697fce46af1b7c327c91a4e0dc1b3b5c38ba96cc2391aac071",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "original_sha256": "be62c54ad6637968e30629230b312a9ec51870ceb6c419d310654fb228ebe5a6",
+      "public_sha256": "be62c54ad6637968e30629230b312a9ec51870ceb6c419d310654fb228ebe5a6",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py",
+      "original_sha256": "49b0db4d51bd3df4b67ac40d88f2efcdf215d6afc7107d0f9dfd78478d94df38",
+      "public_sha256": "49b0db4d51bd3df4b67ac40d88f2efcdf215d6afc7107d0f9dfd78478d94df38",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "original_sha256": "06376d9ad156d318da6a43bea05cd7a2558f04f940aeff55f265d7134af10d85",
+      "public_sha256": "06376d9ad156d318da6a43bea05cd7a2558f04f940aeff55f265d7134af10d85",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py",
+      "original_sha256": "93ada83260330216eba252503520318e3202e449208758ad2a9d48f32e617387",
+      "public_sha256": "93ada83260330216eba252503520318e3202e449208758ad2a9d48f32e617387",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/messages.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/messages.py",
+      "original_sha256": "68312e8c40e3c53ca8b11dbf093d45a22d977d0adfcdce3acc5fdaf47c37eeee",
+      "public_sha256": "68312e8c40e3c53ca8b11dbf093d45a22d977d0adfcdce3acc5fdaf47c37eeee",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/models/function.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/models/function.py",
+      "original_sha256": "9c67b35563c7ccdaba7fe2384af7ae51c83b68c2bd047a5f7fa9a913aaa31dbd",
+      "public_sha256": "9c67b35563c7ccdaba7fe2384af7ae51c83b68c2bd047a5f7fa9a913aaa31dbd",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/output.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/output.py",
+      "original_sha256": "9f38788a6d8f389d8dfb3db171e9410165f4dd0ad33fe553108610314df19437",
+      "public_sha256": "9f38788a6d8f389d8dfb3db171e9410165f4dd0ad33fe553108610314df19437",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "original_sha256": "7aa587f0675e20c45185186c9f052dbda01551ed09b3652c0c4a96a1412bf650",
+      "public_sha256": "7aa587f0675e20c45185186c9f052dbda01551ed09b3652c0c4a96a1412bf650",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tools.py",
+      "public_path": "preparation/input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/tools.py",
+      "original_sha256": "7bd25c3e77fc473777144c9c9f05109ebc503d15e2c7945c39a479c274394a48",
+      "public_sha256": "7bd25c3e77fc473777144c9c9f05109ebc503d15e2c7945c39a479c274394a48",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/LICENSE",
+      "public_path": "preparation/input/sources/pydantic_e2/LICENSE",
+      "original_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "public_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/docs/capabilities/custom.md",
+      "public_path": "preparation/input/sources/pydantic_e2/docs/capabilities/custom.md",
+      "original_sha256": "b2d7160128eaa16a93739184147c07a4ccf0a846424731f017a0a6ac9a0d3167",
+      "public_sha256": "b2d7160128eaa16a93739184147c07a4ccf0a846424731f017a0a6ac9a0d3167",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/docs/deferred-tools.md",
+      "public_path": "preparation/input/sources/pydantic_e2/docs/deferred-tools.md",
+      "original_sha256": "7561b31238a6b86e400ac525b4c468c99f7a2277fdcb9234a5c8de486036db56",
+      "public_sha256": "7561b31238a6b86e400ac525b4c468c99f7a2277fdcb9234a5c8de486036db56",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "original_sha256": "2b6aaf1eb1aecb23472a06926f30af7ae10285d7f2e5bb9d8e3281a0ae909d6a",
+      "public_sha256": "2b6aaf1eb1aecb23472a06926f30af7ae10285d7f2e5bb9d8e3281a0ae909d6a",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py",
+      "original_sha256": "a01d33078fa25274566a8ff692d28ae10d627a6431cfb54fb8e194dfe32d8b8c",
+      "public_sha256": "a01d33078fa25274566a8ff692d28ae10d627a6431cfb54fb8e194dfe32d8b8c",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py",
+      "original_sha256": "a06571b7a28182f63a1e12cbae28dde42b40231188151d0de2f56bdb26c61885",
+      "public_sha256": "a06571b7a28182f63a1e12cbae28dde42b40231188151d0de2f56bdb26c61885",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py",
+      "original_sha256": "c84e39b23c083717b98db05cea827fa5a52c220adcc9579eaeaea5d1972d02ae",
+      "public_sha256": "c84e39b23c083717b98db05cea827fa5a52c220adcc9579eaeaea5d1972d02ae",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/capability.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/capability.py",
+      "original_sha256": "6e51d54f797d88ed3611f57c960cfe99d689ae8c78f46816fe783d9e3d1d6ef4",
+      "public_sha256": "6e51d54f797d88ed3611f57c960cfe99d689ae8c78f46816fe783d9e3d1d6ef4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/combined.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/combined.py",
+      "original_sha256": "efc6fbfd52f69fbbe035e9de093352363ab9cfc3db09b25a018999c3bebd60b1",
+      "public_sha256": "efc6fbfd52f69fbbe035e9de093352363ab9cfc3db09b25a018999c3bebd60b1",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/messages.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/messages.py",
+      "original_sha256": "e21bf0b7826a0a5fab17ddd3a0bfdea943e759f21c773cafbc1eb75c2c64d753",
+      "public_sha256": "e21bf0b7826a0a5fab17ddd3a0bfdea943e759f21c773cafbc1eb75c2c64d753",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py",
+      "original_sha256": "fd2e45803c3202872995e3e50455d2ff5f0c71b9f15b60bb469f6948d9464da7",
+      "public_sha256": "fd2e45803c3202872995e3e50455d2ff5f0c71b9f15b60bb469f6948d9464da7",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tools.py",
+      "public_path": "preparation/input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tools.py",
+      "original_sha256": "39746cb1a1d2c2b4e7b1dd8d5ea78637a73f3664eeae2bdf7524dd93c889122c",
+      "public_sha256": "39746cb1a1d2c2b4e7b1dd8d5ea78637a73f3664eeae2bdf7524dd93c889122c",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E1_FINAL_PR.json",
+      "public_path": "preparation/provenance/E1_FINAL_PR.json",
+      "original_sha256": "aadbad39b0973139319b351ed63376d05918d59b990bdbf7dcab8ead0e83aede",
+      "public_sha256": "aadbad39b0973139319b351ed63376d05918d59b990bdbf7dcab8ead0e83aede",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E1_ISSUE_METADATA.json",
+      "public_path": "preparation/provenance/E1_ISSUE_METADATA.json",
+      "original_sha256": "49440d2157413007e6eb0d510e2a0fe732eaadcfc7ac50fb563d92eaa5f75c53",
+      "public_sha256": "49440d2157413007e6eb0d510e2a0fe732eaadcfc7ac50fb563d92eaa5f75c53",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E1_SOURCE_COMMIT.json",
+      "public_path": "preparation/provenance/E1_SOURCE_COMMIT.json",
+      "original_sha256": "4cbeece4de2f6db5f1a813e05b3585cff01b3c8166789c5bbfa1000b9c459838",
+      "public_sha256": "4cbeece4de2f6db5f1a813e05b3585cff01b3c8166789c5bbfa1000b9c459838",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E2_ISSUE_METADATA.json",
+      "public_path": "preparation/provenance/E2_ISSUE_METADATA.json",
+      "original_sha256": "7fe69b898ad37497505249592b40bef309cd7518c67dd8b01bfe745726996534",
+      "public_sha256": "7fe69b898ad37497505249592b40bef309cd7518c67dd8b01bfe745726996534",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E2_SOURCE_COMMIT.json",
+      "public_path": "preparation/provenance/E2_SOURCE_COMMIT.json",
+      "original_sha256": "0dd46a3ea100d3ed8fd48de80e763f52324eb86c578b341190e4de7c74d2af7b",
+      "public_sha256": "0dd46a3ea100d3ed8fd48de80e763f52324eb86c578b341190e4de7c74d2af7b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E3_E4_TAG.json",
+      "public_path": "preparation/provenance/E3_E4_TAG.json",
+      "original_sha256": "532fc87c66af630f0e9dc1457256aee561a81fc41ad67af313f295426a8740da",
+      "public_sha256": "532fc87c66af630f0e9dc1457256aee561a81fc41ad67af313f295426a8740da",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E3_ISSUE_METADATA.json",
+      "public_path": "preparation/provenance/E3_ISSUE_METADATA.json",
+      "original_sha256": "0501b79ebc01dbd120af91a91286b29a45e5a837c66e03e82ac0070703f10b6f",
+      "public_sha256": "0501b79ebc01dbd120af91a91286b29a45e5a837c66e03e82ac0070703f10b6f",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/E3_PROPOSED_PR.json",
+      "public_path": "preparation/provenance/E3_PROPOSED_PR.json",
+      "original_sha256": "eb56315aec76ea0dd58196e570cf9cba3e7689ba0254fb0fb9065ce80a054fe6",
+      "public_sha256": "eb56315aec76ea0dd58196e570cf9cba3e7689ba0254fb0fb9065ce80a054fe6",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/INPUT_MANIFEST.json",
+      "public_path": "preparation/provenance/INPUT_MANIFEST.json",
+      "original_sha256": "9fa7bdf683b0f2161557b16a93efe72e0cd95254ee26b8849dde799cc2448c8d",
+      "public_sha256": "9fa7bdf683b0f2161557b16a93efe72e0cd95254ee26b8849dde799cc2448c8d",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/PRESENTATION_TRANSFORMS.json",
+      "public_path": "preparation/provenance/PRESENTATION_TRANSFORMS.json",
+      "original_sha256": "8c8ae0939f70063d540385c2dcdf0d3a7d614bdd8580921faa7ef62d97dd7428",
+      "public_sha256": "8c8ae0939f70063d540385c2dcdf0d3a7d614bdd8580921faa7ef62d97dd7428",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/REFERENCE_A_FIRST_RECORD.json",
+      "public_path": "preparation/provenance/REFERENCE_A_FIRST_RECORD.json",
+      "original_sha256": "c8bcf96b03ff4a7ced007604a00e8fa99a9f038f51d41b9a21d8779ed963d4e9",
+      "public_sha256": "02b20a60f13e5af39f77862414237f30d1b58ca8b66e1fd570becba809469cfe",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "preparation/provenance/RESOLUTION_SOURCE_FILES.json",
+      "public_path": "preparation/provenance/RESOLUTION_SOURCE_FILES.json",
+      "original_sha256": "200fe735162c828a5d00a4e3b7bd3f5ffaac03635b3246183a96484406d11266",
+      "public_sha256": "200fe735162c828a5d00a4e3b7bd3f5ffaac03635b3246183a96484406d11266",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/SELECTION_LEDGER.md",
+      "public_path": "preparation/provenance/SELECTION_LEDGER.md",
+      "original_sha256": "5b0fb9019798a08ec733f9c280b69c1531b4409573feb7b4f2be8ef50c997cf4",
+      "public_sha256": "5b0fb9019798a08ec733f9c280b69c1531b4409573feb7b4f2be8ef50c997cf4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/SOURCE_FILES.json",
+      "public_path": "preparation/provenance/SOURCE_FILES.json",
+      "original_sha256": "58481ca97987c1b14d353d051c166b84cf56516f2ae7219fdce6510c7d2daa57",
+      "public_sha256": "58481ca97987c1b14d353d051c166b84cf56516f2ae7219fdce6510c7d2daa57",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E1/block_00.txt",
+      "public_path": "preparation/provenance/issue_code/E1/block_00.txt",
+      "original_sha256": "d550ef8ac8ab39ab1d9c0ea45525f5955120a01c4cdcc30e676f050b99b085e9",
+      "public_sha256": "d550ef8ac8ab39ab1d9c0ea45525f5955120a01c4cdcc30e676f050b99b085e9",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E1/block_01.txt",
+      "public_path": "preparation/provenance/issue_code/E1/block_01.txt",
+      "original_sha256": "7e845711c6dd3902b5d8dc1e8df5474b12a95b230f9e72ee3d28256732cb5dc4",
+      "public_sha256": "7e845711c6dd3902b5d8dc1e8df5474b12a95b230f9e72ee3d28256732cb5dc4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E1/block_02.txt",
+      "public_path": "preparation/provenance/issue_code/E1/block_02.txt",
+      "original_sha256": "f052baccea3b50315dcfa9f41c17fee6e84529ca6a7fd315c595ecb5a1adf637",
+      "public_sha256": "f052baccea3b50315dcfa9f41c17fee6e84529ca6a7fd315c595ecb5a1adf637",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E2/block_00.txt",
+      "public_path": "preparation/provenance/issue_code/E2/block_00.txt",
+      "original_sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "public_sha256": "8ecd2baa2fb90744897031ca334fb049d28799d83bf43184b5947035bd3b4e9f",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E2/block_01.txt",
+      "public_path": "preparation/provenance/issue_code/E2/block_01.txt",
+      "original_sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "public_sha256": "77cec3ab10b9fc1c4a5c76a9e5a2f613b4239954db849b9e158ff21f8848219c",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E3/block_00.txt",
+      "public_path": "preparation/provenance/issue_code/E3/block_00.txt",
+      "original_sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "public_sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E3/block_01.txt",
+      "public_path": "preparation/provenance/issue_code/E3/block_01.txt",
+      "original_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "public_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E3/block_02.txt",
+      "public_path": "preparation/provenance/issue_code/E3/block_02.txt",
+      "original_sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "public_sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/issue_code/E3/block_03.txt",
+      "public_path": "preparation/provenance/issue_code/E3/block_03.txt",
+      "original_sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "public_sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/resolution_only/E1_final/LICENSE",
+      "public_path": "preparation/provenance/resolution_only/E1_final/LICENSE",
+      "original_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "public_sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/resolution_only/E1_final/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "public_path": "preparation/provenance/resolution_only/E1_final/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "original_sha256": "79877419317cca3b6b0c4adf4bd20fc19aead54ab4181b40536bd900cc2b02d1",
+      "public_sha256": "79877419317cca3b6b0c4adf4bd20fc19aead54ab4181b40536bd900cc2b02d1",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "preparation/provenance/resolution_only/E1_final/tests/test_agent.py",
+      "public_path": "preparation/provenance/resolution_only/E1_final/tests/test_agent.py",
+      "original_sha256": "8454676be1ab8af9e0c18422448816d7d615853137211dba243661395a2bb65b",
+      "public_sha256": "8454676be1ab8af9e0c18422448816d7d615853137211dba243661395a2bb65b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/ACTOR_TASK_A.txt",
+      "public_path": "protocol/ACTOR_TASK_A.txt",
+      "original_sha256": "e85c6fa4aa8197995475a0935148830c584d0ca126631f2e62120a5ed491c92f",
+      "public_sha256": "e85c6fa4aa8197995475a0935148830c584d0ca126631f2e62120a5ed491c92f",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/ACTOR_TASK_B.txt",
+      "public_path": "protocol/ACTOR_TASK_B.txt",
+      "original_sha256": "20c2ecd58c003e6b912786f47fb4cfe6d078d91716c2913edabbd1225d8ea5de",
+      "public_sha256": "20c2ecd58c003e6b912786f47fb4cfe6d078d91716c2913edabbd1225d8ea5de",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/METHOD_PROJECTION.json",
+      "public_path": "protocol/METHOD_PROJECTION.json",
+      "original_sha256": "256b9829652883156665f830cd38303a2b414286ca29ee626b10189f4a77b953",
+      "public_sha256": "256b9829652883156665f830cd38303a2b414286ca29ee626b10189f4a77b953",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/METHOD_VIEW.md",
+      "public_path": "protocol/METHOD_VIEW.md",
+      "original_sha256": "3a2f7e3b038fbf98e1ccad7168b7eb014e96c7220f7ce8bd914a2a6c5fc54173",
+      "public_sha256": "3a2f7e3b038fbf98e1ccad7168b7eb014e96c7220f7ce8bd914a2a6c5fc54173",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/PROTOCOL.md",
+      "public_path": "protocol/PROTOCOL.md",
+      "original_sha256": "086b5a02fbf349717e6d5b86e2d3a95f8aa67dc9e91ebacf17f8c5f957226779",
+      "public_sha256": "086b5a02fbf349717e6d5b86e2d3a95f8aa67dc9e91ebacf17f8c5f957226779",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/REFERENCE_A.md",
+      "public_path": "protocol/REFERENCE_A.md",
+      "original_sha256": "cf25cc90177ec480e6c1122e4f7e01ff5296b6fba7644fde8cefcf9b93930f80",
+      "public_sha256": "d58303f0d52ca6139157534bfd96bb8d58f5a8b16edb6aa0051f29cfab9335a0",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/REFERENCE_B.md",
+      "public_path": "protocol/REFERENCE_B.md",
+      "original_sha256": "e999fc6817ec75675498af8808e517e9901c7f8479c78822bbfd39a933ba50f1",
+      "public_sha256": "e999fc6817ec75675498af8808e517e9901c7f8479c78822bbfd39a933ba50f1",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/REFERENCE_COMBINED.md",
+      "public_path": "protocol/REFERENCE_COMBINED.md",
+      "original_sha256": "03095a452f16c426de707cb6bfa21fc45cd2c10aa1ccfff2d1b3e9fe9057de07",
+      "public_sha256": "03095a452f16c426de707cb6bfa21fc45cd2c10aa1ccfff2d1b3e9fe9057de07",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "project/experiments/decision_transfer_use_v1/launch_actor.py",
+      "public_path": "protocol/launch_actor.py",
+      "original_sha256": "485a6ec702a1cc2ea0a456d9da70f35d81f9ad94434446ede6c1fb0a1010fe00",
+      "public_sha256": "ee2b730131eec39168a693f4c98c73e62b73204253743772b7567d0db8366002",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "project/results_cache/decision_transfer_use_v1/FREEZE.json",
+      "public_path": "FREEZE.public.json",
+      "original_sha256": "2a7ea086227f70ecf4e551294840b787034ac944a6c65d71af2840e17483bcd2",
+      "public_sha256": "0437e0519af760c814a95704268db20739db857d4152d0668d978d08799b6555",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "previous-artifact/study/case_analysis/WORKSHEET.md",
+      "public_path": "protocol/WORKSHEET.original.md",
+      "original_sha256": "b73494db792b0da8c158035919bc6a56ef0a89ada53c905ee7c096a2e0e96ac5",
+      "public_sha256": "b73494db792b0da8c158035919bc6a56ef0a89ada53c905ee7c096a2e0e96ac5",
+      "transform": "byte-identical"
+    }
+  ],
+  "original_actor_input_copies": "Two identical 51-file copies are bound in the original freeze; publication supplies one common preparation/input tree and both original task prompts.",
+  "no_changes_to_original_frozen_files": true
+}

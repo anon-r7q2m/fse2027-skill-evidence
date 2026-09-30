@@ -1,0 +1,43 @@
+from langgraph.func import entrypoint, task
+from langgraph.types import Command, interrupt
+import asyncio
+from langgraph.checkpoint.memory import InMemorySaver
+
+checkpointer = InMemorySaver()
+
+@task
+async def step_1(input_query):
+    """Append bar."""
+    print("Running step 1")
+    return f"{input_query} bar"
+
+@task
+async def human_feedback(input_query):
+    """Append user input."""
+    print("Running step 2")
+    feedback = interrupt(f"Please provide feedback: {input_query}")
+    return f"{input_query} {feedback}"
+
+@task
+async def step_3(input_query):
+    """Append qux."""
+    print("Running step 3")
+    return f"{input_query} qux"
+
+@entrypoint()
+async def graph(input_query):
+    result_1 = await step_1(input_query)
+    result_2 = await human_feedback(result_1)
+    result_3 = await step_3(result_2)
+
+    return result_3
+
+@entrypoint(checkpointer=checkpointer)
+async def parent_graph(input_query):
+    result = await graph.ainvoke(input_query)
+    return result
+
+config = {"configurable": {"thread_id": "1"}}
+
+print(asyncio.run(graph.ainvoke("foo", config)))
+print(asyncio.run(graph.ainvoke(Command(resume="baz"), config)))

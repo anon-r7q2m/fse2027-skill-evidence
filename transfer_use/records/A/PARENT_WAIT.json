@@ -1,0 +1,15 @@
+{
+  "actor": "A",
+  "completed_at": "2026-09-29T17:05:29.216113+00:00",
+  "elapsed_seconds": 364.32708278112113,
+  "return_code": 0,
+  "timed_out": false,
+  "original_parent_wait_recorded": true,
+  "output_files": {
+    "output/ANALYSIS.md": "a876b01e100f4ee9341f995330417cd070736d7b40994a1bd43512c58ce18db5",
+    "output/CONTEXT.json": "8574f15d26b9ac11df3a5ffe6a8fd1da900fdd66d2fc5b26761eed58890f4b2a",
+    "output/FINAL.txt": "e900f18a5326fc9b8eeaf21e56e8050b67444f116ed46b01dead8a5ff8e87d38"
+  },
+  "events_sha256": "95c27fa8b52b0ef02c4d5bebe7f9c0acf99ce576f56eee012bff71130dc9eef3",
+  "adjudication": "PENDING; process exit does not establish a supported answer"
+}

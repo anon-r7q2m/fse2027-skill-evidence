@@ -1,0 +1,114 @@
+{
+  "exported_at": "2026-09-29T17:09:22.770455+00:00",
+  "status": "COMPLETE_RUN_RECORDS_ADJUDICATION_PENDING",
+  "exports": [
+    {
+      "source_relative": "actor_A/output/ANALYSIS.md",
+      "public_path": "records/A/ANALYSIS.md",
+      "original_sha256": "a876b01e100f4ee9341f995330417cd070736d7b40994a1bd43512c58ce18db5",
+      "public_sha256": "a876b01e100f4ee9341f995330417cd070736d7b40994a1bd43512c58ce18db5",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "actor_A/output/CONTEXT.json",
+      "public_path": "records/A/CONTEXT.json",
+      "original_sha256": "8574f15d26b9ac11df3a5ffe6a8fd1da900fdd66d2fc5b26761eed58890f4b2a",
+      "public_sha256": "8574f15d26b9ac11df3a5ffe6a8fd1da900fdd66d2fc5b26761eed58890f4b2a",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "actor_A/output/FINAL.txt",
+      "public_path": "records/A/FINAL.txt",
+      "original_sha256": "e900f18a5326fc9b8eeaf21e56e8050b67444f116ed46b01dead8a5ff8e87d38",
+      "public_sha256": "e900f18a5326fc9b8eeaf21e56e8050b67444f116ed46b01dead8a5ff8e87d38",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/A/LAUNCH.json",
+      "public_path": "records/A/LAUNCH.json",
+      "original_sha256": "0078a498bf7bd19983f7e38b271bdcc6733120c226636b15e71488cee18b49c4",
+      "public_sha256": "89aabaa3c304d83652c02a86327e7c3034ee5a2322abb181b88b90960b5dffd5",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "runs/A/PARENT_WAIT.json",
+      "public_path": "records/A/PARENT_WAIT.json",
+      "original_sha256": "cd52af039a616379bf7dafe403d930702e5e46fce6efa4ce68b5b6b2ab50023b",
+      "public_sha256": "cd52af039a616379bf7dafe403d930702e5e46fce6efa4ce68b5b6b2ab50023b",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/A/stderr.txt",
+      "public_path": "records/A/stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/A/events.jsonl",
+      "public_path": "records/A/TOOL_EVENTS.public.jsonl",
+      "original_sha256": "95c27fa8b52b0ef02c4d5bebe7f9c0acf99ce576f56eee012bff71130dc9eef3",
+      "public_sha256": "c0e309cec7cb1f4b63836ec7ddcbc4d024a4241f8fb1be9162483df3388d9611",
+      "transform": "Retain every command start/completion with command and output, turn metadata and usage; hash private thread identifier; omit non-tool progress/final chatter duplicated in final files; normalize JSON serialization; literal local-root replacement."
+    },
+    {
+      "source_relative": "actor_B/output/ANALYSIS.md",
+      "public_path": "records/B/ANALYSIS.md",
+      "original_sha256": "9932b2439017c882ed5a1170327346c3627c113d25ca800ce10f20f9fb22bcf5",
+      "public_sha256": "9932b2439017c882ed5a1170327346c3627c113d25ca800ce10f20f9fb22bcf5",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "actor_B/output/CONTEXT.json",
+      "public_path": "records/B/CONTEXT.json",
+      "original_sha256": "acd17ed97471ac1cd5615293e9e962678230c4f3f282955fc219b2c75ecbefcf",
+      "public_sha256": "acd17ed97471ac1cd5615293e9e962678230c4f3f282955fc219b2c75ecbefcf",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "actor_B/output/FINAL.txt",
+      "public_path": "records/B/FINAL.txt",
+      "original_sha256": "140915b64682424f9146eac14a5613cc1c91240de2d4cbb32e76b03aa4d7fa7a",
+      "public_sha256": "140915b64682424f9146eac14a5613cc1c91240de2d4cbb32e76b03aa4d7fa7a",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/B/LAUNCH.json",
+      "public_path": "records/B/LAUNCH.json",
+      "original_sha256": "fddba37dd5abdc6f8fe894b45d87037e87262bb3262ecd0a93204d9dce934053",
+      "public_sha256": "2042190aa420294e50ba4dc685f25a6c54aecfb5551cd6396a40e3f188f66f75",
+      "transform": "literal local-root/CLI-path replacement"
+    },
+    {
+      "source_relative": "runs/B/PARENT_WAIT.json",
+      "public_path": "records/B/PARENT_WAIT.json",
+      "original_sha256": "3037d611f1ceffa6af93e1fc4a35099aa65ee0b7cfa410be967280f9ae9f4bd2",
+      "public_sha256": "3037d611f1ceffa6af93e1fc4a35099aa65ee0b7cfa410be967280f9ae9f4bd2",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/B/stderr.txt",
+      "public_path": "records/B/stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transform": "byte-identical"
+    },
+    {
+      "source_relative": "runs/B/events.jsonl",
+      "public_path": "records/B/TOOL_EVENTS.public.jsonl",
+      "original_sha256": "c1421f39c96134f62a043c8107b75628f04400d642160cfa9b2a3ca2462ea789",
+      "public_sha256": "d58a3f22ead353c359d29a3fca0163be2e825ae0868014cffcd64026ea81a578",
+      "transform": "Retain every command start/completion with command and output, turn metadata and usage; hash private thread identifier; omit non-tool progress/final chatter duplicated in final files; normalize JSON serialization; literal local-root replacement."
+    },
+    {
+      "source_relative": "project/results_cache/decision_transfer_use_v1/RUN_AUDIT.json",
+      "public_path": "RUN_AUDIT.public.json",
+      "original_sha256": "0fa65b877b8f92613df36cef4ae1aab1b4add33161bfd2f915e7f47b6a423a53",
+      "public_sha256": "0fa65b877b8f92613df36cef4ae1aab1b4add33161bfd2f915e7f47b6a423a53",
+      "transform": "byte-identical"
+    }
+  ],
+  "all_originals_unchanged": true,
+  "no_hidden_reasoning_or_credentials_included": true,
+  "tool_events_projection": "Every outward command start/completion and its output retained. Original full logs remain local, with hashes in each parent receipt and this map. No hidden chain of thought is distributed."
+}

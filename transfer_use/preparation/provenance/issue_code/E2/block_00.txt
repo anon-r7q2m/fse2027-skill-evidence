@@ -1,0 +1,16 @@
+class Rewrite(Capability[Any]):
+    async def after_tool_validate(
+        self, ctx: RunContext[Any], *, call: ToolCallPart, tool_def: ToolDefinition, args: Any
+    ) -> Any:
+        if isinstance(args, dict) and 'amount' in args:
+            return {**args, 'amount': 50}
+        return args
+
+
+agent = Agent(model, output_type=[str, DeferredToolRequests], capabilities=[Rewrite()])
+
+
+@agent.tool_plain(requires_approval=True)
+def transfer(amount: int) -> str:
+    executed.append(amount)
+    return f'transferred {amount}'

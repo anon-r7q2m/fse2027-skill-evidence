@@ -1,0 +1,11 @@
+{
+  "source": "study/case_analysis/WORKSHEET.md",
+  "source_sha256": "b73494db792b0da8c158035919bc6a56ef0a89ada53c905ee7c096a2e0e96ac5",
+  "inclusive_lines": [
+    7,
+    39
+  ],
+  "projection_sha256": "3a2f7e3b038fbf98e1ccad7168b7eb014e96c7220f7ce8bd914a2a6c5fc54173",
+  "transformation": "verbatim line-range projection; retains generic JSON-path illustration in original line 27",
+  "excluded": "opening formation-case inventory, old worked analyses and checker section; no worksheet method change"
+}

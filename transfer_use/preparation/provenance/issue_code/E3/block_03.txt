@@ -1,0 +1,7 @@
+Running step 1
+Running step 2
+{'__interrupt__': [Interrupt(value='Please provide feedback: foo bar', id='0a61aa843e230733f749283420b28924'), Interrupt(value='Please provide feedback: foo bar', id='0a61aa843e230733f749283420b28924')]}
+Running step 1
+Running step 2
+Running step 3
+foo bar baz qux

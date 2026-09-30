@@ -1,12 +1,21 @@
 # What Does PASS Mean? Anonymous review artifact
 
-This artifact accompanies **What Does PASS Mean? Tracing Evidence into Coding-Agent Decisions**.
+This artifact accompanies **What Does PASS Mean? Verification Boundaries in Agent Workflows**.
 The focused study examines two implementation relationships: one generated
 requirement used for both repair and acceptance, and configured authority or
 observed events that fail to reach the deciding component. Different cases
 require different corrections, including retaining lawful behavior.
 
-Start with these three entries:
+The [dated prior-art disclosure](study/prior_art_20260929.md) identifies earlier
+public reports of the a21 and s12 defects. Their original records remain intact;
+local prediction and reproduction are not first-discovery claims.
+
+Start with these entries:
+
+- [External-case use](transfer_use/README.md): two fresh AI contexts, four fixed
+  outside decision units and all eight original analyses. Project-side reference
+  judgments support the concrete actions while retaining a secondary omission
+  and unknown historical facts; no untreated comparison or new target run.
 
 - [Case-analysis worksheet](study/case_analysis/WORKSHEET.md): six analysis units,
   separate input facts and author inferences, competing explanations, justified
@@ -22,6 +31,8 @@ Start with these three entries:
   42 input--variant runs on two pinned frameworks. This older study remains
   closed and separate from the nine-cell integration extension.
 
+The [complete paired/repeat figure](study/capacity_figure/README.md) retains the
+existing capacity visualization moved out of the main text.
 The [development companion](study/development_context.md) retains catalog and
 historical block summaries. All 192 capacity outcome rows and the primary
 sixteen-task analyses remain public; other historical studies have uneven

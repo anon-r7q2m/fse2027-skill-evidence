@@ -1,0 +1,11 @@
+{
+  "sha": "b5f43e4cc4c7d6ae2d7f76007dede1d8ca00c204",
+  "html_url": "https://github.com/pydantic/pydantic-ai/commit/b5f43e4cc4c7d6ae2d7f76007dede1d8ca00c204",
+  "commit_author_date": "2026-07-10T22:04:01Z",
+  "commit_committer_date": "2026-07-10T22:04:01Z",
+  "parents": [
+    "0201aad824be58c66989fcdca3d07dec84071e65"
+  ],
+  "api_url": "https://api.github.com/repos/pydantic/pydantic-ai/commits/b5f43e4cc4c7d6ae2d7f76007dede1d8ca00c204",
+  "retrieved_utc": "2026-09-29T16:47:20.038766+00:00"
+}

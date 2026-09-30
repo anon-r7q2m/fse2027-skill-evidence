@@ -1,0 +1,36 @@
+{
+  "html_url": "https://github.com/pydantic/pydantic-ai/issues/6277",
+  "created_at": "2026-07-05T08:58:56Z",
+  "updated_at": "2026-07-11T02:23:56Z",
+  "state": "closed",
+  "author_association": "NONE",
+  "author": "baudm",
+  "body_sha256": "60390b6ade9248ad6479ae1e6e457f721aa201011b3385923d03cf6077774beb",
+  "full_issue_prose_saved": false,
+  "code_blocks": [
+    {
+      "index": 0,
+      "language": "python",
+      "body_start_line": 23,
+      "body_end_line": 30,
+      "path": "issue_code/E1/block_00.txt",
+      "sha256": "d550ef8ac8ab39ab1d9c0ea45525f5955120a01c4cdcc30e676f050b99b085e9"
+    },
+    {
+      "index": 1,
+      "language": "python",
+      "body_start_line": 57,
+      "body_end_line": 73,
+      "path": "issue_code/E1/block_01.txt",
+      "sha256": "7e845711c6dd3902b5d8dc1e8df5474b12a95b230f9e72ee3d28256732cb5dc4"
+    },
+    {
+      "index": 2,
+      "language": "Python",
+      "body_start_line": 79,
+      "body_end_line": 193,
+      "path": "issue_code/E1/block_02.txt",
+      "sha256": "f052baccea3b50315dcfa9f41c17fee6e84529ca6a7fd315c595ecb5a1adf637"
+    }
+  ]
+}

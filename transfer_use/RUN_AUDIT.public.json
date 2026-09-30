@@ -1,0 +1,444 @@
+{
+  "recorded_at": "2026-09-29T17:07:24.709680+00:00",
+  "status": "BOTH_CONTEXTS_COMPLETED_WITHIN_DECLARED_BOUNDARIES_ADJUDICATION_PENDING",
+  "planned_records": 8,
+  "frozen_file_count": 192,
+  "frozen_input_changes": [],
+  "actors": {
+    "A": {
+      "parent_wait": {
+        "actor": "A",
+        "completed_at": "2026-09-29T17:05:29.216113+00:00",
+        "elapsed_seconds": 364.32708278112113,
+        "return_code": 0,
+        "timed_out": false,
+        "original_parent_wait_recorded": true,
+        "output_files": {
+          "output/ANALYSIS.md": "a876b01e100f4ee9341f995330417cd070736d7b40994a1bd43512c58ce18db5",
+          "output/CONTEXT.json": "8574f15d26b9ac11df3a5ffe6a8fd1da900fdd66d2fc5b26761eed58890f4b2a",
+          "output/FINAL.txt": "e900f18a5326fc9b8eeaf21e56e8050b67444f116ed46b01dead8a5ff8e87d38"
+        },
+        "events_sha256": "95c27fa8b52b0ef02c4d5bebe7f9c0acf99ce576f56eee012bff71130dc9eef3",
+        "adjudication": "PENDING; process exit does not establish a supported answer"
+      },
+      "context": {
+        "project_specific_memory_summary": false,
+        "project_specific_AGENTS": false,
+        "prior_case_answers_or_manuscript": false,
+        "prior_study_reviews": false,
+        "assessed_before_packet_read": true,
+        "public_case_training_exposure": "unknown",
+        "backend_identity": "unknown",
+        "receipt_scope": "Flags describe only material supplied in the initial context. No project history of the listed kinds was supplied."
+      },
+      "read_search_commands": 30,
+      "own_output_write_commands": 2,
+      "commands": [
+        {
+          "ordinal": 1,
+          "type": "own_output_write",
+          "command": "mkdir -p output && cat > output/CONTEXT.json <<'EOF'"
+        },
+        {
+          "ordinal": 2,
+          "type": "read_search",
+          "command": "cat METHOD_VIEW.md"
+        },
+        {
+          "ordinal": 3,
+          "type": "read_search",
+          "command": "cat input/README.md"
+        },
+        {
+          "ordinal": 4,
+          "type": "read_search",
+          "command": "rg --files input"
+        },
+        {
+          "ordinal": 5,
+          "type": "read_search",
+          "command": "nl -ba input/E1/CASE.md"
+        },
+        {
+          "ordinal": 6,
+          "type": "read_search",
+          "command": "nl -ba input/E1/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 7,
+          "type": "read_search",
+          "command": "rg -n 'end_strategy|early|final_result|tool_calls|text_parts|NativeOutput|union|wrapper|result' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py input/sources/pydantic_e1/docs/agent.md input/sources/pydantic_e1/docs/output.md"
+        },
+        {
+          "ordinal": 8,
+          "type": "read_search",
+          "command": "rg -n -A 100 -B 15 'async def _handle_response' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py"
+        },
+        {
+          "ordinal": 9,
+          "type": "read_search",
+          "command": "rg -n -A 60 -B 25 'if tool_calls:' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py"
+        },
+        {
+          "ordinal": 10,
+          "type": "read_search",
+          "command": "rg -n -A 35 -B 8 \"end_strategy.*early|class UnionOutputResult|class StructuredTextOutputSchema|class NativeOutputSchema\" input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py"
+        },
+        {
+          "ordinal": 11,
+          "type": "read_search",
+          "command": "rg -n -A 58 'class _EarlyProcessor|end_strategy: EndStrategy|end_strategy:.*=' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py"
+        },
+        {
+          "ordinal": 12,
+          "type": "read_search",
+          "command": "nl -ba input/E2/CASE.md"
+        },
+        {
+          "ordinal": 13,
+          "type": "read_search",
+          "command": "nl -ba input/E2/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 14,
+          "type": "read_search",
+          "command": "nl -ba input/E2/REPORTED_VALUES.txt"
+        },
+        {
+          "ordinal": 15,
+          "type": "read_search",
+          "command": "rg -n 'after_tool_validate|requires_approval|args_override|approved|ApprovalRequired|args_as_dict|approvals' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py input/sources/pydantic_e2/docs/deferred-tools.md input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py"
+        },
+        {
+          "ordinal": 16,
+          "type": "read_search",
+          "command": "awk 'NR>=490 && NR<=647 {printf \"%5d %s\\n\",NR,$0}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py"
+        },
+        {
+          "ordinal": 17,
+          "type": "read_search",
+          "command": "awk 'NR>=310 && NR<=442 {printf \"%5d %s\\n\",NR,$0}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py"
+        },
+        {
+          "ordinal": 18,
+          "type": "read_search",
+          "command": "awk 'NR>=770 && NR<=841 {printf \"%5d %s\\n\",NR,$0}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py"
+        },
+        {
+          "ordinal": 19,
+          "type": "read_search",
+          "command": "rg -n -A 27 'def _make_validation_success|async def after_tool_validate|override_args:' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py"
+        },
+        {
+          "ordinal": 20,
+          "type": "read_search",
+          "command": "nl -ba input/E3/CASE.md"
+        },
+        {
+          "ordinal": 21,
+          "type": "read_search",
+          "command": "nl -ba input/E3/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 22,
+          "type": "read_search",
+          "command": "nl -ba input/E3/REPORTED_BASE_OUTPUT.txt"
+        },
+        {
+          "ordinal": 23,
+          "type": "read_search",
+          "command": "nl -ba input/E3/REPORTED_WRAPPED_OUTPUT.txt"
+        },
+        {
+          "ordinal": 24,
+          "type": "read_search",
+          "command": "rg -n 'checkpointer|previously|resume|restart|nested|cached|persist' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py"
+        },
+        {
+          "ordinal": 25,
+          "type": "read_search",
+          "command": "rg -n 'checkpoint_ns|checkpointer|GraphInterrupt|INTERRUPT|RESUMING' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py"
+        },
+        {
+          "ordinal": 26,
+          "type": "read_search",
+          "command": "awk 'NR>=235 && NR<=305 {printf \"%5d %s\\n\",NR,$0}' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py"
+        },
+        {
+          "ordinal": 27,
+          "type": "read_search",
+          "command": "rg -n -A 24 -B 12 'scratchpad.subgraph_counter|checkpointer is None|interrupts.extend|CONFIG_KEY_CHECKPOINTER' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py"
+        },
+        {
+          "ordinal": 28,
+          "type": "read_search",
+          "command": "rg -n -A 14 -B 8 'checkpointer = self.checkpointer|checkpointer = config|CONFIG_KEY_CHECKPOINTER: checkpointer|CONFIG_KEY_CHECKPOINTER: self.checkpointer' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_algo.py"
+        },
+        {
+          "ordinal": 29,
+          "type": "read_search",
+          "command": "nl -ba input/E4/CASE.md"
+        },
+        {
+          "ordinal": 30,
+          "type": "read_search",
+          "command": "nl -ba input/E4/PUBLISHED_EXAMPLE.txt"
+        },
+        {
+          "ordinal": 31,
+          "type": "read_search",
+          "command": "awk 'NR>=420 && NR<=550 {printf \"%5d %s\\n\",NR,$0}' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py"
+        },
+        {
+          "ordinal": 32,
+          "type": "own_output_write",
+          "command": "cat > output/ANALYSIS.md <<'EOF'"
+        }
+      ],
+      "usage": [
+        {
+          "input_tokens": 1511503,
+          "cached_input_tokens": 1401600,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8233,
+          "reasoning_output_tokens": 269
+        }
+      ],
+      "other_tool_starts": [],
+      "no_observed_access_outside_packet": true,
+      "no_observed_target_execution_or_delegation": true,
+      "commands_manually_inspected_by_root": true
+    },
+    "B": {
+      "parent_wait": {
+        "actor": "B",
+        "completed_at": "2026-09-29T17:05:45.403860+00:00",
+        "elapsed_seconds": 379.35465995501727,
+        "return_code": 0,
+        "timed_out": false,
+        "original_parent_wait_recorded": true,
+        "output_files": {
+          "output/ANALYSIS.md": "9932b2439017c882ed5a1170327346c3627c113d25ca800ce10f20f9fb22bcf5",
+          "output/CONTEXT.json": "acd17ed97471ac1cd5615293e9e962678230c4f3f282955fc219b2c75ecbefcf",
+          "output/FINAL.txt": "140915b64682424f9146eac14a5613cc1c91240de2d4cbb32e76b03aa4d7fa7a"
+        },
+        "events_sha256": "c1421f39c96134f62a043c8107b75628f04400d642160cfa9b2a3ca2462ea789",
+        "adjudication": "PENDING; process exit does not establish a supported answer"
+      },
+      "context": {
+        "project_specific_memory_summary": false,
+        "project_specific_AGENTS": false,
+        "prior_case_answers_or_manuscript": false,
+        "prior_study_reviews": false,
+        "assessed_before_packet_read": true,
+        "public_case_training_exposure": "unknown",
+        "backend_identity": "unknown"
+      },
+      "read_search_commands": 35,
+      "own_output_write_commands": 2,
+      "commands": [
+        {
+          "ordinal": 1,
+          "type": "own_output_write",
+          "command": "mkdir -p output && cat > output/CONTEXT.json <<'EOF'"
+        },
+        {
+          "ordinal": 2,
+          "type": "read_search",
+          "command": "cat -n METHOD_VIEW.md"
+        },
+        {
+          "ordinal": 3,
+          "type": "read_search",
+          "command": "cat -n input/README.md"
+        },
+        {
+          "ordinal": 4,
+          "type": "read_search",
+          "command": "rg --files input"
+        },
+        {
+          "ordinal": 5,
+          "type": "read_search",
+          "command": "cat -n input/E3/CASE.md"
+        },
+        {
+          "ordinal": 6,
+          "type": "read_search",
+          "command": "cat -n input/E3/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 7,
+          "type": "read_search",
+          "command": "cat -n input/E3/REPORTED_BASE_OUTPUT.txt"
+        },
+        {
+          "ordinal": 8,
+          "type": "read_search",
+          "command": "cat -n input/E3/REPORTED_WRAPPED_OUTPUT.txt"
+        },
+        {
+          "ordinal": 9,
+          "type": "read_search",
+          "command": "rg -n 'checkpointer|resume|restart|persist|cache|interrupt|previous' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py"
+        },
+        {
+          "ordinal": 10,
+          "type": "read_search",
+          "command": "sed -n '255,338{=;p;}' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/func/__init__.py"
+        },
+        {
+          "ordinal": 11,
+          "type": "read_search",
+          "command": "rg -n 'checkpointer|resume|re-exec|restart|GraphInterrupt|__interrupt__' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_retry.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py"
+        },
+        {
+          "ordinal": 12,
+          "type": "read_search",
+          "command": "rg -n -C 5 'CONFIG_KEY_CHECKPOINTER|Command\\(resume|interrupts.extend|INTERRUPT.*extend|resume.*checkpointer|checkpointer.*resume' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/_loop.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/config.py input/sources/langgraph_1_0_8/libs/langgraph/langgraph/pregel/main.py"
+        },
+        {
+          "ordinal": 13,
+          "type": "read_search",
+          "command": "cat -n input/E4/CASE.md"
+        },
+        {
+          "ordinal": 14,
+          "type": "read_search",
+          "command": "cat -n input/E4/PUBLISHED_EXAMPLE.txt"
+        },
+        {
+          "ordinal": 15,
+          "type": "read_search",
+          "command": "sed -n '420,546{=;p;}' input/sources/langgraph_1_0_8/libs/langgraph/langgraph/types.py"
+        },
+        {
+          "ordinal": 16,
+          "type": "read_search",
+          "command": "cat -n input/E1/CASE.md"
+        },
+        {
+          "ordinal": 17,
+          "type": "read_search",
+          "command": "cat -n input/E1/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 18,
+          "type": "read_search",
+          "command": "rg -n 'end_strategy|early|NativeOutput|class Native|union|Union|TextPart|tool_calls|text_parts' input/sources/pydantic_e1/docs/output.md input/sources/pydantic_e1/docs/agent.md input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/output.py"
+        },
+        {
+          "ordinal": 19,
+          "type": "read_search",
+          "command": "sed -n '1220,1455{=;p;}' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_agent_graph.py"
+        },
+        {
+          "ordinal": 20,
+          "type": "read_search",
+          "command": "rg -n -C 5 'end_strategy:' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/agent/__init__.py"
+        },
+        {
+          "ordinal": 21,
+          "type": "read_search",
+          "command": "sed -n '1064,1200{=;p;}' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py"
+        },
+        {
+          "ordinal": 22,
+          "type": "read_search",
+          "command": "sed -n '480,510{=;p;};610,638{=;p;};689,750{=;p;}' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_output.py"
+        },
+        {
+          "ordinal": 23,
+          "type": "read_search",
+          "command": "rg -n -C 4 'final_result|end_strategy|function_tool_calls|output_tool_calls' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py"
+        },
+        {
+          "ordinal": 24,
+          "type": "read_search",
+          "command": "sed -n '879,914{=;p;}' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/_tool_execution.py"
+        },
+        {
+          "ordinal": 25,
+          "type": "read_search",
+          "command": "sed -n '125,174{=;p;}' input/sources/pydantic_e1/pydantic_ai_slim/pydantic_ai/models/function.py"
+        },
+        {
+          "ordinal": 26,
+          "type": "read_search",
+          "command": "cat -n input/E2/CASE.md"
+        },
+        {
+          "ordinal": 27,
+          "type": "read_search",
+          "command": "cat -n input/E2/PROVIDED_PROGRAM.txt"
+        },
+        {
+          "ordinal": 28,
+          "type": "read_search",
+          "command": "cat -n input/E2/REPORTED_VALUES.txt"
+        },
+        {
+          "ordinal": 29,
+          "type": "read_search",
+          "command": "rg -n 'after_tool_validate|requires_approval|args_override|ToolApproved|approval|validated_args' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py input/sources/pydantic_e2/docs/deferred-tools.md input/sources/pydantic_e2/docs/capabilities/custom.md"
+        },
+        {
+          "ordinal": 30,
+          "type": "read_search",
+          "command": "sed -n '690,778{=;p;}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/abstract.py"
+        },
+        {
+          "ordinal": 31,
+          "type": "read_search",
+          "command": "rg -n -C 5 'validated_args|override_args|ToolApproved|unapproved|deferred_calls.*append|replace\\(call' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py"
+        },
+        {
+          "ordinal": 32,
+          "type": "read_search",
+          "command": "sed -n '305,359{=;p;};440,461{=;p;};495,552{=;p;};817,887{=;p;}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py"
+        },
+        {
+          "ordinal": 33,
+          "type": "read_search",
+          "command": "sed -n '267,304{=;p;};362,425{=;p;}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tool_manager.py"
+        },
+        {
+          "ordinal": 34,
+          "type": "read_search",
+          "command": "sed -n '780,849{=;p;}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_tool_execution.py"
+        },
+        {
+          "ordinal": 35,
+          "type": "read_search",
+          "command": "sed -n '99,140{=;p;}' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/_deferred.py"
+        },
+        {
+          "ordinal": 36,
+          "type": "read_search",
+          "command": "rg -n -C 4 'requires_approval|unapproved|after_tool_validate' input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/tools.py input/sources/pydantic_e2/pydantic_ai_slim/pydantic_ai/capabilities/combined.py"
+        },
+        {
+          "ordinal": 37,
+          "type": "own_output_write",
+          "command": "cat > output/ANALYSIS.md <<'EOF'"
+        }
+      ],
+      "usage": [
+        {
+          "input_tokens": 1729738,
+          "cached_input_tokens": 1634176,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9884,
+          "reasoning_output_tokens": 274
+        }
+      ],
+      "other_tool_starts": [],
+      "no_observed_access_outside_packet": true,
+      "no_observed_target_execution_or_delegation": true,
+      "commands_manually_inspected_by_root": true
+    }
+  },
+  "audit_limits": "Outward CLI event logs and supplied-context receipts; no OS path sandbox or attestation of training history/backend identity. No scientific correctness inferred from completion.",
+  "retries_or_replacement_actors": 0,
+  "benchmark_scores_added": 0
+}

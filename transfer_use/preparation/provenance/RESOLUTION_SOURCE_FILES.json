@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "path": "resolution_only/E1_final/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1/LICENSE",
+      "commit": "3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1",
+      "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4",
+      "bytes": 1100,
+      "license": "MIT",
+      "analyst_visible": false
+    },
+    {
+      "path": "resolution_only/E1_final/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1/pydantic_ai_slim/pydantic_ai/_agent_graph.py",
+      "commit": "3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1",
+      "sha256": "79877419317cca3b6b0c4adf4bd20fc19aead54ab4181b40536bd900cc2b02d1",
+      "bytes": 93716,
+      "license": "MIT",
+      "analyst_visible": false
+    },
+    {
+      "path": "resolution_only/E1_final/tests/test_agent.py",
+      "source_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1/tests/test_agent.py",
+      "commit": "3adb9b0260383d0f9f2b2a9433f07e1ecfc768c1",
+      "sha256": "8454676be1ab8af9e0c18422448816d7d615853137211dba243661395a2bb65b",
+      "bytes": 501652,
+      "license": "MIT",
+      "analyst_visible": false
+    }
+  ]
+}

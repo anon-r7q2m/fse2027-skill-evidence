@@ -1,0 +1,2 @@
+approver is shown:  {'amount': 100}
+tool executed with: amount=50

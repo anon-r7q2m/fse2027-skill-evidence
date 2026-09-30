@@ -50,3 +50,25 @@ analysis for six units. `study/development_context.md` preserves the catalog,
 historical comparison summaries and audit limitations moved out of the main text.
 These analysis and packaging changes add no benchmark scores or independent
 mechanism discoveries. All earlier scientific studies and outcomes are retained.
+
+
+## September 29 focused transfer revision: retained history
+
+The prior-art disclosure is a dated supplement to original records; it does not
+rewrite a prediction or adjudication. The capacity figure, editable source and
+original exported data move into `study/capacity_figure/` without changing outcomes.
+All 618 files from the prior release are retained; only root navigation/claim and
+packaging documents are updated. Separate transfer-use material is identified
+with its own frozen protocol and closure, not merged into old native or benchmark
+sample counts.
+
+
+The `transfer_use/` study was internally frozen and executed on September 29;
+final closure was recorded on September 30. It adds two bounded static-analysis
+contexts and eight context-by-unit records, not new benchmark or native-target
+runs. Preparation/run/adjudication publication maps identify exact originals
+and disclosed local-path or event-log projections. Actor answers are unchanged.
+Upstream modules and notices are retained. Public report code/output excerpts
+are attributed without claiming issue authors explicitly granted MIT. No
+credentials, hidden reasoning, private annotations or original grading patches
+are added.

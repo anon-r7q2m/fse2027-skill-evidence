@@ -1,0 +1,44 @@
+{
+  "html_url": "https://github.com/langchain-ai/langgraph/issues/6792",
+  "created_at": "2026-02-12T20:42:05Z",
+  "updated_at": "2026-09-06T20:18:19Z",
+  "state": "open",
+  "author_association": "NONE",
+  "author": "venkatesh-sivaraman",
+  "body_sha256": "bd81e8dc5c98ff213b863ff27302b3c7c2c4d611b1c97ccafc9db5fde996ba8c",
+  "full_issue_prose_saved": false,
+  "code_blocks": [
+    {
+      "index": 0,
+      "language": "python",
+      "body_start_line": 14,
+      "body_end_line": 56,
+      "path": "issue_code/E3/block_00.txt",
+      "sha256": "4b3daedd6c2305c79cacd25b8ced55e7d7329e1207ced343b7308e0e0e80f5db"
+    },
+    {
+      "index": 1,
+      "language": "shell",
+      "body_start_line": 62,
+      "body_end_line": 62,
+      "path": "issue_code/E3/block_01.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "index": 2,
+      "language": "",
+      "body_start_line": 71,
+      "body_end_line": 76,
+      "path": "issue_code/E3/block_02.txt",
+      "sha256": "d00e0ce138e413ebf5ec0a2a666c58f98e88d0ecefec1858e1183b8d4555f8f6"
+    },
+    {
+      "index": 3,
+      "language": "",
+      "body_start_line": 81,
+      "body_end_line": 87,
+      "path": "issue_code/E3/block_03.txt",
+      "sha256": "9a4e6018feeef3525780c03ff3ac19cd7851cc6cbb9a263dc214c512b66b7dd1"
+    }
+  ]
+}

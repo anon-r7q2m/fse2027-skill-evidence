@@ -1,0 +1,34 @@
+{
+  "exported_at": "2026-09-30T05:12:18.572706+00:00",
+  "exports": [
+    {
+      "source_relative": "results_cache/decision_transfer_use_v1/ADJUDICATION_B.md",
+      "public_path": "ADJUDICATION_B.md",
+      "original_sha256": "cc9678d0677accd66097cbaef97effb072d1a50b413b30e63d9adab89d9a2de6",
+      "public_sha256": "46d1b747fd1d3e50cd8e74f93ab285b97d81d8d68bed75fea4061fecc5a43afb",
+      "transform": "literal local-root replacement"
+    },
+    {
+      "source_relative": "results_cache/decision_transfer_use_v1/ADJUDICATION_B.json",
+      "public_path": "ADJUDICATION_B.json",
+      "original_sha256": "3a086b0796e8e017733aed2eaa06aec9e8a88c423c219697b9f797ff105577b8",
+      "public_sha256": "05a9bfbc2d17026ddd2045817d6e088f9a0ba690aa8fda7d72a5f21f0f262bec",
+      "transform": "literal local-root replacement"
+    },
+    {
+      "source_relative": "results_cache/decision_transfer_use_v1/ADJUDICATION_A_REVIEW.md",
+      "public_path": "ADJUDICATION_A_REVIEW.md",
+      "original_sha256": "a4203374c99789ba146d5df62c4a4d40862a22281b2c9328bb2f83fbaae5ad68",
+      "public_sha256": "71b49f028b9252d1f010f199f2eb23c2d5ed539198ce8da321cf86cb650179a8",
+      "transform": "literal local-root replacement"
+    },
+    {
+      "source_relative": "results_cache/decision_transfer_use_v1/CLOSED.json",
+      "public_path": "CLOSED.json",
+      "original_sha256": "102b0dd6c769feaeaea51b895342ebb4165688bdd2058dfb4d218cf6a5db0f42",
+      "public_sha256": "102b0dd6c769feaeaea51b895342ebb4165688bdd2058dfb4d218cf6a5db0f42",
+      "transform": "byte-identical"
+    }
+  ],
+  "originals_unchanged": true
+}

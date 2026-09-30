@@ -1,0 +1,8 @@
+{
+  "reference": "<project-root>/experiments/decision_transfer_use_v1/REFERENCE_A.md",
+  "sha256": "cf25cc90177ec480e6c1122e4f7e01ff5296b6fba7644fde8cefcf9b93930f80",
+  "recorded_utc": "2026-09-29T16:53:50.812237+00:00",
+  "REFERENCE_B_read_before_first_record": false,
+  "actor_output_exists_or_read_by_A": false,
+  "selection_facts_previously_shared": true
+}
