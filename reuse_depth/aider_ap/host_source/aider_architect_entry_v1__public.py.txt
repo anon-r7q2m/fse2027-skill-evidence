@@ -1,0 +1,270 @@
+"""Two recorded-response production entries, without provider requests or task scoring."""
+
+import argparse
+import asyncio
+import copy
+from pathlib import Path
+import tempfile
+
+from analysis.automatic_extraction_v1.common import canonical, parse_json, require, write_once
+from analysis.aider_architect_transfer_v1.isolation import Program as ArchitectProgram
+from analysis.gc_composed_host_v1.native import NativeClient as PoolClient
+from analysis.localization_repair_v1.environment_witness import text_response
+from analysis.measurement_entry.process import run_process
+from analysis.measurement_entry.public import runtime_environment
+from analysis.r_preparation_fallback_v1.native import NativeClient
+from analysis.reproduction_regression_v1.environment_witness import setup_environment
+from analysis.rl_post_handoff_v1.fixtures import ISSUE, SUBJECT
+from analysis.same_base_selection_v2.isolation import Program as PoolProgram
+from analysis.validated_selection_entry_v1.environment import environment_factory
+from analysis.validated_selection_entry_v1.public import TEMPLATE
+from tests.analysis.test_hint_host_effect_v1 import RecordedProvider, response
+
+from .constants import A_PATH, A_SHA, P_PATH, P_SHA, RESULTS, ROOT
+from .ordinary import Host
+from .pool_host import Host as PoolHost
+
+OUTPUT = RESULTS / "public_v2"
+ADVICE = "  In a2s_rl_subject.py, replace the negative branch return 0 with return -value. Keep the other branch unchanged.\n\n"
+SOURCE_ONLY = [
+    {
+        "path": "public_caller.py",
+        "content": "# Supplied artificial read-only source view.\nresult = magnitude(-4)\n",
+    }
+]
+ORIGINAL = ISSUE + "\nPRIVATE_TO_ARCHITECT_ISSUE_CARD_MARKER\n"
+
+
+def begins(template, policy, editor):
+    pool = {
+        "kind": "begin_samples",
+        "run_id": "architect-public-" + editor,
+        "base_commit": template["base_commit"],
+        "base_snapshot_ref": template["base_tree"],
+        "issue": ORIGINAL,
+        "files": [{"path": "a2s_rl_subject.py", "content": SUBJECT, "mode": "100644"}],
+        "locations": [{"path": "a2s_rl_subject.py", "start": 1, "end": 4}],
+        "max_samples": 4,
+        "limits": {k: policy[k] for k in ("input_token_limit", "output_token_limit")},
+    }
+    architect = {
+        "kind": "begin_architect",
+        "run_id": pool["run_id"],
+        "base_snapshot_ref": template["base_tree"],
+        "issue": ORIGINAL,
+        "files": [{"path": "a2s_rl_subject.py", "content": SUBJECT}],
+        "readonly_context": SOURCE_ONLY,
+        "model": policy["model"],
+        "editor_format": editor,
+        "max_calls": 7 if editor == "ordinary" else 5,
+        "editor_min_calls": 1 if editor == "ordinary" else 4,
+    }
+    return pool, architect
+
+
+def verify_context(body):
+    wire = canonical(body).decode()
+    require(
+        "PRIVATE_TO_ARCHITECT_ISSUE_CARD_MARKER" not in wire, "original issue leaked into editor"
+    )
+    require(
+        "public_caller.py" in wire and "result = magnitude(-4)" in wire, "read-only view missing"
+    )
+    require("a2s_rl_subject.py" in wire and "def magnitude" in wire, "editable view missing")
+
+
+async def ordinary_control(template, policy, capture):
+    target = OUTPUT / "A"
+    pool, begin = begins(template, policy, "ordinary")
+    config = {
+        "scope": "PUBLIC_SCRIPTED_CONTROL",
+        "image": template["image"],
+        "base_commit": template["base_commit"],
+        "base_tree": template["base_tree"],
+        "capture_script": str(capture),
+        "run_id": begin["run_id"],
+        "preflight_command": "python -B -c 'import a2s_rl_subject'",
+        "issue": ORIGINAL,
+        "pool_begin": pool,
+        "readonly_context": SOURCE_ONLY,
+        "architect_begin": begin,
+    }
+    values = [
+        response(
+            "replace_lines",
+            {
+                "explanation": "Apply the recorded architect advice.",
+                "edits": [
+                    {
+                        "path": "a2s_rl_subject.py",
+                        "original_lines": ["        return 0"],
+                        "updated_lines": ["        return -value"],
+                    }
+                ],
+            },
+        ),
+        response("task_complete", {"summary": "Recorded editor complete."}),
+    ]
+    provider = RecordedProvider(values)
+    aprovider = RecordedProvider([text_response(ADVICE, 1)])
+    client = NativeClient(
+        {**policy, "calls_per_start": 6}, target / "requests/editor", None, provider
+    )
+    architect = PoolClient(
+        {**policy, "calls_per_start": 1}, target / "requests/architect", None, aprovider
+    )
+    program = ArchitectProgram(A_PATH, records_dir=target / "A_workers")
+    require(program.identity == A_SHA, "original architect package")
+    host = Host(target / "entry", config)
+    try:
+        result = await host.run_prefix("A", client, architect=architect, program=program)
+    finally:
+        cleanup = await host.close()
+    require(
+        cleanup["cleanup_confirmed"] and result["requests"] == 3,
+        "one architect and two recorded editor commits",
+    )
+    require(
+        provider.calls[0]["input"][0] == {"role": "user", "content": ADVICE},
+        "exact handoff task text",
+    )
+    for body in provider.calls:
+        verify_context(body)
+    patch = Path(result["policies"]["A"]["publication"]["original_capture"]) / "agent.patch"
+    require("+        return -value" in patch.read_text(), "real ordinary edited tree missing")
+    return {
+        "status": "ARCHITECT_ORDINARY_ENTRY_PASS",
+        "scripted_commits": 3,
+        "package_sha256": program.identity,
+        "cleanup_confirmed": True,
+        "original_issue_absent": True,
+        "unchanged_handoff": True,
+        "readonly_preserved": True,
+    }
+
+
+async def pool_control(template, policy, capture):
+    target = OUTPUT / "AP"
+    pool, begin = begins(template, policy, "search_replace_k4")
+    factory, absent = environment_factory(
+        target,
+        image=template["image"],
+        base_commit=template["base_commit"],
+        base_tree=template["base_tree"],
+        capture_script=capture,
+    )
+    program = PoolProgram(P_PATH, records_dir=target / "P_workers")
+    aprogram = ArchitectProgram(A_PATH, records_dir=target / "A_workers")
+    require(
+        program.identity == P_SHA and aprogram.identity == A_SHA, "unchanged generated packages"
+    )
+    aprovider = RecordedProvider([text_response(ADVICE, 1)])
+    architect = PoolClient(
+        {**policy, "calls_per_start": 1}, target / "requests/architect", None, aprovider
+    )
+    providers, clients = {}, {}
+    for index, value in enumerate(("-value", "-value", "-value", "1"), 1):
+        text = (
+            "```python\n### a2s_rl_subject.py\n<<<<<<< SEARCH\n        return 0\n=======\n        return "
+            + value
+            + "\n>>>>>>> REPLACE\n```"
+        )
+        key = f"sample{index}"
+        providers[key] = RecordedProvider([text_response(text, index + 1)])
+        clients[key] = PoolClient(
+            {**policy, "calls_per_start": 1}, target / "requests" / key, None, providers[key]
+        )
+    host = PoolHost(
+        logs=target / "entry",
+        environment_factory=factory,
+        cleanup_check=absent,
+        capture_script=capture,
+        identities={"A": A_SHA, "P": P_SHA},
+    )
+    result = await host.run(
+        pool,
+        program=program,
+        clients=clients,
+        prefix="AP",
+        readonly_context=SOURCE_ONLY,
+        architect=architect,
+        architect_program=aprogram,
+        architect_begin=begin,
+    )
+    require(
+        host.cleanup["cleanup_confirmed"] and result["requests"] == 5,
+        "one architect plus K4 recorded commits",
+    )
+    edited = parse_json((host.logs / "editor_begin.json").read_bytes())
+    require(edited == {**pool, "issue": ADVICE}, "only P issue replaced with exact handoff")
+    for provider in providers.values():
+        verify_context(provider.calls[0])
+        require(ADVICE in provider.calls[0]["input"][0]["content"], "exact advice reaches P")
+    patch = Path(result["policies"]["AP"]["publication"]["original_capture"]) / "agent.patch"
+    require("+        return -value" in patch.read_text(), "original P captured repair missing")
+    return {
+        "status": "ARCHITECT_ORIGINAL_P_ENTRY_PASS",
+        "scripted_commits": 5,
+        "packages": {"A": A_SHA, "P": P_SHA},
+        "cleanup_confirmed": True,
+        "original_issue_absent": True,
+        "unchanged_handoff": True,
+        "readonly_preserved": True,
+    }
+
+
+async def child():
+    setup_environment()
+    template = parse_json(TEMPLATE.read_bytes())
+    policy = copy.deepcopy(template["policy"])
+    policy.update(stage_id="aider-architect-scripted-entry-v1", request_timeout_seconds=300)
+    capture = Path(template["task_path"]) / "environment/capture_patch.py"
+    ordinary = await ordinary_control(template, policy, capture)
+    pool = await pool_control(template, policy, capture)
+    write_once(
+        OUTPUT / "control.json",
+        {
+            "status": "TWO_ORIGINAL_ARCHITECT_ENTRIES_PASS",
+            "ordinary": ordinary,
+            "pool": pool,
+            "actual_model_requests": 0,
+            "benchmark_starts": 0,
+            "scorer_starts": 0,
+            "cleanup_confirmed": True,
+            "gain_claim": False,
+        },
+    )
+
+
+def launch():
+    OUTPUT.mkdir(parents=True, exist_ok=False)
+    with tempfile.TemporaryDirectory(prefix="a2s-architect-entry-") as config:
+        (Path(config) / "config.json").write_text("{}\n")
+        receipt = run_process(
+            [str(ROOT / ".venv/bin/python"), "-B", "-m", __package__ + ".public", "child"],
+            cell=OUTPUT / "process",
+            cwd=ROOT,
+            env=runtime_environment(config),
+            timeout=2100,
+        )
+    require(
+        receipt["return_code"] == 0
+        and not receipt["timed_out"]
+        and not receipt["process_group_remaining"],
+        "recorded entry incomplete",
+    )
+    control = parse_json((OUTPUT / "control.json").read_bytes())
+    write_once(
+        OUTPUT / "terminal.json", {**control, "parent_wait_return_code": receipt["return_code"]}
+    )
+    return control
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("mode", choices=("launch", "child"))
+    args = parser.parse_args()
+    if args.mode == "child":
+        asyncio.run(child())
+    else:
+        print(launch())

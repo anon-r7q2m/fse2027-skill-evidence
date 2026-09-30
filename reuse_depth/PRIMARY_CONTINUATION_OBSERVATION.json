@@ -1,0 +1,87 @@
+{
+  "kind": "POST_HOC_DESCRIPTIVE_PROJECTION_OF_EXISTING_PRIMARY_RECORDS",
+  "new_study_executions": 0,
+  "new_grades": 0,
+  "inputs": [
+    "capacity/outcomes.csv",
+    "capacity/identities/primary_stage_dispositions.json",
+    "capacity/primary_participation_cost.json"
+  ],
+  "single_policy_solves": {
+    "L": 5,
+    "Ln": 7,
+    "P": 8,
+    "Pn": 10
+  },
+  "combined_policy_solves": {
+    "LP": 13,
+    "LnPn": 4
+  },
+  "Ln_successful_paths": [
+    {
+      "cell_id": "005-194-r1-Ln",
+      "instance_id": "django__django-10880",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "native_requests": 9,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "019-196-r1-Ln",
+      "instance_id": "django__django-16082",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "native_requests": 9,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "048-199-r1-Ln",
+      "instance_id": "django__django-11299",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "native_requests": 9,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "062-201-r1-Ln",
+      "instance_id": "django__django-15467",
+      "discovery_status": "NO_LOCALIZATION",
+      "capacity_path": null,
+      "native_requests": 8,
+      "requests": 8,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "069-202-r1-Ln",
+      "instance_id": "pytest-dev__pytest-8399",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "native_requests": 7,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "083-204-r1-Ln",
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "native_requests": 7,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    },
+    {
+      "cell_id": "119-208-r1-Ln",
+      "instance_id": "pylint-dev__pylint-6903",
+      "discovery_status": "LOCALIZED",
+      "capacity_path": null,
+      "native_requests": 7,
+      "requests": 9,
+      "policy_status": "DEFAULT_FINAL"
+    }
+  ],
+  "Ln_success_after_NO_LOCALIZATION": 4,
+  "limit": "Whole installed policies differ in algorithm, continuation, admission and realized usage. No causal mechanism contribution, synergy, new fallback benefit, stable superiority or new extraction rate is established."
+}

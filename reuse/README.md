@@ -1,6 +1,13 @@
 # Reuse evidence candidate (2026-09-30)
 
-This is a bounded, unpublished candidate packet for release review. It adds the source-to-package connections needed by the skill-reuse manuscript. Preparation performed static copying, line extraction, metadata projection and privacy inspection only. No donor, generated module, model, target, replay, benchmark or scorer was executed.
+Publication update: the earlier packet below is retained unchanged in scope.
+The [subsequent archival supplement](../reuse_depth/README.md) now releases
+all nine selected original implementations and the corrected AP entry's
+actual package callbacks, materialization and publication. This adds original
+consumer records for AP; it does not upgrade the unavailable initial ordinary
+wire/roster, qualification suites, G entry or source-calibration seams.
+
+This bounded inspection packet supplies source-to-package connections for the skill-reuse manuscript. Preparation performed static copying, line extraction, metadata projection and privacy inspection only. No donor, generated module, model, target, replay, benchmark or scorer was executed.
 
 `PROVENANCE.json` maps every file to full original-file SHA-256 and original line ranges. JSON projections also list selected fields. Origin paths are repository-relative archival identifiers; they contain no author-machine root. `PRIVACY_REVIEW.json` records the candidate-content inspection. Existing catalog, capacity and effect evidence stays in the previously prepared artifact stage and is not duplicated here.
 

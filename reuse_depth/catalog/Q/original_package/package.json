@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "profile": "sweagent_chooser_v1",
+  "entrypoint": "mechanism:handle",
+  "modules": [
+    "mechanism.py"
+  ],
+  "capabilities": [
+    "chooser_request",
+    "chooser_selection"
+  ]
+}

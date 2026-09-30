@@ -84,3 +84,20 @@ excerpt originate from `aider-ai/aider` at
 relicensed as project-authored MIT code. Generated target code, host-adapter
 excerpts and newly authored inspection/provenance guides remain separately
 identified in that provenance map.
+
+## All-nine implementation and AP archival supplement
+
+`reuse_depth/catalog/` contains unchanged selected generated target modules,
+with original manifests where present and existing public profiles. It is
+distinct from donor source and from the root project-authored MIT grant.
+Donor-derived code/prompts retain pinned notices under `reuse_depth/licenses/`:
+Agentless, Moatless, OpenHands, Trae and SWE-agent MIT; Aider Apache-2.0.
+The Moatless/Trae notices were obtained from the exact pinned revisions and
+their Git blob identities checked against the existing source trees.
+
+`reuse_depth/aider_ap/` archives a project-authored synthetic fixture and
+predetermined-response entry. The exact old patch and materialized source
+belong to that fixture, not a benchmark or private annotation dataset. New
+inspection guides/inventories and the static binding checker use the separate
+project-authored MIT grant. Existing original bytes and small path projections
+are identified in `reuse_depth/PROVENANCE.json`.

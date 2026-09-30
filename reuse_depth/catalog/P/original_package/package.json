@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "profile": "same_base_selection_v2",
+  "entrypoint": "mechanism:handle",
+  "modules": [
+    "mechanism.py",
+    "edit_parser_pkg.py",
+    "admission_pkg.py",
+    "normalize_pkg.py"
+  ],
+  "capabilities": [
+    "sample_batch",
+    "candidate_batch",
+    "candidate_assessments",
+    "sample_selection"
+  ]
+}

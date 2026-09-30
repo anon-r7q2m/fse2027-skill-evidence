@@ -7,6 +7,11 @@ qualification, actual host delivery and installed-policy task utility.
 
 ## Start with the reuse chains
 
+- [All nine original implementations and the archived A-to-P consuming chain](reuse_depth/README.md):
+  unchanged selected code, existing profiles, seven original callbacks,
+  candidate materialization, selected capture and publication. The offline
+  binding checker executes no study code. Missing old ordinary wire,
+  qualification payloads and measured provider usage remain missing.
 - [Reuse evidence and publication scope](reuse/PUBLICATION.md), with the
   [detailed source/package/host guide](reuse/README.md): historical `P_sel`
   source-fallback omission, Aider's unchanged-package host correction and G's

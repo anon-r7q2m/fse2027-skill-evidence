@@ -5,6 +5,17 @@ chains below precede the older explanatory and measurement entries. They add
 inspectable evidence to existing development observations, not new execution
 or independent discoveries.
 
+The later `reuse_depth/` supplement adds all nine selected original
+implementations and existing profiles (G/R manifests remain absent), and an
+allowlisted recovery of the corrected AP entry. Its original callbacks bind
+exact advice to the unchanged P input, materialized candidate trees,
+selection, original capture/publication and A terminal. The old failed
+ordinary wire/roster and qualification inputs remain unavailable. Its static
+checker executes no package. `PRIMARY_CONTINUATION_OBSERVATION.json` is a
+post-hoc projection: four of Ln's seven successful primary paths have
+NO_LOCALIZATION and ordinary continuation; it establishes no causal component
+effect, synergy or new score.
+
 | Reuse claim | New public connection | Inferential scope |
 | --- | --- | --- |
 | Historical `P_sel` omitted a source fallback | `reuse/p_sel/`: fixed donor and old/repaired rule excerpts, three-candidate public reference, decision witness, four-line diff, original manifest and qualification reports | Public source-guided repair; data/backend seams; old independent behavior pass with overall source failure; repeated regression; source-review aggregate exposure disclosed. Complete repaired entry is reported, not replayed. |

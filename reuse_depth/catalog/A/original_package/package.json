@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "profile": "aider_architect_v1",
+  "entrypoint": "mechanism:handle",
+  "modules": [
+    "mechanism.py"
+  ],
+  "capabilities": [
+    "architect_request",
+    "editor_handoff",
+    "architect_terminal"
+  ]
+}

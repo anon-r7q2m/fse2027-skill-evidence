@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "profile": "checking_context_hook_v1",
+  "entrypoint": "mechanism:handle",
+  "modules": [
+    "mechanism.py"
+  ],
+  "capabilities": [
+    "model_request",
+    "project_observations",
+    "observation"
+  ]
+}

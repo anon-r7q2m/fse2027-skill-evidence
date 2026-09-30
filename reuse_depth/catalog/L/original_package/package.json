@@ -1,0 +1,1 @@
+{"capabilities":["read_files","model_request","localization_handoff"],"entrypoint":"mechanism:handle","modules":["mechanism.py","donor_logic.py"],"profile":"localization_only_v1","schema_version":1}

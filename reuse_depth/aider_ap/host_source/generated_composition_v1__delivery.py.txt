@@ -1,0 +1,129 @@
+"""Exact wire occurrences are recorded for every owner before any package ACK."""
+
+import copy
+
+from analysis.automatic_extraction_v1.common import require
+from analysis.g_migration_trial_v1.isolation import PackageError
+from analysis.g_package_preparation_v1.runtime import canonical, digest
+
+
+class Delivery:
+    def __init__(self, sessions, clock_check):
+        self.sessions, self.clock_check = sessions, clock_check
+        self.pending, self.entries, self.terminals = [], [], []
+        self._registered = set()
+
+    def stage(self, owner, rows, messages):
+        require(len(rows) == len(messages), "package dispatch/message roster differs")
+        for row, message in zip(rows, messages):
+            require(canonical(row["message"]) == canonical(message), "package message changed")
+            key = (owner, row["effect"]["message_id"])
+            require(key not in self._registered, "repeated owner/message identity")
+            self._registered.add(key)
+            self.pending.append((owner, row))
+
+    def append(self, items, messages):
+        require(
+            canonical([row["message"] for _, row in self.pending]) == canonical(messages),
+            "package feedback batch differs from returned effects",
+        )
+        for owner, row in self.pending:
+            self.entries.append(
+                {
+                    "owner": owner,
+                    "message_id": row["effect"]["message_id"],
+                    "input_index": len(items),
+                    "wire_sha256": digest(row["message"]),
+                    "wire_message": copy.deepcopy(row["message"]),
+                    "delivered_request": None,
+                    "acknowledged": False,
+                }
+            )
+            items.append(copy.deepcopy(row["message"]))
+        self.pending = []
+
+    def common(self, items, call_id):
+        index = len(items) - 1
+        message = items[index]
+        require(
+            message.get("type") == "function_call_output" and message.get("call_id") == call_id,
+            "common observation occurrence differs",
+        )
+        self.entries.append(
+            {
+                "owner": "host",
+                "call_id": call_id,
+                "input_index": index,
+                "wire_sha256": digest(message),
+                "wire_message": copy.deepcopy(message),
+                "delivered_request": None,
+                "acknowledged": False,
+            }
+        )
+
+    def record(self, query, items, receipt, *, purpose):
+        require(
+            receipt.get("number") == query
+            and receipt.get("state") == "COMMIT"
+            and receipt.get("usage") is not None
+            and receipt.get("purpose") == purpose,
+            "known matching COMMIT required for inclusion",
+        )
+        require(not any(row["query_id"] == query for row in self.terminals), "duplicate inclusion")
+        terminal = {
+            "query_id": query,
+            "purpose": purpose,
+            "status": receipt["status"],
+            "body_sha256": receipt["body_sha256"],
+        }
+        self.terminals.append(terminal)
+        if purpose == "reproducer":
+            return
+        require(purpose == "solve", "unknown input purpose")
+        for row in self.entries:
+            if row["delivered_request"] is not None:
+                continue
+            index = row["input_index"]
+            require(
+                index < len(items) and digest(items[index]) == row["wire_sha256"],
+                "committed input occurrence changed",
+            )
+            row.update(
+                delivered_request=query,
+                service_status=receipt["status"],
+                body_sha256=receipt["body_sha256"],
+            )
+        # This phase has no callbacks. Even a later first-ACK failure cannot
+        # erase the already sent inputs of the other package.
+
+    def acknowledge(self, query):
+        terminal = next((r for r in self.terminals if r["query_id"] == query), None)
+        require(
+            terminal is not None
+            and terminal["purpose"] == "solve"
+            and terminal["status"] == "completed",
+            "ACK needs a completed solver COMMIT",
+        )
+        for row in self.entries:
+            if row["owner"] == "host" or row["delivered_request"] != query or row["acknowledged"]:
+                continue
+            self.clock_check("before_package_delivery_ack")
+            session = self.sessions[row["owner"]]
+            event = {
+                "kind": "feedback_delivered",
+                "message_id": row["message_id"],
+                "request_id": query if row["owner"] == "G" else str(query),
+                "completed": True,
+            }
+            session.ack_context = copy.deepcopy(event)
+            try:
+                effects = session.apply(event)
+                if effects:
+                    raise PackageError("ACK_EFFECT_VIOLATION", "acknowledgement emitted effects")
+            finally:
+                session.ack_context = None
+            self.clock_check("after_package_delivery_ack")
+            row["acknowledged"] = True
+
+    def snapshot(self):
+        return {"entries": copy.deepcopy(self.entries), "terminals": copy.deepcopy(self.terminals)}

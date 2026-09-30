@@ -1,0 +1,1 @@
+{"capabilities":["observation"],"entrypoint":"mechanism:handle","modules":["mechanism.py"],"profile":"checking_context_hook_v1","schema_version":1}

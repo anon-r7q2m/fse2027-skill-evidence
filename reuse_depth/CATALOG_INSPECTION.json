@@ -1,0 +1,210 @@
+{
+  "status": "NEW_INSPECTION_INVENTORY",
+  "date": "2026-09-30",
+  "new_model_calls": 0,
+  "new_package_executions": 0,
+  "new_benchmark_or_grader_runs": 0,
+  "classes": [
+    {
+      "class": "G",
+      "donors": [
+        {
+          "repository": "https://github.com/OpenAutoCoder/Agentless",
+          "revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71"
+        }
+      ],
+      "original_directory": "results_cache/g_native_log_repair_v1/generation/a2s/final_package",
+      "original_package_manifest": "ABSENT_NOT_RECONSTRUCTED",
+      "file_sha256": {
+        "compatibility.py": "ccfe2d4cb66cfbd910e74d16609135ef912b929335938aad427e65c327b0ae95",
+        "mechanism.py": "f17d1d9aad32b4a410bbd79d2fbe7f456596c696ca4ecf53d709ca94a200afcd",
+        "native_logs.py": "e3762107264020b3dd5c62c8390142dd26475cec76fa79e25c7e7b62eaf36abc"
+      },
+      "computed_file_map_digest": "b65a3fcdfd78b605569863e58abd2e15efe4449222aa5f97816f553f89ee8ebb",
+      "profile_references": [
+        "experiments/g_guard_repair_v1/CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "R",
+      "donors": [
+        {
+          "repository": "https://github.com/OpenAutoCoder/Agentless",
+          "revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71"
+        }
+      ],
+      "original_directory": "results_cache/r_behavior_api_v1/generation/direct/final_package",
+      "original_package_manifest": "ABSENT_NOT_RECONSTRUCTED",
+      "file_sha256": {
+        "case_runner.py": "d83dea9d0cfe0661e51225747f21aece8ae75ec3321a95c3dbdc64ca1faef7ca",
+        "mechanism.py": "644ca63affeb14b729dbf79fb566ba45ec59061f263ba51c6ad29f9e425e6703",
+        "reproduction.py": "889d218379e278219aa404aed07b73265b835541cb891a3f7f9f0f353265be95",
+        "source_rules.py": "ee53612424c256d598bed1b7d308e4b7eb6cc7d937924cdb1954045f36d60f10"
+      },
+      "computed_file_map_digest": "e077a6a76a5617901163b5f3c809efbf84265ac48a5894fda2a2d45c60c327a9",
+      "profile_references": [
+        "experiments/r_behavior_transfer_v1/PUBLIC_CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "C",
+      "donors": [
+        {
+          "repository": "https://github.com/aorwall/moatless-tools",
+          "revision": "011ead57a5c81664e9c45e07e1f50b17e695cc63"
+        }
+      ],
+      "original_directory": "results_cache/moatless_cleanup_transfer_v1/generation/a2s/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "mechanism.py": "b0b3335515814ac74d28d1bc765f4d55219aa37b49c2fdbde055d1a931d6841d",
+        "package.json": "c34c3491d009a8432738f958816e9a1fc260e61a84e1abbee343298baff10ff1"
+      },
+      "computed_file_map_digest": "9853ff753c02fec91d49ab338d6c208182049f2f2592bd10d1ff627d27df45c7",
+      "profile_references": [
+        "results_cache/moatless_cleanup_transfer_v1/generation/a2s/final_package/package.json",
+        "experiments/moatless_cleanup_transfer_v1/target.json"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "S",
+      "donors": [
+        {
+          "repository": "https://github.com/All-Hands-AI/OpenHands",
+          "revision": "34bf9c2579ca5a25e452583eed38c6c0e45cebd6"
+        }
+      ],
+      "original_directory": "results_cache/openhands_summary_transfer_v1/generation/a2s/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "mechanism.py": "14816dad223eb59e129b790906d19f276433959f88eccbb1b0ea61d8fd8c495e",
+        "package.json": "e3ee75a6931223d8f25d6678f066da94f3d38105c5c9a5cfcec6d3cfb6021d70"
+      },
+      "computed_file_map_digest": "710899ac1165d8c9a87b9d9500475cbb9d811b6851c7c5a537d919d0928a9955",
+      "profile_references": [
+        "results_cache/openhands_summary_transfer_v1/generation/a2s/final_package/package.json",
+        "experiments/openhands_summary_transfer_v1/HOST_PROFILE.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "P",
+      "donors": [
+        {
+          "repository": "https://github.com/OpenAutoCoder/Agentless",
+          "revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71"
+        }
+      ],
+      "original_directory": "results_cache/search_replace_transfer_v1/generation/direct/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "admission_pkg.py": "a6d81cb0f846f1ff3c32e2d362d11104bdb956fd9df2ceec436aa3696c37c716",
+        "edit_parser_pkg.py": "09a3147e3162d2ce38b065a7338547ab3889c6ee9727f8ff7daa867d5a96bac1",
+        "mechanism.py": "57089ca2c9482320bcc448d37670c1888b5f31f9bb4c2ddb223e185eb1d8476f",
+        "normalize_pkg.py": "9fb08d255a6da5696a75b66e4d1e80db263090a400f8fef0ce8dd78045b10ae4",
+        "package.json": "0b60160e6940a2fbcf66cd5dd90f10594c579b334e026957a7611bb4b3c37589"
+      },
+      "computed_file_map_digest": "b276b81cbd303ae186cabb004855362d3c1f325649234baf9e10c7e66f623f77",
+      "profile_references": [
+        "results_cache/search_replace_transfer_v1/generation/direct/final_package/package.json",
+        "experiments/search_replace_transfer_v1/PUBLIC_CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "F",
+      "donors": [
+        {
+          "repository": "https://github.com/bytedance/trae-agent",
+          "revision": "e839e559ac61bdd0e057c375dd1dee391fee797d"
+        }
+      ],
+      "original_directory": "results_cache/discovery_observable_v1/generation/trae_direct/migration/candidate_2",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "mechanism.py": "7c947716141b3c5a1ce93fdb0161a554d1717113c6a48fdc56789115447b28a3",
+        "package.json": "55ccc8779293c6b4bf629918f05f288281b011d3757c7d41573e49bca383611c"
+      },
+      "computed_file_map_digest": "2be986f35a21b43abd915f3ced02a4d8c48b86509fe2fcb4b2f2810ba2425a5b",
+      "profile_references": [
+        "results_cache/discovery_observable_v1/generation/trae_direct/migration/candidate_2/package.json"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "L",
+      "donors": [
+        {
+          "repository": "https://github.com/OpenAutoCoder/Agentless",
+          "revision": "5ce5888b9f149beaace393957a55ea8ee46c9f71"
+        }
+      ],
+      "original_directory": "results_cache/localization_issue_boundary_v1/generation/direct/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "donor_logic.py": "2c5b3a24ef3428406a9f4adbeceebb846699e7e42338854edded2494048af252",
+        "mechanism.py": "cc7d5735d0ccab35328e5bde363b890af1acefced8ad59444f3a72f409b48785",
+        "package.json": "e987550c6f9ce58433729c8ab85a31701e53df84c309ceb936cca8ec0c5b22e5"
+      },
+      "computed_file_map_digest": "ed16379f76c1eea804034121d2ca4f3f08ddf9dc41b6d91871ad1f8fbe44b70d",
+      "profile_references": [
+        "results_cache/localization_issue_boundary_v1/generation/direct/final_package/package.json",
+        "experiments/localization_only_v1/PUBLIC_CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "Q",
+      "donors": [
+        {
+          "repository": "https://github.com/SWE-agent/SWE-agent",
+          "revision": "3ea751c087f32b16e039a2233dd6eefecef325d5"
+        }
+      ],
+      "original_directory": "results_cache/sweagent_chooser_repair_v1/generation/direct/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "mechanism.py": "0018d6d3fa04ffbf1e9a66ab10a7d7ebc5c7abcd9a7714a7c40ef8cccc284ce8",
+        "package.json": "15c4d17366f9505e6529fbaae15780875093d53115db9b800261802955692a45"
+      },
+      "computed_file_map_digest": "0272999914d1f4203224ae94b1f6b263a387a3f82031d771203e6a10bec568e9",
+      "profile_references": [
+        "results_cache/sweagent_chooser_repair_v1/generation/direct/final_package/package.json",
+        "experiments/sweagent_chooser_transfer_v1/PUBLIC_CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    },
+    {
+      "class": "A",
+      "donors": [
+        {
+          "repository": "https://github.com/Aider-AI/aider",
+          "revision": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c"
+        }
+      ],
+      "original_directory": "results_cache/aider_architect_transfer_v1/generation/direct/final_package",
+      "original_package_manifest": "PRESENT",
+      "file_sha256": {
+        "mechanism.py": "b4f321794589cabb646851550b088eee17c9ca444e9b1a22ee24c27aa0891bd3",
+        "package.json": "b36258ae184c34413fbcfa0d08e0714fb762b004c0162d60a9a132eb03b8ee23"
+      },
+      "computed_file_map_digest": "c869f922a65220b3f6182e8aab39ea63569642c6d4f2f78503573560485b8a4d",
+      "profile_references": [
+        "results_cache/aider_architect_transfer_v1/generation/direct/final_package/package.json",
+        "experiments/aider_architect_transfer_v1/PUBLIC_CONTRACT.md"
+      ],
+      "evidence_limit": "Original code inspection only. Historical qualification/entry grades and their availability are unchanged; no package is run here."
+    }
+  ],
+  "closed_common_runtime": false,
+  "unchanged_limits": [
+    "Survivor catalog; no common extraction denominator.",
+    "G source metadata remains SOURCE_METADATA_INVALID.",
+    "G/R original package.json absent.",
+    "Most historical qualification/entry records remain REPORTED_ONLY.",
+    "Published modules do not close missing host, transport, assessment or scoring records."
+  ]
+}

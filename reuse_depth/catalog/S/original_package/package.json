@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "profile": "checking_history_hook_v1",
+  "capabilities": [
+    "model_request",
+    "project_history"
+  ],
+  "entrypoint": "mechanism:handle",
+  "modules": [
+    "mechanism.py"
+  ]
+}

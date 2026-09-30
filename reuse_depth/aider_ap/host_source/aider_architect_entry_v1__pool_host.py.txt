@@ -1,0 +1,313 @@
+"""Original P K4, optionally preceded by the generated architect handoff."""
+
+import asyncio
+import copy
+from pathlib import Path
+import time
+
+from analysis.automatic_extraction_v1.common import file_sha, require, write_once
+from analysis.g_migration_trial_v1.isolation import PackageError
+from analysis.gr_generated_effect_v1.capture import BUNDLE_FILES, validate_bundle
+from analysis.same_base_selection_v2.host import Deadline as SetupDeadline
+from analysis.same_base_selection_v2.session import Session
+from analysis.source_first_selection_v2.host import Host as WorkspaceHost
+
+from analysis.search_replace_effect_v1.constants import S_SHA as P_SHA
+from .bridge import Session as ArchitectSession, ReadonlyClient, combine_accounts
+from analysis.search_replace_effect_v1.deadline import Deadline
+from analysis.search_replace_effect_v1.sampling import (
+    Samples,
+    PoolResourceStop,
+    controller,
+    settled,
+)
+
+
+def declared_package_stop(error, session, program):
+    """Only an actual, cleaned worker resource limit can become a scored stop."""
+    if error.category == "INPUT_LIMIT":
+        return "P2_DECLARED_INPUT_LIMIT"
+    if error.category not in {"WALL_TIMEOUT", "STDOUT_LIMIT", "STDERR_LIMIT"}:
+        raise error
+    call = session.events[-1] if session.events else None
+    workers = program.records[call["worker_start"] :] if call else []
+    require(
+        len(workers) == 1
+        and call.get("exception_category") == error.category
+        and workers[0].get("status") == error.category
+        and workers[0].get("cleanup_confirmed") is True
+        and workers[0].get("package_sha256") == program.identity
+        and workers[0].get("input_sha256") == call["input_sha256"],
+        "worker resource stop lacks matching actual invocation and cleanup",
+    )
+    return "P2_DECLARED_" + error.category
+
+
+def accounts(clients, controls):
+    native = {n: settled(c, controls[n]) for n, c in clients.items()}
+    require(set(native) == {f"sample{i}" for i in range(1, 5)}, "four actual accounts")
+    require(all(a["requests"] <= 1 for a in native.values()), "sample retries forbidden")
+    usage = {k: sum(a["usage"][k] for a in native.values()) for k in native["sample1"]["usage"]}
+    return {
+        "accounts": native,
+        "requests": sum(a["requests"] for a in native.values()),
+        "usage": usage,
+    }
+
+
+class Host(WorkspaceHost):
+    async def _pool(self, begin, program, clients, prefix):
+        self.session = Session(program, clock_check=self.deadline.check, logs=self.logs / "P2")
+        self.sampling = Samples(
+            [clients[f"sample{i}"] for i in range(1, 5)],
+            [self.controls[f"sample{i}"] for i in range(1, 5)],
+            self.deadline.check,
+        )
+        selection, reason = None, self.architect_stop
+        try:
+            if reason is not None:
+                raise PoolResourceStop(reason)
+            selection = await self.session.run(
+                begin,
+                sample_request=self.sampling,
+                materialize_capture=self._materialize,
+            )
+        except (PoolResourceStop, PackageError) as error:
+            # Structural/identity and environment failures are not resource
+            # exhaustion. Never use an unverified partial pool for selection.
+            accounts(clients, self.controls)
+            reason = (
+                str(error)
+                if isinstance(error, PoolResourceStop)
+                else declared_package_stop(error, self.session, program)
+            )
+            batch = self.session.events[0].get("value") if self.session.events else None
+            if batch:
+                self.sampling.close_unrequested(batch["effects"][0]["requests"], reason)
+            else:
+                # No sample request effect existed. Record unattempted slots,
+                # without manufacturing IDs or provider terminal responses.
+                for i in range(1, 5):
+                    self.sampling.record(i, None, "NOT_SENT_RESOURCE", reason)
+        self.deadline.begin_finalization()
+        accounting = accounts(clients, self.controls)
+        require(len(self.sampling.accounting) == 4, "four allocated dispositions required")
+        policies = {}
+        for name, selector in ((prefix, "vote"),):
+            choice = (
+                {
+                    "mode": "empty_base",
+                    "sample_index": None,
+                    "snapshot_ref": begin["base_snapshot_ref"],
+                }
+                if reason
+                else selection[selector]
+            )
+            snapshot = (
+                self.base_snapshot
+                if choice["sample_index"] is None
+                else self.session.captures[choice["sample_index"]]
+            )
+            require(
+                snapshot["snapshot_ref"] == choice["snapshot_ref"], "chosen original tree differs"
+            )
+            folder = Path(snapshot["directory"])
+            require(
+                validate_bundle(folder, begin["base_commit"]) == snapshot["bundle"],
+                "original bundle changed",
+            )
+            policies[name] = {
+                "status": "DECLARED_RESOURCE_EMPTY_BASE"
+                if reason
+                else "ORIGINAL_GENERATED_SELECTION",
+                "selection": copy.deepcopy(choice),
+                "fallback_reason": reason,
+                "publication": {
+                    **snapshot["bundle"],
+                    "original_capture": str(folder),
+                    "original_bundle_hashes": {n: file_sha(folder / n) for n in BUNDLE_FILES},
+                    "run_id": begin["run_id"],
+                    "recapture": False,
+                },
+            }
+        terminal = self.architect_terminal
+        if self.handoff is not None:
+            terminal = self.architect_session.finish(
+                choice["snapshot_ref"], accounting, "resource_stop" if reason else "completed"
+            )
+        total = combine_accounts(
+            {
+                "editor": accounting,
+                **({"architect": settled(self.architect, self.acontrol)} if self.architect else {}),
+            }
+        )
+        if terminal is not None:
+            require(
+                terminal["calls_used"] == total["requests"]
+                and terminal["usage"]
+                == {k: total["usage"][k] for k in ("input_tokens", "output_tokens")},
+                "generated terminal matches actual total",
+            )
+        output = {
+            "status": "PREFIX_ENDPOINTS_FROZEN",
+            "prefix": prefix,
+            "terminal_status": "ENDOGENOUS_RESOURCE_STOP" if reason else "SELECTION_COMPLETE",
+            "policies": policies,
+            "p2_selection": selection,
+            "requests": total["requests"],
+            "usage": total["usage"],
+            "accounts": total["accounts"],
+            "architect_terminal": terminal,
+            "sampling": self.sampling.snapshot(),
+            "official_scores": None,
+        }
+        self.deadline.check("before_endpoint_write")
+        write_once(self.logs / "endpoints.json", output)
+        return output
+
+    async def run(
+        self,
+        begin,
+        *,
+        program,
+        clients,
+        prefix,
+        readonly_context,
+        architect=None,
+        architect_program=None,
+        architect_begin=None,
+    ):
+        require(not self.started and prefix in {"P", "AP"}, "single new pool prefix")
+        require(
+            program.identity == P_SHA,
+            "frozen package required",
+        )
+        require(set(clients) == {f"sample{i}" for i in range(1, 5)}, "no R or repair account")
+        require(
+            begin["max_samples"] == 4
+            and all(c.policy["calls_per_start"] == 1 for c in clients.values()),
+            "K4 budget",
+        )
+        require(
+            (prefix == "AP")
+            == (
+                architect is not None
+                and architect_program is not None
+                and architect_begin is not None
+            ),
+            "architect package/client/start triple",
+        )
+        self.architect, self.acontrol = architect, controller(1) if architect else None
+        self.architect_session = self.architect_terminal = self.handoff = None
+        self.architect_stop = None
+        self.started, self.sampling = True, None
+        self.controls = {n: controller(1) for n in clients}
+        write_once(self.logs / "begin.json", begin)
+        started = time.monotonic()
+        output, failure, setup_seconds = None, None, None
+        try:
+            self.deadline = SetupDeadline(240)
+            await asyncio.wait_for(self._workspace(begin), timeout=240)
+            setup_seconds = time.monotonic() - started
+            self.deadline = Deadline()
+            self.capture.clock_check = self.deadline.check
+            for name, client in clients.items():
+                client.admission_check = lambda n=name, c=client: self.deadline.admit(
+                    c, self.controls[n]
+                )
+            edited_begin = copy.deepcopy(begin)
+            views = copy.deepcopy(readonly_context)
+            if prefix == "AP":
+                require(architect.policy["calls_per_start"] == 1, "one architect request")
+                architect.admission_check = lambda: self.deadline.admit(architect, self.acontrol)
+                self.architect_session = ArchitectSession(
+                    architect_program, self.logs / "architect", self.deadline
+                )
+                try:
+                    effect = self.architect_session.prepare(
+                        architect_begin, architect, self.acontrol
+                    )
+                except PoolResourceStop as exc:
+                    settled(architect, self.acontrol)
+                    self.architect_stop = str(exc)
+                else:
+                    if effect["kind"] == "editor_handoff":
+                        self.handoff = effect
+                        require(
+                            effect["remaining_calls"] >= 4
+                            and effect["editor_format"] == "search_replace_k4",
+                            "unshortened K4 editor",
+                        )
+                        require(
+                            effect["files"]
+                            == [
+                                {"path": r["path"], "content": r["content"]} for r in begin["files"]
+                            ],
+                            "inherited full files",
+                        )
+                        edited_begin["issue"], views = (
+                            effect["task_text"],
+                            effect["readonly_context"],
+                        )
+                    else:
+                        require(
+                            effect["kind"] == "architect_terminal", "generated handoff or terminal"
+                        )
+                        self.architect_terminal = effect
+                        self.architect_stop = "ARCHITECT_" + effect["status"]
+            write_once(self.logs / "editor_begin.json", edited_begin)
+            editor_clients = {
+                name: ReadonlyClient(client, views) for name, client in clients.items()
+            }
+            output = await self._pool(edited_begin, program, editor_clients, prefix)
+        except BaseException as error:
+            failure = type(error).__name__
+            raise
+        finally:
+            errors = []
+            for environment in reversed(self.environments):
+                try:
+                    await asyncio.wait_for(environment.stop(delete=True), timeout=120)
+                except BaseException as error:
+                    errors.append(type(error).__name__)
+            worker_programs = {
+                "P2": program,
+                **({"A": architect_program} if architect_program else {}),
+            }
+            if any(
+                r.get("cleanup_confirmed") is not True
+                for p in worker_programs.values()
+                for r in p.records
+            ):
+                errors.append("WORKER_CLEANUP_UNCONFIRMED")
+            self.cleanup = {
+                "cleanup_confirmed": not errors,
+                "errors": errors,
+                "environments": [e.record for e in self.environments],
+                "workers": {key: copy.deepcopy(p.records) for key, p in worker_programs.items()},
+            }
+            write_once(self.logs / "cleanup.json", self.cleanup)
+            write_once(
+                self.logs / "trajectory.json",
+                {
+                    "failure_type": failure,
+                    "terminal_status": output["terminal_status"]
+                    if output
+                    else "EXECUTION_INCOMPLETE",
+                    "score_eligibility": bool(output and not errors),
+                    "clients": {n: c.snapshot() for n, c in clients.items()},
+                    "architect": architect.snapshot() if architect else None,
+                    "architect_calls": self.architect_session.calls
+                    if self.architect_session
+                    else [],
+                    "controllers": {n: c.snapshot() for n, c in self.controls.items()},
+                    "sampling": self.sampling.snapshot() if self.sampling else None,
+                    "deadline_events": getattr(self.deadline, "events", []),
+                    "setup_seconds": setup_seconds,
+                    "elapsed_seconds": time.monotonic() - started,
+                    "official_scores": None,
+                },
+            )
+            if errors:
+                raise RuntimeError("POOL_CLEANUP_UNCONFIRMED") from None
+        return output

@@ -1,0 +1,11 @@
+diff --git a/a2s_rl_subject.py b/a2s_rl_subject.py
+index 55070e60cdee5cfb0788f5b396a6636fd75815fa..f24234db5a4b20c9643851b0bfaf380bda8bb15c 100644
+--- a/a2s_rl_subject.py
++++ b/a2s_rl_subject.py
+@@ -1,4 +1,5 @@
++
+ def magnitude(value):
+     if value < 0:
+-        return 0
++        return -value
+     return value

@@ -1,0 +1,114 @@
+"""Human public input controls, never extraction outputs or benchmark solutions."""
+
+import json
+import shlex
+
+from analysis.localization_repair_v1.environment_witness import text_response
+from tests.analysis.test_hint_host_effect_v1 import response
+
+SUBJECT = "def magnitude(value):\n    if value < 0:\n        return 0\n    return value\n"
+FIXED = "def magnitude(value):\n    if value < 0:\n        return -value\n    return value"
+REGRESSED = "def magnitude(value):\n    if value < 0:\n        return 1\n    return value\n"
+FINAL = FIXED + "\n# Public scripted final repair.\n"
+ISSUE = "Public artificial control: magnitude(value) must return the absolute value of an integer; positive integers and zero retain their values. The negative input currently returns zero.\n"
+
+
+def card(base):
+    return {
+        "base_commit": base,
+        "task": "agent2skill/rl-post-handoff-public",
+        "origin": "HUMAN_PUBLIC_SYNTHETIC_REQUIREMENTS",
+        "requirement": "The actual magnitude return value equals abs(value) for the supplied integer.",
+        "operations": [
+            {
+                "id": "magnitude",
+                "kind": "repo_call",
+                "form": "function",
+                "module": "a2s_rl_subject",
+                "qualname": "magnitude",
+                "path": "a2s_rl_subject.py",
+                "requirement_refs": ["absolute-value"],
+            }
+        ],
+    }
+
+
+def reproducer():
+    cases = [
+        {
+            "id": name,
+            "function": "case_" + name,
+            "role": role,
+            "operations": ["magnitude"],
+            "requirements": ["absolute-value"],
+            "checks": 1,
+            "rationale": "Compare the actual repository result to the public absolute-value requirement.",
+        }
+        for name, role in (("negative", "issue"), ("positive", "control"))
+    ]
+    parts = ["CASES = " + repr(cases)]
+    for name, value in (("negative", -4), ("positive", 3)):
+        parts.append(
+            "def case_" + name + "(observer):\n"
+            "    ref = observer.repo_call('magnitude', args=(" + str(value) + ",))\n"
+            "    observer.check(ref, lambda out: out.kind == 'return' and out.value == "
+            + str(abs(value))
+            + ", 'absolute-value')\n"
+        )
+    return "\n\n".join(parts).strip()
+
+
+def write_action(content):
+    code = "from pathlib import Path; Path('a2s_rl_subject.py').write_text(" + repr(content) + ")"
+    return response("bash", {"command": "python -B -c " + shlex.quote(code)})
+
+
+def responses(arm):
+    values = []
+    if "R" in arm:
+        values.append(text_response("```python\n" + reproducer() + "\n```", 1))
+    if "L" in arm:
+        texts = [
+            "a2s_rl_subject.py",
+            "```\na2s_rl_subject.py\nfunction: magnitude\n```",
+            "```\na2s_rl_subject.py\nline: 3\n```",
+            "```python\nedit_file('a2s_rl_subject.py', 3, 3, '        return -value')\n```",
+        ]
+        values.extend(text_response(text, len(values) + i + 1) for i, text in enumerate(texts))
+    else:
+        values.append(write_action(FIXED))
+    values.extend(
+        [
+            response("bash", {"command": "cat a2s_rl_subject.py"}),
+            write_action(REGRESSED),
+            write_action(FINAL),
+            response("task_complete", {"summary": "Public scripted R/L entry control finished."}),
+        ]
+    )
+    # Distinct public response and call IDs make each observed wire occurrence explicit.
+    for i, value in enumerate(values, 1):
+        value["id"] = "resp_rl_public_" + str(i)
+        for item in value["output"]:
+            if item["type"] == "function_call":
+                item["call_id"] = "call_rl_public_" + str(i)
+            elif item["type"] == "reasoning":
+                item["id"] = "rs_rl_public_" + str(i)
+    return json.loads(json.dumps(values))
+
+
+def specification(base, policy):
+    return {
+        "card": card(base),
+        "domain": {
+            "base_commit": base,
+            "model_limits": {
+                key: policy[key] for key in ("input_token_limit", "output_token_limit")
+            },
+            "execution_spec": {
+                "command": "/opt/miniconda3/envs/testbed/bin/python -B /tmp/a2s-r-host/bootstrap.py /tmp/a2s-r-host/host_request.json /tmp/a2s-r-input",
+                "cwd": "/testbed",
+            },
+            "projection_spec": {"replace_from_base": [], "guards": {}, "expected_files": {}},
+            "execution_limits": {"timeout_seconds": 120, "output_bytes": 2097152},
+        },
+    }

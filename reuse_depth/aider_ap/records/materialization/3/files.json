@@ -1,0 +1,1 @@
+[{"after":"\ndef magnitude(value):\n    if value < 0:\n        return -value\n    return value\n","before":"def magnitude(value):\n    if value < 0:\n        return 0\n    return value\n","path":"a2s_rl_subject.py"}]

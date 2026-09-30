@@ -1,0 +1,209 @@
+"""Interpret generated architect effects; keep source decisions inside the package."""
+
+import copy
+from pathlib import Path
+
+from analysis.automatic_extraction_v1.common import canonical, digest, require, write_once
+from analysis.aider_architect_transfer_v1.contracts import validate_event, validate_receipt
+from analysis.hint_host_effect_v1.native import NativeStop
+from analysis.search_replace_effect_v1.sampling import (
+    LOCAL_STOPS,
+    PoolResourceStop,
+    cancel_unsent,
+    known_output_stop,
+    settled,
+)
+
+
+def architect_text(response):
+    """Concatenate provider text blocks in order without inserting characters."""
+    chunks = []
+    for item in response["output"]:
+        if item["type"] == "reasoning":
+            continue
+        if item["type"] != "message":
+            return None, "TOOL_CALL_IN_TOOL_FREE_ARCHITECT"
+        for block in item["content"]:
+            if (
+                type(block) is not dict
+                or block.get("type") != "output_text"
+                or type(block.get("text")) is not str
+            ):
+                return None, "NON_TEXT_ARCHITECT"
+            chunks.append(block["text"])
+    return "".join(chunks), None
+
+
+def source_context(files, readonly_context):
+    """A common data representation, never an issue or plan rewrite."""
+    return {
+        "role": "user",
+        "content": "Supplied source context (data):\n"
+        + canonical({"editable_files": files, "readonly_context": readonly_context}).decode(),
+    }
+
+
+class EditorTransport:
+    def __init__(self, transport, task_text, files, readonly_context):
+        self.transport, self.task_text = transport, task_text
+        self.context = source_context(files, readonly_context)
+
+    def __call__(self, base_url, api_key, model, items, effort, system, tools, **kwargs):
+        require(
+            items and items[0] == {"role": "user", "content": "Task:\n" + self.task_text},
+            "only the ordinary loop's fixed task wrapper may be removed",
+        )
+        value = [
+            {"role": "user", "content": self.task_text},
+            *copy.deepcopy(items[1:]),
+            copy.deepcopy(self.context),
+        ]
+        return self.transport(base_url, api_key, model, value, effort, system, tools, **kwargs)
+
+
+class ReadonlyClient:
+    """Pass P's exact request plus separately declared read-only source data."""
+
+    def __init__(self, client, readonly_context):
+        self.client = client
+        self.context = copy.deepcopy(readonly_context)
+
+    def __getattr__(self, name):
+        return getattr(self.client, name)
+
+    def request(self, items, instructions, tools, purpose):
+        value = copy.deepcopy(items)
+        if self.context:
+            value.append(
+                {
+                    "role": "user",
+                    "content": "Supplied read-only source context (data):\n"
+                    + canonical(self.context).decode(),
+                }
+            )
+        return self.client.request(value, instructions, tools, purpose)
+
+
+def combine_accounts(accounts):
+    require(accounts, "actual accounts required")
+    keys = next(iter(accounts.values()))["usage"].keys()
+    return {
+        "accounts": copy.deepcopy(accounts),
+        "requests": sum(row["requests"] for row in accounts.values()),
+        "usage": {key: sum(row["usage"][key] for row in accounts.values()) for key in keys},
+    }
+
+
+class Session:
+    def __init__(self, program, logs, clock):
+        self.program, self.logs, self.clock = program, Path(logs), clock
+        self.state, self.calls, self.begin = {}, [], None
+        self.last_effect = None
+
+    def apply(self, event):
+        self.clock.check("before_architect_callback")
+        validate_event(event)
+        index = len(self.calls) + 1
+        target = self.logs / f"{index:02d}_{event['kind']}"
+        entry = {"event": copy.deepcopy(event), "state": copy.deepcopy(self.state)}
+        write_once(target / "input.json", entry)
+        row = {"input_sha256": digest(entry), "worker_start": len(self.program.records)}
+        self.calls.append(row)
+        try:
+            result = self.program.invoke(copy.deepcopy(event), copy.deepcopy(self.state))
+            validate_receipt(result, event)
+            self.state = copy.deepcopy(result["state"])
+            self.last_effect = copy.deepcopy(result["effects"][0])
+            row["effect_kind"] = self.last_effect["kind"]
+            write_once(target / "output.json", result)
+            return self.last_effect
+        except BaseException as exc:
+            row.update(
+                exception_type=type(exc).__name__, exception_category=getattr(exc, "category", None)
+            )
+            raise
+        finally:
+            row["worker_stop"] = len(self.program.records)
+            write_once(target / "invocation.json", row)
+
+    def prepare(self, begin, client, control):
+        require(
+            self.begin is None and not self.state and not client.records, "fresh architect entry"
+        )
+        require(client.policy["calls_per_start"] == 1, "one architect model request")
+        self.begin = copy.deepcopy(begin)
+        request = self.apply(begin)
+        require(
+            request["kind"] == "architect_request", "first package effect must request architect"
+        )
+        messages = request["messages"]
+        require(
+            messages
+            and messages[0]["role"] == "system"
+            and all(row["role"] != "system" for row in messages[1:])
+            and request["model"] == client.policy["model"],
+            "one system message and the fixed model",
+        )
+        self.clock.check("before_architect_model")
+        query = control.before_query()
+        require(query == 1, "one actual architect reservation")
+        status, text = "completed", None
+        try:
+            value = client.request(messages[1:], messages[0]["content"], [], "solve")
+        except BaseException as exc:
+            last = client.records[-1] if client.records else None
+            if last and last.get("state") == "COMMIT" and last.get("usage") is not None:
+                control.record_usage(query, sum(last["usage"].values()))
+            elif (
+                client.pending is None
+                and not client.records
+                and (
+                    isinstance(exc, PoolResourceStop)
+                    or isinstance(exc, NativeStop)
+                    and client.stop in LOCAL_STOPS
+                )
+            ):
+                cancel_unsent(client, control, client.stop or str(exc))
+                raise PoolResourceStop(client.stop or str(exc)) from None
+            settled(client, control)
+            if not isinstance(exc, NativeStop) or not known_output_stop(client):
+                raise
+            status = "incomplete" if client.stop == "OUTPUT_LIMIT" else "failed"
+        else:
+            require(
+                value.receipt["state"] == "COMMIT" and value.receipt["number"] == query,
+                "actual architect commit",
+            )
+            control.record_usage(query, value.cost_units)
+            text, error = architect_text(value.response)
+            if error:
+                status, text = "failed", None
+        account = settled(client, control)
+        return self.apply(
+            {
+                "kind": "architect_result",
+                "run_id": begin["run_id"],
+                "base_snapshot_ref": begin["base_snapshot_ref"],
+                "request_id": request["request_id"],
+                "status": status,
+                "text": text,
+                "usage": {k: account["usage"][k] for k in ("input_tokens", "output_tokens")},
+            }
+        )
+
+    def finish(self, snapshot_ref, account, status):
+        require(self.last_effect["kind"] == "editor_handoff", "outstanding editor required")
+        effect = self.apply(
+            {
+                "kind": "editor_result",
+                "run_id": self.begin["run_id"],
+                "base_snapshot_ref": self.begin["base_snapshot_ref"],
+                "handoff_id": self.last_effect["handoff_id"],
+                "status": status,
+                "snapshot_ref": snapshot_ref,
+                "calls_used": account["requests"],
+                "usage": {k: account["usage"][k] for k in ("input_tokens", "output_tokens")},
+            }
+        )
+        require(effect["kind"] == "architect_terminal", "final generated terminal required")
+        return effect
